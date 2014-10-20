@@ -1,0 +1,20 @@
+* Features
+
+** Small fix
+** Big fix
+** Regression fix
+
+** Small feature
+** Important feature
+
+** Test
+** Refactoring
+
+** Documentation
+
+* Decide the labels with an unsupervised algorithm
+
+* Project Kernel
+
+** Choose a slice of history to classify
+** 
