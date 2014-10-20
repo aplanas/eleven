@@ -6,6 +6,7 @@
 pip install -U numpy scipy
 pip install -U matplotlib
 
+# pip install -U scikit-learn
 pip install -U git+https://github.com/scikit-learn/scikit-learn.git#egg=scikit-learn
 
 pip install -U ipython[all]
