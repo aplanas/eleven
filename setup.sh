@@ -1,5 +1,11 @@
 #! /bin/sh
 
+# make sure these are installed:
+if false
+then
+    sudo zypper in python-devel blas-devel lapack-devel gcc-fortran
+fi
+
 # virtualenv env
 # . ./env/bin/activate
 
