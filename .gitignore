@@ -52,3 +52,12 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Emacs
+*~
+
+# Local
+attic
+books
+kernel-git
+*.ipynb
