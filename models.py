@@ -13,7 +13,7 @@ from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.grid_search import GridSearchCV
 from sklearn.linear_model import SGDClassifier
 from sklearn.pipeline import Pipeline, FeatureUnion
-from sklearn.preprocessing import LabelEncoder, Normalizer
+from sklearn.preprocessing import LabelEncoder, StandardScaler
 
 
 def fetch_gitlog(data_path, stats=False):
@@ -129,21 +129,25 @@ if __name__ == '__main__':
             ('message', pipeline_message),
             ('numeric', pipeline_numeric),
         ])),
-        ('normalizer', Normalizer()),
+        ('scaler', StandardScaler(with_mean=False)),
         ('clf', SGDClassifier()),
     ])
 
+    # cls = main_pipeline.fit(data.data, data.target)
+    # print cls.predict(data.data)
+    # print data.target
+
     parameters = {
         'features__summary__vect__max_df': (0.5, 0.75, 1.0),
-        'features__summary__vect__max_features': (None, 5000, 10000, 50000),
+        # 'features__summary__vect__max_features': (None, 5000, 10000, 50000),
         'features__summary__vect__ngram_range': ((1, 1), (1, 2)),  # unigrams or bigrams
         'features__summary__tfidf__use_idf': (True, False),
-        'features__summary__tfidf__norm': ('l1', 'l2'),
+        # 'features__summary__tfidf__norm': ('l1', 'l2'),
         'features__message__vect__max_df': (0.5, 0.75, 1.0),
-        'features__message__vect__max_features': (None, 5000, 10000, 50000),
+        # 'features__message__vect__max_features': (None, 5000, 10000, 50000),
         'features__message__vect__ngram_range': ((1, 1), (1, 2)),  # unigrams or bigrams
         'features__message__tfidf__use_idf': (True, False),
-        'features__message__tfidf__norm': ('l1', 'l2'),
+        # 'features__message__tfidf__norm': ('l1', 'l2'),
         'clf__alpha': (0.00001, 0.000001),
         'clf__penalty': ('l2', 'elasticnet'),
         'clf__n_iter': (10, 50, 80),
