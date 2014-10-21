@@ -21,18 +21,19 @@ if __name__ == '__main__':
         exit(1)
 
     with open(args.csv, 'w') as csvfile:
-        csvwriter = csv.writer(csvfile, delimiter='\t', quotechar='|')
+        csvwriter = csv.writer(csvfile, delimiter=',', quotechar='"', doublequote=True)
         repo = git.Repo(args.project)
         if args.limit:
-            iter_ = repo.iter_commits(args.from_, max_count=args.limit)
+            iter_ = repo.iter_commits(args.from_, max_count=args.limit, no_merges=True)
         else:
-            iter_ = repo.iter_commits(args.from_)
+            iter_ = repo.iter_commits(args.from_, no_merges=True)
         for commit in iter_:
             if commit.hexsha == args.to:
                 break
             summary = commit.summary.encode('utf-8')
             message = commit.message.encode('utf-8')
             stats = commit.stats.total
-            csvwriter.writerow((summary, message, stats['files'],
-                                stats['lines'], stats['insertions'],
+            csvwriter.writerow((summary, message, commit.hexsha,
+                                stats['files'], stats['lines'],
+                                stats['insertions'],
                                 stats['deletions']))
