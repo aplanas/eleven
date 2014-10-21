@@ -1,20 +1,18 @@
+#+STARTUP: showall
+
 * Features
 
-** Small fix
-** Big fix
-** Regression fix
+** Minor / Major
+** Fix / Regression / Refactoring / Feature / Documentation 
 
-** Small feature
-** Important feature
+** Regression as defined in http://en.wikipedia.org/wiki/Software_regression
 
-** Test
-** Refactoring
-
-** Documentation
+** Fix (Major) -- Affect users (distributions)
+** Major -- Security, data loss
+** Minor -- Performance (except if is an order of magnitude), remove of dead code
+** Feature -- Remove misleading error messages
 
 * Decide the labels with an unsupervised algorithm
 
 * Project Kernel
-
-** Choose a slice of history to classify
-** 
+** DONE Choose a slice of history to classify
