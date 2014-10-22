@@ -94,6 +94,14 @@ class SliceFeature(BaseEstimator):
 
         return result
 
+def print_score_and_parameters(interesting_parameters, all_parameters, score, scores=None):
+    print 'score: %0.3f' % score
+    print 'parameters set:'
+    for param_name in sorted(interesting_parameters.keys()):
+        print '\t%s: %r' % (param_name, all_parameters[param_name])
+    if scores is not None:
+        print "Scores: ",
+        print scores
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Train different models with the same dataset.')
@@ -159,12 +167,24 @@ if __name__ == '__main__':
     print 'parameters:'
     pprint(parameters)
     t0 = time()
+
     grid_search.fit(data.data, data.target)
     print 'done in %0.3fs' % (time() - t0)
     print
+    
+    print "Best result:"
 
-    print 'Best score: %0.3f' % grid_search.best_score_
-    print 'Best parameters set:'
-    best_parameters = grid_search.best_estimator_.get_params()
-    for param_name in sorted(parameters.keys()):
-        print '\t%s: %r' % (param_name, best_parameters[param_name])
+    print_score_and_parameters(parameters,
+                               grid_search.best_estimator_.get_params(),
+                               grid_search.best_score_)
+
+    print
+    print "All results:"
+    for result in sorted(grid_search.grid_scores_, 
+                         key=lambda x: x.mean_validation_score):
+        print_score_and_parameters(parameters,
+                                   result.parameters,
+                                   result.mean_validation_score,
+                                   result.cv_validation_scores)
+        print
+        
