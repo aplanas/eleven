@@ -53,7 +53,7 @@ def fetch_gitlog(data_path, stats=False):
 class SliceFeature(BaseEstimator):
     """Estimator to slice a feature."""
 
-    def __init__(self, slc, astype=None):
+    def __init__(self, slc, astype=None, flatten=False):
         """Build an instance using a slice object.
 
         >>> X = np.array([[1, 2, 3], [10, 20, 30]])
@@ -73,6 +73,7 @@ class SliceFeature(BaseEstimator):
         """
         self.slc = slc
         self.astype = astype
+        self.flatten = flatten
 
     def fit(self, X, y=None):
         """Does nothing: this transformer is stateless."""
@@ -85,12 +86,16 @@ class SliceFeature(BaseEstimator):
         else:
             index = range(self.slc.start, self.slc.stop)
 
-        result = X[:, index]
-        if len(index) == 1:
-            result = result.reshape(X.shape[0])
+        result = X[:,index]
+        print result.shape
 
         if self.astype:
             result = result.astype(self.astype)
+
+        if self.flatten:
+            result = result.reshape(X.shape[0])
+
+        print result.shape
 
         return result
 
