@@ -156,9 +156,9 @@ if __name__ == '__main__':
         'features__message__vect__ngram_range': ((1, 1), (1, 2)),  # unigrams or bigrams
         'features__message__tfidf__use_idf': (True, False),
         # 'features__message__tfidf__norm': ('l1', 'l2'),
-        'clf__alpha': (0.00001, 0.000001),
+        'clf__alpha': (1e-4, 1e-5, 1e-6),
         'clf__penalty': ('l2', 'elasticnet'),
-        'clf__n_iter': (10, 50, 80),
+        'clf__n_iter': (5, 10, 20, 50),
     }
     grid_search = GridSearchCV(main_pipeline, parameters, n_jobs=-1, verbose=1)
 
