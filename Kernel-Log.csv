@@ -2450,7 +2450,7 @@ bug:
 https://bugzilla.kernel.org/show_bug.cgi?id=51381
 
 Signed-off-by: Alex Deucher <alexander.deucher@amd.com>
-",1,4,4,0,,ff1b129403aad9a5c7cc9a6eaaffe4bd5fc0c67f
+",1,4,4,0,Feature (Minor),ff1b129403aad9a5c7cc9a6eaaffe4bd5fc0c67f
 drm/radeon: add a backlight quirk for Amilo Xi 2550,"drm/radeon: add a backlight quirk for Amilo Xi 2550
 
 Only the acpi backlight seems to work.  Using the
@@ -2461,7 +2461,7 @@ bug:
 https://bugs.freedesktop.org/show_bug.cgi?id=81382
 
 Signed-off-by: Alex Deucher <alexander.deucher@amd.com>
-",1,9,8,1,,8aff6ad5a393b8e2ad00dce4d278ecf41397bf0d
+",1,9,8,1,Feature (Minor),8aff6ad5a393b8e2ad00dce4d278ecf41397bf0d
 drm/radeon: add a module parameter for backlight control (v2),"drm/radeon: add a module parameter for backlight control (v2)
 
 Add a module parameter to disable the radeon GPU backlight
@@ -2476,14 +2476,14 @@ https://bugs.freedesktop.org/show_bug.cgi?id=81382
 v2: fix module parameter description
 
 Signed-off-by: Alex Deucher <alexander.deucher@amd.com>
-",3,42,34,8,,bc13018b5eba26ca229b33763c9e61fac31a1925
+",3,42,34,8,Feature (Minor),bc13018b5eba26ca229b33763c9e61fac31a1925
 drm/radeon: Update IH_RB_RPTR register after each processed interrupt,"drm/radeon: Update IH_RB_RPTR register after each processed interrupt
 
 This might decrease the chance of IH ring buffer overflows.
 
 Signed-off-by: Michel Dänzer <michel.daenzer@amd.com>
 Signed-off-by: Alex Deucher <alexander.deucher@amd.com>
-",4,8,4,4,,f55e03b975c230758c8f164347dfa10103f60e2c
+",4,8,4,4,Feature (Minor),f55e03b975c230758c8f164347dfa10103f60e2c
 drm/radeon: Make IH ring overflow debugging output more useful,"drm/radeon: Make IH ring overflow debugging output more useful
 
 Use the same format for all ring indices, and fix the calculation of the
@@ -2491,7 +2491,7 @@ post-overflow RPTR.
 
 Signed-off-by: Michel Dänzer <michel.daenzer@amd.com>
 Signed-off-by: Alex Deucher <alexander.deucher@amd.com>
-",4,16,8,8,,6cc2fda213d7a939e151ea1b5ec8033cce732c08
+",4,16,8,8,Refactoring (Minor),6cc2fda213d7a939e151ea1b5ec8033cce732c08
 drm/radeon: Clear RB_OVERFLOW bit earlier,"drm/radeon: Clear RB_OVERFLOW bit earlier
 
 Otherwise the bit remains set in rdev->ih.rptr, so the wptr can never
@@ -2502,7 +2502,7 @@ overflow.
 
 Signed-off-by: Michel Dänzer <michel.daenzer@amd.com>
 Signed-off-by: Alex Deucher <alexander.deucher@amd.com>
-",4,8,4,4,,11bab0ae9991b165b542294806013d1e06fb3294
+",4,8,4,4,Fix (Minor),11bab0ae9991b165b542294806013d1e06fb3294
 arm/arm64: KVM: Fix unaligned access bug on gicv2 access,"arm/arm64: KVM: Fix unaligned access bug on gicv2 access
 
 We were using an atomic bitop on the vgic_v2.vgic_elrsr field which was
@@ -2516,7 +2516,7 @@ non-atomic version of the accessor instead.
 Tested-by: Joel Schopp <joel.schopp@amd.com>
 Reported-by: Riku Voipio <riku.voipio@linaro.org>
 Signed-off-by: Christoffer Dall <christoffer.dall@linaro.org>
-",1,2,1,1,,1f2bb4acc125edc2c06db3ad3e8c699bc075ad52
+",1,2,1,1,Fix (Minor),1f2bb4acc125edc2c06db3ad3e8c699bc075ad52
 genhd: fix leftover might_sleep() in blk_free_devt(),"genhd: fix leftover might_sleep() in blk_free_devt()
 
 Commit 2da78092 changed the locking from a mutex to a spinlock,
@@ -2526,7 +2526,7 @@ free from an RCU callback. Get rid of it.
 
 Reported-by: Pontus Fuchs <pontus.fuchs@gmail.com>
 Signed-off-by: Jens Axboe <axboe@fb.com>
-",1,2,0,2,,46f341ffcfb5d8530f7d1e60f3be06cce6661b62
+",1,2,0,2,Regression (Minor),46f341ffcfb5d8530f7d1e60f3be06cce6661b62
 dm9000: Return an ERR_PTR() in all error conditions of dm9000_parse_dt(),"dm9000: Return an ERR_PTR() in all error conditions of dm9000_parse_dt()
 
 In one error condition dm9000_parse_dt() returns NULL, however the
@@ -2538,7 +2538,7 @@ ERR_PTR() in this case.
 Fixes: 0b8bf1baabe5 (net: dm9000: Allow instantiation using device tree)
 Signed-off-by: Tobias Klauser <tklauser@distanz.ch>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,2,1,1,,09f3756bb9a82835b0c2a9b50f36b47aa42f2c61
+",1,2,1,1,Regression (Minor),09f3756bb9a82835b0c2a9b50f36b47aa42f2c61
 ath9k: Fix NULL pointer dereference on early irq,"ath9k: Fix NULL pointer dereference on early irq
 
 The ah struct might not have been initialized when
@@ -2546,7 +2546,7 @@ interrupt comes so check for it.
 
 Signed-off-by: Wojciech Dubowik <Wojciech.Dubowik@neratec.com>
 Signed-off-by: John W. Linville <linville@tuxdriver.com>
-",1,2,1,1,,2ba7d144d39a596cf5d09390ee7de21cfb69cf2b
+",1,2,1,1,Fix (Minor),2ba7d144d39a596cf5d09390ee7de21cfb69cf2b
 net: rfkill: gpio: Fix clock status,"net: rfkill: gpio: Fix clock status
 
 Clock is disabled when the device is blocked.
@@ -2554,7 +2554,7 @@ So, clock_enabled is the logical negation of ""blocked"".
 
 Signed-off-by: Loic Poulain <loic.poulain@intel.com>
 Signed-off-by: John W. Linville <linville@tuxdriver.com>
-",1,2,1,1,,fa5c107cc887886a04ee2dbce05af86de220ae48
+",1,2,1,1,Fix (Minor),fa5c107cc887886a04ee2dbce05af86de220ae48
 r8169: fix an if condition,"r8169: fix an if condition
 
 There is an extra semi-colon so __rtl8169_set_features() is called every
@@ -2564,7 +2564,7 @@ Fixes: 929a031dfd62 ('r8169: adjust __rtl8169_set_features')
 Signed-off-by: Dan Carpenter <dan.carpenter@oracle.com>
 Acked-by: Hayes Wang <hayeswang@realtek.com>--
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,2,1,1,,85911d71109d3dda8bb35515b78bcc1de6837785
+",1,2,1,1,Fix (Minor),85911d71109d3dda8bb35515b78bcc1de6837785
 r8152: disable ALDPS,"r8152: disable ALDPS
 
 If the hw is in ALDPS mode, the hw may have no response for accessing
@@ -2577,14 +2577,14 @@ is enabled.
 
 Signed-off-by: Hayes Wang <hayeswang@realtek.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,62,45,17,,d70b1137233836be1d71bd53ae60bec6c9e7203c
+",1,62,45,17,Fix (Minor),d70b1137233836be1d71bd53ae60bec6c9e7203c
 ipoib: validate struct ipoib_cb size,"ipoib: validate struct ipoib_cb size
 
 To catch future errors sooner.
 
 Signed-off-by: Eric Dumazet <edumazet@google.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",2,10,8,2,,b49fe36208b45f76dfbcfcd3afd952a33fa9f5ce
+",2,10,8,2,Refactoring (Minor),b49fe36208b45f76dfbcfcd3afd952a33fa9f5ce
 net: sched: shrink struct qdisc_skb_cb to 28 bytes,"net: sched: shrink struct qdisc_skb_cb to 28 bytes
 
 We cannot make struct qdisc_skb_cb bigger without impacting IPoIB,
@@ -2603,7 +2603,7 @@ fields at the end of it later)
 Signed-off-by: Eric Dumazet <edumazet@google.com>
 Fixes: e0f31d849867 (""flow_keys: Record IP layer protocol in skb_flow_dissect()"")
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",2,21,16,5,,257117862634d89de33fec74858b1a0ba5ab444b
+",2,21,16,5,Regression (Minor),257117862634d89de33fec74858b1a0ba5ab444b
 tg3: Work around HW/FW limitations with vlan encapsulated frames,"tg3: Work around HW/FW limitations with vlan encapsulated frames
 
 TG3 appears to have an issue performing TSO and checksum offloading
@@ -2617,7 +2617,7 @@ CC: Prashant Sreedharan <prashant@broadcom.com>
 CC: Michael Chan <mchan@broadcom.com>
 Signed-off-by: Vladislav Yasevich <vyasevic@redhat.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,20,18,2,,476c18850c6cbaa3f2bb661ae9710645081563b9
+",1,20,18,2,Fix (Minor),476c18850c6cbaa3f2bb661ae9710645081563b9
 hwmon: (tmp103) Fix resource leak bug in tmp103 temperature sensor driver,"hwmon: (tmp103) Fix resource leak bug in tmp103 temperature sensor driver
 
 tmp103 temperature sensor driver registers with the hwmon framework by calling
@@ -2627,7 +2627,7 @@ longer needed. Fix this by calling devm_hwmon_device_register_with_groups.
 
 Signed-off-by: Sundar J Dev <sundarjayakumardev@gmail.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,2,1,1,,4e66cd13ff9cd7eaae69e2fae0335d8d99d8afdf
+",1,2,1,1,Fix (Minor),4e66cd13ff9cd7eaae69e2fae0335d8d99d8afdf
 macvlan: allow to enqueue broadcast pkt on virtual device,"macvlan: allow to enqueue broadcast pkt on virtual device
 
 Since commit 412ca1550cbe (""macvlan: Move broadcasts into a work queue""), the
@@ -2644,7 +2644,7 @@ Tested-by: Thibaut Collet <thibaut.collet@6wind.com>
 Signed-off-by: Nicolas Dichtel <nicolas.dichtel@6wind.com>
 Acked-by: Herbert Xu <herbert@gondor.apana.org.au>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,3,2,1,,07d92d5cc977a7fe1e683e1d4a6f723f7f2778cb
+",1,3,2,1,Fix (Minor),07d92d5cc977a7fe1e683e1d4a6f723f7f2778cb
 blk-mq: use blk_mq_start_hw_queues() when running requeue work,"blk-mq: use blk_mq_start_hw_queues() when running requeue work
 
 When requests are retried due to hw or sw resource shortages,
@@ -2653,7 +2653,7 @@ restart the queues when running the requeue work, otherwise the
 queue run will be a no-op.
 
 Signed-off-by: Jens Axboe <axboe@fb.com>
-",1,6,5,1,,8b95741569eabc5eb17da71d1d3668cdb0bef86c
+",1,6,5,1,Fix (Minor),8b95741569eabc5eb17da71d1d3668cdb0bef86c
 blk-mq: fix potential oops on out-of-memory in __blk_mq_alloc_rq_maps(),"blk-mq: fix potential oops on out-of-memory in __blk_mq_alloc_rq_maps()
 
 __blk_mq_alloc_rq_maps() can be invoked multiple times, if we scale
@@ -2663,7 +2663,7 @@ the parent function, blk_mq_alloc_tag_set().
 
 Reported-by: Robert Elliott  <Elliott@hp.com>
 Signed-off-by: Jens Axboe <axboe@fb.com>
-",1,1,0,1,,6b55e1f2d0a5e462e52678278ab749468f1db81c
+",1,1,0,1,Fix (Minor),6b55e1f2d0a5e462e52678278ab749468f1db81c
 blk-mq: avoid infinite recursion with the FUA flag,"blk-mq: avoid infinite recursion with the FUA flag
 
 We should not insert requests into the flush state machine from
@@ -2677,7 +2677,7 @@ Reported-by: Robert Elliott  <Elliott@hp.com>
 Debugged-by: Ming Lei <ming.lei@canonical.com>
 Signed-off-by: Christoph Hellwig <hch@lst.de>
 Signed-off-by: Jens Axboe <axboe@fb.com>
-",2,12,4,8,,a57a178a490345c7236b0077b3de005754389ed6
+",2,12,4,8,Fix (Major),a57a178a490345c7236b0077b3de005754389ed6
 blk-mq: Avoid race condition with uninitialized requests,"blk-mq: Avoid race condition with uninitialized requests
 
 This patch should fix the bug reported in
@@ -2700,7 +2700,7 @@ Reported-by: Paulo De Rezende Pinatti <ppinatti@linux.vnet.ibm.com>
 Tested-by: Paulo De Rezende Pinatti <ppinatti@linux.vnet.ibm.com>
 Acked-by: Christian Borntraeger <borntraeger@de.ibm.com>
 Signed-off-by: Jens Axboe <axboe@fb.com>
-",1,4,3,1,,683d0e126232d898a481daa3a4ca032c2b1a9660
+",1,4,3,1,Fix (Minor),683d0e126232d898a481daa3a4ca032c2b1a9660
 blk-mq: request deadline must be visible before marking rq as started,"blk-mq: request deadline must be visible before marking rq as started
 
 When we start the request, we set the deadline and flip the bits
@@ -2712,7 +2712,7 @@ timeout handling.
 
 Suggested-by: Ming Lei <tom.leiming@gmail.com>
 Signed-off-by: Jens Axboe <axboe@fb.com>
-",1,6,6,0,,538b75341835e3c2041ff066408de10d24fdc830
+",1,6,6,0,Feature (Minor),538b75341835e3c2041ff066408de10d24fdc830
 pch_gbe: 'select' NET_PTP_CLASSIFY.,"pch_gbe: 'select' NET_PTP_CLASSIFY.
 
 Fixes the following randconfig build failure:
@@ -2729,7 +2729,7 @@ Fixes the following randconfig build failure:
 
 Reported-by: Jim Davis <jim.epost@gmail.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,1,1,0,,4e5f9ef380b00871995d638c03e7ae7c67244e31
+",1,1,1,0,Fix (Minor),4e5f9ef380b00871995d638c03e7ae7c67244e31
 scsi: Use 'depends' with LIBFC instead of 'select'.,"scsi: Use 'depends' with LIBFC instead of 'select'.
 
 LIBFC depends upon SCSI_FC_ATTRS and select's CRC32C.
@@ -2741,7 +2741,7 @@ for every LIBFCOE user which makes little sense.
 Subsequently, use 'depends' instead of 'select' for LIBFCOE too.
 
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",3,12,6,6,,df568d8e5250bf24e38c69ad4374baf0f8d279ba
+",3,12,6,6,Refactoring (Minor),df568d8e5250bf24e38c69ad4374baf0f8d279ba
 IB/mlx4: Fix VF mac handling in RoCE,"IB/mlx4: Fix VF mac handling in RoCE
 
 We had several problems here.  First, a race condition on QP1 mac
@@ -2756,7 +2756,7 @@ the mac is zero, but port is non-zero.
 Signed-off-by: Jack Morgenstein <jackm@dev.mellanox.co.il>
 Signed-off-by: Or Gerlitz <ogerlitz@mellanox.com>
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",2,31,20,11,,25476b0209b2e48dfb689e1b4cf7278875082b1f
+",2,31,20,11,Fix (Major),25476b0209b2e48dfb689e1b4cf7278875082b1f
 IB/mlx4: Do not allow APM under RoCE,"IB/mlx4: Do not allow APM under RoCE
 
 Automatic Path Migration is not supported under RoCE. Therefore,
@@ -2769,7 +2769,7 @@ APM capability in the device flags returned by mlx4_ib_query_device.
 Signed-off-by: Jack Morgenstein <jackm@dev.mellanox.co.il>
 Signed-off-by: Or Gerlitz <ogerlitz@mellanox.com>
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",2,22,21,1,,3dec48788817fce4a029cbab14f2b407ae78478f
+",2,22,21,1,Fix (Minor),3dec48788817fce4a029cbab14f2b407ae78478f
 IB/mlx4: Don't update QP1 in native mode,"IB/mlx4: Don't update QP1 in native mode
 
 For native functions (non-SR-IOV), there's no reason to update
@@ -2778,7 +2778,7 @@ the smac_index, as QP1 is a GSI QP.
 Signed-off-by: Jack Morgenstein <jackm@dev.mellanox.co.il>
 Signed-off-by: Or Gerlitz <ogerlitz@mellanox.com>
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",1,4,4,0,,d24d9f43384b5933867a5786934e130efa8b5c92
+",1,4,4,0,Fix (Minor),d24d9f43384b5933867a5786934e130efa8b5c92
 IB/mlx4: Avoid accessing netdevice when building RoCE qp1 header,"IB/mlx4: Avoid accessing netdevice when building RoCE qp1 header
 
 The source MAC is needed in RoCE when building the QP1 header.
@@ -2799,7 +2799,7 @@ when accessing it.
 Signed-off-by: Jack Morgenstein <jackm@dev.mellanox.co.il>
 Signed-off-by: Or Gerlitz <ogerlitz@mellanox.com>
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",3,44,28,16,,3e0629cb6c0518423c9e2671bbe8ec15dde5dcaf
+",3,44,28,16,Fix (Major),3e0629cb6c0518423c9e2671bbe8ec15dde5dcaf
 mlx4: Fix mlx4 reg/unreg mac to work properly with 0-mac addresses,"mlx4: Fix mlx4 reg/unreg mac to work properly with 0-mac addresses
 
 There is a chance that the VF mlx4 RoCE driver (mlx4_ib) may see a 0-mac
@@ -2830,7 +2830,7 @@ is done with the update qp command, as was added by commit 9433c188915c
 Signed-off-by: Jack Morgenstein <jackm@dev.mellanox.co.il>
 Signed-off-by: Or Gerlitz <ogerlitz@mellanox.com>
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",1,11,7,4,,f4fd40b26bd597e203639281859a758402550d62
+",1,11,7,4,Fix (Minor),f4fd40b26bd597e203639281859a758402550d62
 "IB/core: When marshaling uverbs path, clear unused fields","IB/core: When marshaling uverbs path, clear unused fields
 
 When marsheling a user path to the kernel struct ib_sa_path, need
@@ -2841,7 +2841,7 @@ Reported-by: Aleksey Senin <alekseys@mellanox.com>
 Signed-off-by: Matan Barak <matanb@mellanox.com>
 Signed-off-by: Or Gerlitz <ogerlitz@mellanox.com>
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",1,4,4,0,,a59c5850f09b4c2d6ad2fc47e5e1be8d654529d6
+",1,4,4,0,Regression (Minor),a59c5850f09b4c2d6ad2fc47e5e1be8d654529d6
 IB/mlx4: Avoid executing gid task when device is being removed,"IB/mlx4: Avoid executing gid task when device is being removed
 
 When device is being removed (e.g during VPI port link type change
@@ -2852,7 +2852,7 @@ Flush the current queue of tasks and block further tasks from entering the queue
 Signed-off-by: Moni Shoua <monis@mellanox.com>
 Signed-off-by: Or Gerlitz <ogerlitz@mellanox.com>
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",1,9,9,0,,4bf9715f184969dc703bde7be94919995024a6a9
+",1,9,9,0,Feature (Minor),4bf9715f184969dc703bde7be94919995024a6a9
 IB/mlx4: Fix lockdep splat for the iboe lock,"IB/mlx4: Fix lockdep splat for the iboe lock
 
 Chuck Lever reported the following stack trace:
@@ -2908,7 +2908,7 @@ Reported-by: Chuck Lever <chuck.lever@oracle.com>
 Signed-off-by: Jack Morgenstein <jackm@dev.mellanox.co.il>
 Signed-off-by: Or Gerlitz <ogerlitz@mellanox.com>
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",1,24,12,12,,dba3ad2addcd74ec850e510f3b8a9d046cc24ef3
+",1,24,12,12,Fix (Major),dba3ad2addcd74ec850e510f3b8a9d046cc24ef3
 IB/mlx4: Get upper dev addresses as RoCE GIDs when port comes up,"IB/mlx4: Get upper dev addresses as RoCE GIDs when port comes up
 
 When a RoCE port becomes active and the netdev of the port has upper
@@ -2918,7 +2918,7 @@ in the port's RoCE GID table.
 Signed-off-by: Moni Shoua <monis@mellanox.com>
 Signed-off-by: Or Gerlitz <ogerlitz@mellanox.com>
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",1,25,17,8,,bccb84f1dfab92ed180adf09c76cfa9ddc90edb9
+",1,25,17,8,Feature (Minor),bccb84f1dfab92ed180adf09c76cfa9ddc90edb9
 IB/mlx4: Reorder steps in RoCE GID table initialization,"IB/mlx4: Reorder steps in RoCE GID table initialization
 
 There's no need to reset the gid table twice and we need to do it only
@@ -2928,7 +2928,7 @@ being done immediatly after we register netdev notifiers.
 Signed-off-by: Moni Shoua <monis@mellanox.com>
 Signed-off-by: Or Gerlitz <ogerlitz@mellanox.com>
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",1,29,17,12,,655b2aaefc353604f9975c31960d9722e6eda449
+",1,29,17,12,Refactoring (Minor),655b2aaefc353604f9975c31960d9722e6eda449
 IB/mlx4: Don't duplicate the default RoCE GID,"IB/mlx4: Don't duplicate the default RoCE GID
 
 When reading the IPv6 addresses from the net-device, make sure to
@@ -2940,7 +2940,7 @@ Fixes: acc4fccf4eff (""IB/mlx4: Make sure GID index 0 is always occupied"")
 Signed-off-by: Moni Shoua <monis@mellanox.com>
 Signed-off-by: Or Gerlitz <ogerlitz@mellanox.com>
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",1,4,4,0,,f5c4834d9328c4ed9fe5dcbec6128d6da16db69a
+",1,4,4,0,Regression (Minor),f5c4834d9328c4ed9fe5dcbec6128d6da16db69a
 IB/mlx4: Avoid null pointer dereference in mlx4_ib_scan_netdevs(),"IB/mlx4: Avoid null pointer dereference in mlx4_ib_scan_netdevs()
 
 When Ethernet netdev is not present for a port (e.g. when the link
@@ -2955,13 +2955,13 @@ Reported-by: Dan Carpenter <dan.carpenter@oracle.com>
 Signed-off-by: Moni Shoua <monis@mellanox.com>
 Signed-off-by: Or Gerlitz <ogerlitz@mellanox.com>
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",1,49,26,23,,e381835cf1b8e3b2857277dbc3b77d8c5350f70a
+",1,49,26,23,Regression (Minor),e381835cf1b8e3b2857277dbc3b77d8c5350f70a
 IB/iser: Bump version to 1.4.1,"IB/iser: Bump version to 1.4.1
 
 Signed-off-by: Roi Dayan <roid@mellanox.com>
 Signed-off-by: Or Gerlitz <ogerlitz@mellanox.com>
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",1,2,1,1,,61aabb3c91c1b03478ffc1a4a2573f825e7f35f9
+",1,2,1,1,Documentation (Minor),61aabb3c91c1b03478ffc1a4a2573f825e7f35f9
 IB/iser: Allow bind only when connection state is UP,"IB/iser: Allow bind only when connection state is UP
 
 We need to fail the bind operation if the iser connection state != UP
@@ -2970,7 +2970,7 @@ We need to fail the bind operation if the iser connection state != UP
 Signed-off-by: Sagi Grimberg <sagig@mellanox.com>
 Signed-off-by: Or Gerlitz <ogerlitz@mellanox.com>
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",1,19,14,5,,91eb1df39a1fba21bbc28895a84630782cd442ed
+",1,19,14,5,Feature (Minor),91eb1df39a1fba21bbc28895a84630782cd442ed
 IB/iser: Fix RX/TX CQ resource leak on error flow,"IB/iser: Fix RX/TX CQ resource leak on error flow
 
 When failing to allocate TX CQ we already allocated RX CQ, so we need to make
@@ -2981,7 +2981,7 @@ Signed-off-by: Roi Dayan <roid@mellanox.com>
 Signed-off-by: Sagi Grimberg <sagig@mellanox.com>
 Signed-off-by: Or Gerlitz <ogerlitz@mellanox.com>
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",1,24,14,10,,c33b15f00bbfb9324dc38e5176f576a0f46e0873
+",1,24,14,10,Fix (Minor),c33b15f00bbfb9324dc38e5176f576a0f46e0873
 RDMA/ocrdma: Use right macro in query AH,"RDMA/ocrdma: Use right macro in query AH
 
 ocrdma_query_ah() does not use correct macro, and checks the wrong bit
@@ -2989,7 +2989,7 @@ for the validity of address handle in vector table.  Fix this.
 
 Signed-off-by: Devesh Sharma <devesh.sharma@emulex.com>
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",1,2,1,1,,f0c2c225dfe9dfb668fe72eadabb8a3ec74ca036
+",1,2,1,1,Fix (Minor),f0c2c225dfe9dfb668fe72eadabb8a3ec74ca036
 RDMA/ocrdma: Resolve L2 address when creating user AH,"RDMA/ocrdma: Resolve L2 address when creating user AH
 
 Because of IP-based GIDs, userspace AHs must have MAC and VLAN ID
@@ -2999,7 +2999,7 @@ right DMAC and VLAN ID before creating AH.
 
 Signed-off-by: Devesh Sharma <devesh.sharma@emulex.com>
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",1,41,30,11,,1be528bcb88d0b854dda1d60b31f4f8f7310f034
+",1,41,30,11,Feature (Minor),1be528bcb88d0b854dda1d60b31f4f8f7310f034
 mlx4: Correct error flows in rereg_mr,"mlx4: Correct error flows in rereg_mr
 
 This patch addresses feedback from Sagi Grimberg on the rereg_mr
@@ -3014,7 +3014,7 @@ Fixes: e630664c8383 (""mlx4_core: Add helper functions to support MR re-registra
 Signed-off-by: Matan Barak <matanb@mellanox.com>
 Signed-off-by: Or Gerlitz <ogerlitz@mellanox.com>
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",2,40,27,13,,4ff0acca7344c93fd9ed778b4c3ce16d95c594e4
+",2,40,27,13,Fix (Minor),4ff0acca7344c93fd9ed778b4c3ce16d95c594e4
 Fix nasty 32-bit overflow bug in buffer i/o code.,"Fix nasty 32-bit overflow bug in buffer i/o code.
 
 On 32-bit architectures, the legacy buffer_head functions are not always
@@ -3054,7 +3054,7 @@ doing a ""find /nt"" where /nt is an NTFS volume causes the inifinite loop
 Signed-off-by: Anton Altaparmakov <aia21@cantab.net>
 Cc: stable@vger.kernel.org
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,6,4,2,,f2d5a94436cc7cc0221b9a81bba2276a25187dd3
+",1,6,4,2,Fix (Major),f2d5a94436cc7cc0221b9a81bba2276a25187dd3
 cpufreq: release policy->rwsem on error,"cpufreq: release policy->rwsem on error
 
 While debugging a cpufreq-related hardware failure on a system I saw the
@@ -3130,7 +3130,7 @@ Signed-off-by: Prarit Bhargava <prarit@redhat.com>
 Acked-by: Viresh Kumar <viresh.kumar@linaro.org>
 Cc: 3.14+ <stable@vger.kernel.org> # 3.14+
 Signed-off-by: Rafael J. Wysocki <rafael.j.wysocki@intel.com>
-",1,2,2,0,,7106e02baed4a72fb23de56b02ad4d31daa74d95
+",1,2,2,0,Fix (Minor),7106e02baed4a72fb23de56b02ad4d31daa74d95
 cpufreq: fix cpufreq suspend/resume for intel_pstate,"cpufreq: fix cpufreq suspend/resume for intel_pstate
 
 Cpufreq core introduces cpufreq_suspended flag to let cpufreq sysfs nodes
@@ -3144,7 +3144,7 @@ Signed-off-by: Lan Tianyu <tianyu.lan@intel.com>
 Cc: 3.15+ <stable@vger.kernel.org> # 3.15+
 [rjw: Subject]
 Signed-off-by: Rafael J. Wysocki <rafael.j.wysocki@intel.com>
-",1,8,4,4,,8e30444e153008e8eb3e74cbcb7a865bfcfb04a0
+",1,8,4,4,Regression (Minor),8e30444e153008e8eb3e74cbcb7a865bfcfb04a0
 ACPI / scan: Correct error return value of create_modalias(),"ACPI / scan: Correct error return value of create_modalias()
 
 There is a typo, it should be negative -errno instead.
@@ -3152,7 +3152,7 @@ There is a typo, it should be negative -errno instead.
 Signed-off-by: Mika Westerberg <mika.westerberg@linux.intel.com>
 Cc: All applicable <stable@vger.kernel.org>
 Signed-off-by: Rafael J. Wysocki <rafael.j.wysocki@intel.com>
-",1,2,1,1,,98d28d0e59160d2d6cb3f6a9050723ac40f89669
+",1,2,1,1,Fix (Minor),98d28d0e59160d2d6cb3f6a9050723ac40f89669
 ACPI / video: disable native backlight for ThinkPad X201s,"ACPI / video: disable native backlight for ThinkPad X201s
 
 The ThinkPad X201s has a working ACPI video backlight interface and is
@@ -3167,7 +3167,7 @@ Cc: 3.16+ <stable@vger.kernel.org> # 3.16+
 Reported-and-tested-by: Yves-Alexis Perez <corsac@debian.org>
 Signed-off-by: Aaron Lu <aaron.lu@intel.com>
 Signed-off-by: Rafael J. Wysocki <rafael.j.wysocki@intel.com>
-",1,8,8,0,,789eeea128925741e0a105357bebf8855d3bcdee
+",1,8,8,0,Fix (Minor),789eeea128925741e0a105357bebf8855d3bcdee
 KVM: correct null pid check in kvm_vcpu_yield_to(),"KVM: correct null pid check in kvm_vcpu_yield_to()
 
 Correct a simple mistake of checking the wrong variable
@@ -3176,7 +3176,7 @@ properly protected by rcu_dereference().
 
 Signed-off-by: Sam Bobroff <sam.bobroff@au1.ibm.com>
 Signed-off-by: Paolo Bonzini <pbonzini@redhat.com>
-",1,2,1,1,,27fbe64bfa63cfb9da025975b59d96568caa2d53
+",1,2,1,1,Fix (Minor),27fbe64bfa63cfb9da025975b59d96568caa2d53
 ALSA: snd-usb-caiaq: Fix LED commands for Kore controller,"ALSA: snd-usb-caiaq: Fix LED commands for Kore controller
 
 KoreController and KoreController2 need an EP1_CMD_DIMM_LEDS command to set
@@ -3185,7 +3185,7 @@ their LEDs, not EP1_CMD_WRITE_IO.
 Signed-off-by: Daniel Mack <daniel@zonque.org>
 Reported-and-tested-by: Brad Wilson <brad.wilson.00@gmail.com>
 Signed-off-by: Takashi Iwai <tiwai@suse.de>
-",1,18,11,7,,e76bf634870e3c5e3a767ad575f1d404c9f1cab8
+",1,18,11,7,Fix (Minor),e76bf634870e3c5e3a767ad575f1d404c9f1cab8
 ALSA: pcm: fix fifo_size frame calculation,"ALSA: pcm: fix fifo_size frame calculation
 
 The calculated frame size was wrong because snd_pcm_format_physical_width()
@@ -3198,7 +3198,7 @@ Fixes: 8bea869c5e56 (""ALSA: PCM midlevel: improve fifo_size handling"")
 Signed-off-by: Clemens Ladisch <clemens@ladisch.de>
 Cc: <stable@vger.kernel.org>
 Signed-off-by: Takashi Iwai <tiwai@suse.de>
-",1,8,5,3,,a9960e6a293e6fc3ed414643bb4e4106272e4d0a
+",1,8,5,3,Regression (Minor),a9960e6a293e6fc3ed414643bb4e4106272e4d0a
 md/raid1: fix_read_error should act on all non-faulty devices.,"md/raid1: fix_read_error should act on all non-faulty devices.
 
 If a devices is being recovered it is not InSync and is not Faulty.
@@ -3218,7 +3218,7 @@ Cc: stable@vger.kernel.org (v3.5+)
 Reported-by: Alexander Lyakas <alex.bolshoy@gmail.com>
 Tested-by: Alexander Lyakas <alex.bolshoy@gmail.com>
 Signed-off-by: NeilBrown <neilb@suse.de>
-",1,4,2,2,,b8cb6b4c121e1bf1963c16ed69e7adcb1bc301cd
+",1,4,2,2,Fix (Minor),b8cb6b4c121e1bf1963c16ed69e7adcb1bc301cd
 md/raid1: count resync requests in nr_pending.,"md/raid1: count resync requests in nr_pending.
 
 Both normal IO and resync IO can be retried with reschedule_retry()
@@ -3242,7 +3242,7 @@ Fixes: 79ef3a8aa1cb1523cc231c9a90a278333c21f761
 cc: stable@vger.kernel.org (v3.13+)
 Reported-by: Brassow Jonathan <jbrassow@redhat.com>
 Signed-off-by: NeilBrown <neilb@suse.de>
-",1,2,2,0,,34e97f170149bfa14979581c4c748bc9b4b79d5b
+",1,2,2,0,Fix (Minor),34e97f170149bfa14979581c4c748bc9b4b79d5b
 md/raid1: update next_resync under resync_lock.,"md/raid1: update next_resync under resync_lock.
 
 raise_barrier() uses next_resync as part of its calculations, so it
@@ -3257,7 +3257,7 @@ it suitable for -stable.
 Fixes: 79ef3a8aa1cb1523cc231c9a90a278333c21f761
 cc: stable@vger.kernel.org (v3.13+)
 Signed-off-by: NeilBrown <neilb@suse.de>
-",1,6,3,3,,c2fd4c94deedb89ac1746c4a53219be499372c06
+",1,6,3,3,Fix (Minor),c2fd4c94deedb89ac1746c4a53219be499372c06
 md/raid1: Don't use next_resync to determine how far resync has progressed,"md/raid1: Don't use next_resync to determine how far resync has progressed
 
 next_resync is (approximately) the location for the next resync request.
@@ -3280,7 +3280,7 @@ could lead to data corruption. Hence: stable.
 Fixes: 79ef3a8aa1cb1523cc231c9a90a278333c21f761
 cc: stable@vger.kernel.org (v3.13+)
 Signed-off-by: NeilBrown <neilb@suse.de>
-",1,12,5,7,,235549605eb7f1c5a37cef8b09d12e6d412c5cd6
+",1,12,5,7,Fix (Minor),235549605eb7f1c5a37cef8b09d12e6d412c5cd6
 md/raid1: make sure resync waits for conflicting writes to complete.,"md/raid1: make sure resync waits for conflicting writes to complete.
 
 The resync/recovery process for raid1 was recently changed
@@ -3306,7 +3306,7 @@ Fixes: 79ef3a8aa1cb1523cc231c9a90a278333c21f761
 Cc: stable@vger.kernel.org (v3.13+)
 Cc: majianpeng <majianpeng@gmail.com>
 Signed-off-by: NeilBrown <neilb@suse.de>
-",1,6,4,2,,2f73d3c55d09ce60647b96ad2a9b539c95a530ee
+",1,6,4,2,Fix (Minor),2f73d3c55d09ce60647b96ad2a9b539c95a530ee
 md/raid1: clean up request counts properly in close_sync(),"md/raid1: clean up request counts properly in close_sync()
 
 If there are outstanding writes when close_sync is called,
@@ -3320,7 +3320,7 @@ to hangs, so this is suitable for -stable.
 Fixes: 79ef3a8aa1cb1523cc231c9a90a278333c21f761
 cc: stable@vger.kernel.org (v3.13+)
 Signed-off-by: NeilBrown <neilb@suse.de>
-",1,5,5,0,,669cc7ba77864e7b1ac39c9f2b2afb8730f341f4
+",1,5,5,0,Fix (Minor),669cc7ba77864e7b1ac39c9f2b2afb8730f341f4
 "[media] em28xx-v4l: get rid of field ""users"" in struct em28xx_v4l2""","[media] em28xx-v4l: get rid of field ""users"" in struct em28xx_v4l2""
 
 This reverts commit 747dba7de2a51a3db58b665ed3bc8c07921546ec.
@@ -3336,7 +3336,7 @@ Tested-by: Mauro Carvalho Chehab <mchehab@osg.samsung.com>
 Signed-off-by: Frank Schäfer <fschaefer.oss@googlemail.com>
 Cc: stable@vger.kernel.org
 Signed-off-by: Mauro Carvalho Chehab <mchehab@osg.samsung.com>
-",2,24,11,13,,8e2c8717c1812628b5538c05250057b37c66fdbe
+",2,24,11,13,Regression (Major),8e2c8717c1812628b5538c05250057b37c66fdbe
 md/raid1:  be more cautious where we read-balance during resync.,"md/raid1:  be more cautious where we read-balance during resync.
 
 commit 79ef3a8aa1cb1523cc231c9a90a278333c21f761 made
@@ -3355,7 +3355,7 @@ So it is suitable for any kernel since 3.11.
 Fixes: 79ef3a8aa1cb1523cc231c9a90a278333c21f761
 cc: stable@vger.kernel.org (v3.13+)
 Signed-off-by: NeilBrown <neilb@suse.de>
-",1,6,1,5,,c6d119cf1b5a778e9ed60a006e2a434fcc4471a2
+",1,6,1,5,Fix (Minor),c6d119cf1b5a778e9ed60a006e2a434fcc4471a2
 md/raid1: intialise start_next_window for READ case to avoid hang,"md/raid1: intialise start_next_window for READ case to avoid hang
 
 r1_bio->start_next_window is not initialised in the READ
@@ -3367,7 +3367,7 @@ Fixes: 79ef3a8aa1cb1523cc231c9a90a278333c21f761
 cc: stable@vger.kernel.org (v3.13+)
 Reported-by: Brassow Jonathan <jbrassow@redhat.com>
 Signed-off-by: NeilBrown <neilb@suse.de>
-",1,1,1,0,,f0cc9a057151892b885be21a1d19b0185568281d
+",1,1,1,0,Fix (Minor),f0cc9a057151892b885be21a1d19b0185568281d
 [media] em28xx: fix VBI handling logic,"[media] em28xx: fix VBI handling logic
 
 When both VBI and video are streaming, and video stream is stopped,
@@ -3383,7 +3383,7 @@ However, this single-line patch is better to be merged at -stable.
 
 Cc: stable@vger.kernel.org
 Signed-off-by: Mauro Carvalho Chehab <mchehab@osg.samsung.com>
-",1,2,1,1,,c7854c2c5d692a329b4d9a9a73bcf36ae137ee7c
+",1,2,1,1,Fix (Minor),c7854c2c5d692a329b4d9a9a73bcf36ae137ee7c
 [media] DocBook media: improve the poll() documentation,"[media] DocBook media: improve the poll() documentation
 
 The poll documentation was incomplete: document how events (POLLPRI)
@@ -3393,7 +3393,7 @@ and streaming I/O.
 Signed-off-by: Hans Verkuil <hans.verkuil@cisco.com>
 Acked-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
 Signed-off-by: Mauro Carvalho Chehab <mchehab@osg.samsung.com>
-",1,23,19,4,,91235537bc4b53f0b6f953acf963bcbb6215c49c
+",1,23,19,4,Documentation (Major),91235537bc4b53f0b6f953acf963bcbb6215c49c
 [media] DocBook media: fix the poll() 'no QBUF' documentation,"[media] DocBook media: fix the poll() 'no QBUF' documentation
 
 Clarify what poll() returns if STREAMON was called but not QBUF.
@@ -3403,7 +3403,7 @@ capture and output devices.
 Signed-off-by: Hans Verkuil <hans.verkuil@cisco.com>
 Acked-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
 Signed-off-by: Mauro Carvalho Chehab <mchehab@osg.samsung.com>
-",1,12,10,2,,acf92046a0a666051f9c6b4a53d874c618203173
+",1,12,10,2,Documentation (Minor),acf92046a0a666051f9c6b4a53d874c618203173
 [media] vb2: fix VBI/poll regression,"[media] vb2: fix VBI/poll regression
 
 The recent conversion of saa7134 to vb2 unconvered a poll() bug that
@@ -3422,7 +3422,7 @@ This brings the vb2 behavior in line with the old videobuf behavior.
 Signed-off-by: Hans Verkuil <hans.verkuil@cisco.com>
 Acked-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
 Signed-off-by: Mauro Carvalho Chehab <mchehab@osg.samsung.com>
-",2,21,18,3,,58d75f4b1ce26324b4d809b18f94819843a98731
+",2,21,18,3,Regression (Minor),58d75f4b1ce26324b4d809b18f94819843a98731
 [media] cx2341x: fix kernel oops,"[media] cx2341x: fix kernel oops
 
 The v4l2_ctrl_config struct must be zeroed before passing it to
@@ -3435,7 +3435,7 @@ This is the only place where this struct wasn't initialized properly.
 Signed-off-by: Hans Verkuil <hans.verkuil@cisco.com>
 Reported-by: Pridvorov Andrey <ua0lnj@bk.ru>
 Signed-off-by: Mauro Carvalho Chehab <mchehab@osg.samsung.com>
-",1,1,1,0,,50394e7369d519ad0d732cb6913d2bbdf4213e2e
+",1,1,1,0,Fix (Major),50394e7369d519ad0d732cb6913d2bbdf4213e2e
 [media] cx24123: fix kernel oops due to missing parent pointer,"[media] cx24123: fix kernel oops due to missing parent pointer
 
 When I try to set the TV standard to e.g. PAL on my Hauppauge WinTV-HVR3000 I get
@@ -3494,7 +3494,7 @@ that's probably why this hasn't been seen before.
 
 Signed-off-by: Hans Verkuil <hans.verkuil@cisco.com>
 Signed-off-by: Mauro Carvalho Chehab <mchehab@osg.samsung.com>
-",1,1,1,0,,fdc6b388925e3d0a4b4773ab7d641947fe59ed46
+",1,1,1,0,Fix (Major),fdc6b388925e3d0a4b4773ab7d641947fe59ed46
 [media] adv7604: fix inverted condition,"[media] adv7604: fix inverted condition
 
 The log_status function should show HDMI information, but the test checking for
@@ -3503,7 +3503,7 @@ an HDMI input was inverted. Fix this.
 Signed-off-by: Hans Verkuil <hans.verkuil@cisco.com>
 Cc: stable@vger.kernel.org      # for v3.12 and up
 Signed-off-by: Mauro Carvalho Chehab <mchehab@osg.samsung.com>
-",1,2,1,1,,77639ff2b3404a913b8037d230a384798b854bae
+",1,2,1,1,Fix (Minor),77639ff2b3404a913b8037d230a384798b854bae
 [media] media/radio: fix radio-miropcm20.c build with io.h header file,"[media] media/radio: fix radio-miropcm20.c build with io.h header file
 
 Fix build errors in radio-miropcm20.c due to missing header file:
@@ -3517,7 +3517,7 @@ Reported-by: Jim Davis <jim.epost@gmail.com>
 Signed-off-by: Randy Dunlap <rdunlap@infradead.org>
 Signed-off-by: Hans Verkuil <hans.verkuil@cisco.com>
 Signed-off-by: Mauro Carvalho Chehab <mchehab@osg.samsung.com>
-",1,1,1,0,,7102076c922e310f5a914a21fcd8d65fd8bd2417
+",1,1,1,0,Fix (Minor),7102076c922e310f5a914a21fcd8d65fd8bd2417
 [media] vb2: fix plane index sanity check in vb2_plane_cookie(),"[media] vb2: fix plane index sanity check in vb2_plane_cookie()
 
 It's also invalid when plane_no is equal to vb->num_planes
@@ -3526,7 +3526,7 @@ Signed-off-by: Zhaowei Yuan <zhaowei.yuan@samsung.com>
 Cc: stable@vger.kernel.org      # for v3.7 and up
 Signed-off-by: Hans Verkuil <hans.verkuil@cisco.com>
 Signed-off-by: Mauro Carvalho Chehab <mchehab@osg.samsung.com>
-",1,2,1,1,,a9ae4692eda4b99f85757b15d60971ff78a0a0e2
+",1,2,1,1,Fix (Minor),a9ae4692eda4b99f85757b15d60971ff78a0a0e2
 [media] DocBook media: update version number and V4L2 changes,"[media] DocBook media: update version number and V4L2 changes
 
 Note: the revision text for the v4l2_pix_format change from Laurent
@@ -3535,14 +3535,14 @@ that as well.
 
 Signed-off-by: Hans Verkuil <hans.verkuil@cisco.com>
 Signed-off-by: Mauro Carvalho Chehab <mchehab@osg.samsung.com>
-",2,35,30,5,,983ed755641cfeac99716311f3d3b464d742f304
+",2,35,30,5,Documentation (Minor),983ed755641cfeac99716311f3d3b464d742f304
 [media] DocBook media: fix fieldname in struct v4l2_subdev_selection,"[media] DocBook media: fix fieldname in struct v4l2_subdev_selection
 
 Field 'rect' is really named 'r'.
 
 Signed-off-by: Hans Verkuil <hans.verkuil@cisco.com>
 Signed-off-by: Mauro Carvalho Chehab <mchehab@osg.samsung.com>
-",1,2,1,1,,1b88db2f2bed287505e8decea512db5e3fe3929c
+",1,2,1,1,Documentation (Minor),1b88db2f2bed287505e8decea512db5e3fe3929c
 [media] vb2: fix vb2 state check when start_streaming fails,"[media] vb2: fix vb2 state check when start_streaming fails
 
 Commit bd994ddb2a12a3ff48cd549ec82cdceaea9614df (vb2: Fix stream start and
@@ -3560,7 +3560,7 @@ Signed-off-by: Hans Verkuil <hans.verkuil@cisco.com>
 Acked-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
 Cc: stable@vger.kernel.org      # for v3.15 and up
 Signed-off-by: Mauro Carvalho Chehab <mchehab@osg.samsung.com>
-",1,17,10,7,,bf3593d939520559774cbfee03ba5f314d909620
+",1,17,10,7,Regression (Minor),bf3593d939520559774cbfee03ba5f314d909620
 [media] videobuf2-core.h: fix comment,"[media] videobuf2-core.h: fix comment
 
 The comment for start_streaming that tells the developer with which vb2 state
@@ -3569,7 +3569,7 @@ buffers should be returned to vb2 gave the wrong state. Very confusing.
 Signed-off-by: Hans Verkuil <hans.verkuil@cisco.com>
 Acked-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
 Signed-off-by: Mauro Carvalho Chehab <mchehab@osg.samsung.com>
-",1,2,1,1,,44e8e69d46db9928cd3b81cbea4ca24257412286
+",1,2,1,1,Documentation (Minor),44e8e69d46db9928cd3b81cbea4ca24257412286
 [media] videobuf2-core: add comments before the WARN_ON,"[media] videobuf2-core: add comments before the WARN_ON
 
 Recently WARN_ON() calls have been added to warn if the driver is not
@@ -3582,7 +3582,7 @@ right direction if they see these warnings.
 Signed-off-by: Hans Verkuil <hans.verkuil@cisco.com>
 Acked-by: Pawel Osciak <pawel@osciak.com>
 Signed-off-by: Mauro Carvalho Chehab <mchehab@osg.samsung.com>
-",1,12,12,0,,23cd08c8f72405359862aff2ad2a8be1c232198c
+",1,12,12,0,Feature (Minor),23cd08c8f72405359862aff2ad2a8be1c232198c
 [media] videobuf2-dma-sg: fix for wrong GFP mask to sg_alloc_table_from_pages,"[media] videobuf2-dma-sg: fix for wrong GFP mask to sg_alloc_table_from_pages
 
 sg_alloc_table_from_pages() only allocates a sg_table, so it should just use
@@ -3639,13 +3639,13 @@ Signed-off-by: Hans Verkuil <hans.verkuil@cisco.com>
 Cc: stable@vger.kernel.org      # for v3.13 and up
 Acked-by: Marek Szyprowski <m.szyprowski@samsung.com>
 Signed-off-by: Mauro Carvalho Chehab <mchehab@osg.samsung.com>
-",1,2,1,1,,47bc59c52b005f546343c373370a7eec6a2b0f84
+",1,2,1,1,Fix (Minor),47bc59c52b005f546343c373370a7eec6a2b0f84
 Linux 3.17-rc6,"Linux 3.17-rc6
-",1,2,1,1,,0f33be009b89d2268e94194dc4fd01a7851b6d51
+",1,2,1,1,Documentation (Minor),0f33be009b89d2268e94194dc4fd01a7851b6d51
 parisc: pdc_stable.c: Avoid potential stack overflows,"parisc: pdc_stable.c: Avoid potential stack overflows
 
 Signed-off-by: Helge Deller <deller@gmx.de>
-",1,12,7,5,,c735483de1a2cd5d6c6b67bf49cfb2991eae6ea6
+",1,12,7,5,Fix (Minor),c735483de1a2cd5d6c6b67bf49cfb2991eae6ea6
 parisc: pdc_stable.c: Cleaning up unnecessary use of memset in conjunction with strncpy,"parisc: pdc_stable.c: Cleaning up unnecessary use of memset in conjunction with strncpy
 
 Using memset before strncpy just to ensure a trailing null character is
@@ -3655,11 +3655,11 @@ Patch modified by Helge Deller to additionally reduce stack usage.
 
 Signed-off-by: Rickard Strandqvist <rickard_strandqvist@spectrumdigital.se>
 Signed-off-by: Helge Deller <deller@gmx.de>
-",1,5,3,2,,94c457deff2a211f8372f69a4d7b0d288183756a
+",1,5,3,2,Feature (Minor),94c457deff2a211f8372f69a4d7b0d288183756a
 parisc: ptrace: use secure_computing_strict(),"parisc: ptrace: use secure_computing_strict()
 
 Signed-off-by: Helge Deller <deller@gmx.de>
-",1,6,2,4,,fe5c873459a973e59854bd235a7e6b3eaa8e5fe0
+",1,6,2,4,Feature (Minor),fe5c873459a973e59854bd235a7e6b3eaa8e5fe0
 ACPI / hotplug: Generate online uevents for ACPI containers,"ACPI / hotplug: Generate online uevents for ACPI containers
 
 Commit 46394fd01 (ACPI / hotplug: Move container-specific code out of
@@ -3677,7 +3677,7 @@ Fixes: 46394fd01 (ACPI / hotplug: Move container-specific code out of the core)
 Reported-and-tested-by: Yasuaki Ishimatsu <isimatu.yasuaki@jp.fujitsu.com>
 Cc: 3.14+ <stable@vger.kernel.org> # 3.14+
 Signed-off-by: Rafael J. Wysocki <rafael.j.wysocki@intel.com>
-",3,12,12,0,,8ab17fc92e49bc2b8fff9d220c19bf50ec9c1158
+",3,12,12,0,Feature (Minor),8ab17fc92e49bc2b8fff9d220c19bf50ec9c1158
 sched: Fix end_of_stack() and location of stack canary for architectures using CONFIG_STACK_GROWSUP,"sched: Fix end_of_stack() and location of stack canary for architectures using CONFIG_STACK_GROWSUP
 
 Aaron Tomlin recently posted patches [1] to enable checking the
@@ -3702,7 +3702,7 @@ Signed-off-by: Ingo Molnar <mingo@kernel.org>
 Tested-by: James Hogan <james.hogan@imgtec.com> [metag]
 Acked-by: James Hogan <james.hogan@imgtec.com>
 Acked-by: Aaron Tomlin <atomlin@redhat.com>
-",1,13,13,0,,6a40281ab5c1ed8ba2253857118a5d400a2d084b
+",1,13,13,0,Fix (Minor),6a40281ab5c1ed8ba2253857118a5d400a2d084b
 i2c: rk3x: fix divisor calculation for SCL frequency,"i2c: rk3x: fix divisor calculation for SCL frequency
 
 I2C_CLKDIV register descripted in the previous version of
@@ -3720,7 +3720,7 @@ Signed-off-by: Addy Ke <addy.ke@rock-chips.com>
 Reviewed-by: Doug Anderson <dianders@chromium.org>
 Signed-off-by: Wolfram Sang <wsa@the-dreams.de>
 Cc: stable@kernel.org
-",1,11,5,6,,b4a7bd7a386dc6b0bb49cb47614e06e8295d495a
+",1,11,5,6,Fix (Minor),b4a7bd7a386dc6b0bb49cb47614e06e8295d495a
 i2c: mxs: fix error message in pio transfer,"i2c: mxs: fix error message in pio transfer
 
 If I2C_M_RD flag is set SELECT command is sent and afterward READ
@@ -3730,7 +3730,7 @@ message instead of SELECT failure error message.
 Signed-off-by: Janusz Uzycki <j.uzycki@elproma.com.pl>
 Acked-by: Marek Vasut <marex@denx.de>
 Signed-off-by: Wolfram Sang <wsa@the-dreams.de>
-",1,2,1,1,,a4780d039ca5c3ef318db084f1bfc6ebed6876c8
+",1,2,1,1,Fix (Minor),a4780d039ca5c3ef318db084f1bfc6ebed6876c8
 i2c: ismt: use correct length when copy buffer,"i2c: ismt: use correct length when copy buffer
 
 In block write mode, when encapsulating dma_buffer, first element is
@@ -3741,7 +3741,7 @@ Signed-off-by: Fan Du <fan.du@intel.com>
 Acked-by: Neil Horman <nhorman@tuxdriver.com>
 Signed-off-by: Wolfram Sang <wsa@the-dreams.de>
 Cc: stable@kernel.org
-",1,4,2,2,,979bbf7b7ae75cfc06e09d09eda38009a3bdc4a4
+",1,4,2,2,Fix (Minor),979bbf7b7ae75cfc06e09d09eda38009a3bdc4a4
 i2c: rcar: fix RCAR_IRQ_ACK_{RECV|SEND},"i2c: rcar: fix RCAR_IRQ_ACK_{RECV|SEND}
 
 Bits 8-31 of all registers reflect the value of bits 0-7 on reads and should be
@@ -3751,7 +3751,7 @@ Bits 8-31 of all registers reflect the value of bits 0-7 on reads and should be
 Signed-off-by: Sergei Shtylyov <sergei.shtylyov@cogentembedded.com>
 Cc: stable@vger.kernel.org
 Signed-off-by: Wolfram Sang <wsa@the-dreams.de>
-",1,4,2,2,,938916fbb8e8cb67eacb784f4eda17e2950c16c5
+",1,4,2,2,Fix (Minor),938916fbb8e8cb67eacb784f4eda17e2950c16c5
 i2c: tegra: Move clk_prepare/clk_set_rate to probe,"i2c: tegra: Move clk_prepare/clk_set_rate to probe
 
 Currently the i2c-tegra bus driver prepares, enables
@@ -3767,7 +3767,7 @@ done on each transfer. This solves the locking issue.
 Signed-off-by: Mikko Perttunen <mperttunen@nvidia.com>
 Reviewed-by: Stephen Warren <swarren@nvidia.com>
 Signed-off-by: Wolfram Sang <wsa@the-dreams.de>
-",1,57,45,12,,c9a9ef4170b3db3044504cd5512d0bb19c6f23c7
+",1,57,45,12,Fix (Minor),c9a9ef4170b3db3044504cd5512d0bb19c6f23c7
 drm/nouveau: ltc/gf100-: fix cbc issues on certain boards,"drm/nouveau: ltc/gf100-: fix cbc issues on certain boards
 
 A mismatch between FB and LTC's idea of how big a large page is causes
@@ -3780,17 +3780,17 @@ Confirmed to fix at least the GK107 MBP.
 Signed-off-by: Ben Skeggs <bskeggs@redhat.com>
 Cc: stable@vger.kernel.org
 Signed-off-by: Dave Airlie <airlied@redhat.com>
-",5,8,7,1,,fe3d9c4b87bb98222a502cc585844a0b950786fb
+",5,8,7,1,Fix (Minor),fe3d9c4b87bb98222a502cc585844a0b950786fb
 drm/bochs: add missing drm_connector_register call,"drm/bochs: add missing drm_connector_register call
 
 Signed-off-by: Gerd Hoffmann <kraxel@redhat.com>
 Signed-off-by: Dave Airlie <airlied@redhat.com>
-",1,1,1,0,,b1fb01241b515641e11263fcc628242d9aeb56ff
+",1,1,1,0,Fix (Minor),b1fb01241b515641e11263fcc628242d9aeb56ff
 drm/cirrus: add missing drm_connector_register call,"drm/cirrus: add missing drm_connector_register call
 
 Signed-off-by: Gerd Hoffmann <kraxel@redhat.com>
 Signed-off-by: Dave Airlie <airlied@redhat.com>
-",1,1,1,0,,c52670919c7ffcf839c7665e5a53d8ee68aabfb0
+",1,1,1,0,Fix (Minor),c52670919c7ffcf839c7665e5a53d8ee68aabfb0
 staging: vt6655: buffer overflow in ioctl,"staging: vt6655: buffer overflow in ioctl
 
 ->u.generic_elem.len is a user controlled number between 0-255.  We
@@ -3798,7 +3798,7 @@ should limit it to avoid memory corruption.
 
 Signed-off-by: Dan Carpenter <dan.carpenter@oracle.com>
 Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-",1,3,3,0,,ed87c2b2e7dd34016017af183b8f3fbe28179bc1
+",1,3,3,0,Fix (Minor),ed87c2b2e7dd34016017af183b8f3fbe28179bc1
 USB: storage: Add quirks for Entrega/Xircom USB to SCSI converters,"USB: storage: Add quirks for Entrega/Xircom USB to SCSI converters
 
 This patch adds quirks for Entrega Technologies (later Xircom PortGear) USB-
@@ -3831,7 +3831,7 @@ was cancelled before release?
 Signed-off-by: Mark Knibbs <markk@clara.co.uk>
 Cc: stable <stable@vger.kernel.org>
 Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-",1,20,20,0,,c80b4495c61636edc58fe1ce300f09f24db28e10
+",1,20,20,0,Feature (Minor),c80b4495c61636edc58fe1ce300f09f24db28e10
 USB: storage: Add quirk for Ariston Technologies iConnect USB to SCSI adapter,"USB: storage: Add quirk for Ariston Technologies iConnect USB to SCSI adapter
 
 Hi,
@@ -3850,7 +3850,7 @@ bcdDevice value the products use.
 Signed-off-by: Mark Knibbs <markk@clara.co.uk>
 Cc: stable <stable@vger.kernel.org>
 Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-",1,6,6,0,,b6a3ed677991558ce09046397a7c4d70530d15b3
+",1,6,6,0,Feature (Minor),b6a3ed677991558ce09046397a7c4d70530d15b3
 USB: storage: Add quirk for Adaptec USBConnect 2000 USB-to-SCSI Adapter,"USB: storage: Add quirk for Adaptec USBConnect 2000 USB-to-SCSI Adapter
 
 The Adaptec USBConnect 2000 is another SCSI-USB converter which uses
@@ -3865,7 +3865,7 @@ bcdDevice value the product uses.
 Signed-off-by: Mark Knibbs <markk@clara.co.uk>
 Cc: stable <stable@vger.kernel.org>
 Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-",1,6,6,0,,67d365a57a51fb9dece6a5ceb504aa381cae1e5b
+",1,6,6,0,Feature (Minor),67d365a57a51fb9dece6a5ceb504aa381cae1e5b
 USB: EHCI: unlink QHs even after the controller has stopped,"USB: EHCI: unlink QHs even after the controller has stopped
 
 Old code in ehci-hcd tries to expedite disabling endpoints after the
@@ -3887,7 +3887,7 @@ Reported-by: Joe Lawrence <joe.lawrence@stratus.com>
 Tested-by: Joe Lawrence <joe.lawrence@stratus.com>
 CC: <stable@vger.kernel.org>
 Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-",1,2,0,2,,7312b5ddd47fee2356baa78c5516ef8e04eed452
+",1,2,0,2,Feature (Minor),7312b5ddd47fee2356baa78c5516ef8e04eed452
 openvswitch: restore OVS_FLOW_CMD_NEW notifications,"openvswitch: restore OVS_FLOW_CMD_NEW notifications
 
 Since commit fb5d1e9e127a (""openvswitch: Build flow cmd netlink reply only if needed.""),
@@ -3900,7 +3900,7 @@ Signed-off-by: Samuel Gauthier <samuel.gauthier@6wind.com>
 Signed-off-by: Nicolas Dichtel <nicolas.dichtel@6wind.com>
 Acked-by: Pravin B Shelar <pshelar@nicira.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,9,5,4,,9b67aa4a82492f128adfccc63e61ab57c1ce1dfd
+",1,9,5,4,Regression (Minor),9b67aa4a82492f128adfccc63e61ab57c1ce1dfd
 genetlink: add function genl_has_listeners(),"genetlink: add function genl_has_listeners()
 
 This function is the counterpart of the function netlink_has_listeners().
@@ -3908,14 +3908,14 @@ This function is the counterpart of the function netlink_has_listeners().
 Signed-off-by: Nicolas Dichtel <nicolas.dichtel@6wind.com>
 Acked-by: Pravin B Shelar <pshelar@nicira.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,8,8,0,,0d566379c5e15a2922dc6bb2ee6a4b7f7a3a0786
+",1,8,8,0,Feature (Minor),0d566379c5e15a2922dc6bb2ee6a4b7f7a3a0786
 lib: rhashtable: remove second linux/log2.h inclusion,"lib: rhashtable: remove second linux/log2.h inclusion
 
 linux/log2.h was included twice.
 
 Signed-off-by: Fabian Frederick <fabf@skynet.be>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,1,0,1,,b3f2512ecdb3561ffa44737f370fdb78e1febf6b
+",1,1,0,1,Refactoring (Minor),b3f2512ecdb3561ffa44737f370fdb78e1febf6b
 net: allow macvlans to move to net namespace,"net: allow macvlans to move to net namespace
 
 I cannot move a macvlan interface created on top of a bonding interface
@@ -3940,7 +3940,7 @@ Patch tested on 3.16.
 Signed-off-by: Francesco Ruggeri <fruggeri@arista.com>
 Acked-by: Cong Wang <cwang@twopensource.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,1,1,0,,0d0162e7a33d3710b9604e7c68c0f31f5c457428
+",1,1,1,0,Regression (Minor),0d0162e7a33d3710b9604e7c68c0f31f5c457428
 3c59x: Fix bad offset spec in skb_frag_dma_map,"3c59x: Fix bad offset spec in skb_frag_dma_map
 
 Recently aded the use of skb_frag_dma_map to 3c59x, but didn't realize it
@@ -3954,7 +3954,7 @@ CC: Linux Kernel list <linux-kernel@vger.kernel.org>
 CC: ""David S. Miller"" <davem@davemloft.net>
 CC: Meelis Roos <mroos@linux.ee>
 Tested-by: Meelis Roos <mroos@linux.ee>
-",1,2,1,1,,8400dd029e764e30361a51a7ae35900ae0032b43
+",1,2,1,1,Fix (Minor),8400dd029e764e30361a51a7ae35900ae0032b43
 3c59x: Add dma error checking and recovery,"3c59x: Add dma error checking and recovery
 
 Noted that 3c59x has no checks on transmit for failed DMA mappings, and no
@@ -3968,7 +3968,7 @@ CC: Linux Kernel list <linux-kernel@vger.kernel.org>
 CC: ""David S. Miller"" <davem@davemloft.net>
 CC: Meelis Roos <mroos@linux.ee>
 Tested-by: Meelis Roos <mroos@linux.ee>
-",1,50,41,9,,6f2b6a3005b2c34c39f207a87667564f64f2f91a
+",1,50,41,9,Feature (Minor),6f2b6a3005b2c34c39f207a87667564f64f2f91a
 sparc: bpf_jit: fix support for ldx/stx mem and SKF_AD_VLAN_TAG,"sparc: bpf_jit: fix support for ldx/stx mem and SKF_AD_VLAN_TAG
 
 fix several issues in sparc BPF JIT compiler.
@@ -4000,7 +4000,7 @@ SKF_AD_VLAN_TAG* related:
 Fixes: 2809a2087cc4 (""net: filter: Just In Time compiler for sparc"")
 Signed-off-by: Alexei Starovoitov <ast@plumgrid.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,25,18,7,,f6f2332dce0efeea8c5653b6e9d1e8c379ace65c
+",1,25,18,7,Fix (Minor),f6f2332dce0efeea8c5653b6e9d1e8c379ace65c
 IB/qib: Correct reference counting in debugfs qp_stats,"IB/qib: Correct reference counting in debugfs qp_stats
 
 This particular reference count is not needed with the rcu protection,
@@ -4011,7 +4011,7 @@ Cc: <stable@vger.kernel.org>
 Reviewed-by: Dennis Dalessandro <dennis.dalessandro@intel.com>
 Signed-off-by: Mike Marciniszyn <mike.marciniszyn@intel.com>
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",2,11,2,9,,85cbb7c728bf39c45a9789b88c9471c0d7a58b0e
+",2,11,2,9,Fix (Minor),85cbb7c728bf39c45a9789b88c9471c0d7a58b0e
 IPoIB: Remove unnecessary port query,"IPoIB: Remove unnecessary port query
 
 There are two queries for port attributes one after another. A second
@@ -4020,7 +4020,7 @@ call is not needed since port_attr structure already holds the data.
 Reviewed-by: Ira Weiny <ira.weiny@intel.com>
 Signed-off-by: Alex Estrin <alex.estrin@intel.com>
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",1,10,1,9,,68f9d83c7765b110de54677573e9538f3ca6ca04
+",1,10,1,9,Refactoring (Minor),68f9d83c7765b110de54677573e9538f3ca6ca04
 "Revert ""PCI: Make sure bus number resources stay within their parents bounds""","Revert ""PCI: Make sure bus number resources stay within their parents bounds""
 
 This reverts commit 1820ffdccb9b (""PCI: Make sure bus number resources stay
@@ -4074,7 +4074,7 @@ Reported-by: Dirk Gouders <dirk@gouders.net>
 Tested-by: Dirk Gouders <dirk@gouders.net>
 Signed-off-by: Bjorn Helgaas <bhelgaas@google.com>
 CC: stable@vger.kernel.org	# v3.15+
-CC: Yinghai Lu <yinghai@kernel.org>",1,10,2,8,,12d8706963f073fffad16c7c24160ef20d9aeaff
+CC: Yinghai Lu <yinghai@kernel.org>",1,10,2,8,Regression (Minor),12d8706963f073fffad16c7c24160ef20d9aeaff
 IB/mlx4: Disable TSO for Connect-X rev. A0 HCAs,"IB/mlx4: Disable TSO for Connect-X rev. A0 HCAs
 
 According to <http://marc.info/?t=138347640900004&r=1&w=2>, revision
@@ -4082,7 +4082,7 @@ A0 of Connect-X does not correctly assemble TSO packets.  Disable that
 feature on that hardware revision.
 
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",1,5,4,1,,50e2ec9105fe1045298924a6c7b9ce870a0b6c13
+",1,5,4,1,Fix (Minor),50e2ec9105fe1045298924a6c7b9ce870a0b6c13
 IB/qib: Change get_user_pages() usage to always NULL vmas,"IB/qib: Change get_user_pages() usage to always NULL vmas
 
 The static helper routine, __qib_get_user_pages(), accepts a vma arg,
@@ -4096,7 +4096,7 @@ NULL to get_user_pages().
 Reviewed-by: Dennis Dalessandro <dennis.dalessandro@intel.com>
 Signed-off-by: Mike Marciniszyn <mike.marciniszyn@intel.com>
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",1,6,3,3,,f5c4984e065556b81edf3c9dadfbc8750de690fc
+",1,6,3,3,Fix (Minor),f5c4984e065556b81edf3c9dadfbc8750de690fc
 IB/ipath: Change get_user_pages() usage to always NULL vmas,"IB/ipath: Change get_user_pages() usage to always NULL vmas
 
 The static helper routine, __ipath_get_user_pages(), accepts a vma
@@ -4110,7 +4110,7 @@ NULL to get_user_pages().
 Reviewed-by: Dennis Dalessandro <dennis.dalessandro@intel.com>
 Signed-off-by: Mike Marciniszyn <mike.marciniszyn@intel.com>
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",1,6,3,3,,3033771febebf2c66d5146624746ebc4a3d79314
+",1,6,3,3,Fix (Minor),3033771febebf2c66d5146624746ebc4a3d79314
 "Revert ""PCI: Don't scan random busses in pci_scan_bridge()""","Revert ""PCI: Don't scan random busses in pci_scan_bridge()""
 
 This reverts commit fc1b253141b3 (""PCI: Don't scan random busses in
@@ -4146,7 +4146,7 @@ Link: http://lkml.kernel.org/r/1409303414-5196-1-git-send-email-david.henningsso
 Reported-by: David Henningsson <david.henningsson@canonical.com>
 Tested-by: David Henningsson <david.henningsson@canonical.com>
 Signed-off-by: Bjorn Helgaas <bhelgaas@google.com>
-CC: stable@vger.kernel.org	# v3.15+",1,10,3,7,,7a0b33d4a45d30b9a838fba4efcd80b7b57d4d16
+CC: stable@vger.kernel.org	# v3.15+",1,10,3,7,Regression (Minor),7a0b33d4a45d30b9a838fba4efcd80b7b57d4d16
 IB: ib_umem_release() should decrement mm->pinned_vm from ib_umem_get,"IB: ib_umem_release() should decrement mm->pinned_vm from ib_umem_get
 
 In debugging an application that receives -ENOMEM from ib_reg_mr(), I
@@ -4186,7 +4186,7 @@ correct mm_struct.
 Signed-off-by: Shawn Bohrer <sbohrer@rgmadvisors.com>
 Reviewed-by: Shachar Raindel <raindel@mellanox.com>
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",2,20,14,6,,87773dd56d5405ac28119fcfadacefd35877c18f
+",2,20,14,6,Fix (Minor),87773dd56d5405ac28119fcfadacefd35877c18f
 RDMA/ocrdma: Do not skip setting deferred_arm,"RDMA/ocrdma: Do not skip setting deferred_arm
 
 When ib_request_notify_cq() is called for the first time, ocrdma tries
@@ -4199,7 +4199,7 @@ Signed-off-by: Devesh Sharma <devesh.sharma@emulex.com>
 Signed-off-by: Selvin Xavier <selvin.xavier@emulex.com>
 Signed-off-by: Mitesh Ahuja <mitesh.ahuja@emulex.com>
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",1,4,1,3,,f93439e476d012b2503dbb07fe0fc675bcbff099
+",1,4,1,3,Fix (Minor),f93439e476d012b2503dbb07fe0fc675bcbff099
 RDMA/ocrdma: Report correct value of max_fast_reg_page_list_len,"RDMA/ocrdma: Report correct value of max_fast_reg_page_list_len
 
 Fix ocrdma_query_device() to report correct value of max_fast_reg_page_list_len.
@@ -4208,7 +4208,7 @@ Signed-off-by: Devesh Sharma <devesh.sharma@emulex.com>
 Signed-off-by: Selvin Xavier <selvin.xavier@emulex.com>
 Signed-off-by: Mitesh Ahuja <mitesh.ahuja@emulex.com>
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",1,2,1,1,,d6a488f21c0f3c44bfbb2339a75159ee55aa2b6f
+",1,2,1,1,Fix (Minor),d6a488f21c0f3c44bfbb2339a75159ee55aa2b6f
 [SCSI] fix for bidi use after free,"[SCSI] fix for bidi use after free
 
 When ending a bi-directionional SCSI request, blk_finish_request()
@@ -13055,7 +13055,7 @@ Fixes: 751109aad583 (ACPI / video: Change the default for video.use_native_backl
 Cc: 3.16+ <stable@vger.kernel.org> # 3.16+
 Signed-off-by: Hans de Goede <hdegoede@redhat.com>
 Signed-off-by: Rafael J. Wysocki <rafael.j.wysocki@intel.com>
-",1,4,2,2,,25294e9f00f03b2b4f4c56e913bc8c573972f33b
+",1,4,2,2,Regression (Minor),25294e9f00f03b2b4f4c56e913bc8c573972f33b
 ACPICA: ACPI 5.1: Add support for runtime validation of _DSD package.,"ACPICA: ACPI 5.1: Add support for runtime validation of _DSD package.
 
 Adds ACPICA kernel runtime support to validate contents/format
@@ -43598,7 +43598,7 @@ Network namespaces are per task so it make sense for them to show up
 in the task directory.
 
 Signed-off-by: ""Eric W. Biederman"" <ebiederm@xmission.com>
-",1,3,3,0,,6ba8ed79a3cce14bd5597218fd46408b8376f8f3
+",1,3,3,0,Feature (Minor),6ba8ed79a3cce14bd5597218fd46408b8376f8f3
 clk: Add missing of_clk_set_defaults export,"clk: Add missing of_clk_set_defaults export
 
 The of_clk_set_defaults() function is used in subsystems which can
@@ -43613,7 +43613,7 @@ Reported-by: kbuild test robot <fengguang.wu@intel.com>
 Signed-off-by: Sylwester Nawrocki <s.nawrocki@samsung.com>
 Acked-by: Wolfram Sang <wsa@the-dreams.de>
 Signed-off-by: Mike Turquette <mturquette@linaro.org>
-",1,1,1,0,,b11a6face1b6d5518319f797a74e22bb4309daa9
+",1,1,1,0,Fix (Minor),b11a6face1b6d5518319f797a74e22bb4309daa9
 NFS: Fix /proc/fs/nfsfs/servers and /proc/fs/nfsfs/volumes,"NFS: Fix /proc/fs/nfsfs/servers and /proc/fs/nfsfs/volumes
 
 The usage of pid_ns->child_reaper->nsproxy->net_ns in
@@ -43635,7 +43635,7 @@ Cc: stable@vger.kernel.org
 Cc: Trond Myklebust <trond.myklebust@primarydata.com>
 Cc: Stanislav Kinsbursky <skinsbursky@parallels.com>
 Signed-off-by: ""Eric W. Biederman"" <ebiederm@xmission.com>
-",4,110,69,41,,65b38851a17472d31fec9019fc3a55b0802dab88
+",4,110,69,41,Fix (Major),65b38851a17472d31fec9019fc3a55b0802dab88
 hwmon: (sis5595) Prevent overflow problem when writing large limits,"hwmon: (sis5595) Prevent overflow problem when writing large limits
 
 On platforms with sizeof(int) < sizeof(long), writing a temperature
@@ -43646,7 +43646,7 @@ the problem.
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Cc: stable@vger.kernel.org
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,2,1,1,,cc336546ddca8c22de83720632431c16a5f9fe9a
+",1,2,1,1,Fix (Minor),cc336546ddca8c22de83720632431c16a5f9fe9a
 drm/msm/hdmi: fix HDMI_MUX_EN gpio request typo,"drm/msm/hdmi: fix HDMI_MUX_EN gpio request typo
 
 HDMI_MUX_EN gpio is requested. If an error occurs, the same name
@@ -43656,7 +43656,7 @@ Signed-off-by: Beeresh Gopal <gbeeresh@codeaurora.org>
 Signed-off-by: Stephane Viau <sviau@codeaurora.org>
 Reviewed-by: Andreas Färber <afaerber@suse.de>
 Signed-off-by: Rob Clark <robdclark@gmail.com>
-",1,2,1,1,,a2fe6cdc03d7a9b0d048a7f32f9d8827e06c67fa
+",1,2,1,1,Fix (Minor),a2fe6cdc03d7a9b0d048a7f32f9d8827e06c67fa
 drm/msm/hdmi: enable lpm-mux if it is present,"drm/msm/hdmi: enable lpm-mux if it is present
 
 lpm-mux is programmed to enable HDMI connector
@@ -43666,7 +43666,7 @@ devices.
 Signed-off-by: Beeresh Gopal <gbeeresh@codeaurora.org>
 Signed-off-by: Stephane Viau <sviau@codeaurora.org>
 Signed-off-by: Rob Clark <robdclark@gmail.com>
-",3,23,23,0,,1930f38a5d8724f6e5cdb75157d09e9a430bd68f
+",3,23,23,0,Feature (Minor),1930f38a5d8724f6e5cdb75157d09e9a430bd68f
 drm/msm/mdp5: add support for MDP5 v1.3,"drm/msm/mdp5: add support for MDP5 v1.3
 
 MDP5 has several functional blocks (ie: VIG/RGB pipes, LMs, ...).
@@ -43685,7 +43685,7 @@ read/write register access.
 
 Signed-off-by: Stephane Viau <sviau@codeaurora.org>
 Signed-off-by: Rob Clark <robdclark@gmail.com>
-",3,601,421,180,,3d47fd47f28903f5a9167e95f32a906bd53e13e6
+",3,601,421,180,Feature (Major),3d47fd47f28903f5a9167e95f32a906bd53e13e6
 drm/msm: fix potential deadlock in gpu init,"drm/msm: fix potential deadlock in gpu init
 
 Somewhere along the way, the firmware loader sprouted another lock
@@ -43698,7 +43698,7 @@ which is problematic vs things like gem mmap.
 So introduce a separate mutex to synchronize gpu init.
 
 Signed-off-by: Rob Clark <robdclark@gmail.com>
-",3,24,16,8,,a1ad35233345e7ddd9ea3ea7b841432f4723d743
+",3,24,16,8,Fix (Minor),a1ad35233345e7ddd9ea3ea7b841432f4723d743
 drm/msm: use upstream iommu,"drm/msm: use upstream iommu
 
 Downstream kernel IOMMU had a non-standard way of dealing with multiple
@@ -43715,22 +43715,22 @@ Once we no longer have to care about pre-DT kernels, we can drop this
 and instead backport upstream IOMMU driver.
 
 Signed-off-by: Rob Clark <robdclark@gmail.com>
-",7,61,18,43,,944fc36c31ed685cf8d3d125eb681ae7198f06fc
+",7,61,18,43,Feature (Minor),944fc36c31ed685cf8d3d125eb681ae7198f06fc
 drm/msm: no mmu is only error if not using vram carveout,"drm/msm: no mmu is only error if not using vram carveout
 
 Signed-off-by: Rob Clark <robdclark@gmail.com>
-",1,15,7,8,,1c4997fe4157c4d715cead67fca1a5085991ac0f
+",1,15,7,8,Fix (Minor),1c4997fe4157c4d715cead67fca1a5085991ac0f
 drm/msm: fix BUG_ON() in error cleanup path,"drm/msm: fix BUG_ON() in error cleanup path
 
 Signed-off-by: Rob Clark <robdclark@gmail.com>
-",1,2,1,1,,036c17082adae0014c53dc2ff9e813abf13bc3b8
+",1,2,1,1,Fix (Minor),036c17082adae0014c53dc2ff9e813abf13bc3b8
 drm/msm/mdp4: add mdp axi clk,"drm/msm/mdp4: add mdp axi clk
 
 Downstream kernel holds this clk via a fake-parent relationship.
 Upstream clock framework requires that we hold it explicitly.
 
 Signed-off-by: Rob Clark <robdclark@gmail.com>
-",2,12,12,0,,e8abb5b5f4a6894d8ecf227de5d9bb6570e399ff
+",2,12,12,0,Feature (Minor),e8abb5b5f4a6894d8ecf227de5d9bb6570e399ff
 drm/msm: hdmi phy 8960 phy pll,"drm/msm: hdmi phy 8960 phy pll
 
 On downstream kernel the clk driver directly bangs hdmi phy registers.
@@ -43738,11 +43738,11 @@ For upstream kernel, we need to model this as a clock and register with
 the clock framework.
 
 Signed-off-by: Rob Clark <robdclark@gmail.com>
-",1,377,376,1,,034fbcc3d8a5dff5d3df5a4ad6bf9cc0b01bd970
+",1,377,376,1,Feature (Minor),034fbcc3d8a5dff5d3df5a4ad6bf9cc0b01bd970
 drm/msm: update generated headers,"drm/msm: update generated headers
 
 Signed-off-by: Rob Clark <robdclark@gmail.com>
-",13,793,692,101,,89301471e6bf942c026d6ebfcbc9a6a937cc6865
+",13,793,692,101,Refactoring (Major),89301471e6bf942c026d6ebfcbc9a6a937cc6865
 drm/msm: DT support for 8960/8064 (v3),"drm/msm: DT support for 8960/8064 (v3)
 
 Now that we (almost) have enough dependencies in place (MMCC, RPM, etc),
@@ -43752,7 +43752,7 @@ v2: update for review comments
 v3: rebase on component helper changes
 
 Signed-off-by: Rob Clark <robdclark@gmail.com>
-",7,265,223,42,,41e69778c80764c12683beff5ebef12298a5d16b
+",7,265,223,42,Feature (Minor),41e69778c80764c12683beff5ebef12298a5d16b
 drm/msm: Implement msm drm fb_mmap callback function,"drm/msm: Implement msm drm fb_mmap callback function
 
 This change implements msm drm specific fb_mmap function for fb device
@@ -43761,7 +43761,7 @@ to properly map the fb address to userspace.
 Signed-off-by: Hai Li <hali@codeaurora.org>
 Signed-off-by: Stephane Viau <sviau@codeaurora.org>
 Signed-off-by: Rob Clark <robdclark@gmail.com> (+ minor comment tweak)
-",1,45,42,3,,8f67da335d08bc06d3333f4bd46b96e6cc096d94
+",1,45,42,3,Feature (Minor),8f67da335d08bc06d3333f4bd46b96e6cc096d94
 drm/msm: activate iommu support,"drm/msm: activate iommu support
 
 This changes activates the iommu support for MDP5, through the
@@ -43769,14 +43769,14 @@ platform config structure.
 
 Signed-off-by: Stephane Viau <sviau@codeaurora.org>
 Signed-off-by: Rob Clark <robdclark@gmail.com>
-",1,6,6,0,,3bf6c1ecaecba6290afa6db23155cd8b9865fd6a
+",1,6,6,0,Feature (Minor),3bf6c1ecaecba6290afa6db23155cd8b9865fd6a
 drm/msm: fix double struct_mutex acquire,"drm/msm: fix double struct_mutex acquire
 
 Mutex is already grabbed in show_locked().. somehow this slipped
 through.
 
 Signed-off-by: Rob Clark <robdclark@gmail.com>
-",1,5,0,5,,b544021f18931258e4e1ef8d88d43dedb73a7ecf
+",1,5,0,5,Fix (Minor),b544021f18931258e4e1ef8d88d43dedb73a7ecf
 ASoC: imx-audmux: Use uintptr_t for port numbers,"ASoC: imx-audmux: Use uintptr_t for port numbers
 
 Since we pass the port number through file private data for debugfs we cast
@@ -43785,7 +43785,7 @@ types are compatible, avoiding warnings on 64 bit platforms where pointers
 are 64 bit and unsigned integers 32 bit.
 
 Signed-off-by: Mark Brown <broonie@linaro.org>
-",1,8,4,4,,e5f89768e9bc1f441d18e2299518a2907e5017c9
+",1,8,4,4,Feature (Minor),e5f89768e9bc1f441d18e2299518a2907e5017c9
 ASoC: davinci: Enable menuconfig entry for McASP,"ASoC: davinci: Enable menuconfig entry for McASP
 
 In order to be able to use simple-card with McASP on TI SoC based boards we
@@ -43793,7 +43793,7 @@ need to be able to select the McASP via menuconfig.
 
 Signed-off-by: Peter Ujfalusi <peter.ujfalusi@ti.com>
 Signed-off-by: Mark Brown <broonie@linaro.org>
-",1,8,7,1,,37119dd791f3195ab35cb3b9cccec94bdc709c57
+",1,8,7,1,Feature (Minor),37119dd791f3195ab35cb3b9cccec94bdc709c57
 ASoC: fsl_asrc: Don't access members of config before checking it,"ASoC: fsl_asrc: Don't access members of config before checking it
 
 sound/soc/fsl/fsl_asrc.c:250 fsl_asrc_config_pair()
@@ -43825,7 +43825,7 @@ vim +/config +250 sound/soc/fsl/fsl_asrc.c
 Reported-by: Dan Carpenter <dan.carpenter@oracle.com>
 Signed-off-by: Nicolin Chen <nicoleotsuka@gmail.com>
 Signed-off-by: Mark Brown <broonie@linaro.org>
-",1,9,6,3,,4e13eb722153a5ad66edd80bc26c3028d96a7b93
+",1,9,6,3,Fix (Minor),4e13eb722153a5ad66edd80bc26c3028d96a7b93
 ASoC: fsl_sarc_dma: Check pair before using it,"ASoC: fsl_sarc_dma: Check pair before using it
 
 The patch 3117bb3109dc: ""ASoC: fsl_asrc: Add ASRC ASoC CPU DAI and
@@ -43854,7 +43854,7 @@ So we just let the driver check pair before using it.
 Reported-by: Dan Carpenter <dan.carpenter@oracle.com>
 Signed-off-by: Nicolin Chen <nicoleotsuka@gmail.com>
 Signed-off-by: Mark Brown <broonie@linaro.org>
-",1,9,7,2,,6ccf62c7bea561cca7ffbd50839f883327080800
+",1,9,7,2,Fix (Minor),6ccf62c7bea561cca7ffbd50839f883327080800
 hwmon: (gpio-fan) Prevent overflow problem when writing large limits,"hwmon: (gpio-fan) Prevent overflow problem when writing large limits
 
 On platforms with sizeof(int) < sizeof(unsigned long), writing a rpm value
@@ -43864,7 +43864,7 @@ chip. Avoid auto-conversion from unsigned long to int to fix the problem.
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Cc: stable@vger.kernel.org
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,2,1,1,,2565fb05d1e9fc0831f7b1c083bcfcb1cba1f020
+",1,2,1,1,Fix (Minor),2565fb05d1e9fc0831f7b1c083bcfcb1cba1f020
 hwmon: (ibmpowernv) Use of_property_read_u32 at appropriate place,"hwmon: (ibmpowernv) Use of_property_read_u32 at appropriate place
 
 Simplify the code a bit and also improve readability.
@@ -43872,7 +43872,7 @@ Simplify the code a bit and also improve readability.
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Tested-by: Neelesh Gupta <neelegup@linux.vnet.ibm.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,7,3,4,,18d03f3cbd229ad9b03e12335ea066461fc00c73
+",1,7,3,4,Refactoring (Minor),18d03f3cbd229ad9b03e12335ea066461fc00c73
 batman-adv: prefer kmalloc_array to kmalloc when possible,"batman-adv: prefer kmalloc_array to kmalloc when possible
 
 Reported by checkpatch with the following warning:
@@ -43880,21 +43880,21 @@ WARNING: Prefer kmalloc_array over kmalloc with multiply
 
 Signed-off-by: Antonio Quartulli <antonio@meshcoding.com>
 Signed-off-by: Marek Lindner <mareklindner@neomailbox.ch>
-",3,22,12,10,,0185dda640a704ce41ca1489c6775451c5ff3dcf
+",3,22,12,10,Refactoring (Minor),0185dda640a704ce41ca1489c6775451c5ff3dcf
 hwmon: (lm85) Convert to devm_hwmon_device_register_with_groups,"hwmon: (lm85) Convert to devm_hwmon_device_register_with_groups
 
 Use devm_hwmon_device_register_with_groups() to simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,144,51,93,,746f68841a530ea0b6fd8f2ec92815ff087b962c
+",1,144,51,93,Refactoring (Minor),746f68841a530ea0b6fd8f2ec92815ff087b962c
 hwmon: (lm85) Avoid forward declaration,"hwmon: (lm85) Avoid forward declaration
 
 Reorder functions to avoid forward declaration.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,513,250,263,,6fd5dd58371fb3cad5aedf64e30bef3ca54b3d6c
+",1,513,250,263,Refactoring (Minor),6fd5dd58371fb3cad5aedf64e30bef3ca54b3d6c
 hwmon: (lm78) Convert to devm_hwmon_device_register_with_groups,"hwmon: (lm78) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -43902,14 +43902,14 @@ simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,98,15,83,,8eb406100c9da01ebe983702aae6d479c882d5cb
+",1,98,15,83,Refactoring (Minor),8eb406100c9da01ebe983702aae6d479c882d5cb
 hwmon: (max6697) Use of_property_read_bool at appropriate places,"hwmon: (max6697) Use of_property_read_bool at appropriate places
 
 This slightly improves readability.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,16,7,9,,8de2dcc9a1355f83885d34888b7e6549d9ea6d92
+",1,16,7,9,Refactoring (Minor),8de2dcc9a1355f83885d34888b7e6549d9ea6d92
 hwmon: (pwm-fan) Make SENSORS_PWM_FAN depend on OF,"hwmon: (pwm-fan) Make SENSORS_PWM_FAN depend on OF
 
 This driver won't instantiate if OF is not configured, thus add OF dependency.
@@ -43918,7 +43918,7 @@ Also add COMPILE_TEST to increase build testing coverage.
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Reviewed-by: Jean Delvare <jdelvare@suse.de>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,2,1,1,,dbd1db7d42c053f2f937dc52c5644e105043b082
+",1,2,1,1,Feature (Minor),dbd1db7d42c053f2f937dc52c5644e105043b082
 hwmon: (pwm-fan) Remove duplicate dev_set_drvdata call,"hwmon: (pwm-fan) Remove duplicate dev_set_drvdata call
 
 The dev_set_drvdata() call is equivalent to the platform_set_drvdata() call in
@@ -43926,14 +43926,14 @@ next line.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,1,0,1,,4e8e75f6a4c977e2e9caffa3ceab0f7e559cb825
+",1,1,0,1,Refactoring (Minor),4e8e75f6a4c977e2e9caffa3ceab0f7e559cb825
 hwmon: (nct6775) Remove num_attr_groups from struct nct6775_data,"hwmon: (nct6775) Remove num_attr_groups from struct nct6775_data
 
 num_attr_groups is only used in nct6775_probe(), make it to be local variable.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,12,6,6,,55bdee69cda055a5df2e0499a7c8fa1915eaf8d5
+",1,12,6,6,Refactoring (Minor),55bdee69cda055a5df2e0499a7c8fa1915eaf8d5
 hwmon: (nct6775) Update module description and Kconfig for NCT6106D and NCT6791D,"hwmon: (nct6775) Update module description and Kconfig for NCT6106D and NCT6791D
 
 This driver also supports NCT6106D and NCT6791D, thus update module description
@@ -43941,7 +43941,7 @@ and Kconfig accordingly.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",2,6,3,3,,78313b9542b28474bd2a8e059c4fb6b690df8db2
+",2,6,3,3,Documentation (Minor),78313b9542b28474bd2a8e059c4fb6b690df8db2
 hwmon: (adt7411) Convert to devm_hwmon_device_register_with_groups,"hwmon: (adt7411) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -43949,7 +43949,7 @@ simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,59,20,39,,eac83cd9dca6ba2e5a8ba8b823daf8fdbbeae109
+",1,59,20,39,Refactoring (Minor),eac83cd9dca6ba2e5a8ba8b823daf8fdbbeae109
 hwmon: (g762) Convert to hwmon_device_register_with_groups,"hwmon: (g762) Convert to hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and hwmon_device_register_with_groups() to simplify
@@ -43960,60 +43960,60 @@ ensure g762_of_clock_disable() is called after hwmon_device_unregister().
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,71,27,44,,398e16db62620dd80a237c5043bec5c9335ac92c
+",1,71,27,44,Refactoring (Minor),398e16db62620dd80a237c5043bec5c9335ac92c
 hwmon: (emc2103) Convert to devm_hwmon_device_register_with_groups,"hwmon: (emc2103) Convert to devm_hwmon_device_register_with_groups
 
 Use devm_hwmon_device_register_with_groups() to simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,89,26,63,,9dd304f86b4b1921c0b7601b3e88a07b257fc2d2
+",1,89,26,63,Refactoring (Minor),9dd304f86b4b1921c0b7601b3e88a07b257fc2d2
 hwmon: (smsc47m1) Avoid forward declaration,"hwmon: (smsc47m1) Avoid forward declaration
 
 Reorder functions to avoid forward declaration.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,115,55,60,,e70198acf84690b3d8ed5d1b924942c1dd85d20d
+",1,115,55,60,Refactoring (Minor),e70198acf84690b3d8ed5d1b924942c1dd85d20d
 hwmon: (smsc47m192) Convert to devm_hwmon_device_register_with_groups,"hwmon: (smsc47m192) Convert to devm_hwmon_device_register_with_groups
 
 Use devm_hwmon_device_register_with_groups() to simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,77,25,52,,166f72966d69334a68774abb7eaa73eece54d464
+",1,77,25,52,Refactoring (Minor),166f72966d69334a68774abb7eaa73eece54d464
 hwmon: (smsc47m192) Avoid forward declaration,"hwmon: (smsc47m192) Avoid forward declaration
 
 Reorder functions to avoid forward declaration.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,161,77,84,,94314e259333892e7b085cd343720bbdc2fa67c5
+",1,161,77,84,Refactoring (Minor),94314e259333892e7b085cd343720bbdc2fa67c5
 hwmon: (max1668) Make max1668_addr_list array const,"hwmon: (max1668) Make max1668_addr_list array const
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,2,1,1,,28681d71e1b74c3b54e1d41be66b8198f8455995
+",1,2,1,1,Refactoring (Minor),28681d71e1b74c3b54e1d41be66b8198f8455995
 hwmon: (max6639) Make normal_i2c array const,"hwmon: (max6639) Make normal_i2c array const
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Acked-by: Roland Stigge <stigge@antcom.de>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,2,1,1,,7edc8cc19fd00edcc864e8c62a08d3946db28b4d
+",1,2,1,1,Refactoring (Minor),7edc8cc19fd00edcc864e8c62a08d3946db28b4d
 hwmon: (thmc50) Convert to devm_hwmon_device_register_with_groups,"hwmon: (thmc50) Convert to devm_hwmon_device_register_with_groups
 
 Use devm_hwmon_device_register_with_groups() to simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,78,25,53,,86fd260e0b15d8718ab711f3fd802713e1bfbe89
+",1,78,25,53,Refactoring (Minor),86fd260e0b15d8718ab711f3fd802713e1bfbe89
 hwmon: (thmc50) Avoid forward declaration,"hwmon: (thmc50) Avoid forward declaration
 
 Reorder functions to avoid forward declaration.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,160,76,84,,9b38a66e1a6570b1aff2c1f892b567eded2b3b4e
+",1,160,76,84,Refactoring (Minor),9b38a66e1a6570b1aff2c1f892b567eded2b3b4e
 hwmon: (adt7470) Convert to devm_hwmon_device_register_with_groups,"hwmon: (adt7470) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -44021,14 +44021,14 @@ simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,97,42,55,,3048577609ef09859505ff2aaf7194a924202193
+",1,97,42,55,Refactoring (Minor),3048577609ef09859505ff2aaf7194a924202193
 hwmon: (adt7470) Avoid forward declaration,"hwmon: (adt7470) Avoid forward declaration
 
 Reorder functions to avoid forward declaration.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,66,30,36,,9027d933a91e1430ebcd9b9fb8da538cb40284ef
+",1,66,30,36,Refactoring (Minor),9027d933a91e1430ebcd9b9fb8da538cb40284ef
 hwmon: (adt7462) Convert to devm_hwmon_device_register_with_groups,"hwmon: (adt7462) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -44036,14 +44036,14 @@ simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,106,42,64,,573bfe67ca1057febc6a0ccd8caff9a9fdb01994
+",1,106,42,64,Refactoring (Minor),573bfe67ca1057febc6a0ccd8caff9a9fdb01994
 hwmon: (adt7462) Avoid forward declaration,"hwmon: (adt7462) Avoid forward declaration
 
 Reorder functions to avoid forward declaration.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,42,18,24,,a2cc242823399bcb64dcd487f8b51c061844165c
+",1,42,18,24,Refactoring (Minor),a2cc242823399bcb64dcd487f8b51c061844165c
 hwmon: Add pwm-fan driver,"hwmon: Add pwm-fan driver
 
 The pwm-fan driver enables control of fans connected to PWM lines.
@@ -44055,7 +44055,7 @@ Reviewed-by: Varka Bhadram <varkabhadram@gmail.com>
 Reviewed-by: Tobias Klauser <tklauser@distanz.ch>
 [Guenter Roeck: Last argument to devm_of_pwm_get is pointer, use NULL]
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",5,235,235,0,,d82d57767c85984132cde4efaf89ad6db290cda3
+",5,235,235,0,Feature (Major),d82d57767c85984132cde4efaf89ad6db290cda3
 hwmon: (asc7621) Make map tables const,"hwmon: (asc7621) Make map tables const
 
 Map tables are never changed, so it is safe to make them const.
@@ -44063,7 +44063,7 @@ Map tables are never changed, so it is safe to make them const.
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Acked-by: George Joseph <george.joseph@fairview5.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,14,7,7,,7a7176aa4bf49685ddbef9adbdaf7383dc62ceed
+",1,14,7,7,Refactoring (Minor),7a7176aa4bf49685ddbef9adbdaf7383dc62ceed
 hwmon: (ds620) Convert to devm_hwmon_device_register_with_groups,"hwmon: (ds620) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -44071,12 +44071,12 @@ simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,60,17,43,,f073b9942731cbef167b8a6d6bacc80370fddf8c
+",1,60,17,43,Refactoring (Minor),f073b9942731cbef167b8a6d6bacc80370fddf8c
 hwmon: (max16065) Use PTR_ERR_OR_ZERO,"hwmon: (max16065) Use PTR_ERR_OR_ZERO
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,5,1,4,,a7b30ea500989e1fde0adbe563976d5379fedb59
+",1,5,1,4,Refactoring (Minor),a7b30ea500989e1fde0adbe563976d5379fedb59
 hwmon: (sht21) Convert to devm_hwmon_device_register_with_groups,"hwmon: (sht21) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -44084,7 +44084,7 @@ simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,82,22,60,,b8d56898307f561d7e100d33c244001a34ee1262
+",1,82,22,60,Refactoring (Minor),b8d56898307f561d7e100d33c244001a34ee1262
 hwmon: (fam15h_power) Remove needless pci dev id,"hwmon: (fam15h_power) Remove needless pci dev id
 
 PCI_DEVICE_ID_AMD_16H_NB_F4 can be obtained from it's
@@ -44093,7 +44093,7 @@ again here.
 
 Signed-off-by: Aravind Gopalakrishnan <Aravind.Gopalakrishnan@amd.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,3,0,3,,4395d78056a8b5716f7e1858feb721ccf91fb104
+",1,3,0,3,Refactoring (Minor),4395d78056a8b5716f7e1858feb721ccf91fb104
 "hwmon: (powerpc/powernv) hwmon driver for power, fan rpm, voltage and temperature","hwmon: (powerpc/powernv) hwmon driver for power, fan rpm, voltage and temperature
 
 This patch adds basic kernel support for reading power values, fan
@@ -44136,7 +44136,7 @@ fan2_input  fan4_input	fan6_input  fan8_input	name	   uevent
 
 Signed-off-by: Neelesh Gupta <neelegup@linux.vnet.ibm.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",5,440,440,0,,24c1aa8587922ba1a3ca4fa58748e94f13b97fab
+",5,440,440,0,Feature (Major),24c1aa8587922ba1a3ca4fa58748e94f13b97fab
 hwmon: (pmbus) Add tps40422 front-end driver,"hwmon: (pmbus) Add tps40422 front-end driver
 
 For TI power management chip TPS40422, READ_TEMPERATURE_2 command is supported on
@@ -44148,7 +44148,7 @@ front-end driver.
 Signed-off-by: Zhu Laiwen <richard.zhu@nsn.com>
 [Guenter Roeck: Dropped unnecessary license text (fixes checkpatch warning)]
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",6,148,142,6,,a8bfeceb0c1400b9331c00f6969afa6cb82d5d4a
+",6,148,142,6,Feature (Major),a8bfeceb0c1400b9331c00f6969afa6cb82d5d4a
 hwmon: (tmp421) Drop FSF mailing address,"hwmon: (tmp421) Drop FSF mailing address
 
 The FSF mailing address can and will change over time,
@@ -44156,14 +44156,14 @@ so drop it.
 
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
 Reviewed-by: Jean Delvare <jdelvare@suse.de>
-",1,4,0,4,,012cb5e257dcce524ee6207e50ca494d8a2b6013
+",1,4,0,4,Documentation (Minor),012cb5e257dcce524ee6207e50ca494d8a2b6013
 hwmon: (tmp421) Add support for TMP441 and TMP442,"hwmon: (tmp421) Add support for TMP441 and TMP442
 
 TMP441 and TMP442 are compatible to TMP421 and TMP422.
 
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
 Reviewed-by: Jean Delvare <jdelvare@suse.de>
-",3,45,33,12,,05c77ab240fdcba3886913235e37b43e3223e9ee
+",3,45,33,12,Feature (Minor),05c77ab240fdcba3886913235e37b43e3223e9ee
 hwmon: (tmp421) Strengthen detect function,"hwmon: (tmp421) Strengthen detect function
 
 Not all supported chips support the entire I2C address range.
@@ -44172,7 +44172,7 @@ Check for invalid values in conversion rate and status registers.
 
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
 Reviewed-by: Jean Delvare <jdelvare@suse.de>
-",2,18,16,2,,a63ee9d83b960199ae111ff4e2413fbe328d32fe
+",2,18,16,2,Refactoring (Minor),a63ee9d83b960199ae111ff4e2413fbe328d32fe
 hwmon: (g760a) Convert to devm_hwmon_device_register_with_groups,"hwmon: (g760a) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -44180,7 +44180,7 @@ simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,53,13,40,,e47c39b3a8299e2d84d9e3ca5e591bc5055dd1d8
+",1,53,13,40,Refactoring (Minor),e47c39b3a8299e2d84d9e3ca5e591bc5055dd1d8
 hwmon: (g760a) Avoid forward declaration,"hwmon: (g760a) Avoid forward declaration
 
 Move g760a_driver to proper place to avoid forward declaration.
@@ -44188,7 +44188,7 @@ Also move g760a_id table close to g760a_driver.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,35,15,20,,15ac4ddb3271af9471225ef018eb3907989aaf6a
+",1,35,15,20,Refactoring (Minor),15ac4ddb3271af9471225ef018eb3907989aaf6a
 hwmon: (adm9240) Convert to devm_hwmon_device_register_with_groups,"hwmon: (adm9240) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -44196,7 +44196,7 @@ simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,74,26,48,,715f69bef14e4139ff1e19bbc69e0cd07de0f4e9
+",1,74,26,48,Refactoring (Minor),715f69bef14e4139ff1e19bbc69e0cd07de0f4e9
 hwmon: (lineage-pem) Convert to devm_hwmon_device_register_with_groups,"hwmon: (lineage-pem) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -44204,7 +44204,7 @@ simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,66,19,47,,8280325288176694a3c22e2f10fdab6d8de5bd99
+",1,66,19,47,Refactoring (Minor),8280325288176694a3c22e2f10fdab6d8de5bd99
 hwmon: (smm665) Convert to devm_hwmon_device_register_with_groups,"hwmon: (smm665) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -44212,14 +44212,14 @@ simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,44,16,28,,781126a0c8debc713a07da16c790253dadb33184
+",1,44,16,28,Refactoring (Minor),781126a0c8debc713a07da16c790253dadb33184
 hwmon: (adm9240) Avoid forward declaration,"hwmon: (adm9240) Avoid forward declaration
 
 Reorder functions to avoid forward declaration.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,315,153,162,,4341fc3f32b278d136179772338ccaa31f222c99
+",1,315,153,162,Refactoring (Minor),4341fc3f32b278d136179772338ccaa31f222c99
 hwmon: (adm1031) Convert to devm_hwmon_device_register_with_groups,"hwmon: (adm1031) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -44227,14 +44227,14 @@ simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,101,38,63,,b060f3c4ac99b050b990b316637f7fd9898b9fd7
+",1,101,38,63,Refactoring (Minor),b060f3c4ac99b050b990b316637f7fd9898b9fd7
 hwmon: (adm1031) Avoid forward declaration,"hwmon: (adm1031) Avoid forward declaration
 
 Reorder functions to avoid forward declaration.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,286,138,148,,278ee1c840fcf32f156fd876efcc3780bc580f6c
+",1,286,138,148,Refactoring (Minor),278ee1c840fcf32f156fd876efcc3780bc580f6c
 hwmon: (adm1026) Convert to devm_hwmon_device_register_with_groups,"hwmon: (adm1026) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -44242,14 +44242,14 @@ simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,140,55,85,,b591d3c1964e7cba6582eb22c7033d37c31a4e99
+",1,140,55,85,Refactoring (Minor),b591d3c1964e7cba6582eb22c7033d37c31a4e99
 hwmon: (adm1026) Avoid forward declaration,"hwmon: (adm1026) Avoid forward declaration
 
 Reorder functions to avoid forward declaration.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,452,219,233,,97df55661a2d60e6554ce9a9ee6fb47606ddc772
+",1,452,219,233,Refactoring (Minor),97df55661a2d60e6554ce9a9ee6fb47606ddc772
 hwmon: (adm1025) Convert to devm_hwmon_device_register_with_groups,"hwmon: (adm1025) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -44257,21 +44257,21 @@ simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,71,23,48,,aab3f57a11723c75477f43d7a510c148f2269d16
+",1,71,23,48,Refactoring (Minor),aab3f57a11723c75477f43d7a510c148f2269d16
 hwmon: (adm1025) Avoid forward declaration,"hwmon: (adm1025) Avoid forward declaration
 
 Reorder functions to avoid forward declaration.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,224,104,120,,851a7afa82c9cbbfa2f85151872a29db0a3f6cbf
+",1,224,104,120,Refactoring (Minor),851a7afa82c9cbbfa2f85151872a29db0a3f6cbf
 hwmon: (adm1021) Avoid forward declaration,"hwmon: (adm1021) Avoid forward declaration
 
 Reorder functions to avoid forward declaration.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,175,83,92,,48995bc4bb9446b81ddf32ee56be0e47aab50557
+",1,175,83,92,Refactoring (Minor),48995bc4bb9446b81ddf32ee56be0e47aab50557
 hwmon: (gl520sm) Convert to devm_hwmon_device_register_with_groups,"hwmon: (gl520sm) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -44279,14 +44279,14 @@ simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,96,35,61,,d1b9c3f50304376f365e305ff61c3ae9a358e2f9
+",1,96,35,61,Refactoring (Minor),d1b9c3f50304376f365e305ff61c3ae9a358e2f9
 hwmon: (gl520sm) Avoid forward declaration,"hwmon: (gl520sm) Avoid forward declaration
 
 Reorder functions to avoid forward declaration.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,317,150,167,,df51f2d7bc8bf99a7f9c29b2f334e412613c2efc
+",1,317,150,167,Refactoring (Minor),df51f2d7bc8bf99a7f9c29b2f334e412613c2efc
 hwmon: (gl518sm) Convert to devm_hwmon_device_register_with_groups,"hwmon: (gl518sm) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -44294,14 +44294,14 @@ simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,76,25,51,,18faf5b9befa0009ab796990eaa25af81f0f3b6f
+",1,76,25,51,Refactoring (Minor),18faf5b9befa0009ab796990eaa25af81f0f3b6f
 hwmon: (gl518sm) Avoid forward declaration,"hwmon: (gl518sm) Avoid forward declaration
 
 Reorder functions to avoid forward declaration.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,263,126,137,,d4a972a33932f039fe9dce0cfb2337fee1150f5a
+",1,263,126,137,Refactoring (Minor),d4a972a33932f039fe9dce0cfb2337fee1150f5a
 hwmon: (lm93) Convert to devm_hwmon_device_register_with_groups,"hwmon: (lm93) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -44309,7 +44309,7 @@ simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,154,66,88,,6579d589eaa0f86a902504f76b4f973e2978d951
+",1,154,66,88,Refactoring (Minor),6579d589eaa0f86a902504f76b4f973e2978d951
 hwmon: (w83791d) Fix smatch warning,"hwmon: (w83791d) Fix smatch warning
 
 smatch complains as follows when checking w83791d.c.
@@ -44322,7 +44322,7 @@ While we are at it, modify other macros as well for consistency and
 to make the code easier to understand.
 
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,15,6,9,,40ebdb9274ba71b6211f500904a3935af81a00ca
+",1,15,6,9,Fix (Minor),40ebdb9274ba71b6211f500904a3935af81a00ca
 hwmon: (lm63) Fix smatch warnings,"hwmon: (lm63) Fix smatch warnings
 
 smatch complains as follows when checking lm63.c.
@@ -44337,12 +44337,12 @@ While we are at it, modify other macros as well for consistency and
 to make the code easier to understand.
 
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,27,10,17,,7560dc0a6d45dbf0d32eb56172dd5062753a8dcc
+",1,27,10,17,Fix (Minor),7560dc0a6d45dbf0d32eb56172dd5062753a8dcc
 hwmon: Make regmap configs const,"hwmon: Make regmap configs const
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",5,10,5,5,,034b44b4a22371c5bcbfb602a5420f3b75939dd8
+",5,10,5,5,Refactoring (Minor),034b44b4a22371c5bcbfb602a5420f3b75939dd8
 hwmon: (htu21) Convert to devm_hwmon_device_register_with_groups,"hwmon: (htu21) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -44350,7 +44350,7 @@ simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,69,22,47,,fa0efc4091e2299741a0391eeaadd36f335d942e
+",1,69,22,47,Refactoring (Minor),fa0efc4091e2299741a0391eeaadd36f335d942e
 hwmon: (emc6w201) Convert to devm_hwmon_device_register_with_groups,"hwmon: (emc6w201) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -44358,7 +44358,7 @@ simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,64,19,45,,7b3dadc4b391c878c26917e23e2af8653dd13db3
+",1,64,19,45,Refactoring (Minor),7b3dadc4b391c878c26917e23e2af8653dd13db3
 hwmon: (amc6821) Convert to devm_hwmon_device_register_with_groups,"hwmon: (amc6821) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -44366,14 +44366,14 @@ simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,70,25,45,,1276fae2a93142525580d6f6ab77105f4d7a0e09
+",1,70,25,45,Refactoring (Minor),1276fae2a93142525580d6f6ab77105f4d7a0e09
 hwmon: (amc6821) Avoid forward declaration,"hwmon: (amc6821) Avoid forward declaration
 
 Reorder functions to avoid forward declaration.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,360,154,206,,28e6274d8fa67ecb468eaa219c45595384e3bda8
+",1,360,154,206,Refactoring (Minor),28e6274d8fa67ecb468eaa219c45595384e3bda8
 hwmon: (adm1029) Convert to devm_hwmon_device_register_with_groups,"hwmon: (adm1029) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -44381,14 +44381,14 @@ simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,55,15,40,,4fd5233f82278df58b523b20f1f21967fe7a6c29
+",1,55,15,40,Refactoring (Minor),4fd5233f82278df58b523b20f1f21967fe7a6c29
 hwmon: (adm1029) Avoid forward declarations,"hwmon: (adm1029) Avoid forward declarations
 
 Reorder functions to avoid forward declarations.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,171,78,93,,b12e484e8cc6d50706840a89d7db5a7a9354f315
+",1,171,78,93,Refactoring (Minor),b12e484e8cc6d50706840a89d7db5a7a9354f315
 hwmon: (ad7418) Convert to devm_hwmon_device_register_with_groups,"hwmon: (ad7418) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -44396,7 +44396,7 @@ simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,65,24,41,,337076f9b6d8890682dcb7873869ef8dfa8febb2
+",1,65,24,41,Refactoring (Minor),337076f9b6d8890682dcb7873869ef8dfa8febb2
 hwmon: (ad7418) Avoid forward declaration,"hwmon: (ad7418) Avoid forward declaration
 
 Move ad7418_driver to proper place to avoid forward declaration.
@@ -44404,7 +44404,7 @@ Also move ad7418_init_client() close to ad7418_probe().
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,72,34,38,,991763a91cbacf1e511ec9bea9ea8539e4d41f39
+",1,72,34,38,Refactoring (Minor),991763a91cbacf1e511ec9bea9ea8539e4d41f39
 hwmon: (ad7414) Convert to devm_hwmon_device_register_with_groups,"hwmon: (ad7414) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -44412,21 +44412,21 @@ simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,57,16,41,,045c1391ec3b703ee00643fe9bda7cd65cd463e1
+",1,57,16,41,Refactoring (Minor),045c1391ec3b703ee00643fe9bda7cd65cd463e1
 hwmon: (ntc_thermistor) Support B57330V2103 from EPCOS,"hwmon: (ntc_thermistor) Support B57330V2103 from EPCOS
 
 This patch adds support for the ntc thermistor B57330V2103 from EPCOS.
 
 Signed-off-by: Johannes Pointner <johannes.pointner@gmail.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",5,59,57,2,,ed67f0872be1aa516831332c732752022d4edc7c
+",5,59,57,2,Feature (Minor),ed67f0872be1aa516831332c732752022d4edc7c
 "devicetree: Add vendor prefix ""epcos"" to vendor-prefixes.txt","devicetree: Add vendor prefix ""epcos"" to vendor-prefixes.txt
 
 This patch adds the vendor prefix for ""epcos"" to the vendor-prefixes.
 
 Signed-off-by: Johannes Pointner <johannes.pointner@gmail.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,1,1,0,,3ef0bb6f769bc61af0ec073cbf49db6598bdefc0
+",1,1,1,0,Feature (Minor),3ef0bb6f769bc61af0ec073cbf49db6598bdefc0
 hwmon: (hih6130) Convert to devm_hwmon_device_register_with_groups,"hwmon: (hih6130) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -44435,7 +44435,7 @@ simplify the code a bit.
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Tested-by: Iain Paton <ipaton0@gmail.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,88,23,65,,a5afc18c9fbae900430b60948b940fbdf734d220
+",1,88,23,65,Refactoring (Minor),a5afc18c9fbae900430b60948b940fbdf734d220
 hwmon: (tmp103) Add missing i2c_set_clientdata call in tmp103_probe,"hwmon: (tmp103) Add missing i2c_set_clientdata call in tmp103_probe
 
 Add missing i2c_set_clientdata() call in tmp103_probe, this makes the
@@ -44444,14 +44444,14 @@ address.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,1,1,0,,233adcefee012ae9b3f3e7d16017bce9072fe62d
+",1,1,1,0,Fix (Minor),233adcefee012ae9b3f3e7d16017bce9072fe62d
 hwmon: (lm75) Add support for TMP112,"hwmon: (lm75) Add support for TMP112
 
 TMP112 is compatible to LM75.
 
 Signed-off-by: Frans Klaver <frans.klaver@xsens.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",3,17,13,4,,c83959f89f1cbe2e712c11e4a77d89f4d34d09ff
+",3,17,13,4,Feature (Minor),c83959f89f1cbe2e712c11e4a77d89f4d34d09ff
 hwmon: (w83l786ng) Convert to devm_hwmon_device_register_with_groups,"hwmon: (w83l786ng) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -44460,7 +44460,7 @@ simplify the code a bit.
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Acked-by: Kevin Lo <kevlo@kevlo.org>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,86,29,57,,202e4851f8aa6bad39c7799dac93c6951d064c87
+",1,86,29,57,Refactoring (Minor),202e4851f8aa6bad39c7799dac93c6951d064c87
 hwmon: (w83l786ng) Avoid forward declaration,"hwmon: (w83l786ng) Avoid forward declaration
 
 Reorder functions to avoid forward declaration.
@@ -44468,7 +44468,7 @@ Reorder functions to avoid forward declaration.
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Acked-by: Kevin Lo <kevlo@kevlo.org>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,209,100,109,,bab711ae8c7ad40f080dc74cc1c664cfe56ceff3
+",1,209,100,109,Refactoring (Minor),bab711ae8c7ad40f080dc74cc1c664cfe56ceff3
 hwmon: (fam15h_power) Convert to devm_hwmon_device_register_with_groups,"hwmon: (fam15h_power) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -44476,7 +44476,7 @@ simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,51,9,42,,562dc9732ac0ab1274d2ca129b5bee5a3cf778cc
+",1,51,9,42,Refactoring (Minor),562dc9732ac0ab1274d2ca129b5bee5a3cf778cc
 hwmon: (wm8350) Convert to devm_hwmon_device_register_with_groups,"hwmon: (wm8350) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -44485,7 +44485,7 @@ simplify the code a bit.
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Acked-by: Charles Keepax <ckeepax@opensource.wolfsonmicro.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,50,7,43,,b3aabd6db3700dfa6ab334c96cbf16c04929b8a2
+",1,50,7,43,Refactoring (Minor),b3aabd6db3700dfa6ab334c96cbf16c04929b8a2
 hwmon: (wm831x) Convert to devm_hwmon_device_register_with_groups,"hwmon: (wm831x) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -44494,7 +44494,7 @@ simplify the code a bit.
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Acked-by: Charles Keepax <ckeepax@opensource.wolfsonmicro.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,72,11,61,,9a70c97b218f5b78b3a265c3ba797b18fa36bd02
+",1,72,11,61,Refactoring (Minor),9a70c97b218f5b78b3a265c3ba797b18fa36bd02
 hwmon: (ads7828) Convert to devm_hwmon_device_register_with_groups,"hwmon: (ads7828) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -44502,7 +44502,7 @@ simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,52,14,38,,f82b2c344994f23c003c967fb833d1a0d7b2527f
+",1,52,14,38,Refactoring (Minor),f82b2c344994f23c003c967fb833d1a0d7b2527f
 hwmon: (atxp1) Convert to devm_hwmon_device_register_with_groups,"hwmon: (atxp1) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups.
@@ -44510,7 +44510,7 @@ This simplifies the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,76,21,55,,11f7e494fd726c119c6f576b4cf1dc09e9f665b8
+",1,76,21,55,Refactoring (Minor),11f7e494fd726c119c6f576b4cf1dc09e9f665b8
 hwmon: Driver for TI TMP103 temperature sensor,"hwmon: Driver for TI TMP103 temperature sensor
 
 Driver for the TI TMP103.
@@ -44521,7 +44521,7 @@ by having only 8 bit registers.
 Signed-off-by: Heiko Schocher <hs@denx.de>
 [linux@roeck-us.net: Select REGMAP_I2C in Kconfig]
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",5,246,246,0,,d17a7dca04b23586f6c284f98196fbe0ac7607a8
+",5,246,246,0,Feature (Major),d17a7dca04b23586f6c284f98196fbe0ac7607a8
 hwmon: (gpio-fan) Convert to devm_hwmon_device_register_with_groups,"hwmon: (gpio-fan) Convert to devm_hwmon_device_register_with_groups
 
 This simplifies the code a bit and also ensures the attribute groups are
@@ -44529,7 +44529,7 @@ properly removed from sysfs when unload the module.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,17,4,13,,49153b092ceb099a5f38a645e3c40b4bd4e28a82
+",1,17,4,13,Refactoring (Minor),49153b092ceb099a5f38a645e3c40b4bd4e28a82
 hwmon: (twl4030-madc-hwmon) Convert to devm_hwmon_device_register_with_groups,"hwmon: (twl4030-madc-hwmon) Convert to devm_hwmon_device_register_with_groups
 
 Use ATTRIBUTE_GROUPS macro and devm_hwmon_device_register_with_groups() to
@@ -44537,7 +44537,7 @@ simplify the code a bit.
 
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,38,6,32,,5495af5f3e6e2cce34a2c22ecd8b1a94e93c184a
+",1,38,6,32,Refactoring (Minor),5495af5f3e6e2cce34a2c22ecd8b1a94e93c184a
 hwmon: Add support for Lattice's POWR1220 power manager IC,"hwmon: Add support for Lattice's POWR1220 power manager IC
 
 This patch adds support for Lattice's POWR1220 power manager IC. Read
@@ -44547,7 +44547,7 @@ sysfs files.
 Signed-off-by: Scott Kanowitz <skanowitz@echo360.com>
 [Guenter Roeck: Removed some extra ( )]
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",4,449,449,0,,f4ff415564cbd1221e5bbac80f97ee94b7e5258d
+",4,449,449,0,Feature (Major),f4ff415564cbd1221e5bbac80f97ee94b7e5258d
 ASoC: adau1977: Fix truncation warning on 64 bit architectures,"ASoC: adau1977: Fix truncation warning on 64 bit architectures
 
 Negating ADAU1977_BLOCK_POWER_SAI_LDO_EN creates an unsigned long constant
@@ -44557,7 +44557,7 @@ this is OK.
 
 Signed-off-by: Mark Brown <broonie@linaro.org>
 Acked-by: Lars-Peter Clausen <lars@metafoo.de>
-",1,2,1,1,,d8df26bb57d2a86365de46a5421b97417401e39a
+",1,2,1,1,Fix (Minor),d8df26bb57d2a86365de46a5421b97417401e39a
 SUNRPC: remove all refcounting of groupinfo from rpcauth_lookupcred,"SUNRPC: remove all refcounting of groupinfo from rpcauth_lookupcred
 
 current_cred() can only be changed by 'current', and
@@ -44572,7 +44572,7 @@ So drop the refcounting and the incorrect rcu_dereference().
 
 Signed-off-by: NeilBrown <neilb@suse.de>
 Signed-off-by: Trond Myklebust <trond.myklebust@primarydata.com>
-",1,8,1,7,,122a8cda6a9a3594c4737570f5cd81636bcd20cf
+",1,8,1,7,Refactoring (Minor),122a8cda6a9a3594c4737570f5cd81636bcd20cf
 NFS: fix two problems in lookup_revalidate in RCU-walk,"NFS: fix two problems in lookup_revalidate in RCU-walk
 
 1/ rcu_dereference isn't correct: that field isn't
@@ -44593,7 +44593,7 @@ NFS: fix two problems in lookup_revalidate in RCU-walk,"NFS: fix two problems in
 Reported-by: kbuild test robot <fengguang.wu@intel.com>
 Signed-off-by: NeilBrown <neilb@suse.de>
 Signed-off-by: Trond Myklebust <trond.myklebust@primarydata.com>
-",1,8,4,4,,50d77739fa1972030daf1c8902404551e49bf232
+",1,8,4,4,Fix (Minor),50d77739fa1972030daf1c8902404551e49bf232
 ALSA: virtuoso: add Xonar Essence STX II support,"ALSA: virtuoso: add Xonar Essence STX II support
 
 Just add the PCI ID for the STX II.  It appears to work the same as the
@@ -44604,17 +44604,17 @@ Tested-by: corubba <corubba@gmx.de>
 Cc: <stable@vger.kernel.org>
 Signed-off-by: Clemens Ladisch <clemens@ladisch.de>
 Signed-off-by: Takashi Iwai <tiwai@suse.de>
-",4,21,15,6,,f42bb22243d2ae264d721b055f836059fe35321f
+",4,21,15,6,Feature (Minor),f42bb22243d2ae264d721b055f836059fe35321f
 ALSA: riptide: fix %d confusingly prefixed with 0x in format strings,"ALSA: riptide: fix %d confusingly prefixed with 0x in format strings
 
 Signed-off-by: Hans Wennborg <hans@hanshq.net>
 Signed-off-by: Takashi Iwai <tiwai@suse.de>
-",1,4,2,2,,47efe636adec37d6c259a69ee53d246cd4bba172
+",1,4,2,2,Fix (Minor),47efe636adec37d6c259a69ee53d246cd4bba172
 ALSA: fireworks: fix %d confusingly prefixed with 0x in format strings,"ALSA: fireworks: fix %d confusingly prefixed with 0x in format strings
 
 Signed-off-by: Hans Wennborg <hans@hanshq.net>
 Signed-off-by: Takashi Iwai <tiwai@suse.de>
-",1,4,2,2,,04b9906d8c03307a15f2333a6a975fec1f67e891
+",1,4,2,2,Fix (Minor),04b9906d8c03307a15f2333a6a975fec1f67e891
 iscsi class: Fix freeing of skb in get host error path,"iscsi class: Fix freeing of skb in get host error path
 
 If get_host_stats failes we are using kfree to free the
@@ -44624,7 +44624,7 @@ This patch was made over Christoph's scsi-queue drivers-for-3.17 branch.
 
 Signed-off-by: Mike Christie <michaelc@cs.wisc.edu>
 Signed-off-by: Christoph Hellwig <hch@lst.de>
-",1,2,1,1,,bfb5087924921f147d4c5d731cbc8c3a069bed0b
+",1,2,1,1,Fix (Minor),bfb5087924921f147d4c5d731cbc8c3a069bed0b
 HID: hyperv: register as a wakeup source,"HID: hyperv: register as a wakeup source
 
 With this patch, we can move the mouse to wake up the VM after the VM executes
@@ -44635,7 +44635,7 @@ This addresses part of https://bugzilla.redhat.com/show_bug.cgi?id=1086100
 Signed-off-by: Dexuan Cui <decui@microsoft.com>
 Signed-off-by: K. Y. Srinivasan <kys@microsoft.com>
 Signed-off-by: Jiri Kosina <jkosina@suse.cz>
-",1,6,6,0,,f1210455e78a610c7b316389b31c162c371d888c
+",1,6,6,0,Feature (Minor),f1210455e78a610c7b316389b31c162c371d888c
 ALSA: hda - add codec ID for Braswell display audio codec,"ALSA: hda - add codec ID for Braswell display audio codec
 
 This patch adds codec ID (0x80862883) and module alias for Braswell
@@ -44643,7 +44643,7 @@ display codec.
 
 Signed-off-by: Libin Yang <libin.yang@intel.com>
 Signed-off-by: Takashi Iwai <tiwai@suse.de>
-",1,2,2,0,,d1585c89cecdb513f68045e47ab76976524b5961
+",1,2,2,0,Feature (Minor),d1585c89cecdb513f68045e47ab76976524b5961
 ALSA: hda - add PCI IDs for Intel Braswell,"ALSA: hda - add PCI IDs for Intel Braswell
 
 Add HD Audio Device PCI ID for the Intel Braswell platform.
@@ -44653,7 +44653,7 @@ AZX_DCAPS_ALIGN_BUFSIZE is not necessary for this controller.
 
 Signed-off-by: Libin Yang <libin.yang@intel.com>
 Signed-off-by: Takashi Iwai <tiwai@suse.de>
-",1,3,3,0,,f31b2ffcad2b8c57cee5ffc634928bcbc8c6a558
+",1,3,3,0,Feature (Minor),f31b2ffcad2b8c57cee5ffc634928bcbc8c6a558
 ALSA: usb-audio: Adjust Gamecom 780 volume level,"ALSA: usb-audio: Adjust Gamecom 780 volume level
 
 Original patch fixed the original problem, but the sound was far too low
@@ -44665,7 +44665,7 @@ more details: https://bugzilla.kernel.org/show_bug.cgi?id=65251
 Signed-off-by: Paul S McSpadden <fisch602@gmail.com>
 Cc: <stable@vger.kernel.org> [v3.14+]
 Signed-off-by: Takashi Iwai <tiwai@suse.de>
-",1,2,1,1,,542baf94ec3c5526955b4c9fd899c7f30fae4ebe
+",1,2,1,1,Fix (Minor),542baf94ec3c5526955b4c9fd899c7f30fae4ebe
 ALSA: usb-audio: improve dmesg source grepability,"ALSA: usb-audio: improve dmesg source grepability
 
 This improves messages from commit 80acefff3bc7bd53d46c16c683ab66c0ece20810.
@@ -44673,7 +44673,7 @@ This improves messages from commit 80acefff3bc7bd53d46c16c683ab66c0ece20810.
 Cc: Alexey Fisher <bug-track@fisher-privat.net>
 Signed-off-by: Michał Mirosław <mirq-linux@rere.qmqm.pl>
 Signed-off-by: Takashi Iwai <tiwai@suse.de>
-",1,9,4,5,,82c1cf0a7fe13760baa891760015a6422d7900bb
+",1,9,4,5,Feature (Minor),82c1cf0a7fe13760baa891760015a6422d7900bb
 dma: pl08x: Use correct specifier for size_t values,"dma: pl08x: Use correct specifier for size_t values
 
 When printing size_t values we should use the %zd or %zx format specifier
@@ -44682,14 +44682,14 @@ sparse.
 
 Signed-off-by: Mark Brown <broonie@linaro.org>
 Signed-off-by: Vinod Koul <vinod.koul@intel.com>
-",1,4,2,2,,6fc8ae787c589245ee3395630d2c428a1afab26c
+",1,4,2,2,Fix (Minor),6fc8ae787c589245ee3395630d2c428a1afab26c
 dmaengine: Remove the context argument to the prep_dma_cyclic operation,"dmaengine: Remove the context argument to the prep_dma_cyclic operation
 
 The argument is always set to NULL and never used. Remove it.
 
 Signed-off-by: Laurent Pinchart <laurent.pinchart+renesas@ideasonboard.com>
 Signed-off-by: Vinod Koul <vinod.koul@intel.com>
-",21,50,22,28,,31c1e5a1350ae8d1bc2018f5de8264266d9773e1
+",21,50,22,28,Refactoring (Minor),31c1e5a1350ae8d1bc2018f5de8264266d9773e1
 drm/tegra: add MODULE_DEVICE_TABLEs,"drm/tegra: add MODULE_DEVICE_TABLEs
 
 When tegra-drm.ko is built as a module, these MODULE_DEVICE_TABLEs allow
@@ -44703,7 +44703,7 @@ needed)
 Cc: <stable@vger.kernel.org>
 Signed-off-by: Stephen Warren <swarren@nvidia.com>
 Signed-off-by: Thierry Reding <treding@nvidia.com>
-",7,7,7,0,,ef70728c7a6571a1a7115031e932b811f1740b2e
+",7,7,7,0,Feature (Minor),ef70728c7a6571a1a7115031e932b811f1740b2e
 drm/tegra: dc - Reset controller on driver remove,"drm/tegra: dc - Reset controller on driver remove
 
 Since the device will no longer be used, may as well keep it in reset to
@@ -44711,7 +44711,7 @@ potentially save some power and make sure it is in a clean state the
 next time it's probed.
 
 Signed-off-by: Thierry Reding <treding@nvidia.com>
-",1,1,1,0,,5482d75a6597de97f79255a257c486a6960c6c65
+",1,1,1,0,Feature (Minor),5482d75a6597de97f79255a257c486a6960c6c65
 drm/tegra: Properly align stride for framebuffers,"drm/tegra: Properly align stride for framebuffers
 
 Tegra20 and Tegra30 both required the buffer line stride to be aligned
@@ -44722,13 +44722,13 @@ framebuffers appropriately.
 
 Originally-by: Stéphane Marchesin <marcheu@chromium.org>
 Signed-off-by: Thierry Reding <treding@nvidia.com>
-",4,28,27,1,,d1f3e1e0b38d49cbb996dcf0fde5b5205d12a23d
+",4,28,27,1,Feature (Minor),d1f3e1e0b38d49cbb996dcf0fde5b5205d12a23d
 drm/tegra: sor - Configure proper sync polarities,"drm/tegra: sor - Configure proper sync polarities
 
 Program the sync signal polarities according to the display mode.
 
 Signed-off-by: Thierry Reding <treding@nvidia.com>
-",1,16,13,3,,3f4f3b5fede02d338383619ff57744a8415ccceb
+",1,16,13,3,Feature (Minor),3f4f3b5fede02d338383619ff57744a8415ccceb
 drm/tegra: sor - Use bits-per-color from panel,"drm/tegra: sor - Use bits-per-color from panel
 
 This change uses the value of bits-per-color from panel to remove one
@@ -44736,7 +44736,7 @@ more hardcoded value.
 
 Signed-off-by: Stéphane Marchesin <marcheu@chromium.org>
 Signed-off-by: Thierry Reding <treding@nvidia.com>
-",1,2,1,1,,054b1bd16138f92cd690324958e48f790a4cd234
+",1,2,1,1,Refactoring (Minor),054b1bd16138f92cd690324958e48f790a4cd234
 drm/tegra: Make job submission 64-bit safe,"drm/tegra: Make job submission 64-bit safe
 
 Job submission currently relies on the fact that struct drm_tegra_reloc
@@ -44758,7 +44758,7 @@ struct host1x_reloc for better readability. Also use unsized types to
 make it more obvious that this isn't part of userspace ABI.
 
 Signed-off-by: Thierry Reding <treding@nvidia.com>
-",3,99,64,35,,961e3beae3b29ae9463631415342244cdaf1cd47
+",3,99,64,35,Fix (Major),961e3beae3b29ae9463631415342244cdaf1cd47
 drm/tegra: Allow non-authenticated processes to create buffer objects,"drm/tegra: Allow non-authenticated processes to create buffer objects
 
 This matches what other drivers do for equivalent IOCTLs.
@@ -44766,7 +44766,7 @@ This matches what other drivers do for equivalent IOCTLs.
 Reviewed-by: Stéphane Marchesin <marcheu@chromium.org>
 Tested-by: Alexandre Courbot <acourbot@nvidia.com>
 Signed-off-by: Thierry Reding <treding@nvidia.com>
-",1,2,1,1,,bd4f236024a8027b2d5ee9de1f823fbf07c39cef
+",1,2,1,1,Feature (Minor),bd4f236024a8027b2d5ee9de1f823fbf07c39cef
 drm/tegra: Add SET/GET_FLAGS IOCTLs,"drm/tegra: Add SET/GET_FLAGS IOCTLs
 
 The DRM_TEGRA_GEM_SET_FLAGS IOCTL can be used to set the flags of a
@@ -44777,7 +44777,7 @@ IOCTL.
 Reviewed-by: Stéphane Marchesin <marcheu@chromium.org>
 Tested-by: Alexandre Courbot <acourbot@nvidia.com>
 Signed-off-by: Thierry Reding <treding@nvidia.com>
-",2,70,70,0,,7b129087874b925901def7ae507f7d9fac406211
+",2,70,70,0,Feature (Minor),7b129087874b925901def7ae507f7d9fac406211
 drm/tegra: Add SET/GET_TILING IOCTLs,"drm/tegra: Add SET/GET_TILING IOCTLs
 
 Currently the tiling parameters of buffer objects can only be set at
@@ -44795,7 +44795,7 @@ can determine the proper parameters for the 2D or 3D engines.
 Reviewed-by: Stéphane Marchesin <marcheu@chromium.org>
 Tested-by: Alexandre Courbot <acourbot@nvidia.com>
 Signed-off-by: Thierry Reding <treding@nvidia.com>
-",2,120,120,0,,7678d71fb4bd6abe6ccb46afe7d90b3ed01ee936
+",2,120,120,0,Feature (Minor),7678d71fb4bd6abe6ccb46afe7d90b3ed01ee936
 drm/tegra: Implement more tiling modes,"drm/tegra: Implement more tiling modes
 
 Tegra124 supports a block-linear mode in addition to the regular pitch
@@ -44804,7 +44804,7 @@ representation into a structure rather than a simple flag.
 
 Tested-by: Alexandre Courbot <acourbot@nvidia.com>
 Signed-off-by: Thierry Reding <treding@nvidia.com>
-",6,142,118,24,,c134f019abcfaa1cb6e07f6154e92a4f8ce8ddd8
+",6,142,118,24,Feature (Major),c134f019abcfaa1cb6e07f6154e92a4f8ce8ddd8
 drm/tegra: dsi - Handle non-continuous clock flag,"drm/tegra: dsi - Handle non-continuous clock flag
 
 Handle the MIPI_DSI_CLOCK_NONCONTINUOUS flag and only set TX-only
@@ -44813,14 +44813,14 @@ continuous clock mode to operate with this driver.
 
 Signed-off-by: Alexandre Courbot <acourbot@nvidia.com>
 Signed-off-by: Thierry Reding <treding@nvidia.com>
-",1,3,2,1,,0c6b1e4ba74f58ee1507d456e52c630b4b8ff174
+",1,3,2,1,Feature (Minor),0c6b1e4ba74f58ee1507d456e52c630b4b8ff174
 drm/tegra: sor - missing unlock on error,"drm/tegra: sor - missing unlock on error
 
 We should unlock before returning the error code.
 
 Signed-off-by: Dan Carpenter <dan.carpenter@oracle.com>
 Signed-off-by: Thierry Reding <treding@nvidia.com>
-",1,2,1,1,,2263c460bed14f36c9a87d97242c35cf1346f61e
+",1,2,1,1,Fix (Minor),2263c460bed14f36c9a87d97242c35cf1346f61e
 dmaengine: nbpfaxi: convert to tasklet,"dmaengine: nbpfaxi: convert to tasklet
 
 It is common among dmaengine drivers to use a tasklet for bottom half
@@ -44828,7 +44828,7 @@ interrupt processing. Convert nbpfaxi to do the same.
 
 Signed-off-by: Guennadi Liakhovetski <g.liakhovetski@gmx.de>
 Signed-off-by: Vinod Koul <vinod.koul@intel.com>
-",1,19,12,7,,f02323ec68328c3db3e3c23490cd80f9ce9c00fa
+",1,19,12,7,Refactoring (Minor),f02323ec68328c3db3e3c23490cd80f9ce9c00fa
 dmaengine: nbpfaxi: fix a theoretical race,"dmaengine: nbpfaxi: fix a theoretical race
 
 A race possibility exists if a DMA slave driver tries to free channel
@@ -44839,7 +44839,7 @@ all descriptor lists before freeing descriptor cache.
 
 Signed-off-by: Guennadi Liakhovetski <g.liakhovetski+renesas@gmail.com>
 Signed-off-by: Vinod Koul <vinod.koul@intel.com>
-",1,1,1,0,,67b166847009b009cd9fbcdef6b71558f49e1bd6
+",1,1,1,0,Fix (Minor),67b166847009b009cd9fbcdef6b71558f49e1bd6
 dmaengine: add a driver for AMBA AXI NBPF DMAC IP cores,"dmaengine: add a driver for AMBA AXI NBPF DMAC IP cores
 
 This patch adds a driver for NBPF DMAC IP cores from Renesas, designed for
@@ -44847,7 +44847,7 @@ the AMBA AXI bus.
 
 Signed-off-by: Guennadi Liakhovetski <g.liakhovetski+renesas@gmail.com>
 Signed-off-by: Vinod Koul <vinod.koul@intel.com>
-",3,1518,1518,0,,b45b262cefd5b8eb2ba88d20e5bd295881293894
+",3,1518,1518,0,Feature (Major),b45b262cefd5b8eb2ba88d20e5bd295881293894
 dmaengine: add device tree binding documentation for the nbpfaxi driver,"dmaengine: add device tree binding documentation for the nbpfaxi driver
 
 The nbpfaxi dmaengine driver doesn't define any new bindings, it only
@@ -44857,7 +44857,7 @@ of the ""dmas"" property.
 Signed-off-by: Guennadi Liakhovetski <g.liakhovetski+renesas@gmail.com>
 Acked-by: Arnd Bergmann <arnd@arndb.de>
 Signed-off-by: Vinod Koul <vinod.koul@intel.com>
-",2,81,81,0,,94c7b6fc7cd1b29d987592ce7eecd902f6728db4
+",2,81,81,0,Documentation (Major),94c7b6fc7cd1b29d987592ce7eecd902f6728db4
 drm: close race in connector registration (v2),"drm: close race in connector registration (v2)
 
 Daniel pointed out with hotplug that userspace could be trying to oops us
@@ -44877,7 +44877,7 @@ v2: fix bool noreg into sane - add comment.
 Reviewed-by: Daniel Vetter <daniel.vetter@ffwll.ch>
 Reviewed-by: David Herrmann <dh.herrmann@gmail.com>
 Signed-off-by: Dave Airlie <airlied@redhat.com>
-",1,48,35,13,,2ee39452fa2fff1e8edb954ccb7e0daee9646557
+",1,48,35,13,Fix (Minor),2ee39452fa2fff1e8edb954ccb7e0daee9646557
 video: hyperv: hyperv_fb: refresh the VM screen by force on VM panic,"video: hyperv: hyperv_fb: refresh the VM screen by force on VM panic
 
 Currently the VSC has no chance to notify the VSP of the dirty rectangle on VM
@@ -44899,7 +44899,7 @@ v4: avoid global variables as Tomi Valkeinen suggested
 Cc: Haiyang Zhang <haiyangz@microsoft.com>
 Signed-off-by: Dexuan Cui <decui@microsoft.com>
 Signed-off-by: Tomi Valkeinen <tomi.valkeinen@ti.com>
-",1,62,59,3,,3686fe964285a9a0c25265f37ada117d47614f1e
+",1,62,59,3,Feature (Minor),3686fe964285a9a0c25265f37ada117d47614f1e
 video: ARM CLCD: Fix DT-related build problems,"video: ARM CLCD: Fix DT-related build problems
 
 This patch fixes the following error when !CONFIG_OF:
@@ -44915,7 +44915,7 @@ drivers/video/fbdev/amba-clcd.c:567: undefined reference to `fb_videomode_from_v
 Reported-by: Fengguang Wu <fengguang.wu@intel.com>
 Signed-off-by: Pawel Moll <pawel.moll@arm.com>
 Signed-off-by: Tomi Valkeinen <tomi.valkeinen@ti.com>
-",2,3,2,1,,1d5167b72ca05b2096760e1200fcd53b5f9a7562
+",2,3,2,1,Fix (Minor),1d5167b72ca05b2096760e1200fcd53b5f9a7562
 drm/i915: only hook up hpd pulse for DP outputs,"drm/i915: only hook up hpd pulse for DP outputs
 
 On HSW+, the digital encoders are shared between HDMI and DP outputs,
@@ -44933,7 +44933,7 @@ Reviewed-by: Dave Airlie <airlied@redhat.com>
 Cc: Paulo Zanoni <przanoni@gmail.com>
 Signed-off-by: Chris Wilson <chris@chris-wilson.co.uk>
 Signed-off-by: Dave Airlie <airlied@redhat.com>
-",1,31,17,14,,f68d697eaf3278200a7fc3c8b1d95d72837b84d8
+",1,31,17,14,Fix (Major),f68d697eaf3278200a7fc3c8b1d95d72837b84d8
 drm/exynos: g2d: let exynos_g2d_get_ver_ioctl fail,"drm/exynos: g2d: let exynos_g2d_get_ver_ioctl fail
 
 Currently the DRM_IOCTL_EXYNOS_G2D_GET_VER ioctl always succeeds, even
@@ -44945,7 +44945,7 @@ fail when G2D is absent, leading to a segfault later.
 
 Signed-off-by: Tobias Jakobi <tjakobi@math.uni-bielefeld.de>
 Signed-off-by: INki Dae <inki.dae@samsung.com>
-",1,15,15,0,,ef7ce055a9e00f6376416466b996515a27b7cb31
+",1,15,15,0,Feature (Minor),ef7ce055a9e00f6376416466b996515a27b7cb31
 drm/exynos: g2d: make ioctls more robust,"drm/exynos: g2d: make ioctls more robust
 
 Both exynos_g2d_set_cmdlist_ioctl and exynos_g2d_exec_ioctl don't check
@@ -44957,7 +44957,7 @@ Add proper checks and return ENODEV if the G2D is not available.
 
 Signed-off-by: Tobias Jakobi <tjakobi@math.uni-bielefeld.de>
 Signed-off-by: INki Dae <inki.dae@samsung.com>
-",1,12,10,2,,1cd1ea565f3ece26dff3a94bf73e4f6caae140b9
+",1,12,10,2,Refactoring (Minor),1cd1ea565f3ece26dff3a94bf73e4f6caae140b9
 drm/exynos: hdmi: add null check for hdmiphy_port,"drm/exynos: hdmi: add null check for hdmiphy_port
 
 The hdmiphy can be apb and hdmiphy_port can be null. So before
@@ -44965,7 +44965,7 @@ accessing hdmiphy_port, it should be checked.
 
 Signed-off-by: Seung-Woo Kim <sw0312.kim@samsung.com>
 Signed-off-by: Inki Dae <inki.dae@samsung.com>
-",1,3,2,1,,9d1e25c9982b97f5f3f2b9c885e823ee58a9fb3d
+",1,3,2,1,Refactoring (Minor),9d1e25c9982b97f5f3f2b9c885e823ee58a9fb3d
 drm/exynos: control blending of mixer graphic layer 0,"drm/exynos: control blending of mixer graphic layer 0
 
 The mixer graphic layer 0 isn't blended as default by commit
@@ -44975,7 +44975,7 @@ is enabled by vp because video layer is bottom.
 
 Signed-off-by: Joonyoung Shim <jy0922.shim@samsung.com>
 Signed-off-by: Inki Dae <inki.dae@samsung.com>
-",1,5,5,0,,f1e716d8f89b5e4bfde73e50b59694c421173015
+",1,5,5,0,Feature (Minor),f1e716d8f89b5e4bfde73e50b59694c421173015
 drm/exynos: Add MODULE_DEVICE_TABLE entries for various components,"drm/exynos: Add MODULE_DEVICE_TABLE entries for various components
 
 Add MODULE_DEVICE_TABLE calls for the various OF match tables that
@@ -44984,7 +44984,7 @@ autoloaded based on devicetree information.
 
 Signed-off-by: Sjoerd Simons <sjoerd.simons@collabora.co.uk>
 Signed-off-by: Inki Dae <inki.dae@samsung.com>
-",4,4,4,0,,39b58a396d36500b79da7d07037566761ad7f2ad
+",4,4,4,0,Feature (Minor),39b58a396d36500b79da7d07037566761ad7f2ad
 "Subject: Revert ""drm/exynos: remove MODULE_DEVICE_TABLE definitions""","Subject: Revert ""drm/exynos: remove MODULE_DEVICE_TABLE definitions""
 
 This reverts commit d089621896c3530a9bd309f96e9c9124d07f6c3f was
@@ -44997,7 +44997,7 @@ reverted to restore support for autoloading
 
 Signed-off-by: Sjoerd Simons <sjoerd.simons@collabora.co.uk>
 Signed-off-by: Inki Dae <inki.dae@samsung.com>
-",2,2,2,0,,bd024b86f1f3fd1114366a0385abb1f7b6794d3f
+",2,2,2,0,Regression (Minor),bd024b86f1f3fd1114366a0385abb1f7b6794d3f
 "Subject: Revert ""drm/exynos: fix module build error""","Subject: Revert ""drm/exynos: fix module build error""
 
 Since 21bdd17b21b45ea48e06e23918d681afbe0622e9 it is possible to have
@@ -45010,7 +45010,7 @@ Conflicts:
 
 Signed-off-by: Sjoerd Simons <sjoerd.simons@collabora.co.uk>
 Signed-off-by: Inki Dae <inki.dae@samsung.com>
-",2,2,2,0,,0262ceeb573ae219c920cc9604ef311e285b27f1
+",2,2,2,0,Regression (Minor),0262ceeb573ae219c920cc9604ef311e285b27f1
 xfs: fix coccinelle warnings,"xfs: fix coccinelle warnings
 
 Removes unneeded semicolon, introduced by commit a70a4fa5 (""xfs: fix
@@ -45024,7 +45024,7 @@ Signed-off-by: Fengguang Wu <fengguang.wu@intel.com>
 Reviewed-by: Brian Foster <bfoster@redhat.com>
 Signed-off-by: Dave Chinner <david@fromorbit.com>
 
-",1,2,1,1,,6eee8972cc1799d3dde3f1e699abf286ed3adbaf
+",1,2,1,1,Fix (Minor),6eee8972cc1799d3dde3f1e699abf286ed3adbaf
 xfs: flush both inodes in xfs_swap_extents,"xfs: flush both inodes in xfs_swap_extents
 
 We need to treat both inodes identically from a page cache point of
@@ -45043,7 +45043,7 @@ Signed-off-by: Dave Chinner <dchinner@redhat.com>
 Reviewed-by: Christoph Hellwig <hch@lst.de>
 Signed-off-by: Dave Chinner <david@fromorbit.com>
 
-",1,81,37,44,,4ef897a27543b513351262881660147366c042a1
+",1,81,37,44,Refactoring (Major),4ef897a27543b513351262881660147366c042a1
 xfs: fix swapext ilock deadlock,"xfs: fix swapext ilock deadlock
 
 xfs_swap_extents() holds the ilock over a call to
@@ -45059,7 +45059,7 @@ Signed-off-by: Dave Chinner <dchinner@redhat.com>
 Reviewed-by: Christoph Hellwig <hch@lst.de>
 Signed-off-by: Dave Chinner <david@fromorbit.com>
 
-",1,33,18,15,,812176832169c77b4bacddd01edc3e55340263fd
+",1,33,18,15,Fix (Minor),812176832169c77b4bacddd01edc3e55340263fd
 xfs: kill xfs_vnode.h,"xfs: kill xfs_vnode.h
 
 Move the IO flag definitions to xfs_inode.h and kill the header file
@@ -45078,7 +45078,7 @@ Signed-off-by: Dave Chinner <dchinner@redhat.com>
 Reviewed-by: Christoph Hellwig <hch@lst.de>
 Signed-off-by: Dave Chinner <david@fromorbit.com>
 
-",6,68,20,48,,b92cc59f69537f26d5a42e4171ccc864ae4d9383
+",6,68,20,48,Refactoring (Major),b92cc59f69537f26d5a42e4171ccc864ae4d9383
 xfs: kill VN_MAPPED,"xfs: kill VN_MAPPED
 
 Only one user, no longer needed.
@@ -45087,7 +45087,7 @@ Signed-off-by: Dave Chinner <dchinner@redhat.com>
 Reviewed-by: Christoph Hellwig <hch@lst.de>
 Signed-off-by: Dave Chinner <david@fromorbit.com>
 
-",2,8,1,7,,dd8c38bab0d88615e0bdf013e6de3d4345f8cda2
+",2,8,1,7,Refactoring (Minor),dd8c38bab0d88615e0bdf013e6de3d4345f8cda2
 xfs: kill VN_CACHED,"xfs: kill VN_CACHED
 
 Only has 2 users, has outlived it's usefulness.
@@ -45096,7 +45096,7 @@ Signed-off-by: Dave Chinner <dchinner@redhat.com>
 Reviewed-by: Christoph Hellwig <hch@lst.de>
 Signed-off-by: Dave Chinner <david@fromorbit.com>
 
-",2,5,2,3,,2667c6f935d979cea1ab7fa58568fd0fd725525f
+",2,5,2,3,Refactoring (Minor),2667c6f935d979cea1ab7fa58568fd0fd725525f
 xfs: kill VN_DIRTY(),"xfs: kill VN_DIRTY()
 
 Only one user of the macro and the dirty mapping check is redundant
@@ -45106,7 +45106,7 @@ Signed-off-by: Dave Chinner <dchinner@redhat.com>
 Reviewed-by: Christoph Hellwig <hch@lst.de>
 Signed-off-by: Dave Chinner <david@fromorbit.com>
 
-",2,4,1,3,,eac152b4742ec5f1ed04d73d699ae2be3607d56b
+",2,4,1,3,Refactoring (Minor),eac152b4742ec5f1ed04d73d699ae2be3607d56b
 xfs: dquot recovery needs verifiers,"xfs: dquot recovery needs verifiers
 
 dquot recovery should add verifiers to the dquot buffers that it
@@ -45126,7 +45126,7 @@ Signed-off-by: Dave Chinner <dchinner@redhat.com>
 Reviewed-by: Brian Foster <bfoster@redhat.com>
 Signed-off-by: Dave Chinner <david@fromorbit.com>
 
-",1,44,23,21,,ad3714b82c631a34724da09a7daa53afcab952fa
+",1,44,23,21,Feature (Minor),ad3714b82c631a34724da09a7daa53afcab952fa
 xfs: quotacheck leaves dquot buffers without verifiers,"xfs: quotacheck leaves dquot buffers without verifiers
 
 When running xfs/305, I noticed that quotacheck was flushing dquot
@@ -45188,7 +45188,7 @@ Reviewed-by: Brian Foster <bfoster@redhat.com>
 Reviewed-by: Christoph Hellwig <hch@lst.de>
 Signed-off-by: Dave Chinner <david@fromorbit.com>
 
-",2,11,9,2,,5fd364fee81a7888af806e42ed8a91c845894f2d
+",2,11,9,2,Fix (Minor),5fd364fee81a7888af806e42ed8a91c845894f2d
 xfs: ensure verifiers are attached to recovered buffers,"xfs: ensure verifiers are attached to recovered buffers
 
 Crash testing of CRC enabled filesystems has resulted in a number of
@@ -45238,7 +45238,7 @@ Reviewed-by: Brian Foster <bfoster@redhat.com>
 Reviewed-by: Christoph Hellwig <hch@lst.de>
 Signed-off-by: Dave Chinner <david@fromorbit.com>
 
-",1,51,31,20,,67dc288c21064b31a98a53dc64f6b9714b819fd6
+",1,51,31,20,Refactoring (Minor),67dc288c21064b31a98a53dc64f6b9714b819fd6
 xfs: catch buffers written without verifiers attached,"xfs: catch buffers written without verifiers attached
 
 We recently had a bug where buffers were slipping through log
@@ -45260,7 +45260,7 @@ Reviewed-by: Brian Foster <bfoster@redhat.com>
 Reviewed-by: Christoph Hellwig <hch@lst.de>
 Signed-off-by: Dave Chinner <david@fromorbit.com>
 
-",2,22,21,1,,400b9d88757c0bfbdfa97014e090ec40a31c1282
+",2,22,21,1,Refactoring (Minor),400b9d88757c0bfbdfa97014e090ec40a31c1282
 xfs: avoid false quotacheck after unclean shutdown,"xfs: avoid false quotacheck after unclean shutdown
 
 The commit
@@ -45287,7 +45287,7 @@ exactly what was on disk, per Brian Foster's suggestion.
 Reported-by: Cyril B. <cbay@excellency.fr>
 Signed-off-by: Eric Sandeen <sandeen@redhat.com>
 
-",2,25,20,5,,5ef828c4152726f56751c78ea844f08d2b2a4fa3
+",2,25,20,5,Fix (Minor),5ef828c4152726f56751c78ea844f08d2b2a4fa3
 xfs: fix rounding error of fiemap length parameter,"xfs: fix rounding error of fiemap length parameter
 
 The offset and length parameters are converted from bytes to basic
@@ -45305,7 +45305,7 @@ Signed-off-by: Brian Foster <bfoster@redhat.com>
 Reviewed-by: Dave Chinner <dchinner@redhat.com>
 Signed-off-by: Dave Chinner <david@fromorbit.com>
 
-",1,4,2,2,,eedf32bfcace7d8e20cc66757d74fc68f3439ff7
+",1,4,2,2,Fix (Minor),eedf32bfcace7d8e20cc66757d74fc68f3439ff7
 xfs: introduce xfs_bulkstat_ag_ichunk,"xfs: introduce xfs_bulkstat_ag_ichunk
 
 Introduce xfs_bulkstat_ag_ichunk() to process inodes in chunk with a
@@ -45318,4 +45318,4 @@ Signed-off-by: Jie Liu <jeff.liu@oracle.com>
 Reviewed-by: Dave Chinner <dchinner@redhat.com>
 Signed-off-by: Dave Chinner <david@fromorbit.com>
 
-",2,157,103,54,,1e773c4989d2dfe08332b4c18f7e1d7ad633015c
+",2,157,103,54,Feature (Major),1e773c4989d2dfe08332b4c18f7e1d7ad633015c
