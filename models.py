@@ -87,15 +87,12 @@ class SliceFeature(BaseEstimator):
             index = range(self.slc.start, self.slc.stop)
 
         result = X[:,index]
-        print result.shape
 
         if self.astype:
             result = result.astype(self.astype)
 
         if self.flatten:
             result = result.reshape(X.shape[0])
-
-        print result.shape
 
         return result
 
