@@ -13,7 +13,7 @@ from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.grid_search import GridSearchCV
 from sklearn.linear_model import SGDClassifier
 from sklearn.pipeline import Pipeline, FeatureUnion
-from sklearn.preprocessing import LabelEncoder, StandardScaler
+from sklearn.preprocessing import LabelEncoder, StandardScaler, MinMaxScaler
 
 
 def fetch_gitlog(data_path, stats=False):
@@ -116,28 +116,36 @@ if __name__ == '__main__':
     data = fetch_gitlog(args.csv, stats=True)
 
     pipeline_summary = Pipeline([
-        ('slice', SliceFeature(slice(0, 1))),
+        ('slice', SliceFeature(slice(0, 1), flatten=True)),
         ('vect', CountVectorizer()),
         ('tfidf', TfidfTransformer()),
+        ('scaler', StandardScaler(with_mean=False)),
     ])
 
     pipeline_message = Pipeline([
-        ('slice', SliceFeature(slice(1, 2))),
+        ('slice', SliceFeature(slice(1, 2), flatten=True)),
         ('vect', CountVectorizer()),
         ('tfidf', TfidfTransformer()),
+        ('scaler', StandardScaler(with_mean=False)),
     ])
 
-    pipeline_numeric = Pipeline([
-        ('slice', SliceFeature(slice(2, 6), astype=int)),
+    pipeline_n_files = Pipeline([
+        ('slice', SliceFeature(slice(2, 3), astype=int)),
+        ('scaler', MinMaxScaler()),
+    ])
+
+    pipeline_n_changes = Pipeline([
+        ('slice', SliceFeature(slice(3, 6), astype=float)),
+        ('scaler', StandardScaler(with_mean=False)),
     ])
 
     main_pipeline = Pipeline([
         ('features', FeatureUnion([
             ('summary', pipeline_summary),
             ('message', pipeline_message),
-            ('numeric', pipeline_numeric),
+            ('n_files', pipeline_n_files),
+            ('n_changes', pipeline_n_changes),
         ])),
-        ('scaler', StandardScaler(with_mean=False)),
         ('clf', SGDClassifier()),
     ])
 
