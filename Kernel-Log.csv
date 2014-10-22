@@ -13066,7 +13066,7 @@ Signed-off-by: Mika Westerberg <mika.westerberg@linux.intel.com>
 Signed-off-by: Bob Moore <robert.moore@intel.com>
 Signed-off-by: Lv Zheng <lv.zheng@intel.com>
 Signed-off-by: Rafael J. Wysocki <rafael.j.wysocki@intel.com>
-",1,39,39,0,,b1272e1fe14f8c143e9c8924e9b490ceb1f6af21
+",1,39,39,0,Feature (Minor),b1272e1fe14f8c143e9c8924e9b490ceb1f6af21
 spi: dw: Don't use devm_kzalloc in master->setup callback,"spi: dw: Don't use devm_kzalloc in master->setup callback
 
 device_add() expects that any memory allocated via devm_* API is only
@@ -13109,7 +13109,7 @@ Reported-by: Thor Thayer <tthayer@opensource.altera.com>
 Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Mark Brown <broonie@kernel.org>
 Cc: stable@vger.kernel.org
-",1,12,10,2,,a97c883a16da7e0691a3be5465926c92a8da4da6
+",1,12,10,2,Fix (Minor),a97c883a16da7e0691a3be5465926c92a8da4da6
 ASoC: simple-card: Fix bug of wrong decrement DT node's refcount,"ASoC: simple-card: Fix bug of wrong decrement DT node's refcount
 
 DAI links's cpu_of_node's and codec_of_node's refcounts shouldn't
@@ -13118,7 +13118,7 @@ Because we will still use them before the audio card is removed.
 
 Signed-off-by: Xiubo Li <Li.Xiubo@freescale.com>
 Signed-off-by: Mark Brown <broonie@kernel.org>
-",1,8,8,0,,e3c4a28b611b03d69bfbdffda985ef0dd94c2794
+",1,8,8,0,Fix (Minor),e3c4a28b611b03d69bfbdffda985ef0dd94c2794
 "iommu/arm-smmu: remove pgtable_page_{c,d}tor()","iommu/arm-smmu: remove pgtable_page_{c,d}tor()
 
 If split page table lock for PTE tables is enabled (CONFIG_SPLIT_PTLOCK_CPUS
@@ -13152,7 +13152,7 @@ guarded with domain lock, so remove calls to pgtable_page_{c,d}tor().
 Cc: <stable@vger.kernel.org>
 Signed-off-by: Vladimir Murzin <vladimir.murzin@arm.com>
 Signed-off-by: Will Deacon <will.deacon@arm.com>
-",1,5,0,5,,93b14135cf24668b45eb57348312b627a8539bc4
+",1,5,0,5,Fix (Minor),93b14135cf24668b45eb57348312b627a8539bc4
 iommu/arm-smmu: fix programming of SMMU_CBn_TCR for stage 1,"iommu/arm-smmu: fix programming of SMMU_CBn_TCR for stage 1
 
 Stage-1 context banks do not have the SMMU_CBn_TCR[SL0] field since it
@@ -13164,7 +13164,7 @@ translations.
 Cc: <stable@vger.kernel.org>
 Signed-off-by: Olav Haugan <ohaugan@codeaurora.org>
 Signed-off-by: Will Deacon <will.deacon@arm.com>
-",1,7,5,2,,1fc870c7efa364862c3bc792cfbdb38afea26742
+",1,7,5,2,Fix (Minor),1fc870c7efa364862c3bc792cfbdb38afea26742
 iommu/arm-smmu: avoid calling request_irq in atomic context,"iommu/arm-smmu: avoid calling request_irq in atomic context
 
 request_irq shouldn't be called from atomic context since it might
@@ -13200,7 +13200,7 @@ Cc: <stable@vger.kernel.org>
 Signed-off-by: Mitchel Humpherys <mitchelh@codeaurora.org>
 [will: code cleanup and fixed request_irq token parameter]
 Signed-off-by: Will Deacon <will.deacon@arm.com>
-",1,47,25,22,,a18037b27ebd23edf5edad8bc6ceb72e4bb5716d
+",1,47,25,22,Fix (Major),a18037b27ebd23edf5edad8bc6ceb72e4bb5716d
 "Revert ""arm64: cpuinfo: print info for all CPUs""","Revert ""arm64: cpuinfo: print info for all CPUs""
 
 It turns out that vendors are relying on the format of /proc/cpuinfo,
@@ -13214,7 +13214,7 @@ This reverts commit d7a49086f263164a2c4c178eb76412d48cd671d7.
 
 Acked-by: Mark Rutland <mark.rutland@arm.com>
 Signed-off-by: Will Deacon <will.deacon@arm.com>
-",1,40,22,18,,5e39977edf6500fd12f169e6c458d33b0ef62feb
+",1,40,22,18,Regression (Minor),5e39977edf6500fd12f169e6c458d33b0ef62feb
 drm/i915: handle G45/GM45 pulse detection connected state.,"drm/i915: handle G45/GM45 pulse detection connected state.
 
 In the HPD pulse handler we check for long pulses if the port is actually
@@ -13230,7 +13230,7 @@ Signed-off-by: Dave Airlie <airlied@redhat.com>
 Reviewed-by: Daniel Vetter <daniel.vetter@ffwll.ch>
 Acked-by: Imre Deak <imre.deak@intel.com>
 Signed-off-by: Jani Nikula <jani.nikula@intel.com>
-",1,55,37,18,,2a592bec50994597716c633191ed6bf7af14defc
+",1,55,37,18,Refactoring (Minor),2a592bec50994597716c633191ed6bf7af14defc
 ata: Disabling the async PM for JMicron chip 363/361,"ata: Disabling the async PM for JMicron chip 363/361
 
 After enabled the PM feature that supporting async noirq(76569faa62
@@ -13260,7 +13260,7 @@ Reported-by: Jay <MyMailClone@t-online.de>
 Signed-off-by: Chuansheng Liu <chuansheng.liu@intel.com>
 Acked-by: Rafael J. Wysocki <rafael.j.wysocki@intel.com>
 Signed-off-by: Tejun Heo <tj@kernel.org>
-",2,24,24,0,,e6b7e41cdd8cae0591e04d9519b65470110e2d44
+",2,24,24,0,Fix (Minor),e6b7e41cdd8cae0591e04d9519b65470110e2d44
 ALSA: hda - Fix digital mic on Acer Aspire 3830TG,"ALSA: hda - Fix digital mic on Acer Aspire 3830TG
 
 Acer Aspire 3830TG with CX20588 codec has a digital built-in mic that
@@ -13269,7 +13269,7 @@ Apply the same fixup to this machine, too.
 
 Cc: <stable@vger.kernel.org>
 Signed-off-by: Takashi Iwai <tiwai@suse.de>
-",1,9,8,1,,ff50479ad61069f3ee14863225aebe36d598e93e
+",1,9,8,1,Fix (Minor),ff50479ad61069f3ee14863225aebe36d598e93e
 arm64: fix bug for reloading FPSIMD state after cpu power off,"arm64: fix bug for reloading FPSIMD state after cpu power off
 
 Now arm64 defers reloading FPSIMD state, but this optimization also
@@ -13287,7 +13287,7 @@ Acked-by: Ard Biesheuvel <ard.biesheuvel@linaro.org>
 Reviewed-by: Catalin Marinas <catalin.marinas@arm.com>
 Signed-off-by: Leo Yan <leoy@marvell.com>
 Signed-off-by: Will Deacon <will.deacon@arm.com>
-",1,1,1,0,,7c68a9cc040216c902f93f9c80305df55d9beff7
+",1,1,1,0,Fix (Minor),7c68a9cc040216c902f93f9c80305df55d9beff7
 netfilter: NETFILTER_XT_TARGET_LOG selects NF_LOG_*,"netfilter: NETFILTER_XT_TARGET_LOG selects NF_LOG_*
 
 CONFIG_NETFILTER_XT_TARGET_LOG is not selected anymore when jumping
@@ -13300,7 +13300,7 @@ when moving from old to new kernels.
 
 Reported-by: Rafał Miłecki <zajec5@gmail.com>
 Signed-off-by: Pablo Neira Ayuso <pablo@netfilter.org>
-",1,4,3,1,,d79a61d646db950b68dd79ecc627cb5f11e0d8ac
+",1,4,3,1,Feature (Minor),d79a61d646db950b68dd79ecc627cb5f11e0d8ac
 drm/vmwgfx: Fix a potential infinite spin waiting for fifo idle,"drm/vmwgfx: Fix a potential infinite spin waiting for fifo idle
 
 The code waiting for fifo idle was incorrect and could possibly spin
@@ -13311,7 +13311,7 @@ Reported-by: Mark Sheldon <markshel@vmware.com>
 Reviewed-by: Jakob Bornecrantz <jakob@vmware.com>
 Reivewed-by: Mark Sheldon <markshel@vmware.com>
 Cc: <stable@vger.kernel.org>
-",1,3,2,1,,f01ea0c3d9db536c64d47922716d8b3b8f21d850
+",1,3,2,1,Fix (Minor),f01ea0c3d9db536c64d47922716d8b3b8f21d850
 drm/vmwgfx: Fix an incorrect OOM return value,"drm/vmwgfx: Fix an incorrect OOM return value
 
 At the same time, make error paths return early for clarity.
@@ -13320,7 +13320,7 @@ Signed-off-by: Thomas Hellstrom <thellstrom@vmware.com>
 Reported-by: Dan Carpenter <dan.carpenter@oracle.com>
 Reviewed-by: jakob Bornecrantz <jakob@vmware.com>
 Cc: <stable@vger.kernel.org>
-",1,11,5,6,,9f9cb84f416f07f57d75789d77e7d47d6141f44e
+",1,11,5,6,Fix (Minor),9f9cb84f416f07f57d75789d77e7d47d6141f44e
 USB: sierra: add 1199:68AA device ID,"USB: sierra: add 1199:68AA device ID
 
 This VID:PID is used for some Direct IP devices behaving
@@ -13330,7 +13330,7 @@ Cc: <stable@vger.kernel.org>
 Reported-by: Lars Melin <larsm17@gmail.com>
 Signed-off-by: Bjørn Mork <bjorn@mork.no>
 Signed-off-by: Johan Hovold <johan@kernel.org>
-",1,3,3,0,,5b3da69285c143b7ea76b3b9f73099ff1093ab73
+",1,3,3,0,Feature (Minor),5b3da69285c143b7ea76b3b9f73099ff1093ab73
 "USB: sierra: avoid CDC class functions on ""68A3"" devices","USB: sierra: avoid CDC class functions on ""68A3"" devices
 
 Sierra Wireless Direct IP devices using the 68A3 product ID
@@ -13348,7 +13348,7 @@ numbers not yet in the blacklist.
 Cc: <stable@vger.kernel.org>
 Signed-off-by: Bjørn Mork <bjorn@mork.no>
 Signed-off-by: Johan Hovold <johan@kernel.org>
-",1,6,4,2,,049255f51644c1105775af228396d187402a5934
+",1,6,4,2,Fix (Minor),049255f51644c1105775af228396d187402a5934
 USB: ftdi_sio: add support for NOVITUS Bono E thermal printer,"USB: ftdi_sio: add support for NOVITUS Bono E thermal printer
 
 Add device id for NOVITUS Bono E thermal printer.
@@ -13356,7 +13356,7 @@ Add device id for NOVITUS Bono E thermal printer.
 Reported-by: Emanuel Koczwara <poczta@emanuelkoczwara.pl>
 Cc: stable <stable@vger.kernel.org>
 Signed-off-by: Johan Hovold <johan@kernel.org>
-",2,7,7,0,,ee444609dbae8afee420c3243ce4c5f442efb622
+",2,7,7,0,Fix (Minor),ee444609dbae8afee420c3243ce4c5f442efb622
 spi: fsl: Don't use devm_kzalloc in master->setup callback,"spi: fsl: Don't use devm_kzalloc in master->setup callback
 
 device_add() expects that any memory allocated via devm_* API is only
@@ -13406,7 +13406,7 @@ Signed-off-by: Axel Lin <axel.lin@ingics.com>
 Tested-by: Christophe Leroy <christophe.leroy@c-s.fr>
 Signed-off-by: Mark Brown <broonie@kernel.org>
 Cc: stable@vger.kernel.org
-",2,25,19,6,,d9f26748128c73ec6bed2846ca52fb1c2edc3ced
+",2,25,19,6,Fix (Minor),d9f26748128c73ec6bed2846ca52fb1c2edc3ced
 USB: zte_ev: fix removed PIDs,"USB: zte_ev: fix removed PIDs
 
 Add back some PIDs that were mistakingly remove when reverting commit
@@ -13420,15 +13420,15 @@ devices to zte_ev"""")
 
 Reported-by: Lei Liu <lei35151@163.com>
 Cc: stable <stable@vger.kernel.org>
-",1,8,8,0,,4df0ea41af9dce89daa9f1cb968884b346d168c9
+",1,8,8,0,Regression (Minor),4df0ea41af9dce89daa9f1cb968884b346d168c9
 m68k: Wire up memfd_create,"m68k: Wire up memfd_create
 
 Signed-off-by: Geert Uytterhoeven <geert@linux-m68k.org>
-",3,4,3,1,,4ed7800987b1b082f8fc98c5cb7eb20cf74280a8
+",3,4,3,1,Refactoring (Minor),4ed7800987b1b082f8fc98c5cb7eb20cf74280a8
 m68k: Wire up getrandom,"m68k: Wire up getrandom
 
 Signed-off-by: Geert Uytterhoeven <geert@linux-m68k.org>
-",3,4,3,1,,16d7b8b99231874d35ab855804c65768e640d6b8
+",3,4,3,1,Regression (Minor),16d7b8b99231874d35ab855804c65768e640d6b8
 "x86, irq: Fix build error caused by 9eabc99a635a77cbf09","x86, irq: Fix build error caused by 9eabc99a635a77cbf09
 
 Commit 9eabc99a635a77cbf09 causes following build error when
@@ -13453,14 +13453,14 @@ Cc: Borislav Petkov <bp@alien8.de>
 Cc: Grant Likely <grant.likely@linaro.org>
 Link: http://lkml.kernel.org/r/1409382916-10649-1-git-send-email-jiang.liu@linux.intel.com
 Signed-off-by: Thomas Gleixner <tglx@linutronix.de>
-",1,1,1,0,,f3761db1646d3ccb9ada2df8e27553a73ef43826
+",1,1,1,0,Fix (Minor),f3761db1646d3ccb9ada2df8e27553a73ef43826
 s390/vdso: remove NULL pointer check from clock_gettime,"s390/vdso: remove NULL pointer check from clock_gettime
 
 The explicit NULL pointer check on the timespec argument is only
 required for clock_getres but not for clock_gettime.
 
 Signed-off-by: Martin Schwidefsky <schwidefsky@de.ibm.com>
-",2,20,6,14,,5da76157a4b7d5f595c846cf5e95f6d085b350e2
+",2,20,6,14,Refactoring (Minor),5da76157a4b7d5f595c846cf5e95f6d085b350e2
 s390/ipl: Add missing SCSI loadparm attributes to /sys/firmware,"s390/ipl: Add missing SCSI loadparm attributes to /sys/firmware
 
 Currently the loadparm is only supported for CCW IPL. But also for SCSI
@@ -13481,7 +13481,7 @@ now from ""struct ipl_block_ccw"" to the generic ""struct ipl_list_hdr"".
 Reviewed-by: Heiko Carstens <heiko.carstens@de.ibm.com>
 Signed-off-by: Michael Holzheu <holzheu@linux.vnet.ibm.com>
 Signed-off-by: Martin Schwidefsky <schwidefsky@de.ibm.com>
-",2,136,89,47,,69928601676ff6f51ff71ba943f749afe7b1cbb2
+",2,136,89,47,Feature (Minor),69928601676ff6f51ff71ba943f749afe7b1cbb2
 s390/dasd: Make module parameter visible in sysfs,"s390/dasd: Make module parameter visible in sysfs
 
 Change the visibility of the dasd parameter of kernel module dasd_mod
@@ -13490,7 +13490,7 @@ to be consistent with the eer_pages parameter.
 Signed-off-by: Peter Oberparleiter <oberpar@linux.vnet.ibm.com>
 Acked-by: Stefan Weinhuber <wein@de.ibm.com>
 Signed-off-by: Martin Schwidefsky <schwidefsky@de.ibm.com>
-",1,2,1,1,,3b1269350b15e46aba8cdd1613a07530253275cd
+",1,2,1,1,Refactoring (Minor),3b1269350b15e46aba8cdd1613a07530253275cd
 iwlwifi: mvm: enable scheduled scan on newest firmware,"iwlwifi: mvm: enable scheduled scan on newest firmware
 
 Scheduled scan was disabled because of a bug in the firmware.
@@ -13500,13 +13500,13 @@ The bugs have been fixes in latest firmware versions, so that
 we can re-enable the feature on latest firmwares only.
 
 Signed-off-by: Emmanuel Grumbach <emmanuel.grumbach@intel.com>
-",1,14,8,6,,6efaaf33bece53a842cb1cc71971a05216d81473
+",1,14,8,6,Feature (Minor),6efaaf33bece53a842cb1cc71971a05216d81473
 iwlwifi: bump firmware API version to 10 for 7000 and 8000,"iwlwifi: bump firmware API version to 10 for 7000 and 8000
 
 New firmware on the way.
 
 Signed-off-by: Emmanuel Grumbach <emmanuel.grumbach@intel.com>
-",2,6,3,3,,d88c8958dc13b4e4eb7fc57e3f06dc1c4abc7b1f
+",2,6,3,3,Feature (Minor),d88c8958dc13b4e4eb7fc57e3f06dc1c4abc7b1f
 stmmac: fix PLS bit setting when EEE is active,"stmmac: fix PLS bit setting when EEE is active
 
 In case of PLS is active the PLS (PHY Link Status) bit in
@@ -13516,7 +13516,7 @@ pattern when the link is ok.
 Signed-off-by: nandini sharma <nandini.sharma@st.com>
 Signed-off-by: Giuseppe Cavallaro <peppe.cavallaro@st.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,7,3,4,,71965352eedd0cc524de36accc6da7d5166a2c62
+",1,7,3,4,Fix (Minor),71965352eedd0cc524de36accc6da7d5166a2c62
 stmmac: never check EEE in case of a switch is attached,"stmmac: never check EEE in case of a switch is attached
 
 This patch is to skip the EEE initialisation when the stmmac
@@ -13524,7 +13524,7 @@ is using a switch (with a fixed phy support).
 
 Signed-off-by: Giuseppe Cavallaro <peppe.cavallaro@st.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,5,5,0,,56b88c25c543f1d4b1fff7f1c0267f59f53c261f
+",1,5,5,0,Feature (Minor),56b88c25c543f1d4b1fff7f1c0267f59f53c261f
 stmmac: fix LPI TW timer value to 20.5us.,"stmmac: fix LPI TW timer value to 20.5us.
 
 The value for LPI TW timer has to be updated to 0x1E that is the hardcoded value
@@ -13535,7 +13535,7 @@ waiting to implement LLDP to negotiate the Wakeup time of Remote PHY.
 Signed-off-by: nandini sharma <nandini.sharma@st.com>
 Signed-off-by: Giuseppe Cavallaro <peppe.cavallaro@st.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,2,1,1,,438a62b16e0aeff5c4a5ab457343cebe4d7278da
+",1,2,1,1,Fix (Minor),438a62b16e0aeff5c4a5ab457343cebe4d7278da
 stmmac: fix the EEE LPI Macro definitions.,"stmmac: fix the EEE LPI Macro definitions.
 
 This patch is to fix the definition of macros for EEE otherwise the LPI TX/RX
@@ -13544,9 +13544,9 @@ entry/exit cannot be properly managed.
 Signed-off-by: Nandini Sharma <nandini.sharma@st.com>
 Signed-off-by: Giuseppe Cavallaro <peppe.cavallaro@st.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,8,4,4,,162fb1d6559c4dcb454f172248d6d8ffa7a30bf8
+",1,8,4,4,Fix (Minor),162fb1d6559c4dcb454f172248d6d8ffa7a30bf8
 Linux 3.17-rc3,"Linux 3.17-rc3
-",1,2,1,1,,69e273c0b0a3c337a521d083374c918dc52c666f
+",1,2,1,1,Documentation (Minor),69e273c0b0a3c337a521d083374c918dc52c666f
 unicore32: Fix build error,"unicore32: Fix build error
 
 unicore32 builds fail with
@@ -13572,7 +13572,7 @@ Fixes: 649671c90eaf (""unicore32: Use get_signal() signal_setup_done()"")
 Cc: Richard Weinberger <richard@nod.at>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,9,5,4,,ca98565a6182a960cd857d7546267a0775154eb8
+",1,9,5,4,Fix (Minor),ca98565a6182a960cd857d7546267a0775154eb8
 iwlwifi: Remove module build requirement for Intel Wireless WiFi,"iwlwifi: Remove module build requirement for Intel Wireless WiFi
 
 The CONFIG_IWLDVM and CONFIG_IWLMVM currently have a
@@ -13583,7 +13583,7 @@ Fixes: ae7486a2b734 (""iwlwifi: fix Kconfig issues"")
 Signed-off-by: Marcel Holtmann <marcel@holtmann.org>
 [Squashed 2 commites for MVM and DVM]
 Signed-off-by: Emmanuel Grumbach <emmanuel.grumbach@intel.com>
-",1,2,0,2,,ab1304b986468e3ef698ec4e1cb1a3d4ba080811
+",1,2,0,2,Fix (Minor),ab1304b986468e3ef698ec4e1cb1a3d4ba080811
 "Revert ""iwlwifi: dvm: don't enable CTS to self""","Revert ""iwlwifi: dvm: don't enable CTS to self""
 
 This reverts commit 43d826ca5979927131685cc2092c7ce862cb91cd.
@@ -13592,7 +13592,7 @@ This commit caused packet loss.
 
 Cc: <stable@vger.kernel.org>
 Signed-off-by: Emmanuel Grumbach <emmanuel.grumbach@intel.com>
-",1,12,12,0,,f47f46d7b09cf1d09e4b44b6cc4dd7d68a08028c
+",1,12,12,0,Regression (Minor),f47f46d7b09cf1d09e4b44b6cc4dd7d68a08028c
 vexpress/spc: fix a build warning on array bounds,"vexpress/spc: fix a build warning on array bounds
 
 With ARCH_VEXPRESS_SPC option, kernel build has the following
@@ -13609,7 +13609,7 @@ Signed-off-by: Alex Shi <alex.shi@linaro.org>
 Acked-by: Pawel Moll <pawel.moll@arm.com>
 Acked-by: Sudeep Holla <sudeep.holla@arm.com>
 Signed-off-by: Olof Johansson <olof@lixom.net>
-",1,14,11,3,,e160cc17688cc6f24211cbc2e2a6e872e08dd4d6
+",1,14,11,3,Fix (Minor),e160cc17688cc6f24211cbc2e2a6e872e08dd4d6
 spi: sh-msiof: Fix transmit-only DMA transfers,"spi: sh-msiof: Fix transmit-only DMA transfers
 
 Fix tx/rx mixup, which broke transmit-only transfers.
@@ -13621,7 +13621,7 @@ Reported-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
 Signed-off-by: Geert Uytterhoeven <geert+renesas@glider.be>
 Acked-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
 Signed-off-by: Mark Brown <broonie@linaro.org>
-",1,4,2,2,,cdcd565fa0925edf9b80c875fcc84a231c75bd1d
+",1,4,2,2,Fix (Minor),cdcd565fa0925edf9b80c875fcc84a231c75bd1d
 regmap: Don't attempt block writes when syncing cache on single_rw devices,"regmap: Don't attempt block writes when syncing cache on single_rw devices
 
 If the device can't support block writes then don't attempt to use raw
@@ -13632,7 +13632,7 @@ Reported-by: Jarkko Nikula <jarkko.nikula@linux.intel.com>
 Tested-by: Jarkko Nikula <jarkko.nikula@linux.intel.com>
 Signed-off-by: Mark Brown <broonie@linaro.org>
 Cc: stable@vger.kernel.org
-",1,2,1,1,,5c1ebe7f73f9166893c3459915db8a09d6d1d715
+",1,2,1,1,Feature (Minor),5c1ebe7f73f9166893c3459915db8a09d6d1d715
 fix EBUSY on umount() from MNT_SHRINKABLE,"fix EBUSY on umount() from MNT_SHRINKABLE
 
 We need the parents of victims alive until namespace_unlock() gets to
@@ -13648,7 +13648,7 @@ not.  So they'll still be around when we get to namespace_unlock().
 
 Cc: stable@vger.kernel.org # 3.12+
 Signed-off-by: Al Viro <viro@zeniv.linux.org.uk>
-",1,6,6,0,,81b6b06197606b4bef4e427a197aeb808e8d89e1
+",1,6,6,0,Fix (Minor),81b6b06197606b4bef4e427a197aeb808e8d89e1
 get rid of propagate_umount() mistakenly treating slaves as busy.,"get rid of propagate_umount() mistakenly treating slaves as busy.
 
 The check in __propagate_umount() (""has somebody explicitly mounted
@@ -13657,7 +13657,7 @@ victims out of the child lists.
 
 Cc: stable@vger.kernel.org
 Signed-off-by: Al Viro <viro@zeniv.linux.org.uk>
-",2,5,4,1,,88b368f27a094277143d8ecd5a056116f6a41520
+",2,5,4,1,Fix (Minor),88b368f27a094277143d8ecd5a056116f6a41520
 net: sctp: fix ABI mismatch through sctp_assoc_to_state helper,"net: sctp: fix ABI mismatch through sctp_assoc_to_state helper
 
 Since SCTP day 1, that is, 19b55a2af145 (""Initial commit"") from lksctp
@@ -13705,7 +13705,7 @@ Fixes: 0b8f9e25b0aa (""sctp: remove completely unsed EMPTY state"")
 Signed-off-by: Daniel Borkmann <dborkman@redhat.com>
 Acked-by: Vlad Yasevich <vyasevich@gmail.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",2,15,14,1,,38ab1fa981d543e1b00f4ffbce4ddb480cd2effe
+",2,15,14,1,Fix (Minor),38ab1fa981d543e1b00f4ffbce4ddb480cd2effe
 net: attempt a single high order allocation,"net: attempt a single high order allocation
 
 In commit ed98df3361f0 (""net: use __GFP_NORETRY for high order
@@ -13738,7 +13738,7 @@ skb_page_frag_refill() iteration.
 Signed-off-by: Eric Dumazet <edumazet@google.com>
 Acked-by: David Rientjes <rientjes@google.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,30,16,14,,d9b2938aabf757da2d40153489b251d4fc3fdd18
+",1,30,16,14,Fix (Minor),d9b2938aabf757da2d40153489b251d4fc3fdd18
 mlx4: Set user-space raw Ethernet QPs to properly handle VXLAN traffic,"mlx4: Set user-space raw Ethernet QPs to properly handle VXLAN traffic
 
 Raw Ethernet QPs opened from user-space lack the proper setup to
@@ -13749,7 +13749,7 @@ steering rule and set the tunnel_type field in the QP context.
 
 Signed-off-by: Or Gerlitz <ogerlitz@mellanox.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",2,38,37,1,,d2fce8a9060db3af7e1b25e259b251da17f6a0d6
+",2,38,37,1,Fix (Minor),d2fce8a9060db3af7e1b25e259b251da17f6a0d6
 net/mlx4: Move the tunnel steering helper function to mlx4_core,"net/mlx4: Move the tunnel steering helper function to mlx4_core
 
 Move the function which we use to set VXLAN DMFS (flow-steering) rules
@@ -13759,7 +13759,7 @@ that they can serve VXLAN traffic too.
 
 Signed-off-by: Or Gerlitz <ogerlitz@mellanox.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",3,72,43,29,,b95089d00c04712a9d4655d5c638930ac24b7bd3
+",3,72,43,29,Regression (Minor),b95089d00c04712a9d4655d5c638930ac24b7bd3
 stmmac: fix dma api misuse,"stmmac: fix dma api misuse
 
 Enabling DMA_API_DEBUG, warnings are reported at runtime
@@ -13777,7 +13777,7 @@ Signed-off-by: Giuseppe Cavallaro <peppe.cavallaro@st.com>
 Reviewed-by: Denis Kirjanov <kda@linux-powerpc.org>
 Cc: Hans de Goede <hdegoede@redhat.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",5,106,79,27,,362b37be01edc7429e3ebaa89613517d57863f5c
+",5,106,79,27,Fix (Minor),362b37be01edc7429e3ebaa89613517d57863f5c
 stmmac: ptp: fix the reference clock,"stmmac: ptp: fix the reference clock
 
 The PTP reference clock, used for setting the addend in the Timestamp Addend
@@ -13795,14 +13795,14 @@ as side effect, the ptp clock can move faster/slower than the system clock.
 
 Signed-off-by: Giuseppe Cavallaro <peppe.cavallaro@st.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",4,28,22,6,,5566401f2f10556776fd199c11d6a02a5e0b7b95
+",4,28,22,6,Fix (Minor),5566401f2f10556776fd199c11d6a02a5e0b7b95
 stmmac: fix tipo on mmc crc error,"stmmac: fix tipo on mmc crc error
 
 This patch is to fix a typo on mmc rx crc error when reported by ethtool.
 
 Signed-off-by: Giuseppe Cavallaro <peppe.cavallaro@st.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",3,6,3,3,,2b78d348f1bc3396ca1662c6a6177a7fb1ca62ff
+",3,6,3,3,Fix (Minor),2b78d348f1bc3396ca1662c6a6177a7fb1ca62ff
 stmmac: prevent false carrier sense detection,"stmmac: prevent false carrier sense detection
 
 This patch is to w/a a problem that happens on some boxes when run at 10Mbps
@@ -13823,7 +13823,7 @@ Acked-by: Vince Bridgers <vbridgers2013@gmail.com>
 Acked-by: Ley Foon Tan <lftan@altera.com>
 Acked-by: Chen-Yu Tsai <wens@csie.org>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,2,1,1,,b1dee4793fb8fec8e6b2efb68953b465a65c6b3e
+",1,2,1,1,Feature (Minor),b1dee4793fb8fec8e6b2efb68953b465a65c6b3e
 kexec: purgatory: add clean-up for purgatory directory,"kexec: purgatory: add clean-up for purgatory directory
 
 Without this patch the kexec-purgatory.c and purgatory.ro files are not
@@ -13836,7 +13836,7 @@ Cc: ""H. Peter Anvin"" <hpa@zytor.com>
 Cc: Thomas Gleixner <tglx@linutronix.de>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,1,1,0,,b0108f9e93d0d39050eaa11358852f349bdccb71
+",1,1,1,0,Feature (Minor),b0108f9e93d0d39050eaa11358852f349bdccb71
 Documentation/kdump/kdump.txt: add ARM description,"Documentation/kdump/kdump.txt: add ARM description
 
 Add arm specific parts to kdump kernel documentation.
@@ -13847,7 +13847,7 @@ Cc: Haren Myneni <hbabu@us.ibm.com>
 Cc: Rob Landley <rob@landley.net>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,36,33,3,,16b0371a2e2ba1a2dea84a18356b9bc7168a5b12
+",1,36,33,3,Documentation (Major),16b0371a2e2ba1a2dea84a18356b9bc7168a5b12
 flush_icache_range: export symbol to fix build errors,"flush_icache_range: export symbol to fix build errors
 
 Fix building errors occuring due to a missing export of
@@ -13870,7 +13870,7 @@ Acked-by: Zhigang Lu <zlu@tilera.com>		[tile]
 Cc: Kirill Tkhai <tkhai@yandex.ru>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",5,5,5,0,,e3560305192cd51b3c07206c85eb4231594dd58b
+",5,5,5,0,Fix (Minor),e3560305192cd51b3c07206c85eb4231594dd58b
 tools: selftests: fix build issue with make kselftests target,"tools: selftests: fix build issue with make kselftests target
 
 Fix the typo of ARCH when running 'make kselftests'.  Change the 'X86'
@@ -13885,7 +13885,7 @@ Cc: Michal Marek <mmarek@suse.cz>
 Cc: Shuah Khan <shuahkh@osg.samsung.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",3,22,11,11,,498b473af9c20a4cb533297dc43b063f35f86349
+",3,22,11,11,Fix (Minor),498b473af9c20a4cb533297dc43b063f35f86349
 ocfs2: quorum: add a log for node not fenced,"ocfs2: quorum: add a log for node not fenced
 
 For debug use, we can see from the log whether the fence decision is
@@ -13898,7 +13898,7 @@ Cc: Joel Becker <jlbec@evilplan.org>
 Cc: Joseph Qi <joseph.qi@huawei.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,13,11,2,,8c7b638cece146234b0c0d5f6ba84d1cf6f81e83
+",1,13,11,2,Feature (Minor),8c7b638cece146234b0c0d5f6ba84d1cf6f81e83
 ocfs2: o2net: set tcp user timeout to max value,"ocfs2: o2net: set tcp user timeout to max value
 
 When tcp retransmit timeout(15mins), the connection will be closed.
@@ -13917,7 +13917,7 @@ Cc: Joel Becker <jlbec@evilplan.org>
 Cc: Joseph Qi <joseph.qi@huawei.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",2,21,21,0,,8e9801dfe37c9e68cdbfcd15988df2187191864e
+",2,21,21,0,Feature (Minor),8e9801dfe37c9e68cdbfcd15988df2187191864e
 ocfs2: o2net: don't shutdown connection when idle timeout,"ocfs2: o2net: don't shutdown connection when idle timeout
 
 This patch series is to fix a possible message lost bug in ocfs2 when
@@ -13962,7 +13962,7 @@ Cc: Joel Becker <jlbec@evilplan.org>
 Cc: Joseph Qi <joseph.qi@huawei.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,25,19,6,,c43c363def04cdaed0d9e26dae846081f55714e7
+",1,25,19,6,Fix (Minor),c43c363def04cdaed0d9e26dae846081f55714e7
 ocfs2: do not write error flag to user structure we cannot copy from/to,"ocfs2: do not write error flag to user structure we cannot copy from/to
 
 If we failed to copy from the structure, writing back the flags leaks 31
@@ -13980,7 +13980,7 @@ Cc: Joel Becker <jlbec@evilplan.org>
 Acked-by: Mark Fasheh <mfasheh@suse.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,129,43,86,,2b462638e41ea62230297c21c4da9955937b7a3c
+",1,129,43,86,Fix (Minor),2b462638e41ea62230297c21c4da9955937b7a3c
 x86/purgatory: use approprate -m64/-32 build flag for arch/x86/purgatory,"x86/purgatory: use approprate -m64/-32 build flag for arch/x86/purgatory
 
 Thomas reported that build of x86_64 kernel was failing for him.  He is
@@ -14011,7 +14011,7 @@ Suggested-by: H. Peter Anvin <hpa@zytor.com>
 Signed-off-by: Vivek Goyal <vgoyal@redhat.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,1,1,0,,4df4185a596c7301be0d8e1fdf691ec03e57cd23
+",1,1,1,0,Fix (Minor),4df4185a596c7301be0d8e1fdf691ec03e57cd23
 drivers/rtc/rtc-s5m.c: re-add support for devices without irq specified,"drivers/rtc/rtc-s5m.c: re-add support for devices without irq specified
 
 The rtc-s5m driver used to support devices without irq specified in the
@@ -14061,7 +14061,7 @@ Tested-by: Krzysztof Kozlowski <k.kozlowski@samsung.com>
 Acked-by: Kyungmin Park <kyungmin.park@samsung.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,21,14,7,,b7d5b9a9686674eedffe5b8745c85265f3fe3367
+",1,21,14,7,Fix (Major),b7d5b9a9686674eedffe5b8745c85265f3fe3367
 xattr: fix check for simultaneous glibc header inclusion,"xattr: fix check for simultaneous glibc header inclusion
 
 The guard was introduced in commit ea1a8217b06b (""xattr: guard against
@@ -14089,7 +14089,7 @@ Cc: Allan McRae <allan@archlinux.org>
 Cc: <stable@vger.kernel.org>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,2,1,1,,bfcfd44cce2774f19daeb59fb4e43fc9aa80e7b8
+",1,2,1,1,Fix (Minor),bfcfd44cce2774f19daeb59fb4e43fc9aa80e7b8
 kexec: remove CONFIG_KEXEC dependency on crypto,"kexec: remove CONFIG_KEXEC dependency on crypto
 
 New system call depends on crypto.  As it did not have a separate config
@@ -14104,7 +14104,7 @@ Cc: H. Peter Anvin <hpa@zytor.com>
 Cc: Shaun Ruffell <sruffell@digium.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",8,16,0,16,,b41d34b46aa91e0c83300c38eebc0b8762705e82
+",8,16,0,16,Refactoring (Minor),b41d34b46aa91e0c83300c38eebc0b8762705e82
 kexec: create a new config option CONFIG_KEXEC_FILE for new syscall,"kexec: create a new config option CONFIG_KEXEC_FILE for new syscall
 
 Currently new system call kexec_file_load() and all the associated code
@@ -14137,7 +14137,7 @@ Cc: H. Peter Anvin <hpa@zytor.com>
 Tested-by: Shaun Ruffell <sruffell@digium.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",8,62,42,20,,74ca317c26a3f8543203b61d262c0ab2e30c384e
+",8,62,42,20,Feature (Minor),74ca317c26a3f8543203b61d262c0ab2e30c384e
 "x86,mm: fix pte_special versus pte_numa","x86,mm: fix pte_special versus pte_numa
 
 Sasha Levin has shown oopses on ffffea0003480048 and ffffea0003480008 at
@@ -14184,7 +14184,7 @@ Cc: Matthew Wilcox <matthew.r.wilcox@intel.com>
 Cc: <stable@vger.kernel.org>	[3.16]
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",2,16,10,6,,b38af4721f59d0b564468f623b3e52a638195015
+",2,16,10,6,Regression (Minor),b38af4721f59d0b564468f623b3e52a638195015
 hugetlb_cgroup: use lockdep_assert_held rather than spin_is_locked,"hugetlb_cgroup: use lockdep_assert_held rather than spin_is_locked
 
 spin_lock may be an empty struct for !SMP configurations and so
@@ -14202,7 +14202,7 @@ Signed-off-by: Michal Hocko <mhocko@suse.cz>
 Reviewed-by: Aneesh Kumar K.V <aneesh.kumar@linux.vnet.ibm.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,2,1,1,,7ea8574e5fa31f43d8098a028f12ba6a9c9f3530
+",1,2,1,1,Feature (Minor),7ea8574e5fa31f43d8098a028f12ba6a9c9f3530
 mm/zpool: use prefixed module loading,"mm/zpool: use prefixed module loading
 
 To avoid potential format string expansion via module parameters, do not
@@ -14219,7 +14219,7 @@ Cc: Nitin Gupta <ngupta@vflare.org>
 Acked-by: Dan Streetman <ddstreet@ieee.org>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",3,4,3,1,,137f8cff505ace6251dc442c7aa973d60c801a79
+",3,4,3,1,Feature (Minor),137f8cff505ace6251dc442c7aa973d60c801a79
 zram: fix incorrect stat with failed_reads,"zram: fix incorrect stat with failed_reads
 
 Since we allocate a temporary buffer in zram_bvec_read to handle partial
@@ -14236,7 +14236,7 @@ Acked-by: Jerome Marchand <jmarchan@redhat.com>
 Acked-by: Sergey Senozhatsky <sergey.senozhatsky@gmail.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",2,12,8,4,,0cf1e9d6c34d4c82ac3af8015594849814843d36
+",2,12,8,4,Fix (Minor),0cf1e9d6c34d4c82ac3af8015594849814843d36
 lib: turn CONFIG_STACKTRACE into an actual option.,"lib: turn CONFIG_STACKTRACE into an actual option.
 
 I was puzzled why /proc/$$/stack had disappeared, until I figured out I
@@ -14248,7 +14248,7 @@ Signed-off-by: Dave Jones <davej@redhat.com>
 Acked-by: Ingo Molnar <mingo@kernel.org>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,7,6,1,,0c38e1fe0fced6aa06dbf444f7203dd7f325e369
+",1,7,6,1,Feature (Minor),0c38e1fe0fced6aa06dbf444f7203dd7f325e369
 mm: actually clear pmd_numa before invalidating,"mm: actually clear pmd_numa before invalidating
 
 Commit 67f87463d3a3 (""mm: clear pmd_numa before invalidating"") cleared
@@ -14260,7 +14260,7 @@ Acked-by: Mel Gorman <mgorman@suse.de>
 Reviewed-by: Rik van Riel <riel@redhat.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,2,1,1,,ce8369bcbeeea6dfe24a6c8f60d2fcfce0432830
+",1,2,1,1,Fix (Minor),ce8369bcbeeea6dfe24a6c8f60d2fcfce0432830
 "memblock, memhotplug: fix wrong type in memblock_find_in_range_node().","memblock, memhotplug: fix wrong type in memblock_find_in_range_node().
 
 In memblock_find_in_range_node(), we defined ret as int.  But it should
@@ -14285,7 +14285,7 @@ Tested-by: Xishi Qiu <qiuxishi@huawei.com>
 Cc: <stable@vger.kernel.org>	[3.13+]
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,3,1,2,,0cfb8f0c3e21e36d4a6e472e4c419d58ba848698
+",1,3,1,2,Fix (Minor),0cfb8f0c3e21e36d4a6e472e4c419d58ba848698
 resource: fix the case of null pointer access,"resource: fix the case of null pointer access
 
 Richard and Daniel reported that UML is broken due to changes to
@@ -14340,7 +14340,7 @@ Tested-by: Daniel Walter <sahne@0x90.at>
 Signed-off-by: Vivek Goyal <vgoyal@redhat.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,11,4,7,,800df627e2eabaf4a921d342a1d5162c843b7fc2
+",1,11,4,7,Regression (Minor),800df627e2eabaf4a921d342a1d5162c843b7fc2
 checkpatch: relax check for length of git commit IDs,"checkpatch: relax check for length of git commit IDs
 
 Checkpatch currently warns if a git commit ID (in the changelog,
@@ -14351,7 +14351,7 @@ length.
 Cc: Geert Uytterhoeven <geert@linux-m68k.org
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,4,2,2,,3f6316b4378e64e96acfe55b499648dc0e6b9603
+",1,4,2,2,Feature (Minor),3f6316b4378e64e96acfe55b499648dc0e6b9603
 alpha: io: implement relaxed accessor macros for writes,"alpha: io: implement relaxed accessor macros for writes
 
 write{b,w,l,q}_relaxed are implemented by some architectures in order to
@@ -14366,13 +14366,13 @@ Cc: Ivan Kokshaysky <ink@jurassic.park.msu.ru>
 Signed-off-by: Will Deacon <will.deacon@arm.com>
 Signed-off-by: Matt Turner <mattst88@gmail.com>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,12,8,4,,9e36c633951acb33e250e75b209b04217ce7b86c
+",1,12,8,4,Feature (Minor),9e36c633951acb33e250e75b209b04217ce7b86c
 "alpha: Wire up sched_setattr, sched_getattr, and renameat2 syscalls.","alpha: Wire up sched_setattr, sched_getattr, and renameat2 syscalls.
 
 Signed-off-by: Michael Cree <mcree@orcon.net.nz>
 Signed-off-by: Matt Turner <mattst88@gmail.com>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",3,8,7,1,,5691e4456a9332b5cdc0692f0963f35444711038
+",3,8,7,1,Feature (Minor),5691e4456a9332b5cdc0692f0963f35444711038
 arm64: report correct stack pointer in KSTK_ESP for compat tasks,"arm64: report correct stack pointer in KSTK_ESP for compat tasks
 
 The KSTK_ESP macro is used to determine the user stack pointer for a
@@ -14387,7 +14387,7 @@ former is used as the stack pointer when executing in AArch32 state.
 Cc: <stable@vger.kernel.org>
 Reported-by: Serban Constantinescu <Serban.Constantinescu@arm.com>
 Signed-off-by: Will Deacon <will.deacon@arm.com>
-",1,2,1,1,,3168a743461ecf86adf3e7dcfcd79271828fb263
+",1,2,1,1,Fix (Minor),3168a743461ecf86adf3e7dcfcd79271828fb263
 arm64: Add brackets around user_stack_pointer(),"arm64: Add brackets around user_stack_pointer()
 
 Commit 5f888a1d33 (ARM64: perf: support dwarf unwinding in compat mode)
@@ -14400,7 +14400,7 @@ Reported-by: Sudeep Holla <sudeep.holla@arm.com>
 Cc: <stable@vger.kernel.org>
 Signed-off-by: Catalin Marinas <catalin.marinas@arm.com>
 Signed-off-by: Will Deacon <will.deacon@arm.com>
-",1,2,1,1,,2520d039728b2a3c5ae7f79fe2a0e9d182855b12
+",1,2,1,1,Fix (Minor),2520d039728b2a3c5ae7f79fe2a0e9d182855b12
 gpio: bt8xx: fix release of managed resources,"gpio: bt8xx: fix release of managed resources
 
 These resources are managed by devres, and should not be explicitly
@@ -14408,7 +14408,7 @@ released.
 
 Signed-off-by: Michael Auchter <a@phire.org>
 Signed-off-by: Linus Walleij <linus.walleij@linaro.org>
-",1,3,0,3,,7cc01f630a967b25d9de200767b42177e4fa0bac
+",1,3,0,3,Fix (Minor),7cc01f630a967b25d9de200767b42177e4fa0bac
 "x86, irq, PCI: Keep IRQ assignment for runtime power management","x86, irq, PCI: Keep IRQ assignment for runtime power management
 
 Now IOAPIC driver dynamically allocates IRQ numbers for IOAPIC pins.
@@ -14436,7 +14436,7 @@ Cc: Borislav Petkov <bp@alien8.de>
 Cc: Grant Likely <grant.likely@linaro.org>
 Link: http://lkml.kernel.org/r/1409304383-18806-1-git-send-email-jiang.liu@linux.intel.com
 Signed-off-by: Thomas Gleixner <tglx@linutronix.de>
-",5,22,20,2,,9eabc99a635a77cbf0948ce17d3cbc2b51680d4a
+",5,22,20,2,Fix (Minor),9eabc99a635a77cbf0948ce17d3cbc2b51680d4a
 spi/rockchip: Avoid accidentally turning off the clock,"spi/rockchip: Avoid accidentally turning off the clock
 
 If our client is requesting a clock that is above the maximum clock
