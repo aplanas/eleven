@@ -29,7 +29,7 @@ def fetch_gitlog(data_path, stats=False):
                          int(line[2]), int(line[3]), int(line[4]),
                          int(line[5]), line[6], line[7]) for line in csvreader]
 
-        data = np.array([d for d in full_dataset if d[-2]])
+        data = np.array([d for d in full_dataset if d[6])
 
         # Encode targets into numbers
         target = [d[6] for d in data]
