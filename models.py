@@ -113,16 +113,38 @@ class Densifier(BaseEstimator):
     def transform(self, X, y=None):
         return X.toarray()
 
+import re
+
+class RegexSpotter(BaseEstimator):
+    def __init__(self, regexp):
+        # store the actual argument, so BaseEstimator.get_params() will do it's magic.
+        self.regexp = regexp
+        self.pattern = re.compile(regexp)
+
+    def fit(self, X, y=None):
+        pass
+    def fit_transform(self, X, y=None):
+        return self.transform(X)
+
+    def transform(self, X, y=None):
+        matches = np.fromiter( ( self.pattern.search(x) for  x in X ), dtype=bool )
+        return matches[:,np.newaxis]
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Train different models with the same dataset.')
     parser.add_argument('-c', '--csv', help='csv file name')
+    parser.add_argument('-d', '--debug', help='turn on debugging: only one job', action='store_true')
 
     args = parser.parse_args()
 
     if not args.csv:
         parser.print_help()
         exit(1)
+
+    if args.debug:
+        n_jobs = 1
+    else:
+        n_jobs = -1
 
     pipeline_summary = Pipeline([
         ('slice', SliceFeature(slice(0, 1), flatten=True)),
@@ -144,11 +166,17 @@ if __name__ == '__main__':
         ('slice', SliceFeature(slice(2, 6), astype=int)),
     ])
 
+    pipeline_sha_spotter = Pipeline([
+        ('slice', SliceFeature(slice(1, 2), flatten=True)),
+        ('sha_spotter', RegexSpotter("[0-9a-eA-E]{6,}"))
+    ])
+
     main_pipeline = Pipeline([
         ('features', FeatureUnion([
             ('summary', pipeline_summary),
             ('message', pipeline_message),
             ('numeric', pipeline_numeric),
+            ('contains_sha', pipeline_sha_spotter),
         ])),
         # ('densifier', Densifier()),
         # ('scaler', StandardScaler(with_mean=False)),
@@ -181,7 +209,7 @@ if __name__ == '__main__':
         # 'clf__fit_intercept': (True, False),
         # 'clf__intercept_scaling': (0.0001, 0.001, 0.01, 0.1, 1.0),
     }
-    grid_search = GridSearchCV(main_pipeline, parameters, n_jobs=-1, verbose=1)
+    grid_search = GridSearchCV(main_pipeline, parameters, n_jobs=n_jobs, verbose=1)
 
     print 'Performing grid search...'
     print 'pipeline:', [name for name, _ in main_pipeline.steps]
