@@ -220,10 +220,10 @@ if __name__ == '__main__':
         'Refactoring (Major)': 'Fix',
         'Feature (Minor)': 'Feature',
         'Feature (Major)': 'Feature',
-        # 'Documentation (Minor)': 'Documentation',
-        # 'Documentation (Major)': 'Documentation',
-        'Documentation (Minor)': 'Feature',
-        'Documentation (Major)': 'Feature',
+        'Documentation (Minor)': 'Documentation',
+        'Documentation (Major)': 'Documentation',
+        # 'Documentation (Minor)': 'Feature',
+        # 'Documentation (Major)': 'Feature',
     }
     data = fetch_gitlog(args.csv, collapse=collapse_map, stats=True)
 
