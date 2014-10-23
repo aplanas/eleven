@@ -8,15 +8,17 @@ from time import time
 import numpy as np
 from sklearn.base import BaseEstimator
 from sklearn.datasets.base import Bunch
+from sklearn.decomposition import PCA
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.grid_search import GridSearchCV
-from sklearn.linear_model import SGDClassifier
 from sklearn.pipeline import Pipeline, FeatureUnion
-from sklearn.preprocessing import LabelEncoder, StandardScaler
+from sklearn.preprocessing import LabelEncoder, StandardScaler, Binarizer
+from sklearn.svm import LinearSVC
+from sklearn.linear_model import LogisticRegression
 
 
-def fetch_gitlog(data_path, stats=False):
+def fetch_gitlog(data_path, collapse=None, stats=False):
     """Convert the CSV log into a datase suitable for scikit-learn."""
     description = 'Lageled git log history'
 
@@ -29,7 +31,11 @@ def fetch_gitlog(data_path, stats=False):
                          int(line[2]), int(line[3]), int(line[4]),
                          int(line[5]), line[6], line[7]) for line in csvreader]
 
-        data = np.array([d for d in full_dataset if d[-2]])
+        data = np.array([d for d in full_dataset if d[6]])
+
+        collapse = {} if not collapse else collapse
+        for key, value in collapse.items():
+            data[data[:, 6] == key, 6] = value
 
         # Encode targets into numbers
         target = [d[6] for d in data]
@@ -95,6 +101,17 @@ class SliceFeature(BaseEstimator):
         return result
 
 
+class Densifier(BaseEstimator):
+    def fit(self, X, y=None):
+        pass
+
+    def fit_transform(self, X, y=None):
+        return self.transform(X)
+
+    def transform(self, X, y=None):
+        return X.toarray()
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Train different models with the same dataset.')
     parser.add_argument('-c', '--csv', help='csv file name')
@@ -105,17 +122,17 @@ if __name__ == '__main__':
         parser.print_help()
         exit(1)
 
-    data = fetch_gitlog(args.csv, stats=True)
-
     pipeline_summary = Pipeline([
         ('slice', SliceFeature(slice(0, 1))),
-        ('vect', CountVectorizer()),
+        ('vect', CountVectorizer(stop_words='english')),
+        # ('binary', Binarizer()),
         ('tfidf', TfidfTransformer()),
     ])
 
     pipeline_message = Pipeline([
         ('slice', SliceFeature(slice(1, 2))),
-        ('vect', CountVectorizer()),
+        ('vect', CountVectorizer(stop_words='english')),
+        # ('binary', Binarizer()),
         ('tfidf', TfidfTransformer()),
     ])
 
@@ -129,28 +146,33 @@ if __name__ == '__main__':
             ('message', pipeline_message),
             ('numeric', pipeline_numeric),
         ])),
-        ('scaler', StandardScaler(with_mean=False)),
-        ('clf', SGDClassifier()),
+        # ('densifier', Densifier()),
+        # ('scaler', StandardScaler(with_mean=False)),
+        # ('scaler', StandardScaler()),
+        # ('clf', LinearSVC()),
+        # ('pca', PCA(n_components=100)),
+        ('clf', LogisticRegression()),
     ])
-
-    # cls = main_pipeline.fit(data.data, data.target)
-    # print cls.predict(data.data)
-    # print data.target
 
     parameters = {
         'features__summary__vect__max_df': (0.5, 0.75, 1.0),
-        # 'features__summary__vect__max_features': (None, 5000, 10000, 50000),
+        'features__summary__vect__max_features': (None, 5000, 10000, 50000),
         'features__summary__vect__ngram_range': ((1, 1), (1, 2)),  # unigrams or bigrams
-        'features__summary__tfidf__use_idf': (True, False),
+        # 'features__summary__tfidf__use_idf': (True, False),
         # 'features__summary__tfidf__norm': ('l1', 'l2'),
         'features__message__vect__max_df': (0.5, 0.75, 1.0),
-        # 'features__message__vect__max_features': (None, 5000, 10000, 50000),
+        'features__message__vect__max_features': (None, 5000, 10000, 50000),
         'features__message__vect__ngram_range': ((1, 1), (1, 2)),  # unigrams or bigrams
-        'features__message__tfidf__use_idf': (True, False),
+        # 'features__message__tfidf__use_idf': (True, False),
         # 'features__message__tfidf__norm': ('l1', 'l2'),
-        'clf__alpha': (0.00001, 0.000001),
-        'clf__penalty': ('l2', 'elasticnet'),
-        'clf__n_iter': (10, 50, 80),
+        # 'clf__C': (0.0001, 0.001, 0.01, 0.1, 1.0),
+        # 'clf__loss': ('l1', 'l2'),
+        # 'clf__penalty': ('l1', 'l2'),
+        # 'clf__dual': (True, False),
+        # 'clf__tol': (1e-4),
+        # 'clf__multi_class': ('ovr', 'crammer_singer'),
+        # 'clf__fit_intercept': (True, False),
+        # 'clf__intercept_scaling': (0.0001, 0.001, 0.01, 0.1, 1.0),
     }
     grid_search = GridSearchCV(main_pipeline, parameters, n_jobs=-1, verbose=1)
 
@@ -158,6 +180,21 @@ if __name__ == '__main__':
     print 'pipeline:', [name for name, _ in main_pipeline.steps]
     print 'parameters:'
     pprint(parameters)
+
+    collapse_map = {
+        'Fix (Minor)': 'Fix',
+        'Fix (Major)': 'Fix',
+        'Regression (Minor)': 'Regression',
+        'Regression (Major)': 'Regression',
+        'Refactoring (Minor)': 'Refactoring',
+        'Refactoring (Major)': 'Refactoring',
+        'Feature (Minor)': 'Feature',
+        'Feature (Major)': 'Feature',
+        'Documentation (Minor)': 'Documentation',
+        'Documentation (Major)': 'Documentation',
+    }
+    data = fetch_gitlog(args.csv, collapse=collapse_map, stats=True)
+
     t0 = time()
     grid_search.fit(data.data, data.target)
     print 'done in %0.3fs' % (time() - t0)
