@@ -8,16 +8,18 @@ from time import time
 
 import numpy as np
 from sklearn.base import BaseEstimator
+from sklearn.cross_validation import train_test_split
 from sklearn.datasets.base import Bunch
 from sklearn.decomposition import PCA
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.grid_search import GridSearchCV
+# from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import confusion_matrix
 from sklearn.pipeline import Pipeline, FeatureUnion
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.preprocessing import Binarizer, MinMaxScaler
 from sklearn.svm import LinearSVC
-from sklearn.linear_model import LogisticRegression
 
 
 def fetch_gitlog(data_path, collapse=None, stats=False):
@@ -170,7 +172,7 @@ if __name__ == '__main__':
 
     pipeline_sha_spotter = Pipeline([
         ('slice', SliceFeature(slice(1, 2), flatten=True)),
-        ('sha_spotter', RegexSpotter("[0-9a-eA-E]{6,}"))
+        ('sha_spotter', RegexSpotter(r'[0-9a-eA-E]{6,}'))
     ])
 
     main_pipeline = Pipeline([
@@ -238,9 +240,12 @@ if __name__ == '__main__':
     }
     data = fetch_gitlog(args.csv, collapse=collapse_map, stats=True)
 
+    # Split the data into a training set and a test set
+    X_train, X_test, y_train, y_test = train_test_split(data.data, data.target, random_state=0)
+
     t0 = time()
 
-    grid_search.fit(data.data, data.target)
+    grid_search.fit(X_train, y_train)
     print 'done in %0.3fs' % (time() - t0)
     print
 
@@ -249,3 +254,11 @@ if __name__ == '__main__':
     best_parameters = grid_search.best_estimator_.get_params()
     for param_name in sorted(parameters.keys()):
         print '\t%s: %r' % (param_name, best_parameters[param_name])
+    print
+
+    # Print the confusion matrix
+    estimator = grid_search.best_estimator_
+    y_pred = estimator.fit(X_train, y_train).predict(X_test)
+
+    print 'Confusion matrix for', data.target_names
+    print confusion_matrix(y_test, y_pred)
