@@ -175,21 +175,21 @@ if __name__ == '__main__':
         # ('densifier', Densifier()),
         # ('scaler', StandardScaler(with_mean=False)),
         # ('scaler', StandardScaler()),
-        # ('clf', LinearSVC()),
         # ('pca', PCA(n_components=100)),
-        ('clf', LogisticRegression()),
+        ('clf', LinearSVC()),
+        # ('clf', LogisticRegression()),
     ])
 
     parameters = {
         'features__summary__vect__max_df': (0.5, 0.75, 1.0),
-        'features__summary__vect__max_features': (None, 5000, 10000, 50000),
-        'features__summary__vect__ngram_range': ((1, 1), (1, 2)),  # unigrams or bigrams
-        # 'features__summary__tfidf__use_idf': (True, False),
+        # 'features__summary__vect__max_features': (None, 5000, 10000, 50000),
+        # 'features__summary__vect__ngram_range': ((1, 1), (1, 2)),  # unigrams or bigrams
+        'features__summary__tfidf__use_idf': (True, False),
         # 'features__summary__tfidf__norm': ('l1', 'l2'),
         'features__message__vect__max_df': (0.5, 0.75, 1.0),
-        'features__message__vect__max_features': (None, 5000, 10000, 50000),
-        'features__message__vect__ngram_range': ((1, 1), (1, 2)),  # unigrams or bigrams
-        # 'features__message__tfidf__use_idf': (True, False),
+        # 'features__message__vect__max_features': (None, 5000, 10000, 50000),
+        # 'features__message__vect__ngram_range': ((1, 1), (1, 2)),  # unigrams or bigrams
+        'features__message__tfidf__use_idf': (True, False),
         # 'features__message__tfidf__norm': ('l1', 'l2'),
         # 'clf__C': (0.0001, 0.001, 0.01, 0.1, 1.0),
         # 'clf__loss': ('l1', 'l2'),
@@ -210,14 +210,20 @@ if __name__ == '__main__':
     collapse_map = {
         'Fix (Minor)': 'Fix',
         'Fix (Major)': 'Fix',
-        'Regression (Minor)': 'Regression',
-        'Regression (Major)': 'Regression',
-        'Refactoring (Minor)': 'Refactoring',
-        'Refactoring (Major)': 'Refactoring',
+        # 'Regression (Minor)': 'Regression',
+        # 'Regression (Major)': 'Regression',
+        # 'Refactoring (Minor)': 'Refactoring',
+        # 'Refactoring (Major)': 'Refactoring',
+        'Regression (Minor)': 'Fix',
+        'Regression (Major)': 'Fix',
+        'Refactoring (Minor)': 'Fix',
+        'Refactoring (Major)': 'Fix',
         'Feature (Minor)': 'Feature',
         'Feature (Major)': 'Feature',
-        'Documentation (Minor)': 'Documentation',
-        'Documentation (Major)': 'Documentation',
+        # 'Documentation (Minor)': 'Documentation',
+        # 'Documentation (Major)': 'Documentation',
+        'Documentation (Minor)': 'Feature',
+        'Documentation (Major)': 'Feature',
     }
     data = fetch_gitlog(args.csv, collapse=collapse_map, stats=True)
 
