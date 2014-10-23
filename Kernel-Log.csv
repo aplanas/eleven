@@ -4869,7 +4869,7 @@ Cc: Paul Walmsley <paul@pwsan.com>
 Cc: Tero Kristo <t-kristo@ti.com>
 Reviewed-by: Nishanth Menon <nm@ti.com>
 Signed-off-by: Tony Lindgren <tony@atomide.com>
-",2,41,36,5,,7db143b89137de06ed289cf8b302f3bbbc5baa1f
+",2,41,36,5,Fix (Minor),7db143b89137de06ed289cf8b302f3bbbc5baa1f
 vgaarb: Drop obsolete #ifndef,"vgaarb: Drop obsolete #ifndef
 
 Commit 20cde694027e (""x86, ia64: Move EFI_FB vga_default_device()
@@ -6530,7 +6530,7 @@ text that's been introduced.
 
 Signed-off-by: Nick Dyer <nick.dyer@itdev.co.uk>
 Signed-off-by: Dmitry Torokhov <dmitry.torokhov@gmail.com>
-",1,4,0,4,,807362cd960daac415e2c8906750b2472c22c80e
+",1,4,0,4,Documentation (Minor),807362cd960daac415e2c8906750b2472c22c80e
 Input: i8042 - also set the firmware id for MUXed ports,"Input: i8042 - also set the firmware id for MUXed ports
 
 So that firmware-id matching can be used with multiplexed aux ports too.
@@ -6960,7 +6960,7 @@ Cc: <stable@vger.kernel.org>
 Acked-by: Philipp Zabel <p.zabel@pengutronix.de>
 Signed-off-by: Shawn Guo <shawn.guo@freescale.com>
 Signed-off-by: Arnd Bergmann <arnd@arndb.de>
-",2,27,23,4,,1b134c9c4b555342be667f144ee714af1c3f6a9f
+",2,27,23,4,Fix (Minor),1b134c9c4b555342be667f144ee714af1c3f6a9f
 can: flexcan: avoid calling usleep_range from interrupt context,"can: flexcan: avoid calling usleep_range from interrupt context
 
 Apparently can_restart() runs from a (timer-) interrupt and can call
@@ -7311,7 +7311,7 @@ Acked-by: Daniel Borkmann <dborkman@redhat.com>
 Signed-off-by: Markos Chandras <markos.chandras@imgtec.com>
 Acked-by: Alexei Starovoitov <ast@plumgrid.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,6,3,3,,1d7efe9dfaa6025acd29a726315f6f7d30a9f1ca
+",1,6,3,3,Documentation (Minor),1d7efe9dfaa6025acd29a726315f6f7d30a9f1ca
 mlx4: Fix wrong endianess access with QP context flags,"mlx4: Fix wrong endianess access with QP context flags
 
 We wrongly tested QP context bits without BE conversion
@@ -8569,7 +8569,7 @@ documentation.  This patch adds the documentation.
 Signed-off-by: Alan Stern <stern@rowland.harvard.edu>
 Cc: stable <stable@vger.kernel.org>  # 3.15+
 Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-",1,1,1,0,,b6089f19fe0cec625b5963a851a07c3e412c27c8
+",1,1,1,0,Documentation (Minor),b6089f19fe0cec625b5963a851a07c3e412c27c8
 usb: host: xhci: fix compliance mode workaround,"usb: host: xhci: fix compliance mode workaround
 
 Commit 71c731a (usb: host: xhci: Fix Compliance Mode
@@ -8666,7 +8666,7 @@ memory barriers should be no-ops in that case.
 
 Signed-off-by: David L Stevens <david.stevens@oracle.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,7,5,2,,78dcff7b73ad1c9052f0b5999f9aaab7648ba2ef
+",1,7,5,2,Feature (Minor),78dcff7b73ad1c9052f0b5999f9aaab7648ba2ef
 Btrfs: use insert_inode_locked4 for inode creation,"Btrfs: use insert_inode_locked4 for inode creation
 
 Btrfs was inserting inodes into the hash table before we had fully
@@ -8730,7 +8730,7 @@ Signed-off-by: Maarten Lankhorst <maarten.lankhorst@canonical.com>
 Cc: Colin Cross <ccross@google.com>
 Cc: Dan Carpenter <dan.carpenter@oracle.com>
 Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-",1,1,0,1,,3ea411c56ef58a1827cf06fdcdeb14fa9265be09
+",1,1,0,1,Fix (Minor),3ea411c56ef58a1827cf06fdcdeb14fa9265be09
 x86/efi: Fixup GOT in all boot code paths,"x86/efi: Fixup GOT in all boot code paths
 
 Maarten reported that his Macbook pro 8.2 stopped booting after commit
@@ -9072,7 +9072,7 @@ machine's architecture.
 
 Signed-off-by: Gaurav Minocha <gaurav.minocha.os@gmail.com>
 Signed-off-by: Grant Likely <grant.likely@linaro.org>
-",1,211,211,0,,b9c74fd7d231d4086eb6b6af60dccd666cda1288
+",1,211,211,0,Documentation (Major),b9c74fd7d231d4086eb6b6af60dccd666cda1288
 of: Disabling OF functions that use sysfs if CONFIG_SYSFS disabled,"of: Disabling OF functions that use sysfs if CONFIG_SYSFS disabled
 
 This patch is to the fix the recent runtime bug in kernel reported by
@@ -9432,7 +9432,7 @@ new link for - How to piss off a Linux kernel subsystem maintainer
 Signed-off-by: Sudip Mukherjee <sudip@vectorindia.org>
 Signed-off-by: Randy Dunlap <rdunlap@infradead.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,1,1,0,,7e0dae61e24a88ad21af2f196e49454e78a8df78
+",1,1,1,0,Documentation (Minor),7e0dae61e24a88ad21af2f196e49454e78a8df78
 Documentation: NFS/RDMA: Document separate Kconfig symbols,"Documentation: NFS/RDMA: Document separate Kconfig symbols
 
 The NFS/RDMA Kconfig symbol was split into separate options for client
@@ -9446,7 +9446,7 @@ Reviewed-by: Jeff Layton <jlayton@redhat.com>
 Signed-off-by: Randy Dunlap <rdunlap@infradead.org>
 Cc: ""J. Bruce Fields"" <bfields@redhat.com>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,16,9,7,,731d5cca82729c85ca3296902a64836619f4ba2d
+",1,16,9,7,Documentation (Minor),731d5cca82729c85ca3296902a64836619f4ba2d
 Documentation: misc-devices: Rename freefall.c from hpfall.c in lis2lv02d,"Documentation: misc-devices: Rename freefall.c from hpfall.c in lis2lv02d
 
 hpfall.c was renamed to freefall.c in 3.16, but this file still refer to
@@ -9455,7 +9455,7 @@ hpfall.c instead of freefall.c
 Signed-off-by: Masanari Iida <standby24x7@gmail.com>
 Signed-off-by: Randy Dunlap <rdunlap@infradead.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,2,1,1,,0024d6e9fd61eefb3915749827ff005db7ce5084
+",1,2,1,1,Documentation (Minor),0024d6e9fd61eefb3915749827ff005db7ce5084
 "Documentation: i2c: rename variable ""register"" to ""reg""","Documentation: i2c: rename variable ""register"" to ""reg""
 
 The example code provided with the i2c device interface documentation
@@ -9477,7 +9477,7 @@ Signed-off-by: Jose Alarcon Roldan <jose.alarcon.roldan@gmail.com>
 Signed-off-by: Randy Dunlap <rdunlap@infradead.org>
 Acked-by: Wolfram Sang <wsa@the-dreams.de>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,10,5,5,,257d6ef4aafa5078e469eb277dfd49841a736618
+",1,10,5,5,Documentation (Minor),257d6ef4aafa5078e469eb277dfd49841a736618
 "Documentation: seq_file: Document seq_open_private(), seq_release_private()","Documentation: seq_file: Document seq_open_private(), seq_release_private()
 
 Despite the fact that these functions have been around for years, they
@@ -9490,7 +9490,7 @@ Signed-off-by: Rob Jones <rob.jones@codethink.co.uk>
 Acked-by: Steven Whitehouse <swhiteho@redhat.com>
 Signed-off-by: Randy Dunlap <rdunlap@infradead.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,33,33,0,,77be4daf4e65eb1da70e6623ec61ecde62f5de95
+",1,33,33,0,Documentation (Minor),77be4daf4e65eb1da70e6623ec61ecde62f5de95
 cpufreq / OPP: Fix the order of arguments for kcalloc(),"cpufreq / OPP: Fix the order of arguments for kcalloc()
 
 These changes fix the argument to the kcalloc
@@ -9647,7 +9647,7 @@ completely non obvious. Document it and restrict it to the
 
 Reported-by: Kees Cook <keescook@chromium.org>
 Signed-off-by: Thomas Gleixner <tglx@linutronix.de>
-",1,24,21,3,,849151dd5481bc8acb1d287a299b5d6a4ca9f1c3
+",1,24,21,3,Documentation (Minor),849151dd5481bc8acb1d287a299b5d6a4ca9f1c3
 amd-xgbe: Enable interrupts for all management counters,"amd-xgbe: Enable interrupts for all management counters
 
 As the management counters reach a threshold they will generate an
@@ -9891,7 +9891,7 @@ Tested:
 Fixes: f24b9be5957b (""net-timestamp: extend SCM_TIMESTAMPING ancillary data struct"")
 Signed-off-by: Willem de Bruijn <willemb@google.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",2,7,2,5,,c199105d154e029cd8c94cccd35bd073e64acc45
+",2,7,2,5,Feature (Minor),c199105d154e029cd8c94cccd35bd073e64acc45
 drivers/net/fddi/skfp/h/skfbi.h: Remove useless PCI_BASE_2ND macros,"drivers/net/fddi/skfp/h/skfbi.h: Remove useless PCI_BASE_2ND macros
 
 They are use less, and may generate compiling warnings, so remove them
@@ -10375,7 +10375,7 @@ documentation errors were found for spi1 pinctrl. Fix the same.
 Fixes: 6e58b8f1daaf1af (""ARM: dts: DRA7: Add the dts files for dra7 SoC and dra7-evm board"")
 Signed-off-by: Nishanth Menon <nm@ti.com>
 Signed-off-by: Tony Lindgren <tony@atomide.com>
-",1,14,7,7,,68e4d9e58dbae2fb178e8b74806f521adb16f0d3
+",1,14,7,7,Fix (Minor),68e4d9e58dbae2fb178e8b74806f521adb16f0d3
 ARM: dts: am43x-epos-evm: Disable QSPI to prevent conflict with GPMC-NAND,"ARM: dts: am43x-epos-evm: Disable QSPI to prevent conflict with GPMC-NAND
 
 Both QSPI and GPMC-NAND share the same Pin (A8) from the SoC for Chip Select
@@ -11458,7 +11458,7 @@ Call Trace:
 
 Signed-off-by: Pablo Neira Ayuso <pablo@netfilter.org>
 Acked-by: Thomas Graf <tgraf@suug.ch>
-",1,8,4,4,,ae82ddcf8e8239bdd06e6830d450cf9e785b8024
+",1,8,4,4,Fix (Minor),ae82ddcf8e8239bdd06e6830d450cf9e785b8024
 netfilter: nft_rbtree: no need for spinlock from set destroy path,"netfilter: nft_rbtree: no need for spinlock from set destroy path
 
 The sets are released from the rcu callback, after the rule is removed
@@ -14547,7 +14547,7 @@ Add a mention about the _optional variants of (devm_)gpiod_get*().
 
 Signed-off-by: Alexandre Courbot <acourbot@nvidia.com>
 Signed-off-by: Linus Walleij <linus.walleij@linaro.org>
-",1,24,23,1,,1b11a9b9e0a87fe8e3d2483bb42f68c94282b8df
+",1,24,23,1,Documentation (Minor),1b11a9b9e0a87fe8e3d2483bb42f68c94282b8df
 ext4: fix same-dir rename when inline data directory overflows,"ext4: fix same-dir rename when inline data directory overflows
 
 When performing a same-directory rename, it's possible that adding or
@@ -14922,7 +14922,7 @@ documentation.
 
 Signed-off-by: Thierry Reding <treding@nvidia.com>
 Signed-off-by: Sumit Semwal <sumit.semwal@linaro.org>
-",1,1,1,0,,1f58d9465c568eb47cab939bbc4f30ae51863295
+",1,1,1,0,Fix (Minor),1f58d9465c568eb47cab939bbc4f30ae51863295
 dma-buf/fence: Fix a kerneldoc warning,"dma-buf/fence: Fix a kerneldoc warning
 
 kerneldoc doesn't know how to parse variables, so don't let it try.
@@ -14936,7 +14936,7 @@ Update some descriptions for API arguments and descriptions.
 
 Signed-off-by: Gioh Kim <gioh.kim@lge.com>
 Signed-off-by: Sumit Semwal <sumit.semwal@linaro.org>
-",1,14,8,6,,a07b3b4508447682574cf18fdad23ed709365dd1
+",1,14,8,6,Documentation (Minor),a07b3b4508447682574cf18fdad23ed709365dd1
 phy: miphy365x: Select GENERIC_PHY instead of depending on it,"phy: miphy365x: Select GENERIC_PHY instead of depending on it
 
 Enabling GENERIC_PHY in the shared (by most ARM sub-architectures)
@@ -15171,7 +15171,7 @@ regulator: Proofread documentation,"regulator: Proofread documentation
 
 Signed-off-by: Geert Uytterhoeven <geert+renesas@glider.be>
 Signed-off-by: Mark Brown <broonie@linaro.org>
-",5,31,16,15,,3a4c695965cb1b3fd5b7e420eeab958af139328c
+",5,31,16,15,Documentation (Minor),3a4c695965cb1b3fd5b7e420eeab958af139328c
 xhci: Disable streams on Via XHCI with device-id 0x3432,"xhci: Disable streams on Via XHCI with device-id 0x3432
 
 This is a bit bigger hammer then I would like to use for this, but for now
@@ -15361,7 +15361,7 @@ relocation type should be treated the same way as R_ARM_ABS32.
 
 Signed-off-by: Andrey Ryabinin <a.ryabinin@samsung.com>
 Signed-off-by: Russell King <rmk+kernel@arm.linux.org.uk>
-",2,2,2,0,,55f0fb6adb83a5883589e945cbce37e90615ea09
+",2,2,2,0,Feature (Minor),55f0fb6adb83a5883589e945cbce37e90615ea09
 FS-Cache: Reduce cookie ref count if submit fails.,"FS-Cache: Reduce cookie ref count if submit fails.
 
 I've been seeing issues with disposing cookies under vma pressure. The symptom
@@ -15710,7 +15710,7 @@ Signed-off-by: Pranith Kumar <bobby.prani@gmail.com>
 Signed-off-by: Christoph Lameter <cl@linux.com>
 Signed-off-by: Randy Dunlap <rdunlap@infradead.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,213,171,42,,ac490f4dca9476bf8a309a2cae92ca68b8c5fca6
+",1,213,171,42,Documentation (Major),ac490f4dca9476bf8a309a2cae92ca68b8c5fca6
 scripts/kernel-doc: recognize __meminit,"scripts/kernel-doc: recognize __meminit
 
 Fix scripts/kernel-doc to recognize __meminit in a function prototype
@@ -16808,7 +16808,7 @@ Reviewed-by: Paul Burton <paul.burton@imgtec.com>
 Signed-off-by: Markos Chandras <markos.chandras@imgtec.com>
 Patchwork: http://patchwork.linux-mips.org/patch/7423/
 Signed-off-by: James Hogan <james.hogan@imgtec.com>
-",1,22,16,6,,43faaa5c97aa222f7f820f7c1e5200a4c44f6e0f
+",1,22,16,6,Refactoring (Minor),43faaa5c97aa222f7f820f7c1e5200a4c44f6e0f
 MIPS: EVA: Add new EVA header,"MIPS: EVA: Add new EVA header
 
 Generic code may need to perform certain operations when EVA is
@@ -18928,7 +18928,7 @@ Reported-by: Tommi Rantala <tt.rantala@gmail.com>
 Cc: <stable@vger.kernel.org> # v2.2.26+
 Signed-off-by: Clemens Ladisch <clemens@ladisch.de>
 Signed-off-by: Takashi Iwai <tiwai@suse.de>
-",1,4,2,2,,ddc64b278a4dda052390b3de1b551e59acdff105
+",1,4,2,2,Fix (Minor),ddc64b278a4dda052390b3de1b551e59acdff105
 cifs: No need to send SIGKILL to demux_thread during umount,"cifs: No need to send SIGKILL to demux_thread during umount
 
 There is no need to explicitly send SIGKILL to cifs_demultiplex_thread
@@ -19903,7 +19903,7 @@ for the TLMM summary IRQ. Correct this to reduce the confusion.
 
 Signed-off-by: Bjorn Andersson <bjorn.andersson@sonymobile.com>
 Signed-off-by: Linus Walleij <linus.walleij@linaro.org>
-",1,2,1,1,,0252d6a2ac2ad9961dace28e4c8c9abe6f2a0472
+",1,2,1,1,Documentation (Minor),0252d6a2ac2ad9961dace28e4c8c9abe6f2a0472
 pinctrl: exynos: Lock GPIOs as interrupts when used as EINTs,"pinctrl: exynos: Lock GPIOs as interrupts when used as EINTs
 
 Currently after configuring a GPIO pin as an interrupt related pinmux
@@ -20323,7 +20323,7 @@ This maps BTN_LEFT to the 4th bit of the T19 message.
 Signed-off-by: Nick Dyer <nick.dyer@itdev.co.uk>
 Acked-by: Stephen Warren <swarren@nvidia.com>
 Signed-off-by: Dmitry Torokhov <dmitry.torokhov@gmail.com>
-",1,11,11,0,,f5940231a5a27fa015aaff42db8dac05362d53bc
+",1,11,11,0,Documentation (Minor),f5940231a5a27fa015aaff42db8dac05362d53bc
 mtd: nand: fix DocBook warnings on nand_sdr_timings doc,"mtd: nand: fix DocBook warnings on nand_sdr_timings doc
 
 Change the comment type (from /** to /*) to prevent DocBook from
@@ -20338,7 +20338,7 @@ Reported-by: Randy Dunlap <rdunlap@infradead.org>
 Acked-by: Randy Dunlap <rdunlap@infradead.org>
 Tested-by: Randy Dunlap <rdunlap@infradead.org>
 Signed-off-by: Brian Norris <computersforpeace@gmail.com>
-",1,2,1,1,,b25046b1e5e3f1423434da77ccc859f2f779d1ce
+",1,2,1,1,Documentation (Minor),b25046b1e5e3f1423434da77ccc859f2f779d1ce
 arm64: configs: Enable X-Gene SATA and ethernet in defconfig,"arm64: configs: Enable X-Gene SATA and ethernet in defconfig
 
 Currently when run on an APM platform the ARMv8 defconfig has no viable
@@ -20712,7 +20712,7 @@ Reviewed-by: Paul Burton <paul.burton@imgtec.com>
 Signed-off-by: Markos Chandras <markos.chandras@imgtec.com>
 Patchwork: http://patchwork.linux-mips.org/patch/7423/
 Signed-off-by: James Hogan <james.hogan@imgtec.com>
-",1,22,16,6,,ca4d24f7954f3746742ba350c2276ff777f21173
+",1,22,16,6,Refactoring (Minor),ca4d24f7954f3746742ba350c2276ff777f21173
 MIPS: EVA: Add new EVA header,"MIPS: EVA: Add new EVA header
 
 Generic code may need to perform certain operations when EVA is
@@ -21856,7 +21856,7 @@ No intended functional change.
 Signed-off-by: Christian König <christian.koenig@amd.com>
 Signed-off-by: Alex Deucher <alexander.deucher@amd.com>
 Cc: stable@vger.kernel.org
-",2,4,3,1,,701e1e789142042144c8cc10b8f6d1554e960144
+",2,4,3,1,Documentation (Minor),701e1e789142042144c8cc10b8f6d1554e960144
 MIPS: GIC: Remove useless parens from GICBIS().,"MIPS: GIC: Remove useless parens from GICBIS().
 
 Signed-off-by: Ralf Baechle <ralf@linux-mips.org>
@@ -22967,7 +22967,7 @@ obtained, it must be submitted. Hence:
 Reported-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
 Signed-off-by: Geert Uytterhoeven <geert+renesas@glider.be>
 Signed-off-by: Mark Brown <broonie@linaro.org>
-",1,94,58,36,,3819bc8752367eae0d72fa1c473dc88ea45631a7
+",1,94,58,36,Fix (Minor),3819bc8752367eae0d72fa1c473dc88ea45631a7
 spi: sh-msiof: Fix leaking of unused DMA descriptors,"spi: sh-msiof: Fix leaking of unused DMA descriptors
 
 If dmaengine_prep_slave_sg() or dmaengine_submit() fail, we may leak
@@ -22984,7 +22984,7 @@ obtained, it must be submitted. Hence:
 Reported-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
 Signed-off-by: Geert Uytterhoeven <geert+renesas@glider.be>
 Signed-off-by: Mark Brown <broonie@linaro.org>
-",1,71,38,33,,3e81b59208fa4697c6c3b6eefb92892b47f8b1e7
+",1,71,38,33,Fix (Minor),3e81b59208fa4697c6c3b6eefb92892b47f8b1e7
 Linux 3.17-rc1,"Linux 3.17-rc1
 ",1,4,2,2,,7d1311b93e58ed55f3a31cc8f94c4b8fe988a2b9
 ASoC: axi: Fix ADI AXI SPDIF specification,"ASoC: axi: Fix ADI AXI SPDIF specification
@@ -22998,7 +22998,7 @@ Reviewed-by: Michal Simek <michal.simek@xilinx.com>
 Fixes: d7b528eff927 (""dt: Add bindings documentation for the ADI AXI-SPDIF audio controller"")
 Signed-off-by: Andreas Färber <afaerber@suse.de>
 Signed-off-by: Mark Brown <broonie@linaro.org>
-",1,2,1,1,,d1555c407a65db42126b295425379acb393ba83a
+",1,2,1,1,Documentation (Minor),d1555c407a65db42126b295425379acb393ba83a
 percpu: free percpu allocation info for uniprocessor system,"percpu: free percpu allocation info for uniprocessor system
 
 Currently, only SMP system free the percpu allocation info.
@@ -23024,7 +23024,7 @@ Active Protection Sensor driver module toshiba_haps.
 
 Signed-off-by: Azael Avalos <coproscefalo@gmail.com>
 Signed-off-by: Matthew Garrett <matthew.garrett@nebula.com>
-",2,78,78,0,,f369aa6d0571df12b6e80a1e86eb7d8ae715b421
+",2,78,78,0,Documentation (Major),f369aa6d0571df12b6e80a1e86eb7d8ae715b421
 platform/x86: Toshiba HDD Active Protection Sensor,"platform/x86: Toshiba HDD Active Protection Sensor
 
 This driver adds support for the built-in accelereometer found
@@ -23486,7 +23486,7 @@ Acked-by: Rob Herring <robh@kernel.org>
 Signed-off-by: Brian Norris <computersforpeace@gmail.com>
 Signed-off-by: Florian Fainelli <f.fainelli@gmail.com>
 Signed-off-by: Grant Likely <grant.likely@linaro.org>
-",2,29,16,13,,a9ecdc0fdc54aa499604dbd43132988effcac9b4
+",2,29,16,13,Fix (Minor),a9ecdc0fdc54aa499604dbd43132988effcac9b4
 Enabling OF selftest to run without machine's devicetree,"Enabling OF selftest to run without machine's devicetree
 
 If there is no devicetree present, this patch adds the selftest
@@ -24641,7 +24641,7 @@ locks: update Locking documentation to clarify fl_release_private behavior,"lock
 
 Acked-by: J. Bruce Fields <bfields@fieldses.org>
 Signed-off-by: Jeff Layton <jlayton@primarydata.com>
-",1,6,5,1,,2ece173e4715031c031de9114491eee80a69cf68
+",1,6,5,1,Documentation (Minor),2ece173e4715031c031de9114491eee80a69cf68
 locks: move locks_free_lock calls in do_fcntl_add_lease outside spinlock,"locks: move locks_free_lock calls in do_fcntl_add_lease outside spinlock
 
 There's no need to call locks_free_lock here while still holding the
@@ -25289,7 +25289,7 @@ interface number.
 
 Signed-off-by: Ted Mielczarek <ted@mielczarek.org>
 Signed-off-by: Dmitry Torokhov <dmitry.torokhov@gmail.com>
-",1,174,157,17,,1a48ff81b3912be5fadae3fafde6c2f632246a4c
+",1,174,157,17,Feature (Major),1a48ff81b3912be5fadae3fafde6c2f632246a4c
 Input: atmel_mxt_ts - fix a few issues reported by Coverity,"Input: atmel_mxt_ts - fix a few issues reported by Coverity
 
 This should fix the following issues reported by Coverity:
@@ -25976,7 +25976,7 @@ we believe this race happens in practice.
 
 Signed-off-by: Michael Ellerman <mpe@ellerman.id.au>
 Signed-off-by: Benjamin Herrenschmidt <benh@kernel.crashing.org>
-",1,1,1,0,,51d7d5205d3389a32859f9939f1093f267409929
+",1,1,1,0,Feature (Minor),51d7d5205d3389a32859f9939f1093f267409929
 "powerpc: Fix ""attempt to move .org backwards"" error","powerpc: Fix ""attempt to move .org backwards"" error
 
 Once again, we see
@@ -26865,7 +26865,7 @@ Signed-off-by: Keyur Chudgar <kchudgar@apm.com>
 Signed-off-by: Dean Nelson <dnelson@redhat.com>
 Reviewed-by: Tobias Klauser <tklauser@distanz.ch>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",11,2299,2299,0,,e6ad767305eb6ea80ce06c1eaa1b0977e8361998
+",11,2299,2299,0,Feature (Major),e6ad767305eb6ea80ce06c1eaa1b0977e8361998
 dts: Add bindings for APM X-Gene SoC ethernet driver,"dts: Add bindings for APM X-Gene SoC ethernet driver
 
 This patch adds bindings for APM X-Gene SoC ethernet driver.
@@ -26883,7 +26883,7 @@ Signed-off-by: Iyappan Subramanian <isubramanian@apm.com>
 Signed-off-by: Ravi Patel <rapatel@apm.com>
 Signed-off-by: Keyur Chudgar <kchudgar@apm.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,66,66,0,,ff4ee1ab1aa1f980b4eb5984f66b3015809b00b2
+",1,66,66,0,Documentation (Minor),ff4ee1ab1aa1f980b4eb5984f66b3015809b00b2
 MAINTAINERS: Add entry for APM X-Gene SoC ethernet driver,"MAINTAINERS: Add entry for APM X-Gene SoC ethernet driver
 
 This patch adds a MAINTAINERS entry for APM X-Gene SoC
@@ -27195,7 +27195,7 @@ Acked-by: Seungwon Jeon <tgih.jun@samsung.com>
 [sonnyrao: fix compile for !CONFIG_MMC_DW_IDMAC case]
 Acked-by: Jaehoon Chung <jh80.chung@samsung.com>
 Signed-off-by: Ulf Hansson <ulf.hansson@linaro.org>
-",2,92,69,23,,3a33a94ce27068c8fef63a4f9ab7cff1210e2a4e
+",2,92,69,23,Refactoring (Minor),3a33a94ce27068c8fef63a4f9ab7cff1210e2a4e
 mmc: sdhci-pxav3: Use devm_* managed helpers,"mmc: sdhci-pxav3: Use devm_* managed helpers
 
 This simplifies probe error and remove code paths.
@@ -27290,7 +27290,7 @@ Signed-off-by: Ira Weiny <ira.weiny@intel.com>
 [ Remove PFX so the patch actually builds.  - Roland ]
 
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",3,162,85,77,,7ef5d4b0463c095a994890131918d3301d8404ee
+",3,162,85,77,Refactoring (Minor),7ef5d4b0463c095a994890131918d3301d8404ee
 IB/ipoib: Avoid multicast join attempts with invalid P_key,"IB/ipoib: Avoid multicast join attempts with invalid P_key
 
 Currently, the parent interface keeps sending broadcast group join
@@ -27324,7 +27324,7 @@ because that breaks the ability to grep for them.""
 
 Signed-off-by: Ira Weiny <ira.weiny@intel.com>
 Signed-off-by: Roland Dreier <roland@purestorage.com>
-",1,26,15,11,,f426a40eb695d315466f130618db30cafb27db90
+",1,26,15,11,Refactoring (Minor),f426a40eb695d315466f130618db30cafb27db90
 dm table: propagate QUEUE_FLAG_NO_SG_MERGE,"dm table: propagate QUEUE_FLAG_NO_SG_MERGE
 
 Commit 05f1dd5 (""block: add queue flag for disabling SG merging"")
@@ -27462,7 +27462,7 @@ Acked-by: Dave Hansen <dave.hansen@linux.intel.com>
 Cc: Randy Dunlap <rdunlap@infradead.org>
 Link: http://lkml.kernel.org/r/1407484195-1441-1-git-send-email-jmmahler@gmail.com
 Signed-off-by: Ingo Molnar <mingo@kernel.org>
-",1,2,1,1,,129ea00594bf993251a5c70d14cbe16f3624e505
+",1,2,1,1,Fix (Minor),129ea00594bf993251a5c70d14cbe16f3624e505
 x86/mm: Fix sparse 'tlb_single_page_flush_ceiling' warning and make the variable read-mostly,"x86/mm: Fix sparse 'tlb_single_page_flush_ceiling' warning and make the variable read-mostly
 
 A sparse warning is generated about
@@ -28065,7 +28065,7 @@ As a side note.. It's a bit hard to figure out how to name this commit..
 GK20A is NVEA, which is before NV108 (GK208).. Confusing.
 
 Signed-off-by: Ben Skeggs <bskeggs@redhat.com>
-",15,158,113,45,,7d155dacc1699a3ceae26b69808a1d3199394469
+",15,158,113,45,Fix (Major),7d155dacc1699a3ceae26b69808a1d3199394469
 drm/gk110b/gr: initvals differ from gk110,"drm/gk110b/gr: initvals differ from gk110
 
 Signed-off-by: Ben Skeggs <bskeggs@redhat.com>
@@ -28096,7 +28096,7 @@ Signed-off-by: Ben Skeggs <bskeggs@redhat.com>
 drm/nouveau/pwr: tidy,"drm/nouveau/pwr: tidy
 
 Signed-off-by: Ben Skeggs <bskeggs@redhat.com>
-",12,326,133,193,,adec9bc3bd5f2618cea5ab8dccc506b86ab4aabb
+",12,326,133,193,Refactoring (Minor),adec9bc3bd5f2618cea5ab8dccc506b86ab4aabb
 Documentation: SubmittingPatches: overhaul changelog description,"Documentation: SubmittingPatches: overhaul changelog description
 
 Maintainers often repeat the same feedback on poorly written
@@ -28110,7 +28110,7 @@ Acked-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
 Acked-by: Ingo Molnar <mingo@kernel.org>
 Signed-off-by: Randy Dunlap <rdunlap@infradead.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,38,31,7,,7b9828d44194b2d90595ed4bd5131cacbf29b201
+",1,38,31,7,Documentation (Minor),7b9828d44194b2d90595ed4bd5131cacbf29b201
 Documentation: freefall: simplify pathnames,"Documentation: freefall: simplify pathnames
 
 Copying to local variable is actually not neccessary, if all we need
@@ -28121,7 +28121,7 @@ Reported-by: Rickard Strandqvist <rickard_strandqvist@spectrumdigital.se>
 Signed-off-by: Pavel Machek <pavel@ucw.cz>
 Signed-off-by: Randy Dunlap <rdunlap@infradead.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,6,1,5,,d74aae4ea0257f3d6e94ef7a0420ef5074d6eb1e
+",1,6,1,5,Documentation (Minor),d74aae4ea0257f3d6e94ef7a0420ef5074d6eb1e
 Documentation: add How to avoid botching up ioctls,"Documentation: add How to avoid botching up ioctls
 
 I pointed some folks at this and they wondered why it wasn't in the
@@ -28131,7 +28131,7 @@ Signed-off-by: Daniel Vetter <daniel.vetter@ffwll.ch>
 Signed-off-by: Michael Ellerman <mpe@ellerman.id.au>
 Signed-off-by: Randy Dunlap <rdunlap@infradead.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",2,221,221,0,,efe4a772215869e780e69d0037dca50e34aee6a7
+",2,221,221,0,Documentation (Major),efe4a772215869e780e69d0037dca50e34aee6a7
 ARM: dts: exynos5420: remove disp_pd,"ARM: dts: exynos5420: remove disp_pd
 
 This was caused by commit 5a8da524049c (""ARM: dts: exynos5420: add dsi
@@ -29174,7 +29174,7 @@ Signed-off-by: Joe Perches <joe@perches.com>
 Acked-by: Roy Franz <roy.franz@linaro.org>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,2,1,1,,fb2efb5ce83c30aa4687251024c648e099f426ae
+",1,2,1,1,Documentation (Minor),fb2efb5ce83c30aa4687251024c648e099f426ae
 MAINTAINERS: update cifs location,"MAINTAINERS: update cifs location
 
 Commit 30706a545417 (""cifs: create a new Documentation/ directory and
@@ -29183,7 +29183,7 @@ move docfiles into it"") moved the files, update the pattern.
 Signed-off-by: Joe Perches <joe@perches.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,2,1,1,,ec421a7144d450e306232ed568a8edf328a06d6a
+",1,2,1,1,Documentation (Minor),ec421a7144d450e306232ed568a8edf328a06d6a
 MAINTAINERS: update microcode patterns,"MAINTAINERS: update microcode patterns
 
 Commit bad5fa631fca (""x86, microcode: Move to a proper location"") moved
@@ -32115,14 +32115,14 @@ RK3288 SoC.
 
 Signed-off-by: Caesar Wang <caesar.wang@rock-chips.com>
 Signed-off-by: Thierry Reding <thierry.reding@gmail.com>
-",1,135,111,24,,f6306299080bbb1a77ad39494203f5397a5c2630
+",1,135,111,24,Feature (Major),f6306299080bbb1a77ad39494203f5397a5c2630
 pwm: rockchip: document RK3288 SoC compatible,"pwm: rockchip: document RK3288 SoC compatible
 
 Document new compatible for PWM founding on RK3288 SoC
 
 Signed-off-by: Caesar Wang <caesar.wang@rock-chips.com>
 Signed-off-by: Thierry Reding <thierry.reding@gmail.com>
-",1,5,4,1,,695d49d941387baa3b2f3f412845a25918e030d5
+",1,5,4,1,Documentation (Minor),695d49d941387baa3b2f3f412845a25918e030d5
 pwm: sti: Remove PWM period table,"pwm: sti: Remove PWM period table
 
 Removes the PWM period table. Instead the prescaler is computed
@@ -32280,7 +32280,7 @@ The documentation has been updated to match this.
 Signed-off-by: Benjamin Tissoires <benjamin.tissoires@redhat.com>
 Reviewed-by: Ping Cheng <pingc@wacom.com>
 Signed-off-by: Dmitry Torokhov <dmitry.torokhov@gmail.com>
-",1,70,27,43,,c704b4ef1a819b053fd33617e861da1932077314
+",1,70,27,43,Documentation (Minor),c704b4ef1a819b053fd33617e861da1932077314
 md: don't allow bitmap file to be added to raid0/linear.,"md: don't allow bitmap file to be added to raid0/linear.
 
 An array can only accept a bitmap if it will call bitmap_daemon_work
@@ -32780,7 +32780,7 @@ document what the individual parts of make-cmd do and why.
 Reported-and-tested-by: Konstantin Khlebnikov <koct9i@gmail.com>
 Reviewed-by: Sam Ravnborg <sam@ravnborg.org>
 Signed-off-by: Michal Marek <mmarek@suse.cz>
-",1,14,8,6,,164f0d2efaaef835473e74b162eae750341d6a8c
+",1,14,8,6,Fix (Minor),164f0d2efaaef835473e74b162eae750341d6a8c
 cpufreq: speedstep-smi: fix decimal printf specifiers,"cpufreq: speedstep-smi: fix decimal printf specifiers
 
 The prefix suggests the number should be printed in hex, so use
@@ -32884,7 +32884,7 @@ Minor documentation updates:
 
 Signed-off-by: J. Bruce Fields <bfields@redhat.com>
 Signed-off-by: Al Viro <viro@zeniv.linux.org.uk>
-",1,38,23,15,,9635389534a765c8357d988e53d323bf033dcdd0
+",1,38,23,15,Documentation (Minor),9635389534a765c8357d988e53d323bf033dcdd0
 dcache: d_find_alias needn't recheck IS_ROOT && DCACHE_DISCONNECTED,"dcache: d_find_alias needn't recheck IS_ROOT && DCACHE_DISCONNECTED
 
 If we get to this point and discover the dentry is not a root dentry, or
@@ -33318,7 +33318,7 @@ pwm: sti: Supply Device Tree binding documentation for ST's PWM IP,"pwm: sti: Su
 Signed-off-by: Ajit Pal Singh <ajitpal.singh@st.com>
 Signed-off-by: Lee Jones <lee.jones@linaro.org>
 Signed-off-by: Thierry Reding <thierry.reding@gmail.com>
-",1,41,41,0,,acad00d3d67ef2a7177beb70e7aeef5f0bd2bcf0
+",1,41,41,0,Documentation (Minor),acad00d3d67ef2a7177beb70e7aeef5f0bd2bcf0
 pwm: sti: Add new driver for ST's PWM IP,"pwm: sti: Add new driver for ST's PWM IP
 
 This driver supports all current STi platforms' PWM IPs.
@@ -33327,7 +33327,7 @@ Signed-off-by: Ajit Pal Singh <ajitpal.singh@st.com>
 Signed-off-by: Lee Jones <lee.jones@linaro.org>
 [thierry.reding: rename module to pwm-sti, fix build breakage]
 Signed-off-by: Thierry Reding <thierry.reding@gmail.com>
-",3,377,377,0,,378fe115d19d6ab9e9210a2ac330159afabf0237
+",3,377,377,0,Feature (Major),378fe115d19d6ab9e9210a2ac330159afabf0237
 dmaengine: nbpfaxi: don't build this driver where it cannot be used,"dmaengine: nbpfaxi: don't build this driver where it cannot be used
 
 Although this driver doesn't have any explicit compile-time architecture
@@ -33441,7 +33441,7 @@ Signed-off-by: Kenneth Graunke <kenneth@whitecape.org>
 Signed-off-by: Ville Syrjälä <ville.syrjala@linux.intel.com>
 
 Signed-off-by: Daniel Vetter <daniel.vetter@ffwll.ch>
-",1,9,9,0,,02c9f7e3cfe76a7f54ef03438c36aade86cc1c8b
+",1,9,9,0,Fix (Minor),02c9f7e3cfe76a7f54ef03438c36aade86cc1c8b
 drm/i915: Refactor Broadwell PIPE_CONTROL emission into a helper.,"drm/i915: Refactor Broadwell PIPE_CONTROL emission into a helper.
 
 We'll want to reuse this for a workaround.
@@ -36701,7 +36701,7 @@ Cc: KOSAKI Motohiro <kosaki.motohiro@jp.fujitsu.com>
 Cc: Hugh Dickins <hughd@google.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",3,7,4,3,,cc7452b6dca384400960d40090a98d0eb920ab22
+",3,7,4,3,Feature (Minor),cc7452b6dca384400960d40090a98d0eb920ab22
 mm: catch memory commitment underflow,"mm: catch memory commitment underflow
 
 Print a warning (if CONFIG_DEBUG_VM=y) when memory commitment becomes
@@ -40348,7 +40348,7 @@ Signed-off-by: Maxime Ripard <maxime.ripard@free-electrons.com>
 Acked-by: Arnd Bergmann <arnd@arndb.de>
 Reviewed-by: Guenter Roeck <linux@roeck-us.net>
 Signed-off-by: Wim Van Sebroeck <wim@iguana.be>
-",1,29,29,0,,440e96bc770eb98b17a763defb9641c77f9a7755
+",1,29,29,0,Refactoring (Minor),440e96bc770eb98b17a763defb9641c77f9a7755
 Documentation: fix two typos in watchdog-api.txt,"Documentation: fix two typos in watchdog-api.txt
 
 This patch changes 'go of' to 'go off' and 'pretimout' to
@@ -40358,7 +40358,7 @@ Signed-off-by: Sangjung Woo <sangjung.woo@samsung.com>
 Acked-by: Randy Dunlap <rdunlap@infradead.org>
 Reviewed-by: Guenter Roeck <linux@roeck-us.net>
 Signed-off-by: Wim Van Sebroeck <wim@iguana.be>
-",1,2,1,1,,5be876cf7e6feeca6dc2bbdb3f1fa0167e13621d
+",1,2,1,1,Documentation (Minor),5be876cf7e6feeca6dc2bbdb3f1fa0167e13621d
 watchdog: imx2_wdt: adds big endianness support.,"watchdog: imx2_wdt: adds big endianness support.
 
 This watchdog driver will be working on IMX2+, Vybrid, LS1, LS2+
@@ -41009,7 +41009,7 @@ local to DRM-core and drivers shouldn't access it.
 
 Reviewed-by: Daniel Vetter <daniel.vetter@ffwll.ch>
 Signed-off-by: David Herrmann <dh.herrmann@gmail.com>
-",7,190,103,87,,e7b96070dd9e51a8b16340411a8643d8c7d5a001
+",7,190,103,87,Refactoring (Major),e7b96070dd9e51a8b16340411a8643d8c7d5a001
 regulator: act8865: fix build when OF is not enabled,"regulator: act8865: fix build when OF is not enabled
 
 act8846_matches and act8865_matches are defined only when OF is
@@ -41029,7 +41029,7 @@ documentation for Active-Semi PMUs.
 Signed-off-by: Beniamino Galvani <b.galvani@gmail.com>
 Reviewed-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Mark Brown <broonie@linaro.org>
-",1,7,5,2,,0b8eebc02a26500ad5084e421793eb15b41bb08e
+",1,7,5,2,Documentation (Minor),0b8eebc02a26500ad5084e421793eb15b41bb08e
 regulator: act8865: add support for act8846,"regulator: act8865: add support for act8846
 
 Add device id and definition of registers and regulators to support
@@ -41492,7 +41492,7 @@ Cc: Rob Landley <rob@landley.net>
 Signed-off-by: Yann Droneaud <ydroneaud@opteya.com>
 Acked-by: Sam Ravnborg <sam@ravnborg.org>
 Signed-off-by: Michal Marek <mmarek@suse.cz>
-",3,96,49,47,,aa8dbeee5ee012e1ee595dd1df9be04e161a3fd4
+",3,96,49,47,Documentation (Minor),aa8dbeee5ee012e1ee595dd1df9be04e161a3fd4
 drm: merge drm_drv.c into drm_ioctl.c,"drm: merge drm_drv.c into drm_ioctl.c
 
 All that is left in drm_drv.c is ioctl management. Merge it into
@@ -42065,7 +42065,7 @@ radeon_connectors.c since that is the only place
 that uses it.
 
 Signed-off-by: Alex Deucher <alexander.deucher@amd.com>
-",3,221,110,111,,72a5c970a57b51f20f8876816869c937340176b5
+",3,221,110,111,Refactoring (Minor),72a5c970a57b51f20f8876816869c937340176b5
 drm/radeon/audio: break out of loops once we match connector,"drm/radeon/audio: break out of loops once we match connector
 
 No need to continue with the loops once we've matched
@@ -42083,7 +42083,7 @@ Also matches Radeon HDA verb 0xf7b documentation.
 
 Signed-off-by: Stefan Brüns <stefan.bruens@rwth-aachen.de>
 Signed-off-by: Alex Deucher <alexander.deucher@amd.com>
-",1,4,2,2,,c748990b7b1c320c626c758379d50748588c6ed6
+",1,4,2,2,Feature (Minor),c748990b7b1c320c626c758379d50748588c6ed6
 "drm/radeon: Inline r100_mm_rreg, -wreg, v3","drm/radeon: Inline r100_mm_rreg, -wreg, v3
 
 This was originally un-inlined by Andi Kleen in 2011 citing size concerns.
