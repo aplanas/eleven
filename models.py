@@ -130,6 +130,19 @@ class RegexSpotter(BaseEstimator):
         matches = np.fromiter( ( self.pattern.search(x) for  x in X ), dtype=bool )
         return matches[:,np.newaxis]
 
+class ColumnDiff(BaseEstimator):
+    def __init__(self):
+        pass
+
+    def fit(self, X, y=None):
+        pass
+    def fit_transform(self, X, y=None):
+        return self.transform(X)
+
+    def transform(self, X, y=None):
+        delta = X[:,0]-X[:,1]
+        return delta[:,np.newaxis]
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Train different models with the same dataset.')
     parser.add_argument('-c', '--csv', help='csv file name')
@@ -163,12 +176,17 @@ if __name__ == '__main__':
     ])
 
     pipeline_numeric = Pipeline([
-        ('slice', SliceFeature(slice(2, 6), astype=int)),
+        ('slice', SliceFeature(slice(2, 6), astype=float)),
     ])
 
     pipeline_sha_spotter = Pipeline([
         ('slice', SliceFeature(slice(1, 2), flatten=True)),
         ('sha_spotter', RegexSpotter("[0-9a-eA-E]{6,}"))
+    ])
+
+    pipeline_diff_delta = Pipeline([
+        ('slice', SliceFeature(slice(4, 6), astype=float)),
+        ('delta', ColumnDiff())
     ])
 
     main_pipeline = Pipeline([
@@ -177,11 +195,12 @@ if __name__ == '__main__':
             ('message', pipeline_message),
             ('numeric', pipeline_numeric),
             ('contains_sha', pipeline_sha_spotter),
+            ('delta', pipeline_diff_delta),
         ])),
-        # ('densifier', Densifier()),
-        # ('scaler', StandardScaler(with_mean=False)),
-        # ('scaler', StandardScaler()),
-        # ('pca', PCA(n_components=100)),
+        #('densifier', Densifier()),
+        ## ('scaler', StandardScaler(with_mean=False)),
+        ## ('scaler', StandardScaler()),
+        #('pca', PCA(n_components=100)),
         ('clf', LinearSVC()),
         # ('clf', LogisticRegression()),
     ])
