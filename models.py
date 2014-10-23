@@ -140,16 +140,6 @@ if __name__ == '__main__':
         # ('scaler', StandardScaler(with_mean=False)),
     ])
 
-    pipeline_n_files = Pipeline([
-        ('slice', SliceFeature(slice(2, 3), astype=float)),
-        # ('scaler', MinMaxScaler()),
-    ])
-
-    pipeline_n_changes = Pipeline([
-        ('slice', SliceFeature(slice(3, 6), astype=float)),
-        ('scaler', StandardScaler(with_mean=False)),
-    ])
-
     pipeline_numeric = Pipeline([
         ('slice', SliceFeature(slice(2, 6), astype=int)),
     ])
@@ -159,8 +149,6 @@ if __name__ == '__main__':
             ('summary', pipeline_summary),
             ('message', pipeline_message),
             ('numeric', pipeline_numeric),
-            # ('n_files', pipeline_n_files),
-            # ('n_changes', pipeline_n_changes),
         ])),
         # ('densifier', Densifier()),
         # ('scaler', StandardScaler(with_mean=False)),
@@ -171,12 +159,15 @@ if __name__ == '__main__':
     ])
 
     parameters = {
-        'features__summary__vect__max_df': (0.5, 0.75, 1.0),
+        'features__summary__vect__max_df': (0.25, 0.5),
+        # 'features__summary__vect__max_df': (0.5, 0.75, 1.0),
+        'features__summary__vect__max_features': (None, 10, 100, 1000),
         # 'features__summary__vect__max_features': (None, 5000, 10000, 50000),
         # 'features__summary__vect__ngram_range': ((1, 1), (1, 2)),  # unigrams or bigrams
         'features__summary__tfidf__use_idf': (True, False),
         # 'features__summary__tfidf__norm': ('l1', 'l2'),
         'features__message__vect__max_df': (0.5, 0.75, 1.0),
+        'features__message__vect__max_features': (None, 100, 1000, 5000),
         # 'features__message__vect__max_features': (None, 5000, 10000, 50000),
         # 'features__message__vect__ngram_range': ((1, 1), (1, 2)),  # unigrams or bigrams
         'features__message__tfidf__use_idf': (True, False),
