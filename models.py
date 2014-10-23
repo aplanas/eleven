@@ -3,6 +3,7 @@
 import argparse
 import csv
 from pprint import pprint
+import re
 from time import time
 
 import numpy as np
@@ -103,6 +104,23 @@ class SliceFeature(BaseEstimator):
         return result
 
 
+class RegexSpotter(BaseEstimator):
+    def __init__(self, regexp):
+        # store the actual argument, so BaseEstimator.get_params() will do it's magic.
+        self.regexp = regexp
+        self.pattern = re.compile(regexp)
+
+    def fit(self, X, y=None):
+        pass
+
+    def fit_transform(self, X, y=None):
+        return self.transform(X)
+
+    def transform(self, X, y=None):
+        matches = np.fromiter((self.pattern.search(x) for x in X), dtype=bool)
+        return matches[:, np.newaxis]
+
+
 class Densifier(BaseEstimator):
     def fit(self, X, y=None):
         pass
@@ -113,22 +131,6 @@ class Densifier(BaseEstimator):
     def transform(self, X, y=None):
         return X.toarray()
 
-import re
-
-class RegexSpotter(BaseEstimator):
-    def __init__(self, regexp):
-        # store the actual argument, so BaseEstimator.get_params() will do it's magic.
-        self.regexp = regexp
-        self.pattern = re.compile(regexp)
-
-    def fit(self, X, y=None):
-        pass
-    def fit_transform(self, X, y=None):
-        return self.transform(X)
-
-    def transform(self, X, y=None):
-        matches = np.fromiter( ( self.pattern.search(x) for  x in X ), dtype=bool )
-        return matches[:,np.newaxis]
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Train different models with the same dataset.')
