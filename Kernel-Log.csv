@@ -4233,7 +4233,7 @@ Fixes: d285203cf647d7c9 scsi: add support for a blk-mq based I/O path.
 Reported-by: Hans de Goede <hdegoede@redhat.com>
 Signed-off-by: Christoph Hellwig <hch@lst.de>
 Signed-off-by: James Bottomley <JBottomley@Parallels.com>
-",1,2,1,1,,e8be1cf58d5b4ddbf8089700df8458f432ed5934
+",1,2,1,1,Regression (Minor),e8be1cf58d5b4ddbf8089700df8458f432ed5934
 [SCSI] libiscsi: fix potential buffer overrun in __iscsi_conn_send_pdu,"[SCSI] libiscsi: fix potential buffer overrun in __iscsi_conn_send_pdu
 
 This patches fixes a potential buffer overrun in __iscsi_conn_send_pdu.
@@ -4962,7 +4962,7 @@ Reported-and-Tested-By: Andreas Noever <andreas.noever@gmail.com>
 Signed-off-by: Bruno Prémont <bonbons@linux-vserver.org>
 Signed-off-by: Bjorn Helgaas <bhelgaas@google.com>
 CC: Matthew Garrett <matthew.garrett@nebula.com>
-CC: stable@vger.kernel.org # v3.5+",3,86,39,47,,86fd887b7fe350819dae5b55e7fef05b511c8656
+CC: stable@vger.kernel.org # v3.5+",3,86,39,47,Regression (Minor),86fd887b7fe350819dae5b55e7fef05b511c8656
 spi: davinci: remove empty function davinci_spi_cleanup,"spi: davinci: remove empty function davinci_spi_cleanup
 
 Remove empty function davinci_spi_cleanup().
@@ -5340,7 +5340,7 @@ Reviewed-by: Daniel (Deognyoun) Kim <dekim@broadcom.com>
 Reviewed-by: Pieter-Paul Giesberts <pieterpg@broadcom.com>
 Signed-off-by: Arend van Spriel <arend@broadcom.com>
 Signed-off-by: John W. Linville <linville@tuxdriver.com>
-",2,14,11,3,,87c4790330810fe5caf0172d9320cf24ef19cebe
+",2,14,11,3,Regression (Minor),87c4790330810fe5caf0172d9320cf24ef19cebe
 brcmfmac: obtain ifp through wdev structure,"brcmfmac: obtain ifp through wdev structure
 
 For P2P_DEVICE interface the function brcmf_cfg80211_update_proto_addr_mode()
@@ -5501,7 +5501,7 @@ function, and easily fixed by just making hash_name() fill in the whole
 With that, the profile for this function looks much smoother.
 
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",2,20,11,9,,9226b5b440f2b4fbb3b797f3cb74a9a627220660
+",2,20,11,9,Regression (Minor),9226b5b440f2b4fbb3b797f3cb74a9a627220660
 [CIFS] Fix setting time before epoch (negative time values),"[CIFS] Fix setting time before epoch (negative time values)
 
 xfstest generic/258 sets the time on a file to a negative value
@@ -5964,7 +5964,7 @@ Cc: Christoph Hellwig <hch@infradead.org>
 Cc: Chris Mason <clm@fb.com>
 Cc: linux-fsdevel@vger.kernel.org
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",2,7,3,4,,99d263d4c5b2f541dfacb5391e22e8c91ea982a6
+",2,7,3,4,Regression (Major),99d263d4c5b2f541dfacb5391e22e8c91ea982a6
 Make hash_64() use a 64-bit multiply when appropriate,"Make hash_64() use a 64-bit multiply when appropriate
 
 The hash_64() function historically does the multiply by the
@@ -6937,7 +6937,7 @@ adding the negative dentry.
 Signed-off-by: Benjamin Coddington <bcodding@redhat.com>
 Signed-off-by: Bob Peterson <rpeterso@redhat.com>
 Signed-off-by: Steven Whitehouse <swhiteho@redhat.com>
-",1,4,3,1,,7b7a91152d3c2ddca95172cac1675625cc8dffaf
+",1,4,3,1,Regression (Minor),7b7a91152d3c2ddca95172cac1675625cc8dffaf
 ARM: DT: imx53: fix lvds channel 1 port,"ARM: DT: imx53: fix lvds channel 1 port
 
 using LVDS channel 1 on an i.MX53 leads to following error:
@@ -9040,7 +9040,7 @@ Bugzilla: https://bugzilla.kernel.org/show_bug.cgi?id=79311
 Signed-off-by: Ville Syrjälä <ville.syrjala@linux.intel.com>
 Reviewed-by: Daniel Vetter <daniel@ffwll.ch>
 Signed-off-by: Jani Nikula <jani.nikula@intel.com>
-",1,4,4,0,,7a98948f3b536ca9a077e84966ddc0e9f53726df
+",1,4,4,0,Regression (Minor),7a98948f3b536ca9a077e84966ddc0e9f53726df
 of: Fix memory block alignment in early_init_dt_add_memory_arch(),"of: Fix memory block alignment in early_init_dt_add_memory_arch()
 
 If a memory block is not aligned to PAGE_SIZE, its base address must be
@@ -9311,7 +9311,7 @@ Signed-off-by: Daniel Vetter <daniel.vetter@ffwll.ch>
 Tested-by: Chris Wilson <chris@chris-wilson.co.uk> # gm45, ilk
 Reviewed-by: Jesse Barnes <jbarnes@virtuousgeek.org>
 Signed-off-by: Jani Nikula <jani.nikula@intel.com>
-",1,9,7,2,,4868b45de11483d5b307a406d7f1a707699b1702
+",1,9,7,2,Regression (Minor),4868b45de11483d5b307a406d7f1a707699b1702
 drm/i915: Fix EIO/wedged handling in gem fault handler,"drm/i915: Fix EIO/wedged handling in gem fault handler
 
 In
@@ -10066,7 +10066,7 @@ Tested-by: Dave Hansen <dave.hansen@intel.com>
 Acked-by: Michal Hocko <mhocko@suse.cz>
 Acked-by: Vladimir Davydov <vdavydov@parallels.com>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,103,78,25,,ce00a967377baadf2481521e131771adc7652856
+",1,103,78,25,Regression (Major),ce00a967377baadf2481521e131771adc7652856
 Export sync_filesystem() for modular ->remount_fs() use,"Export sync_filesystem() for modular ->remount_fs() use
 
 This patch changes sync_filesystem() to be EXPORT_SYMBOL().
@@ -12381,7 +12381,7 @@ Reported-by: Kick In <pierre-andre.morey@canonical.com>
 Tested-by: Chris J Arges <chris.j.arges@canonical.com>
 Signed-off-by: Ming Lei <ming.lei@canonical.com>
 Signed-off-by: Jens Axboe <axboe@fb.com>
-",1,17,11,6,,0738854939e6ec9b9111a8cfc0ca1dfa3cff6b2e
+",1,17,11,6,Regression (Minor),0738854939e6ec9b9111a8cfc0ca1dfa3cff6b2e
 xen/balloon: cancel ballooning if adding new memory failed,"xen/balloon: cancel ballooning if adding new memory failed
 
 If the balloon driver is adding additional memory regions to the
@@ -12522,7 +12522,7 @@ Tested-by: Tibor Billes <tbilles@gmx.com>
 Reviewed-by: Chris Wilson <chris@chris-wilson.co.uk>
 Signed-off-by: Ville Syrjälä <ville.syrjala@linux.intel.com>
 Signed-off-by: Jani Nikula <jani.nikula@intel.com>
-",1,10,7,3,,bbfb44e8b688e778964275ab0862f67463ba4f84
+",1,10,7,3,Regression (Minor),bbfb44e8b688e778964275ab0862f67463ba4f84
 iommu/arm-smmu: fix corner cases in address size calculations,"iommu/arm-smmu: fix corner cases in address size calculations
 
 Working out the usable address sizes for the SMMU is surprisingly tricky.
@@ -13035,7 +13035,7 @@ Reported-and-tested-by: Andre Müller <andre.muller@web.de>
 Cc: 3.16+ <stable@vger.kernel.org> # 3.16+
 Signed-off-by: Hans de Goede <hdegoede@redhat.com>
 Signed-off-by: Rafael J. Wysocki <rafael.j.wysocki@intel.com>
-",1,30,30,0,,5f24079b021cd3147c8d24ba65833f7a0df7e80d
+",1,30,30,0,Regression (Major),5f24079b021cd3147c8d24ba65833f7a0df7e80d
 ACPI / video: Fix use_native_backlight selection logic,"ACPI / video: Fix use_native_backlight selection logic
 
 Commit 751109aad583 (""ACPI / video: Change the default for
@@ -14776,7 +14776,7 @@ Cc: stable@vger.kernel.org # v3.16
 Signed-off-by: Tony Lindgren <tony@atomide.com>
 Tested-by: Aaro Koskinen <aaro.koskinen@iki.fi>
 Signed-off-by: Lee Jones <lee.jones@linaro.org>
-",2,22,11,11,,daebabd578647440d41fc9b48d8c7a88dc2f7ab5
+",2,22,11,11,Regression (Minor),daebabd578647440d41fc9b48d8c7a88dc2f7ab5
 mfd: tc3589x: Add device tree bindings,"mfd: tc3589x: Add device tree bindings
 
 This defines the device tree bindings for the Toshiba TC3589x
@@ -14870,7 +14870,7 @@ This reverts commit f79a901331a823ae370584b15cd39dd110b95a0a.
 Reported-by: GOESSEL Guillaume <g_goessel@outlook.com>
 Signed-off-by: Hans de Goede <hdegoede@redhat.com>
 Signed-off-by: Darren Hart <dvhart@linux.intel.com>
-",1,27,0,27,,3b264d279e72be290f9755c410e2594075f4685c
+",1,27,0,27,Regression (Major),3b264d279e72be290f9755c410e2594075f4685c
 MAINTAINERS: Update platform-drivers-x86 maintainer and tree,"MAINTAINERS: Update platform-drivers-x86 maintainer and tree
 
 Update the general entry for drivers/platform/x86 with myself as
@@ -15111,7 +15111,7 @@ testcase: xfstest generic/019
 Signed-off-by: Dmitry Monakhov <dmonakhov@openvz.org>
 Signed-off-by: Theodore Ts'o <tytso@mit.edu>
 Cc: stable@vger.kernel.org
-",1,68,35,33,,c174e6d6979a04b7b77b93f244396be4b81f8bfb
+",1,68,35,33,Regression (Minor),c174e6d6979a04b7b77b93f244396be4b81f8bfb
 ext4: fix incorect journal credits reservation in ext4_zero_range,"ext4: fix incorect journal credits reservation in ext4_zero_range
 
 Currently we reserve only 4 blocks but in worst case scenario
@@ -15734,7 +15734,7 @@ Fixes: 013cdf1088d72 (nfs: use generic posix ACL infrastructure,,,)
 Resolves: https://bugzilla.redhat.com/show_bug.cgi?id=1132786
 Cc: stable@vger.kernel.org # 3.14+
 Signed-off-by: Trond Myklebust <trond.myklebust@primarydata.com>
-",1,5,4,1,,f87d928f6d98644d39809a013a22f981d39017cf
+",1,5,4,1,Regression (Minor),f87d928f6d98644d39809a013a22f981d39017cf
 NFSv4: Don't clear the open state when we just did an OPEN_DOWNGRADE,"NFSv4: Don't clear the open state when we just did an OPEN_DOWNGRADE
 
 If we did an OPEN_DOWNGRADE, then the right thing to do on success, is
@@ -16334,7 +16334,7 @@ Reported-by: Thomas Leonard <talex5@gmail.com>
 Signed-off-by: Wei Liu <wei.liu2@citrix.com>
 Cc: Ian Campbell <ian.campbell@citrix.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,6,3,3,,e24f8191cc35ae3780b4656a6befae8b8657edc2
+",1,6,3,3,Regression (Minor),e24f8191cc35ae3780b4656a6befae8b8657edc2
 MIPS: Fix a warning for virt_to_page,"MIPS: Fix a warning for virt_to_page
 
 Compiling mm/highmem.c gives a warning: passing argument 1 of
@@ -17178,7 +17178,7 @@ Reported-by: Gabriele Mazzotta <gabriele.mzt@gmail.com>
 Reported-by: Dirk Griesbach <spamthis@freenet.de>
 Cc: 3.16+ <stable@vger.kernel.org> # 3.16+
 Signed-off-by: Rafael J. Wysocki <rafael.j.wysocki@intel.com>
-",1,2,1,1,,fc2e0a8326d1b21d11ef8213298e5302867fed2c
+",1,2,1,1,Regression (Minor),fc2e0a8326d1b21d11ef8213298e5302867fed2c
 ARM: OMAP2+: hwmod: Rearm wake-up interrupts for DT when MUSB is idled,"ARM: OMAP2+: hwmod: Rearm wake-up interrupts for DT when MUSB is idled
 
 Looks like MUSB cable removal can cause wake-up interrupts to
@@ -17215,7 +17215,7 @@ a PM regression on beagleboard compared to legacy booting.
 
 Tested-by: Tero Kristo <t-kristo@ti.com>
 Signed-off-by: Tony Lindgren <tony@atomide.com>
-",1,1,1,0,,c15adae88327a59f55fea9f84050c68a5e7a1596
+",1,1,1,0,Regression (Minor),c15adae88327a59f55fea9f84050c68a5e7a1596
 "ARM: dts: Remove twl6030 clk32g ""regulator""","ARM: dts: Remove twl6030 clk32g ""regulator""
 
 The kernel has never supported clk32g as a regulator since it is a clock
@@ -17291,7 +17291,7 @@ Fixes: 65b97cf6b8de (mtd: nand: omap2: handle nand on gpmc)
 Cc: <stable@vger.kernel.org>	[3.7+]
 Signed-off-by: Roger Quadros <rogerq@ti.com>
 Signed-off-by: Tony Lindgren <tony@atomide.com>
-",1,2,1,1,,40ddbf5069bd4e11447c0088fc75318e0aac53f0
+",1,2,1,1,Regression (Minor),40ddbf5069bd4e11447c0088fc75318e0aac53f0
 ARM: dts: omap3430-sdp: Revert to using software ECC for NAND,"ARM: dts: omap3430-sdp: Revert to using software ECC for NAND
 
 For v3.14 and prior, 1-bit Hamming code ECC via software was used
@@ -17599,7 +17599,7 @@ CC: stable@vger.kernel.org # 3.15+
 Signed-off-by: Alexander Usyskin <alexander.usyskin@intel.com>
 Signed-off-by: Tomas Winkler <tomas.winkler@intel.com>
 Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-",1,1,1,0,,73ab4232388b7a08f17c8d08141ff2099fa0b161
+",1,1,1,0,Regression (Minor),73ab4232388b7a08f17c8d08141ff2099fa0b161
 usb: dwc2: gadget: Set the default EP max packet value as 8 bytes,"usb: dwc2: gadget: Set the default EP max packet value as 8 bytes
 
 Set the default EP max packet value as 8 bytes, because in the case
@@ -17914,7 +17914,7 @@ Cc: Mateusz Guzik <mguzik@redhat.com>
 Cc: Petr Matousek <pmatouse@redhat.com>
 Cc: stable@vger.kernel.org      # v3.16 and anything that f8567a3845ac was backported to
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,77,73,4,,d856f32a86b2b015ab180ab7a55e455ed8d3ccc5
+",1,77,73,4,Regression (Major),d856f32a86b2b015ab180ab7a55e455ed8d3ccc5
 USB: whiteheat: Added bounds checking for bulk command response,"USB: whiteheat: Added bounds checking for bulk command response
 
 This patch fixes a potential security issue in the whiteheat USB driver
@@ -18122,7 +18122,7 @@ Cc: stable@vger.kernel.org # v3.15+
 Acked-by: Felipe Balbi <balbi@ti.com>
 Signed-off-by: Tony Lindgren <tony@atomide.com>
 Signed-off-by: Kishon Vijay Abraham I <kishon@ti.com>
-",1,88,63,25,,96be39ab34b77c6f6f5cd6ae03aac6c6449ee5c4
+",1,88,63,25,Regression (Major),96be39ab34b77c6f6f5cd6ae03aac6c6449ee5c4
 MAINTAINERS: Add entry for Renesas DRM drivers,"MAINTAINERS: Add entry for Renesas DRM drivers
 
 Signed-off-by: Laurent Pinchart <laurent.pinchart+renesas@ideasonboard.com>
@@ -18423,7 +18423,7 @@ Fixes: f27b087b81b7 (""block: add blk_rq_set_block_pc()"")
 Cc: <stable@vger.kernel.org> # 3.16.x
 Signed-off-by: Tony Battersby <tonyb@cybernetics.com>
 Signed-off-by: Jens Axboe <axboe@fb.com>
-",1,9,7,2,,2ba136daa3ae1e881c9f586f283fcaa164767dce
+",1,9,7,2,Regression (Minor),2ba136daa3ae1e881c9f586f283fcaa164767dce
 scsi-mq: fix requests that use a separate CDB buffer,"scsi-mq: fix requests that use a separate CDB buffer
 
 This patch fixes code such as the following with scsi-mq enabled:
@@ -19152,7 +19152,7 @@ devices as well as to single-function devices.
 Signed-off-by: Yuval Mintz <Yuval.Mintz@qlogic.com>
 Signed-off-by: Ariel Elior <Ariel.Elior@qlogic.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,92,17,75,,7c3afd85dc1610bb2fc049644cd1b52c7af96f98
+",1,92,17,75,Regression (Major),7c3afd85dc1610bb2fc049644cd1b52c7af96f98
 qlcnic: Fix endianess issue in firmware load from file operation,"qlcnic: Fix endianess issue in firmware load from file operation
 
 Firmware binary file is in little endian. On big-endian architecture, while
@@ -19538,7 +19538,7 @@ BUG_ON.
 Reported-by: Chris Murphy <lists@colorremedies.com>
 Signed-off-by: Liu Bo <bo.li.liu@oracle.com>
 Signed-off-by: Chris Mason <clm@fb.com>
-",1,1,1,0,,38c1c2e44bacb37efd68b90b3f70386a8ee370ee
+",1,1,1,0,Regression (Minor),38c1c2e44bacb37efd68b90b3f70386a8ee370ee
 btrfs: fix leak in qgroup_subtree_accounting() error path,"btrfs: fix leak in qgroup_subtree_accounting() error path
 
 Coverity pointed this out; in the newly added
@@ -19873,7 +19873,7 @@ Signed-off-by: Liu Bo <bo.li.liu@oracle.com>
 Reviewed-by: Satoru Takeuchi <takeuchi_satoru@jp.fujitsu.com>
 Tested-by: Satoru Takeuchi <takeuchi_satoru@jp.fujitsu.com>
 Signed-off-by: Chris Mason <clm@fb.com>
-",1,2,1,1,,87fa3bb0786f37dff0b92f2c38421dd56d8902a9
+",1,2,1,1,Regression (Minor),87fa3bb0786f37dff0b92f2c38421dd56d8902a9
 gpio-lynxpoint: enable input sensing in resume,"gpio-lynxpoint: enable input sensing in resume
 
 It appears that input sensing bit might be reset during
@@ -20165,7 +20165,7 @@ Fix this by setting enable_gpio in the pdata struct to -EINVAL.
 Signed-off-by: Lothar Waßmann <LW@KARO-electronics.de>
 Acked-by: Thierry Reding <treding@nvidia.com>
 Signed-off-by: Lee Jones <lee.jones@linaro.org>
-",1,1,1,0,,937222c4dda495277a8dfbc18bf7e54fe670105c
+",1,1,1,0,Regression (Minor),937222c4dda495277a8dfbc18bf7e54fe670105c
 perf: Handle compat ioctl,"perf: Handle compat ioctl
 
 When running a 32-bit userspace on a 64-bit kernel (eg. i386
@@ -20848,7 +20848,7 @@ Signed-off-by: Ralf Baechle <ralf@linux-mips.org>
 This reverts commit 1490434f0da63afc6006411c8829c6a7935a4e7e.
 
 Several people have reported regressions with this patch on kabini.
-",1,4,1,3,,b738ca5d68e4051c86e32f46f67a69f3bb9cee5e
+",1,4,1,3,Regression (Major),b738ca5d68e4051c86e32f46f67a69f3bb9cee5e
 drm/radeon: fix active_cu mask on SI and CIK after re-init (v3),"drm/radeon: fix active_cu mask on SI and CIK after re-init (v3)
 
 Need to initialize the mask to 0 on init, otherwise it
@@ -23708,7 +23708,7 @@ Cc: stable@vger.kernel.org # v3.16
 Cc: Rusty Russell <rusty@rustcorp.com.au>
 Signed-off-by: Andy Lutomirski <luto@amacapital.net>
 Signed-off-by: Rusty Russell <rusty@rustcorp.com.au>
-",1,5,5,0,,ff7e0055bb5ddbbb320cdd8dfd3e18672bddd2ad
+",1,5,5,0,Regression (Minor),ff7e0055bb5ddbbb320cdd8dfd3e18672bddd2ad
 blk-mq: get rid of unused BLK_MQ_F_SHOULD_SORT flag,"blk-mq: get rid of unused BLK_MQ_F_SHOULD_SORT flag
 
 We used to use this for determining whether to sort the dispatch list,
@@ -26999,7 +26999,7 @@ should shadow it.
 
 Cc: stable@vger.kernel.org [3.14 and later]
 Signed-off-by: Al Viro <viro@zeniv.linux.org.uk>
-",1,31,24,7,,12a5b5294cb1896e9a3c9fca8ff5a7e3def4e8c6
+",1,31,24,7,Regression (Minor),12a5b5294cb1896e9a3c9fca8ff5a7e3def4e8c6
 __generic_file_write_iter(): fix handling of sync error after DIO,"__generic_file_write_iter(): fix handling of sync error after DIO
 
 If DIO results in short write and sync write fails, we want to bugger off
@@ -27451,7 +27451,7 @@ Fixes: 8e5ced83dd1c (""ALSA: usb-audio: remove superfluous Roland quirks"")
 Cc: <stable@vger.kernel.org>
 Signed-off-by: Clemens Ladisch <clemens@ladisch.de>
 Signed-off-by: Takashi Iwai <tiwai@suse.de>
-",1,29,29,0,,53da5ebfef66ea6e478ad9c6add3781472b79475
+",1,29,29,0,Regression (Minor),53da5ebfef66ea6e478ad9c6add3781472b79475
 x86/doc: Fix the 'tlb_single_page_flush_ceiling' sysconfig path,"x86/doc: Fix the 'tlb_single_page_flush_ceiling' sysconfig path
 
 Fix the documented sysconfig location of 'tlb_single_page_flush_ceiling'
@@ -32073,7 +32073,7 @@ Reviewed-by: Shobhit Kumar <shobhit.kumar@intel.com>
 [danvet: Add regression citation.]
 Cc: stable@vger.kernel.org
 Signed-off-by: Daniel Vetter <daniel.vetter@ffwll.ch>
-",1,2,1,1,,ed3b6679936801fa2dab47e7a6ef74e383400ed9
+",1,2,1,1,Regression (Minor),ed3b6679936801fa2dab47e7a6ef74e383400ed9
 netfilter: nf_tables: don't update chain with unset counters,"netfilter: nf_tables: don't update chain with unset counters
 
 Fix possible replacement of the per-cpu chain counters by null
@@ -34723,7 +34723,7 @@ Cc: Tejun Heo <tj@kernel.org>
 Cc: Ingo Molnar <mingo@elte.hu>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",2,178,178,0,,5f9be8248d9802730185f98f4db41285dc00283c
+",2,178,178,0,Feature (Minor),5f9be8248d9802730185f98f4db41285dc00283c
 lib: add lib/glob.c,"lib: add lib/glob.c
 
 This is a helper function from drivers/ata/libata_core.c, where it is
@@ -38738,7 +38738,7 @@ V2:
 
 Signed-off-by: Hariprasad Shenai <hariprasad@chelsio.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,7,3,4,,8e1e605902d07c0ce1c3331a8d0a12a6c9e5d7fb
+",1,7,3,4,Regression (Minor),8e1e605902d07c0ce1c3331a8d0a12a6c9e5d7fb
 ACPI / processor: Make acpi_cpu_soft_notify() process CPU FROZEN events,"ACPI / processor: Make acpi_cpu_soft_notify() process CPU FROZEN events
 
 CPU hotplug happens during S2RAM and CPU notify event will be CPU_XXX_FROZEN.
@@ -39842,7 +39842,7 @@ tg3_tso_bug() to handle multiple HW TX rings.
 Signed-off-by: Prashant Sreedharan <prashant@broadcom.com>
 Signed-off-by: Michael Chan <mchan@broadcom.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,22,12,10,,4d8fdc95c60e90d84c8257a0067ff4b1729a3757
+",1,22,12,10,Regression (Minor),4d8fdc95c60e90d84c8257a0067ff4b1729a3757
 amd-xgbe: Perform phy connect/disconnect at dev open/stop,"amd-xgbe: Perform phy connect/disconnect at dev open/stop
 
 A change added to the mdiobus/phy api added a module_get/module_put
@@ -39989,7 +39989,7 @@ This reverts commit a71e3c37960ce5f9c6a519bc1215e3ba9fa83e75.
 Cc: <stable@vger.kernel.org> #3.16
 Signed-off-by: Fabio Estevam <fabio.estevam@freescale.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,1,0,1,,ce7991e8198b80eb6b4441b6f6114bea4a665d66
+",1,1,0,1,Regression (Minor),ce7991e8198b80eb6b4441b6f6114bea4a665d66
 cxgb4vf: Turn off SGE RX/TX Callback Timers and interrupts in PCI shutdown routine,"cxgb4vf: Turn off SGE RX/TX Callback Timers and interrupts in PCI shutdown routine
 
 Need to turn off  SGE RX/TX Callback Timers & interrupt in cxgb4vf PCI Shutdown
@@ -43188,7 +43188,7 @@ the driver was ported to a pure OF driver in mid 2008.)
 
 Signed-off-by: Christopher Alexander Tobias Schulze <cat.schulze@alice-dsl.net>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",2,17,14,3,,5cdceab3d5e02eb69ea0f5d8fa9181800baf6f77
+",2,17,14,3,Regression (Minor),5cdceab3d5e02eb69ea0f5d8fa9181800baf6f77
 drm/sti: fix warning in build.,"drm/sti: fix warning in build.
 
 Signed-off-by: Dave Airlie <airlied@redhat.com>
@@ -43302,7 +43302,7 @@ ignores NULL entries in the new_nodes array.
 This regression was introduced in 2d7f9531.
 
 Change-Id: I76564d7257800583214376b4bacf236cda90c89c
-",1,1,1,0,,400ffaa2acd72274e2c7293a9724382383bebf3e
+",1,1,1,0,Regression (Minor),400ffaa2acd72274e2c7293a9724382383bebf3e
 bcache: Fix an infinite loop in journal replay,"bcache: Fix an infinite loop in journal replay
 
 When running with multiple cache devices, if one of the devices has a completely
