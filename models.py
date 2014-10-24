@@ -125,6 +125,12 @@ class RegexSpotter(BaseEstimator):
         matches = np.fromiter((self.pattern.search(x) for x in X), dtype=bool)
         return matches[:, np.newaxis]
 
+def regex_pipeline(column, regex):
+    pipeline = Pipeline([
+        ('slice', SliceFeature(slice(column, column + 1), flatten=True)),
+        ('sha_spotter', RegexSpotter(regex))
+    ])
+    return pipeline
 
 class Densifier(BaseEstimator):
     def fit(self, X, y=None):
@@ -174,29 +180,15 @@ if __name__ == '__main__':
         ('slice', SliceFeature(slice(2, 6), astype=int)),
     ])
 
-    pipeline_sha_spotter = Pipeline([
-        ('slice', SliceFeature(slice(1, 2), flatten=True)),
-        ('sha_spotter', RegexSpotter(r'[0-9a-eA-E]{6,}'))
-    ])
-
-    pipeline_bugzilla_spotter = Pipeline([
-        ('slice', SliceFeature(slice(1, 2), flatten=True)),
-        ('sha_spotter', RegexSpotter(r'bugzilla\.kernel\.org'))
-    ])
-
-    pipeline_lkml_spotter = Pipeline([
-        ('slice', SliceFeature(slice(1, 2), flatten=True)),
-        ('sha_spotter', RegexSpotter(r'lkml\.kernel\.org'))
-    ])
-
     main_pipeline = Pipeline([
         ('features', FeatureUnion([
             ('summary', pipeline_summary),
             ('message', pipeline_message),
             ('numeric', pipeline_numeric),
-            ('contains_sha', pipeline_sha_spotter),
-            ('contains_bugzilla', pipeline_bugzilla_spotter),
-            ('contains_lkml', pipeline_lkml_spotter),
+            ('contains_sha', regex_pipeline(1, r'[0-9a-eA-E]{6,}')),
+#            ('contains_http', regex_pipeline(1, r'https?://')),
+#            ('contains_bugzilla', regex_pipeline(1, r'bugzilla\.kernel\.org')),
+#            ('contains_lkml', regex_pipeline(1, r'lkml\.kernel\.org')),
         ])),
         # ('densifier', Densifier()),
         # ('scaler', StandardScaler(with_mean=False)),
