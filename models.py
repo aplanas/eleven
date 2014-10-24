@@ -10,7 +10,6 @@ import numpy as np
 from sklearn.base import BaseEstimator
 from sklearn.cross_validation import train_test_split
 from sklearn.datasets.base import Bunch
-from sklearn.decomposition import PCA
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.grid_search import GridSearchCV
@@ -125,12 +124,14 @@ class RegexSpotter(BaseEstimator):
         matches = np.fromiter((self.pattern.search(x) for x in X), dtype=bool)
         return matches[:, np.newaxis]
 
+
 def regex_pipeline(column, regex):
     pipeline = Pipeline([
         ('slice', SliceFeature(slice(column, column + 1), flatten=True)),
         ('sha_spotter', RegexSpotter(regex))
     ])
     return pipeline
+
 
 class Densifier(BaseEstimator):
     def fit(self, X, y=None):
@@ -186,14 +187,13 @@ if __name__ == '__main__':
             ('message', pipeline_message),
             ('numeric', pipeline_numeric),
             ('contains_sha', regex_pipeline(1, r'[0-9a-eA-E]{6,}')),
-#            ('contains_http', regex_pipeline(1, r'https?://')),
-#            ('contains_bugzilla', regex_pipeline(1, r'bugzilla\.kernel\.org')),
-#            ('contains_lkml', regex_pipeline(1, r'lkml\.kernel\.org')),
+            # ('contains_http', regex_pipeline(1, r'https?://')),
+            # ('contains_bugzilla', regex_pipeline(1, r'bugzilla\.kernel\.org')),
+            # ('contains_lkml', regex_pipeline(1, r'lkml\.kernel\.org')),
         ])),
         # ('densifier', Densifier()),
         # ('scaler', StandardScaler(with_mean=False)),
         # ('scaler', StandardScaler()),
-        # ('pca', PCA(n_components=100)),
         ('clf', LinearSVC()),
         # ('clf', LogisticRegression()),
     ])
