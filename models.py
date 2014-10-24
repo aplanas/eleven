@@ -22,7 +22,7 @@ from sklearn.preprocessing import Binarizer, MinMaxScaler
 from sklearn.svm import LinearSVC
 
 
-def fetch_gitlog(data_path, collapse=None, stats=False):
+def fetch_gitlog(data_path, collapse=None, full_data=False, stats=False):
     """Convert the CSV log into a datase suitable for scikit-learn."""
     description = 'Lageled git log history'
 
@@ -35,7 +35,10 @@ def fetch_gitlog(data_path, collapse=None, stats=False):
                          int(line[2]), int(line[3]), int(line[4]),
                          int(line[5]), line[6], line[7]) for line in csvreader]
 
-        data = np.array([d for d in full_dataset if d[6]])
+        if not full_data:
+            data = np.array([d for d in full_dataset if d[6]])
+        else:
+            data = np.array(full_dataset)
 
         collapse = {} if not collapse else collapse
         for key, value in collapse.items():
@@ -137,6 +140,7 @@ class Densifier(BaseEstimator):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Train different models with the same dataset.')
     parser.add_argument('-c', '--csv', help='csv file name')
+    parser.add_argument('-l', '--label', action='store_true', help='label missing data')
     parser.add_argument('-d', '--debug', help='turn on debugging: only one job', action='store_true')
 
     args = parser.parse_args()
@@ -258,7 +262,18 @@ if __name__ == '__main__':
 
     # Print the confusion matrix
     estimator = grid_search.best_estimator_
-    y_pred = estimator.fit(X_train, y_train).predict(X_test)
+    y_pred = estimator.predict(X_test)
 
     print 'Confusion matrix for', data.target_names
     print confusion_matrix(y_test, y_pred)
+
+    if args.label:
+        # Get the full data and add labels
+        full_data = fetch_gitlog(args.csv, full_data=True)
+        unknown = [i for i, l in enumerate(full_data.target_names) if not l][0]
+        y_pred = estimator.predict(full_data.data)
+        for x, y, y_p in zip(full_data.data, full_data.target, y_pred):
+            if not y:
+                print data.target_names[y_p]
+            else:
+                print full_data.target_names[y]
