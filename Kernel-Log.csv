@@ -1,4 +1,4 @@
-,,files,total changes,add,del,,
+,,F,A+D,A(+),D(-),,
 Linux 3.17,"Linux 3.17
 ",1,2,1,1,Documentation (Minor),bfe01a5ba2490f299e1d2d5508cbbbadd897bbe9
 init/Kconfig: Fix HAVE_FUTEX_CMPXCHG to not break up the EXPERT menu,"init/Kconfig: Fix HAVE_FUTEX_CMPXCHG to not break up the EXPERT menu
@@ -4223,7 +4223,7 @@ Signed-off-by: Daniel Gryniewicz <dang@linuxbox.com>
 Reviewed-by: Webb Scales <webbnh@hp.com>
 Signed-off-by: Christoph Hellwig <hch@lst.de>
 Signed-off-by: James Bottomley <JBottomley@Parallels.com>
-",1,5,3,2,,f81426a84bef870d26e5e752772d8ca203cd4aed
+",1,5,3,2,Fix (Minor),f81426a84bef870d26e5e752772d8ca203cd4aed
 [SCSI] fix regression that accidentally disabled block-based tcq,"[SCSI] fix regression that accidentally disabled block-based tcq
 
 The scsi blk-mq support accidentally flipped a conditional, which lead to
@@ -4250,7 +4250,7 @@ Reviewed-by: Sagi Grimberg <sagig@mellanox.com>
 Signed-off-by: Christoph Hellwig <hch@lst.de>
 Cc: stable@vger.kernel.org
 Signed-off-by: James Bottomley <JBottomley@Parallels.com>
-",1,10,10,0,,db9bfd64b14a3a8f1868d2164518fdeab1b26ad1
+",1,10,10,0,Fix (Minor),db9bfd64b14a3a8f1868d2164518fdeab1b26ad1
 x86/kaslr: Avoid the setup_data area when picking location,"x86/kaslr: Avoid the setup_data area when picking location
 
 The KASLR location-choosing logic needs to avoid the setup_data
@@ -4268,7 +4268,7 @@ Cc: Pavel Machek <pavel@ucw.cz>
 Cc: Linus Torvalds <torvalds@linux-foundation.org>
 Link: http://lkml.kernel.org/r/20140911161931.GA12001@www.outflux.net
 Signed-off-by: Ingo Molnar <mingo@kernel.org>
-",1,15,15,0,,0cacbfbeb5077b63d5d3cf6df88b14ac12ad584b
+",1,15,15,0,Fix (Minor),0cacbfbeb5077b63d5d3cf6df88b14ac12ad584b
 ALSA: hda - Add fixup model name lookup for Lemote A1205,"ALSA: hda - Add fixup model name lookup for Lemote A1205
 
 Lemote A1004 is already added in commit a2dd933d01f (ALSA: hda - Add
@@ -4278,13 +4278,13 @@ missing.
 Signed-off-by: Huacai Chen <chenhc@lemote.com>
 Cc: <stable@vger.kernel.org> # 3.15+
 Signed-off-by: Takashi Iwai <tiwai@suse.de>
-",1,1,1,0,,8245b3634516e6b7eb1c94594c0fd41d233502aa
+",1,1,1,0,Feature (Minor),8245b3634516e6b7eb1c94594c0fd41d233502aa
 drm/radeon: Fix typo 'addr' -> 'entry' in rs400_gart_set_page,"drm/radeon: Fix typo 'addr' -> 'entry' in rs400_gart_set_page
 
 Bugzilla: https://bugs.freedesktop.org/show_bug.cgi?id=83996
 Signed-off-by: Michel Dänzer <michel.daenzer@amd.com>
 Signed-off-by: Alex Deucher <alexander.deucher@amd.com>
-",1,4,2,2,,226b6d88d0c38bd0817660c79e3bea870dfeee4b
+",1,4,2,2,Fix (Minor),226b6d88d0c38bd0817660c79e3bea870dfeee4b
 drm/nouveau/runpm: fix module unload,"drm/nouveau/runpm: fix module unload
 
 Use the new vga_switcheroo_fini_domain_pm_ops function
@@ -4300,7 +4300,7 @@ Reviewed-by: Ben Skeggs <bskeggs@redhat.com>
 Signed-off-by: Alex Deucher <alexander.deucher@amd.com>
 Cc: stable@vger.kernel.org
 Cc: Ben Skeggs <bskeggs@redhat.com>
-",1,9,9,0,,53beaa01e0fe8e4202f43485a03b32fcf5dfea74
+",1,9,9,0,Fix (Minor),53beaa01e0fe8e4202f43485a03b32fcf5dfea74
 drm/radeon/px: fix module unload,"drm/radeon/px: fix module unload
 
 Use the new vga_switcheroo_fini_domain_pm_ops function
@@ -4317,7 +4317,7 @@ Signed-off-by: Alex Deucher <alexander.deucher@amd.com>
 Cc: stable@vger.kernel.org
 Signed-off-by: Pali Rohár <pali.rohar@gmail.com>
 Cc: Ben Skeggs <bskeggs@redhat.com>
-",1,11,9,2,,2e97140dd58cab8772bf77d73eabda213e45202d
+",1,11,9,2,Fix (Minor),2e97140dd58cab8772bf77d73eabda213e45202d
 vgaswitcheroo: add vga_switcheroo_fini_domain_pm_ops,"vgaswitcheroo: add vga_switcheroo_fini_domain_pm_ops
 
 Drivers should call this on unload to unregister pmops.
@@ -4330,7 +4330,7 @@ Signed-off-by: Alex Deucher <alexander.deucher@amd.com>
 Cc: stable@vger.kernel.org
 Signed-off-by: Pali Rohár <pali.rohar@gmail.com>
 Cc: Ben Skeggs <bskeggs@redhat.com>
-",2,8,8,0,,766a53d059d1500c9755c8af017bd411bd8f1b20
+",2,8,8,0,Feature (Minor),766a53d059d1500c9755c8af017bd411bd8f1b20
 drm/radeon: don't reset dma on r6xx-evergreen init,"drm/radeon: don't reset dma on r6xx-evergreen init
 
 Otherwise we may lose the DMA golden settings which can
@@ -4339,7 +4339,7 @@ lead to hangs, etc.
 Reviewed-by: Christian König <christian.koenig@amd.com>
 Signed-off-by: Alex Deucher <alexander.deucher@amd.com>
 Cc: stable@vger.kernel.org
-",1,9,0,9,,c1789a2e66a4209fe5035eca11fdd729b2ffdd82
+",1,9,0,9,Fix (Minor),c1789a2e66a4209fe5035eca11fdd729b2ffdd82
 drm/radeon: don't reset sdma on CIK init,"drm/radeon: don't reset sdma on CIK init
 
 Otherwise we may lose the DMA golden settings which can
@@ -4348,7 +4348,7 @@ lead to hangs, etc.
 Reviewed-by: Christian König <christian.koenig@amd.com>
 Signed-off-by: Alex Deucher <alexander.deucher@amd.com>
 Cc: stable@vger.kernel.org
-",1,7,0,7,,799028d5d85384cce140323be633c8d5f079193f
+",1,7,0,7,Fix (Minor),799028d5d85384cce140323be633c8d5f079193f
 drm/radeon: don't reset dma on NI/SI init,"drm/radeon: don't reset dma on NI/SI init
 
 Otherwise we may lose the DMA golden settings which can
@@ -4360,14 +4360,14 @@ https://www.libreoffice.org/bugzilla/show_bug.cgi?id=83500
 Reviewed-by: Christian König <christian.koenig@amd.com>
 Signed-off-by: Alex Deucher <alexander.deucher@amd.com>
 Cc: stable@vger.kernel.org
-",1,6,0,6,,31a25e2caf9367365fcb0e57fd8fa5a42e9b73e4
+",1,6,0,6,Fix (Minor),31a25e2caf9367365fcb0e57fd8fa5a42e9b73e4
 drm/radeon/dpm: fix resume on mullins,"drm/radeon/dpm: fix resume on mullins
 
 Need to properly disable nb dpm on dpm disable.
 
 Signed-off-by: Alex Deucher <alexander.deucher@amd.com>
 Cc: stable@vger.kernel.org
-",1,28,21,7,,39da038479a81a35a7f8af3ab2c90effd5c8eff1
+",1,28,21,7,Fix (Minor),39da038479a81a35a7f8af3ab2c90effd5c8eff1
 drm/radeon: Disable HDP flush before every CS again for < r600,"drm/radeon: Disable HDP flush before every CS again for < r600
 
 It was causing display corruption with R300 generation GPUs at least.
@@ -4375,7 +4375,7 @@ It was causing display corruption with R300 generation GPUs at least.
 Reported-and-Tested-by: Mikael Pettersson <mikpelinux@gmail.com>
 Signed-off-by: Michel Dänzer <michel.daenzer@amd.com>
 Signed-off-by: Alex Deucher <alexander.deucher@amd.com>
-",4,35,16,19,,897eba827e8659a03a1b2f4e74389691f824783f
+",4,35,16,19,Fix (Minor),897eba827e8659a03a1b2f4e74389691f824783f
 drm/radeon: delete unused PTE_* defines,"drm/radeon: delete unused PTE_* defines
 
 They don't appear to be used anywhere... elsewhere uses R*_PTE_*.
@@ -4405,7 +4405,7 @@ In file included from ./arch/arm64/include/asm/io.h:29:0,
 
 Signed-off-by: Kyle McMartin <kyle@redhat.com>
 Signed-off-by: Alex Deucher <alexander.deucher@amd.com>
-",1,7,0,7,,64d8ee59577a2b1de73cc40c2ec661bddf71e8b0
+",1,7,0,7,Refactoring (Minor),64d8ee59577a2b1de73cc40c2ec661bddf71e8b0
 Fix unbalanced mutex in dma_pool_create().,"Fix unbalanced mutex in dma_pool_create().
 
 dma_pool_create() needs to unlock the mutex in error case.  The bug was
@@ -4415,7 +4415,7 @@ redundant NULL check for dev in dma_pool_create()"")/
 Signed-off-by: Krzysztof Hałasa <khc@piap.pl>
 Cc: stable@vger.kernel.org  # v3.16
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,2,1,1,,153a9f131f50420b7ce008c94f1c6374cbc460d7
+",1,2,1,1,Regression (Minor),153a9f131f50420b7ce008c94f1c6374cbc460d7
 NFSv4: Fix another bug in the close/open_downgrade code,"NFSv4: Fix another bug in the close/open_downgrade code
 
 James Drew reports another bug whereby the NFS client is now sending
@@ -4428,7 +4428,7 @@ Link: http://lkml.kernel.org/r/541AD7E5.8020409@engr.wisc.edu
 Fixes: aee7af356e15 (NFSv4: Fix problems with close in the presence...)
 Cc: stable@vger.kernel.org # 2.6.33+
 Signed-off-by: Trond Myklebust <trond.myklebust@primarydata.com>
-",1,30,15,15,,cd9288ffaea4359d5cfe2b8d264911506aed26a4
+",1,30,15,15,Fix (Minor),cd9288ffaea4359d5cfe2b8d264911506aed26a4
 NFSv4: nfs4_state_manager() vs. nfs_server_remove_lists(),"NFSv4: nfs4_state_manager() vs. nfs_server_remove_lists()
 
 There is a race between nfs4_state_manager() and
@@ -4450,7 +4450,7 @@ avoids the panic.
 CC: Stable Tree <stable@vger.kernel.org>
 Signed-off-by: Steve Dickson <steved@redhat.com>
 Signed-off-by: Trond Myklebust <trond.myklebust@primarydata.com>
-",1,38,20,18,,080af20cc945d110f9912d01cf6b66f94a375b8d
+",1,38,20,18,Fix (Minor),080af20cc945d110f9912d01cf6b66f94a375b8d
 cgroup: fix unbalanced locking,"cgroup: fix unbalanced locking
 
 cgroup_pidlist_start() holds cgrp->pidlist_mutex and then calls
@@ -4465,7 +4465,7 @@ Cc: <stable@vger.kernel.org> # 3.14+
 Signed-off-by: Zefan Li <lizefan@huawei.com>
 Signed-off-by: Tejun Heo <tj@kernel.org>
 Acked-by: Cong Wang <xiyou.wangcong@gmail.com>
-",1,1,0,1,,eb4aec84d6bdf98d00cedb41c18000f7a31e648a
+",1,1,0,1,Fix (Minor),eb4aec84d6bdf98d00cedb41c18000f7a31e648a
 "Revert ""Btrfs: device_list_add() should not update list when mounted""","Revert ""Btrfs: device_list_add() should not update list when mounted""
 
 This reverts commit b96de000bc8bc9688b3a2abea4332bd57648a49f.
@@ -4479,7 +4479,7 @@ For now, just revert the commit and we'll put a better fix into a later
 merge window.
 
 Signed-off-by: Chris Mason <clm@fb.com>
-",1,13,6,7,,0f23ae74f589304bf33233f85737f4fd368549eb
+",1,13,6,7,Regression (Minor),0f23ae74f589304bf33233f85737f4fd368549eb
 crypto: qat - Enable all 32 IRQs,"crypto: qat - Enable all 32 IRQs
 
 Enable interrupts from all 32 bundles.
@@ -4487,7 +4487,7 @@ Enable interrupts from all 32 bundles.
 Signed-off-by: Conor McLoughlin <conor.mcloughlin@intel.com>
 Signed-off-by: Tadeusz Struk <tadeusz.struk@intel.com>
 Signed-off-by: Herbert Xu <herbert@gondor.apana.org.au>
-",1,2,1,1,,413e55742a4f18da6173271ca66748e690997f30
+",1,2,1,1,Feature (Minor),413e55742a4f18da6173271ca66748e690997f30
 drm/i915: Add limited color range readout for HDMI/DP ports on g4x/vlv/chv,"drm/i915: Add limited color range readout for HDMI/DP ports on g4x/vlv/chv
 
 The limited color range knob is in the port registers on
@@ -4501,7 +4501,7 @@ Signed-off-by: Ville Syrjälä <ville.syrjala@linux.intel.com>
 Tested-by: Chris Clayton <chris2553@googlemail.com>
 Reviewed-by: Daniel Vetter <daniel.vetter@ffwll.ch>
 Signed-off-by: Jani Nikula <jani.nikula@intel.com>
-",2,11,10,1,,8c875fca1a8d76665c60fa141c220cee65f44f5e
+",2,11,10,1,Feature (Minor),8c875fca1a8d76665c60fa141c220cee65f44f5e
 can: at91_can: add missing prepare and unprepare of the clock,"can: at91_can: add missing prepare and unprepare of the clock
 
 In order to make the driver work with the common clock framework, this patch
@@ -4514,7 +4514,7 @@ Signed-off-by: Anthony Harivel <anthony.harivel@emtrion.de>
 Acked-by: Boris Brezillon <boris.brezillon@free-electrons.com>
 Cc: linux-stable <stable@vger.kernel.org>
 Signed-off-by: Marc Kleine-Budde <mkl@pengutronix.de>
-",1,8,5,3,,e77980e50bc2850599d4d9c0192b67a9ffd6daac
+",1,8,5,3,Feature (Minor),e77980e50bc2850599d4d9c0192b67a9ffd6daac
 can: flexcan: increase FLEXCAN_MCR_MAXMB() macro to 7 bits,"can: flexcan: increase FLEXCAN_MCR_MAXMB() macro to 7 bits
 
 This patch increases the mask in the FLEXCAN_MCR_MAXMB() to 7 bits as in the
@@ -4522,7 +4522,7 @@ newer flexcan cores the MAXMB field is 7 bits wide.
 
 Reported-by: David Jander <david@protonic.nl>
 Signed-off-by: Marc Kleine-Budde <mkl@pengutronix.de>
-",1,2,1,1,,4c728d804c4b9d1ae7f76e8f32c419bc21a6e540
+",1,2,1,1,Feature (Minor),4c728d804c4b9d1ae7f76e8f32c419bc21a6e540
 can: flexcan: put TX mailbox into TX_INACTIVE mode after tx-complete,"can: flexcan: put TX mailbox into TX_INACTIVE mode after tx-complete
 
 After sending a RTR frame the TX mailbox becomes a RX_EMPTY mailbox. To avoid
@@ -4534,7 +4534,7 @@ without busy polling the tx complete interrupt.
 
 Cc: linux-stable <stable@vger.kernel.org>
 Signed-off-by: Marc Kleine-Budde <mkl@pengutronix.de>
-",1,3,3,0,,de5944883ebbedbf5adc8497659772f5da7b7d72
+",1,3,3,0,Feature (Minor),de5944883ebbedbf5adc8497659772f5da7b7d72
 can: flexcan: implement workaround for errata ERR005829,"can: flexcan: implement workaround for errata ERR005829
 
 This patch implements the workaround mentioned in ERR005829:
@@ -4555,7 +4555,7 @@ Step 9: Write twice INACTIVE code (0b1000) into the first valid mailbox.
 Signed-off-by: David Jander <david@protonic.nl>
 Cc: linux-stable <stable@vger.kernel.org>
 Signed-off-by: Marc Kleine-Budde <mkl@pengutronix.de>
-",1,16,15,1,,25e924450fcb23c11c07c95ea8964dd9f174652e
+",1,16,15,1,Fix (Minor),25e924450fcb23c11c07c95ea8964dd9f174652e
 can: flexcan: correctly initialize mailboxes,"can: flexcan: correctly initialize mailboxes
 
 Apparently mailboxes may contain random data at startup, causing some of them
@@ -4568,7 +4568,7 @@ This patch initializes all mailboxes after the FIFO as RX_INACTIVE.
 Signed-off-by: David Jander <david@protonic.nl>
 Cc: linux-stable <stable@vger.kernel.org>
 Signed-off-by: Marc Kleine-Budde <mkl@pengutronix.de>
-",1,7,7,0,,fc05b884a31dbf259cc73cc856e634ec3acbebb6
+",1,7,7,0,Fix (Minor),fc05b884a31dbf259cc73cc856e634ec3acbebb6
 can: flexcan: mark TX mailbox as TX_INACTIVE,"can: flexcan: mark TX mailbox as TX_INACTIVE
 
 This patch fixes the initialization of the TX mailbox. It is now correctly
@@ -4576,7 +4576,7 @@ initialized as TX_INACTIVE not RX_EMPTY.
 
 Cc: linux-stable <stable@vger.kernel.org>
 Signed-off-by: Marc Kleine-Budde <mkl@pengutronix.de>
-",1,15,13,2,,c32fe4ad3e4861b2bfa1f44114c564935a123dda
+",1,15,13,2,Fix (Minor),c32fe4ad3e4861b2bfa1f44114c564935a123dda
 can: peak_pci: add PCI ID definition pcie card variant,"can: peak_pci: add PCI ID definition pcie card variant
 
 Add PCI ID definition for the single channel PCAN ExpressCard 34 adapter. Due
@@ -4586,7 +4586,7 @@ created at initialization time. Tested including the LED functionality.
 Signed-off-by: Oliver Hartkopp <socketcan@hartkopp.net>
 Acked-by: Stephane Grosjean <s.grosjean@peak-system.com>
 Signed-off-by: Marc Kleine-Budde <mkl@pengutronix.de>
-",1,6,5,1,,4be0015c955a9a6e26395dbaba4bfdedf8f755ca
+",1,6,5,1,Feature (Minor),4be0015c955a9a6e26395dbaba4bfdedf8f755ca
 can: c_can_platform: fix parameters of c_can_hw_raminit_ti(),"can: c_can_platform: fix parameters of c_can_hw_raminit_ti()
 
 Pass the correct 'mask' and 'value' bits to c_can_hw_raminit_wait_ti(). They
@@ -4596,7 +4596,7 @@ Reported-by: Jay Schroeder <jay.schroeder@garmin.com>
 Signed-off-by: Roger Quadros <rogerq@ti.com>
 Cc: linux-stable <stable@vger.kernel.org>
 Signed-off-by: Marc Kleine-Budde <mkl@pengutronix.de>
-",1,4,2,2,,a7380db5f0d6dd94981e73da08d8fa863ee72235
+",1,4,2,2,Fix (Minor),a7380db5f0d6dd94981e73da08d8fa863ee72235
 CacheFiles: Handle rename2,"CacheFiles: Handle rename2
 
 Not all filesystems now provide the rename i_op - ext4 for one - but rather
@@ -4618,7 +4618,7 @@ Turning on debugging shows:
 where -1 is EPERM.
 
 Signed-off-by: David Howells <dhowells@redhat.com>
-",1,3,2,1,,e2cf1f1cc7636bd860e47cd0ad6194da8975f8b5
+",1,3,2,1,Fix (Minor),e2cf1f1cc7636bd860e47cd0ad6194da8975f8b5
 cachefiles: remove two unused pagevecs.,"cachefiles: remove two unused pagevecs.
 
 
@@ -4631,7 +4631,7 @@ in 3.8.
 
 Signed-off-by: NeilBrown <neilb@suse.de>
 Signed-off-by: David Howells <dhowells@redhat.com>
-",1,6,0,6,,696382f938d22597f4945865ed8e3f25e240cd41
+",1,6,0,6,Refactoring (Minor),696382f938d22597f4945865ed8e3f25e240cd41
 FS-Cache: refcount becomes corrupt under vma pressure.,"FS-Cache: refcount becomes corrupt under vma pressure.
 
 In rare cases under heavy VMA pressure the ref count for a fscache cookie
@@ -4672,7 +4672,7 @@ RSP <ffff8803bc85f9b8>
 
 Signed-off-by: Milosz Tanski <milosz@adfin.com>
 Signed-off-by: David Howells <dhowells@redhat.com>
-",1,7,4,3,,3e1199dcad004a40b55297a4736ccd1b9b81a952
+",1,7,4,3,Fix (Minor),3e1199dcad004a40b55297a4736ccd1b9b81a952
 iscsi-target: avoid NULL pointer in iscsi_copy_param_list failure,"iscsi-target: avoid NULL pointer in iscsi_copy_param_list failure
 
 In iscsi_copy_param_list() a failed iscsi_param_list memory allocation
@@ -4687,7 +4687,7 @@ Found by coverity.
 Signed-off-by: Joern Engel <joern@logfs.org>
 Cc: <stable@vger.kernel.org> # v3.1+
 Signed-off-by: Nicholas Bellinger <nab@linux-iscsi.org>
-",1,2,1,1,,8ae757d09c45102b347a1bc2867f54ffc1ab8fda
+",1,2,1,1,Fix (Minor),8ae757d09c45102b347a1bc2867f54ffc1ab8fda
 iscsi-target: Fix memory corruption in iscsit_logout_post_handler_diffcid,"iscsi-target: Fix memory corruption in iscsit_logout_post_handler_diffcid
 
 This patch fixes a bug in iscsit_logout_post_handler_diffcid() where
@@ -4700,7 +4700,7 @@ bool conn_found to determine if the function needs to exit early.
 Reported-by: Joern Engel <joern@logfs.org>
 Cc: <stable@vger.kernel.org> # v3.1+
 Signed-off-by: Nicholas Bellinger <nab@linux-iscsi.org>
-",1,4,3,1,,b53b0d99d6fbf7d44330395349a895521cfdbc96
+",1,4,3,1,Fix (Minor),b53b0d99d6fbf7d44330395349a895521cfdbc96
 target: Fix inverted logic in SE_DEV_ALUA_SUPPORT_STATE_STORE,"target: Fix inverted logic in SE_DEV_ALUA_SUPPORT_STATE_STORE
 
 Fix inverted logic in SE_DEV_ALUA_SUPPORT_STATE_STORE for setting
@@ -4712,7 +4712,7 @@ A value of 1 should enable the support, not disable it.
 Signed-off-by: Sebastian Herbszt <herbszt@gmx.de>
 Cc: <stable@vger.kernel.org> # v3.14+
 Signed-off-by: Nicholas Bellinger <nab@linux-iscsi.org>
-",1,2,1,1,,1f0b030c45c781f9fe568e5e2a813d6c8567a051
+",1,2,1,1,Fix (Minor),1f0b030c45c781f9fe568e5e2a813d6c8567a051
 target: Fix user data segment multiplier in spc_emulate_evpd_b3(),"target: Fix user data segment multiplier in spc_emulate_evpd_b3()
 
 This patch fixes an apparent cut and paste error in spc_emulate_evpd_b3(),
@@ -4723,7 +4723,7 @@ user data segment size.
 
 Signed-off-by: Sebastian Herbszt <herbszt@gmx.de>
 Signed-off-by: Nicholas Bellinger <nab@linux-iscsi.org>
-",1,2,1,1,,096b49951712291824e9f9358a0c46417011098e
+",1,2,1,1,Fix (Minor),096b49951712291824e9f9358a0c46417011098e
 "Revert ""init: make rootdelay=N consistent with rootwait behaviour""","Revert ""init: make rootdelay=N consistent with rootwait behaviour""
 
 This reverts commit 4dfe694f616e00e6fd83e5bbcd7a3c4d7113493d.
@@ -4757,7 +4757,7 @@ Cc: Russell King <linux@arm.linux.org.uk>
 Cc: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Paul Gortmaker <paul.gortmaker@windriver.com>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,12,6,6,,8ba4caf1ee1585f018d32ab924244c9589bc9f37
+",1,12,6,6,Regression (Minor),8ba4caf1ee1585f018d32ab924244c9589bc9f37
 MIPS: SmartMIPS: Disable assembler warnings,"MIPS: SmartMIPS: Disable assembler warnings
 
 The kernel code overrides the default ISA as passed by the compiler
@@ -4781,7 +4781,7 @@ Signed-off-by: Markos Chandras <markos.chandras@imgtec.com>
 Cc: linux-mips@linux-mips.org
 Patchwork: https://patchwork.linux-mips.org/patch/7356/
 Signed-off-by: Ralf Baechle <ralf@linux-mips.org>
-",1,11,10,1,,dab1b4450df481f9d18b66fefcea6aef5e4708fb
+",1,11,10,1,Fix (Minor),dab1b4450df481f9d18b66fefcea6aef5e4708fb
 hwmon: (fam15h_power) Add support for two more processors,"hwmon: (fam15h_power) Add support for two more processors
 
 Fam16h,M30h(Mullins) and Fam15hM30h(Kaveri) processors can
@@ -4789,7 +4789,7 @@ report 'power_crit' value. So, adding their respective device ids.
 
 Signed-off-by: Aravind Gopalakrishnan <Aravind.Gopalakrishnan@amd.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,2,2,0,,0a0039ad541d6ecdb4028e77ac6eae49a36af82b
+",1,2,2,0,Feature (Minor),0a0039ad541d6ecdb4028e77ac6eae49a36af82b
 hwmon: (fam15h_power) Make actual power reporting conditional,"hwmon: (fam15h_power) Make actual power reporting conditional
 
 power1_input should only be reported for Fam15h, Models 00h-0fh
@@ -4802,14 +4802,14 @@ Suggested-by: Guenter Roeck <linux@roeck-us.net>
 Fixes: 22e32f4f5777 ('x86,AMD: Power driver support for AMD's family 16h processors')
 Signed-off-by: Aravind Gopalakrishnan <Aravind.Gopalakrishnan@amd.com>
 Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-",1,18,17,1,,961a23788c3448eec7906bd74c64c01c54fba80e
+",1,18,17,1,Feature (Minor),961a23788c3448eec7906bd74c64c01c54fba80e
 drm: sti: do not iterate over the info frame array,"drm: sti: do not iterate over the info frame array
 
 avi infoframe is a 13 bytes array, do not read after this limite.
 
 Signed-off-by: Benjamin Gaignard <benjamin.gaignard@linaro.org>
 Signed-off-by: Dave Airlie <airlied@redhat.com>
-",1,1,0,1,,7dc9250f1d08f470f8d4e585a2eaeb951d4356be
+",1,1,0,1,Fix (Minor),7dc9250f1d08f470f8d4e585a2eaeb951d4356be
 Btrfs: set inode's logged_trans/last_log_commit after ranged fsync,"Btrfs: set inode's logged_trans/last_log_commit after ranged fsync
 
 When a ranged fsync finishes if there are still extent maps in the modified
@@ -4830,7 +4830,7 @@ which was added to its v5, but didn't make it on time.
 
 Signed-off-by: Filipe Manana <fdmanana@suse.com>
 Signed-off-by: Chris Mason <clm@fb.com>
-",2,27,13,14,,125c4cf9f37c98fed2c08229b31358cfec63dcf6
+",2,27,13,14,Fix (Minor),125c4cf9f37c98fed2c08229b31358cfec63dcf6
 ARM: OMAP3: Fix I/O chain clock line assertion timed out error,"ARM: OMAP3: Fix I/O chain clock line assertion timed out error
 
 We are getting ""PRM: I/O chain clock line assertion timed out"" errors
@@ -4881,7 +4881,7 @@ corresponding arch-specific define is gone with above patch.
 
 Signed-off-by: Bruno Prémont <bonbons@linux-vserver.org>
 Signed-off-by: Bjorn Helgaas <bhelgaas@google.com>
-CC: Matthew Garrett <matthew.garrett@nebula.com>",2,10,0,10,,ce6eacb07e287c0c3c8b5c316a9a7f9cecf69e95
+CC: Matthew Garrett <matthew.garrett@nebula.com>",2,10,0,10,Refactoring (Minor),ce6eacb07e287c0c3c8b5c316a9a7f9cecf69e95
 scsi: use 'depends' instead of 'select' for SCSI_FC_ATTRS,"scsi: use 'depends' instead of 'select' for SCSI_FC_ATTRS
 
 There are other kconfig symbols which use SCSI_FC_ATTRS.
@@ -4900,7 +4900,7 @@ drivers/scsi/scsi_transport_fc.c:611:7: error: 'scsi_nl_sock' undeclared (first 
 Reported-by: Fengguang Wu <fengguang.wu@intel.com> [0-day test robot]
 Signed-off-by: Randy Dunlap <rdunlap@infradead.org>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",4,16,8,8,,6a38792ca8a5da28f65dc42eeb73d9a431f8d0fd
+",4,16,8,8,Fix (Minor),6a38792ca8a5da28f65dc42eeb73d9a431f8d0fd
 sfc: fix addr_list_lock spinlock use before init,"sfc: fix addr_list_lock spinlock use before init
 
 Reported by Nikolay Aleksandrov.  In efx_init_port() we call
@@ -4915,7 +4915,7 @@ The EF10 equivalent, efx_ef10_filter_sync_rx_mode(), already has the
 Signed-off-by: Edward Cree <ecree@solarflare.com>
 Tested-by: Nikolay Aleksandrov <nikolay@redhat.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,3,3,0,,f650fb456f2079b762c131a11397c0a966e2bfe4
+",1,3,3,0,Fix (Minor),f650fb456f2079b762c131a11397c0a966e2bfe4
 net: rfkill: gpio: Enable module auto-loading for ACPI based switches,"net: rfkill: gpio: Enable module auto-loading for ACPI based switches
 
 For the ACPI based switches the MODULE_DEVICE_TABLE is missing to
@@ -4923,7 +4923,7 @@ export the entries for module auto-loading.
 
 Signed-off-by: Marcel Holtmann <marcel@holtmann.org>
 Signed-off-by: John W. Linville <linville@tuxdriver.com>
-",1,1,1,0,,dda3b191eb6c5a56d443723dcb71ade60d97c04f
+",1,1,1,0,Feature (Minor),dda3b191eb6c5a56d443723dcb71ade60d97c04f
 r8169: adjust __rtl8169_set_features,"r8169: adjust __rtl8169_set_features
 
 Remove the ""changed"" test in __rtl8169_set_features(). Instead, do
@@ -4935,7 +4935,7 @@ rtl_open().
 Signed-off-by: Francois Romieu <romieu@fr.zoreil.com>
 Signed-off-by: Hayes Wang <hayeswang@realtek.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,74,34,40,,929a031dfd62aae34bf8e728f712e6751e416d1f
+",1,74,34,40,Refactoring (Minor),929a031dfd62aae34bf8e728f712e6751e416d1f
 vgaarb: Don't default exclusively to first video device with mem+io,"vgaarb: Don't default exclusively to first video device with mem+io
 
 Commit 20cde694027e (""x86, ia64: Move EFI_FB vga_default_device()
@@ -4969,7 +4969,7 @@ Remove empty function davinci_spi_cleanup().
 
 Signed-off-by: Grygorii Strashko <grygorii.strashko@ti.com>
 Signed-off-by: Mark Brown <broonie@kernel.org>
-",1,5,0,5,,6e7488f8f6f68218bd52283f78f571466280ac96
+",1,5,0,5,Refactoring (Minor),6e7488f8f6f68218bd52283f78f571466280ac96
 ARM: 8149/1: perf: Don't sleep while atomic when enabling per-cpu interrupts,"ARM: 8149/1: perf: Don't sleep while atomic when enabling per-cpu interrupts
 
 Rob Clark reports a sleeping while atomic bug when using perf.
@@ -5021,7 +5021,7 @@ Acked-by: Will Deacon <will.deacon@arm.com>
 Cc: stable@vger.kernel.org
 Signed-off-by: Stephen Boyd <sboyd@codeaurora.org>
 Signed-off-by: Russell King <rmk+kernel@arm.linux.org.uk>
-",1,14,4,10,,505013bc9065391f09a51d51cd3bf0b06dfb570a
+",1,14,4,10,Fix (Minor),505013bc9065391f09a51d51cd3bf0b06dfb570a
 ARM: 8148/1: flush TLS and thumbee register state during exec,"ARM: 8148/1: flush TLS and thumbee register state during exec
 
 The TPIDRURO and TPIDRURW registers need to be flushed during exec;
@@ -5039,7 +5039,7 @@ Signed-off-by: Nathan Lynch <nathan_lynch@mentor.com>
 Acked-by: Will Deacon <will.deacon@arm.com>
 Cc: <stable@vger.kernel.org>
 Signed-off-by: Russell King <rmk+kernel@arm.linux.org.uk>
-",4,83,66,17,,fbfb872f5f417cea48760c535e0ff027c88b507a
+",4,83,66,17,Feature (Minor),fbfb872f5f417cea48760c535e0ff027c88b507a
 ARM: 8151/1: add missing exports for asm functions required by get_user macro,"ARM: 8151/1: add missing exports for asm functions required by get_user macro
 
 Previous commits that dealt with get_user for 64bit type missed to
@@ -5049,7 +5049,7 @@ Solution is to export all required functions.
 
 Signed-off-by: Victor Kamensky <victor.kamensky@linaro.org>
 Signed-off-by: Russell King <rmk+kernel@arm.linux.org.uk>
-",1,8,8,0,,7a0bd49713aca3040099e1413d1cc9f08802d97a
+",1,8,8,0,Fix (Minor),7a0bd49713aca3040099e1413d1cc9f08802d97a
 vfs: workaround gcc <4.6 build error in link_path_walk(),"vfs: workaround gcc <4.6 build error in link_path_walk()
 
 Commit d6bb3e9075bb (""vfs: simplify and shrink stack frame of
@@ -5076,7 +5076,7 @@ Cc: Geert Uytterhoeven <geert@linux-m68k.org>
 Cc: linux-fsdevel@vger.kernel.org
 Cc: linux-metag@vger.kernel.org
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,2,1,1,,a060dc5010ffa32f3a83e5336f6eeb6551fa137a
+",1,2,1,1,Fix (Minor),a060dc5010ffa32f3a83e5336f6eeb6551fa137a
 Fix mfsymlinks file size check,"Fix mfsymlinks file size check
 
 If the mfsymlinks file size has changed (e.g. the file no longer
@@ -5084,13 +5084,13 @@ represents an emulated symlink) we were not returning an error properly.
 
 Signed-off-by: Steve French <smfrench@gmail.com>
 Reviewed-by: Stefan Metzmacher <metze@samba.org>
-",1,4,3,1,,364d42930d96a872b2076deeb9c24f9ff132de34
+",1,4,3,1,Fix (Minor),364d42930d96a872b2076deeb9c24f9ff132de34
 Update version number displayed by modinfo for cifs.ko,"Update version number displayed by modinfo for cifs.ko
 
 Update cifs.ko version to 2.05
 
 Signed-off-by: Steve French <smfrench@gmail.com>w
-",1,2,1,1,,69af38dbc5b44e90dde35af4a1df3f5510809a1a
+",1,2,1,1,Documentation (Minor),69af38dbc5b44e90dde35af4a1df3f5510809a1a
 cifs: remove dead code,"cifs: remove dead code
 
 cifs provides two dummy functions 'sess_auth_lanman' and
@@ -5109,7 +5109,7 @@ any downsides that I can see.
 Signed-off-by: Arnd Bergmann <arnd@arndb.de>
 Signed-off-by: Yalin Wang <yalin.wang@sonymobile.com>
 Signed-off-by: Steve French <smfrench@gmail.com>
-",1,17,0,17,,116ae5e2b09f7022281c253a6037a74d0446bfaf
+",1,17,0,17,Refactoring (Minor),116ae5e2b09f7022281c253a6037a74d0446bfaf
 "Revert ""cifs: No need to send SIGKILL to demux_thread during umount""","Revert ""cifs: No need to send SIGKILL to demux_thread during umount""
 
 This reverts commit 52a36244443eabb594bdb63622ff2dd7a083f0e2.
@@ -5121,7 +5121,7 @@ between test runs.
 Signed-off-by: Namjae Jeon <namjae.jeon@samsung.com>
 CC: Jeff Layton <jlayton@primarydata.com>
 Signed-off-by: Steve French <smfrench@gmail.com>
-",1,19,19,0,,a5c3e1c725af9e84deceb3c33939ca4ffe3fefc8
+",1,19,19,0,Regression (Minor),a5c3e1c725af9e84deceb3c33939ca4ffe3fefc8
 xfrm: Generate queueing routes only from route lookup functions,"xfrm: Generate queueing routes only from route lookup functions
 
 Currently we genarate a queueing route if we have matching policies
@@ -5137,7 +5137,7 @@ dst_output() afterwards.
 Fixes: a0073fe18e71 (""xfrm: Add a state resolution packet queue"")
 Reported-by: Konstantinos Kolelis <k.kolelis@sirrix.com>
 Signed-off-by: Steffen Klassert <steffen.klassert@secunet.com>
-",2,33,25,8,,b8c203b2d2fc961bafd53b41d5396bbcdec55998
+",2,33,25,8,Fix (Minor),b8c203b2d2fc961bafd53b41d5396bbcdec55998
 xfrm: Generate blackhole routes only from route lookup functions,"xfrm: Generate blackhole routes only from route lookup functions
 
 Currently we genarate a blackhole route route whenever we have
@@ -5153,7 +5153,7 @@ dst_output() afterwards.
 Fixes: 2774c131b1d (""xfrm: Handle blackhole route creation via afinfo."")
 Reported-by: Konstantinos Kolelis <k.kolelis@sirrix.com>
 Signed-off-by: Steffen Klassert <steffen.klassert@secunet.com>
-",4,43,36,7,,f92ee61982d6da15a9e49664ecd6405a15a2ee56
+",4,43,36,7,Fix (Major),f92ee61982d6da15a9e49664ecd6405a15a2ee56
 "scsi: fix build errors, SCSI_FC_ATTRS needs to depend on SCSI && NET","scsi: fix build errors, SCSI_FC_ATTRS needs to depend on SCSI && NET
 
 Fix build errors when CONFIG_SCSI_NETLINK is enabled but
@@ -5173,7 +5173,7 @@ drivers/built-in.o: In function `scsi_netlink_exit':
 Signed-off-by: Randy Dunlap <rdunlap@infradead.org>
 Tested-by: Anish Bhatt <anish@chelsio.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,2,1,1,,95cd6f488d164de462a8279e802a0ad05c33d167
+",1,2,1,1,Fix (Minor),95cd6f488d164de462a8279e802a0ad05c33d167
 bnx2i/bnx2fc : fix randconfig error in next-20140909,"bnx2i/bnx2fc : fix randconfig error in next-20140909
 
 Just like CNIC, tristate of these two modules is also dependent on IPV6.
@@ -5185,7 +5185,7 @@ compiled as a module.
 Fixes: c99d667e8527 (""cnic : Cleanup CONFIG_IPV6 & VLAN check"")
 Signed-off-by: Anish Bhatt <anish@chelsio.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",2,2,2,0,,23a3c99201954d8ffe92e599e3c3039985280f1b
+",2,2,2,0,Fix (Minor),23a3c99201954d8ffe92e599e3c3039985280f1b
 scsi_netlink : Make SCSI_NETLINK dependent on NET instead of selecting NET,"scsi_netlink : Make SCSI_NETLINK dependent on NET instead of selecting NET
 
 Required for avoiding recursive dependencies in the Kconfig, brought out
@@ -5194,7 +5194,7 @@ As suggested by Randy Dunlap
 
 Signed-off-by: Anish Bhatt <anish@chelsio.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,2,1,1,,5d6be6a5d4864712832822efeb9c2d54e4063949
+",1,2,1,1,Fix (Minor),5d6be6a5d4864712832822efeb9c2d54e4063949
 cxgb4: Don't allocate adapter structure for all PF's,"cxgb4: Don't allocate adapter structure for all PF's
 
 commit 35b1de557970 (""rdma/cxgb4: Fixes cxgb4 probe failure in VM when PF is
@@ -5206,7 +5206,7 @@ Fix: Allocate adapter structure only for PF4
 
 Signed-off-by: Hariprasad Shenai <hariprasad@chelsio.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,49,27,22,,d6ce2628f32271c037a8c12e1994c9fba3a4af49
+",1,49,27,22,Fix (Minor),d6ce2628f32271c037a8c12e1994c9fba3a4af49
 bridge: Fix br_should_learn to check vlan_enabled,"bridge: Fix br_should_learn to check vlan_enabled
 
 As Toshiaki Makita pointed out, the BRIDGE_INPUT_SKB_CB will
@@ -5219,7 +5219,7 @@ Reported-by: Toshiaki Makita<toshiaki.makita1@gmail.com>
 Fixes: 20adfa1 bridge: Check if vlan filtering is enabled only once.
 Signed-off-by: Vladislav Yasevich <vyasevic@redhat.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,2,1,1,,c095f248e63ada504dd90c90baae673ae10ee3fe
+",1,2,1,1,Fix (Minor),c095f248e63ada504dd90c90baae673ae10ee3fe
 iscsi-target: Ignore ICF_GOT_LAST_DATAOUT during Data-Out ITT lookup,"iscsi-target: Ignore ICF_GOT_LAST_DATAOUT during Data-Out ITT lookup
 
 This patch adds a explicit check in iscsit_find_cmd_from_itt_or_dump()
@@ -5237,7 +5237,7 @@ dumped.
 Reported-by: Arshad Hussain <arshad.hussain@calsoftinc.com>
 Tested-by: Arshad Hussain <arshad.hussain@calsoftinc.com>
 Signed-off-by: Nicholas Bellinger <nab@linux-iscsi.org>
-",1,2,2,0,,3687db882d8ec8f0792603ff00c2e80d791e49e8
+",1,2,2,0,Feature (Minor),3687db882d8ec8f0792603ff00c2e80d791e49e8
 Target/iser: Fix initiator_depth and responder_resources,"Target/iser: Fix initiator_depth and responder_resources
 
 The iser target is the RDMA requester and the iser initiator is the
@@ -5251,7 +5251,7 @@ set responder_resources.
 
 Signed-off-by: Sagi Grimberg <sagig@mellanox.com>
 Signed-off-by: Nicholas Bellinger <nab@linux-iscsi.org>
-",1,11,6,5,,1a92e17e39b9a5d476e0a7aa52280e76321834ee
+",1,11,6,5,Fix (Minor),1a92e17e39b9a5d476e0a7aa52280e76321834ee
 Target/iser: Avoid calling rdma_disconnect twice,"Target/iser: Avoid calling rdma_disconnect twice
 
 rdma_disconnect may be called in 2 code flows:
@@ -5264,7 +5264,7 @@ from isert_wait_conn.
 
 Signed-off-by: Sagi Grimberg <sagig@mellanox.com>
 Signed-off-by: Nicholas Bellinger <nab@linux-iscsi.org>
-",1,2,1,1,,38a8316b5d80ddee071d493bae567185c07de359
+",1,2,1,1,Feature (Minor),38a8316b5d80ddee071d493bae567185c07de359
 Target/iser: Don't put isert_conn inside disconnected handler,"Target/iser: Don't put isert_conn inside disconnected handler
 
 disconnected_handler is invoked on several CM events (such
@@ -5276,7 +5276,7 @@ the connection too early.
 Signed-off-by: Sagi Grimberg <sagig@mellanox.com>
 Cc: <stable@vger.kernel.org> # v3.10+
 Signed-off-by: Nicholas Bellinger <nab@linux-iscsi.org>
-",1,2,1,1,,0fc4ea701fcf5bc51ace4e288af5be741465f776
+",1,2,1,1,Fix (Minor),0fc4ea701fcf5bc51ace4e288af5be741465f776
 Target/iser: Get isert_conn reference once got to connected_handler,"Target/iser: Get isert_conn reference once got to connected_handler
 
 In case the connection didn't reach connected state, disconnected
@@ -5286,7 +5286,7 @@ isert_conn will be missing.
 Signed-off-by: Sagi Grimberg <sagig@mellanox.com>
 Cc: <stable@vger.kernel.org> # v3.10+
 Signed-off-by: Nicholas Bellinger <nab@linux-iscsi.org>
-",1,5,3,2,,c2f88b17a1d97ca4ecd96cc22333a7a4f1407d39
+",1,5,3,2,Feature (Minor),c2f88b17a1d97ca4ecd96cc22333a7a4f1407d39
 ACPIPHP / radeon / nouveau: Remove acpi_bus_no_hotplug(),"ACPIPHP / radeon / nouveau: Remove acpi_bus_no_hotplug()
 
 Revert parts of f244d8b623da (""ACPIPHP / radeon / nouveau: Fix VGA
@@ -5300,7 +5300,7 @@ Signed-off-by: Bjorn Helgaas <bhelgaas@google.com>
 Acked-by: Alex Deucher <alexander.deucher@amd.com>
 Acked-by: Rafael J. Wysocki <rafael.j.wysocki@intel.com>
 Acked-by: Dave Airlie <airlied@redhat.com>
-Acked-by: Rajat Jain <rajatxjain@gmail.com>",4,46,5,41,,f91ce35e471ae17552ce7bfe355cfd997e3ad781
+Acked-by: Rajat Jain <rajatxjain@gmail.com>",4,46,5,41,Regression (Minor),f91ce35e471ae17552ce7bfe355cfd997e3ad781
 ath9k_htc: fix random decryption failure,"ath9k_htc: fix random decryption failure
 
 In v3.15 the driver stopped to accept network packets after successful
@@ -5315,7 +5315,7 @@ Bugzilla: https://bugzilla.kernel.org/show_bug.cgi?id=78581
 Fixes: 341b29b9cd2f (""ath9k_htc: use ath9k_cmn_rx_skb_postprocess"")
 Signed-off-by: Johannes Stezenbach <js@sig21.net>
 Signed-off-by: John W. Linville <linville@tuxdriver.com>
-",1,2,1,1,,d21ccfd0a60ea3dece3e1d142f52694abf87a0b1
+",1,2,1,1,Regression (Minor),d21ccfd0a60ea3dece3e1d142f52694abf87a0b1
 brcmfmac: handle IF event for P2P_DEVICE interface,"brcmfmac: handle IF event for P2P_DEVICE interface
 
 The firmware notifies about interface changes through the IF event
@@ -5354,7 +5354,7 @@ Reviewed-by: Daniel (Deognyoun) Kim <dekim@broadcom.com>
 Reviewed-by: Pieter-Paul Giesberts <pieterpg@broadcom.com>
 Signed-off-by: Arend van Spriel <arend@broadcom.com>
 Signed-off-by: John W. Linville <linville@tuxdriver.com>
-",1,7,5,2,,8f2b45971b32824b830a544ed1d179215770b1eb
+",1,7,5,2,Fix (Minor),8f2b45971b32824b830a544ed1d179215770b1eb
 brcmfmac: conditionally compile firmware protocol source code,"brcmfmac: conditionally compile firmware protocol source code
 
 The host-interface can select which protocol implementation it
@@ -5369,7 +5369,7 @@ Reviewed-by: Daniel (Deognyoun) Kim <dekim@broadcom.com>
 Reviewed-by: Pieter-Paul Giesberts <pieterpg@broadcom.com>
 Signed-off-by: Arend van Spriel <arend@broadcom.com>
 Signed-off-by: John W. Linville <linville@tuxdriver.com>
-",4,38,30,8,,f1d56039b58f6f786450a858b2c8d2459a3382cc
+",4,38,30,8,Feature (Minor),f1d56039b58f6f786450a858b2c8d2459a3382cc
 brcmfmac: Fix memory leak and missing assignment.,"brcmfmac: Fix memory leak and missing assignment.
 
 The function brcmf_enable_bw40_2g contains a memory leak. The
@@ -5384,7 +5384,7 @@ Reviewed-by: Daniel (Deognyoun) Kim <dekim@broadcom.com>
 Signed-off-by: Hante Meuleman <meuleman@broadcom.com>
 Signed-off-by: Arend van Spriel <arend@broadcom.com>
 Signed-off-by: John W. Linville <linville@tuxdriver.com>
-",1,2,2,0,,fac7d2a3b8798f8b58004c74c4b37b9643b5897a
+",1,2,2,0,Fix (Minor),fac7d2a3b8798f8b58004c74c4b37b9643b5897a
 net: fix creation adjacent device symlinks,"net: fix creation adjacent device symlinks
 
 __netdev_adjacent_dev_insert may add adjust device of different net
@@ -5397,7 +5397,7 @@ Fix: rewrite netdev_adjacent_is_neigh_list macro as a function,
 
 Signed-off-by: Alexander Fomichev <git.user@gmail.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,18,11,7,,7ce64c79c4decdeb1afe0bf2f6ef834b382871d1
+",1,18,11,7,Fix (Minor),7ce64c79c4decdeb1afe0bf2f6ef834b382871d1
 net/phy: micrel: Disable asymmetric pause for KSZ9031,"net/phy: micrel: Disable asymmetric pause for KSZ9031
 
 The KSZ9031 appears to suffer from the same hardware bug as described
@@ -5409,7 +5409,7 @@ Remove the SUPPORTED_Asym_Pause flag for the KSZ9031 to fix this.
 
 Signed-off-by: Mike Looijmans <mike.looijmans@topic.nl>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,3,1,2,,95e8b10393f88a0db88d97e9d1953f01c854315a
+",1,3,1,2,Fix (Minor),95e8b10393f88a0db88d97e9d1953f01c854315a
 ia64: Fix syscall number for memfd_create,"ia64: Fix syscall number for memfd_create
 
 Cut & paste typo from the line above.
@@ -5417,7 +5417,7 @@ Cut & paste typo from the line above.
 Reported-by: Ben Hutchings <ben@decadent.org.uk>
 Signed-off-by: Tony Luck <tony.luck@intel.com>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,2,1,1,,f3b5933190c1fc5ad8f3a1dec594e9e849e088c0
+",1,2,1,1,Fix (Minor),f3b5933190c1fc5ad8f3a1dec594e9e849e088c0
 vfs: simplify and shrink stack frame of link_path_walk(),"vfs: simplify and shrink stack frame of link_path_walk()
 
 Commit 9226b5b440f2 (""vfs: avoid non-forwarding large load after small
@@ -5442,7 +5442,7 @@ relevant information.  So this removes more lines than it adds, and the
 source code is clearer too.
 
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,39,18,21,,d6bb3e9075bbcf758d6084bb581f797bb6ea24c6
+",1,39,18,21,Refactoring (Minor),d6bb3e9075bbcf758d6084bb581f797bb6ea24c6
 [SMB3] Fix oops when creating symlinks on smb3,"[SMB3] Fix oops when creating symlinks on smb3
 
 We were not checking for symlink support properly for SMB2/SMB3
@@ -5452,7 +5452,7 @@ to create symlink when mfsymlinks on smb2/smb3 mounts
 Signed-off-by: Steve French <smfrench@gmail.com>
 Cc: <stable@vger.kernel.org> # 3.14+
 CC: Sachin Prabhu <sprabhu@redhat.com>
-",1,8,6,2,,da80659d4aa758dc6935b10ec64513f0b67bc969
+",1,8,6,2,Fix (Minor),da80659d4aa758dc6935b10ec64513f0b67bc969
 drm/i915: Fix SRC_COPY width on 830/845g,"drm/i915: Fix SRC_COPY width on 830/845g
 
 One small change I forgot to make in
@@ -5473,9 +5473,9 @@ Cc: stable@vger.kernel.org
 Tested-by: Thomas Richter <thor@math.tu-berlin.de>
 Acked-by: Daniel Vetter <daniel@ffwll.ch>
 Signed-off-by: Jani Nikula <jani.nikula@intel.com>
-",1,2,1,1,,611a7a4fd8b5fb6b25ab1f8bdcde61800a7feacf
+",1,2,1,1,Fix (Minor),611a7a4fd8b5fb6b25ab1f8bdcde61800a7feacf
 Linux 3.17-rc5,"Linux 3.17-rc5
-",1,2,1,1,,9e82bf014195d6f0054982c463575cdce24292be
+",1,2,1,1,Documentation (Minor),9e82bf014195d6f0054982c463575cdce24292be
 vfs: avoid non-forwarding large load after small store in path lookup,"vfs: avoid non-forwarding large load after small store in path lookup
 
 The performance regression that Josef Bacik reported in the pathname
@@ -5514,7 +5514,7 @@ Samba server also has a bug with this (see samba bugzilla 7771)
 but it works to Windows server.
 
 Signed-off-by: Steve French <smfrench@gmail.com>
-",1,20,16,4,,2ae83bf93882d1ec0cd775c489bd1bee611f792e
+",1,20,16,4,Fix (Minor),2ae83bf93882d1ec0cd775c489bd1bee611f792e
 be careful with nd->inode in path_init() and follow_dotdot_rcu(),"be careful with nd->inode in path_init() and follow_dotdot_rcu()
 
 in the former we simply check if dentry is still valid after picking
@@ -5523,7 +5523,7 @@ where we fetch dentry and its ->d_seq, under the same checks.
 
 Cc: stable@vger.kernel.org # 2.6.38+
 Signed-off-by: Al Viro <viro@zeniv.linux.org.uk>
-",1,15,13,2,,4023bfc9f351a7994fb6a7d515476c320f94a574
+",1,15,13,2,Fix (Minor),4023bfc9f351a7994fb6a7d515476c320f94a574
 don't bugger nd->seq on set_root_rcu() from follow_dotdot_rcu(),"don't bugger nd->seq on set_root_rcu() from follow_dotdot_rcu()
 
 return the value instead, and have path_init() do the assignment.  Broken by
@@ -5539,7 +5539,7 @@ in sync.
 
 Cc: stable@vger.kernel.org # 2.6.38+
 Signed-off-by: Al Viro <viro@zeniv.linux.org.uk>
-",1,33,17,16,,7bd88377d482e1eae3c5329b12e33cfd664fa6a9
+",1,33,17,16,Fix (Minor),7bd88377d482e1eae3c5329b12e33cfd664fa6a9
 iio:magnetometer: bugfix magnetometers gain values,"iio:magnetometer: bugfix magnetometers gain values
 
 This patch fix gains values. The first driver was designed using
@@ -5548,7 +5548,7 @@ engineering samples, in mass production the values are changed.
 Signed-off-by: Denis Ciocca <denis.ciocca@st.com>
 Cc: Stable@vger.kernel.org
 Signed-off-by: Jonathan Cameron <jic23@kernel.org>
-",1,52,30,22,,a31d0928999fbf33b3a6042e8bcb7b7f7e07d094
+",1,52,30,22,Fix (Minor),a31d0928999fbf33b3a6042e8bcb7b7f7e07d094
 iio: adc: at91: don't use the last converted data register,"iio: adc: at91: don't use the last converted data register
 
 If touchscreen mode is enabled and a conversion is requested on another
@@ -5565,7 +5565,7 @@ Acked-by: Alexandre Belloni <alexandre.belloni@free-electrons.com>
 Acked-by: Nicolas Ferre <nicolas.ferre@atmel.com>
 Cc: Stable@vger.kernel.org
 Signed-off-by: Jonathan Cameron <jic23@kernel.org>
-",1,12,7,5,,d4f51956ac8ad302db9b0c4e4232775b1baa7b44
+",1,12,7,5,Fix (Minor),d4f51956ac8ad302db9b0c4e4232775b1baa7b44
 iio: adc: xilinx-xadc: assign auxiliary channels address correctly,"iio: adc: xilinx-xadc: assign auxiliary channels address correctly
 
 This patch fixes incorrect logic for assigning address
@@ -5575,7 +5575,7 @@ Signed-off-by: Subbaraya Sundeep Bhatta <sbhatta@xilinx.com>
 Acked-by: Lars-Peter Clausen <lars@metafoo.de>
 Cc: Stable@vger.kernel.org
 Signed-off-by: Jonathan Cameron <jic23@kernel.org>
-",1,2,1,1,,1887e724e2b6df06847522fe9dc2ab53639516cc
+",1,2,1,1,Fix (Minor),1887e724e2b6df06847522fe9dc2ab53639516cc
 KVM: check for !is_zero_pfn() in kvm_is_mmio_pfn(),"KVM: check for !is_zero_pfn() in kvm_is_mmio_pfn()
 
 Read-only memory ranges may be backed by the zero page, so avoid
@@ -5589,7 +5589,7 @@ misidentifies it as a MMIO pfn due to its PG_reserved bit being set.
 Signed-off-by: Ard Biesheuvel <ard.biesheuvel@linaro.org>
 Fixes: b88657674d39 (""ARM: KVM: user_mem_abort: support stage 2 MMIO page mapping"")
 Signed-off-by: Paolo Bonzini <pbonzini@redhat.com>
-",1,2,1,1,,85c8555ff07ef09261bd50d603cd4290cff5a8cc
+",1,2,1,1,Fix (Minor),85c8555ff07ef09261bd50d603cd4290cff5a8cc
 mm: export symbol dependencies of is_zero_pfn(),"mm: export symbol dependencies of is_zero_pfn()
 
 In order to make the static inline function is_zero_pfn() callable by
@@ -5605,7 +5605,7 @@ set, but need to be treated as MMIO memory.
 Signed-off-by: Ard Biesheuvel <ard.biesheuvel@linaro.org>
 Acked-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Paolo Bonzini <pbonzini@redhat.com>
-",3,4,4,0,,0b70068e47e8f0c813a902dc3d6def601fd15acb
+",3,4,4,0,Feature (Minor),0b70068e47e8f0c813a902dc3d6def601fd15acb
 x86 early_ioremap: Increase FIX_BTMAPS_SLOTS to 8,"x86 early_ioremap: Increase FIX_BTMAPS_SLOTS to 8
 
 3.16 kernel boot fail with earlyprintk=efi, it keeps scrolling at the
@@ -5683,7 +5683,7 @@ boot-time mappings become 512 page with this patch.
 Signed-off-by: Dave Young <dyoung@redhat.com>
 Cc: <stable@vger.kernel.org> # v3.16
 Signed-off-by: Matt Fleming <matt.fleming@intel.com>
-",1,6,3,3,,3eddc69ffeba092d288c386646bfa5ec0fce25fd
+",1,6,3,3,Fix (Major),3eddc69ffeba092d288c386646bfa5ec0fce25fd
 ntb: Add alignment check to meet hardware requirement,"ntb: Add alignment check to meet hardware requirement
 
 The NTB translate register must have the value to be BAR size aligned.
@@ -5695,14 +5695,14 @@ CONFIG_CMA_SIZE_MBYTES set.
 
 Signed-off-by: Dave Jiang <dave.jiang@intel.com>
 Signed-off-by: Jon Mason <jdmason@kudzu.us>
-",1,13,13,0,,3cc5ba1938eea0de372a41d1687c8030049c5e8f
+",1,13,13,0,Feature (Minor),3cc5ba1938eea0de372a41d1687c8030049c5e8f
 MAINTAINERS: update NTB info,"MAINTAINERS: update NTB info
 
 Update my contact info to my personal email address and add Dave Jiang.
 
 Signed-off-by: Jon Mason <jon.mason@intel.com>
 Signed-off-by: Dave Jiang <dave.jiang@intel.com>
-",1,3,2,1,,9ef6bf6c75abcfee3cfc3d751b8091200771aeec
+",1,3,2,1,Documentation (Minor),9ef6bf6c75abcfee3cfc3d751b8091200771aeec
 NTB: correct the spread of queues over mw's,"NTB: correct the spread of queues over mw's
 
 The detection of an uneven number of queues on the given memory windows
@@ -5710,27 +5710,27 @@ was not correct.  The mw_num is zero based and the mod should be
 division to spread them evenly over the mw's.
 
 Signed-off-by: Jon Mason <jon.mason@intel.com>
-",1,4,2,2,,a1413cfbcb9f56fca59043ef3c19369327e61b49
+",1,4,2,2,Fix (Minor),a1413cfbcb9f56fca59043ef3c19369327e61b49
 fix bogus read_seqretry() checks introduced in b37199e,"fix bogus read_seqretry() checks introduced in b37199e
 
 read_seqretry() returns true on mismatch, not on match...
 
 Cc: stable@vger.kernel.org # 3.15+
 Signed-off-by: Al Viro <viro@zeniv.linux.org.uk>
-",1,4,2,2,,f5be3e29127aec8c87f883aadadff337f8c2cfd7
+",1,4,2,2,Regression (Minor),f5be3e29127aec8c87f883aadadff337f8c2cfd7
 "move the call of __d_drop(anon) into __d_materialise_unique(dentry, anon)","move the call of __d_drop(anon) into __d_materialise_unique(dentry, anon)
 
 and lock the right list there
 
 Cc: stable@vger.kernel.org
 Signed-off-by: Al Viro <viro@zeniv.linux.org.uk>
-",1,8,6,2,,6f18493e541c690169c3b1479d47d95f624161cf
+",1,8,6,2,Refactoring (Minor),6f18493e541c690169c3b1479d47d95f624161cf
 [fix] lustre: d_make_root() does iput() on dentry allocation failure,"[fix] lustre: d_make_root() does iput() on dentry allocation failure
 
 double-free is a bad thing
 
 Signed-off-by: Al Viro <viro@zeniv.linux.org.uk>
-",1,2,1,1,,f77ced6637a18d4f543458a112881776a6b7fa8c
+",1,2,1,1,Fix (Minor),f77ced6637a18d4f543458a112881776a6b7fa8c
 bridge: Allow clearing of pvid and untagged bitmap,"bridge: Allow clearing of pvid and untagged bitmap
 
 Currently, it is possible to modify the vlan filter
@@ -5751,7 +5751,7 @@ the configuration.
 
 Signed-off-by: Vlad Yasevich <vyasevic@redhat.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,4,4,0,,635126b7ca13a01d6322fbf7bdc5d1c738d26807
+",1,4,4,0,Fix (Minor),635126b7ca13a01d6322fbf7bdc5d1c738d26807
 bridge: Check if vlan filtering is enabled only once.,"bridge: Check if vlan filtering is enabled only once.
 
 The bridge code checks if vlan filtering is enabled on both
@@ -5769,7 +5769,7 @@ apply filtering information.
 
 Signed-off-by: Vladislav Yasevich <vyasevic@redhat.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",2,17,13,4,,20adfa1a81af00bf2027644507ad4fa9cd2849cf
+",2,17,13,4,Fix (Minor),20adfa1a81af00bf2027644507ad4fa9cd2849cf
 bonding: fix div by zero while enslaving and transmitting,"bonding: fix div by zero while enslaving and transmitting
 
 The problem is that the slave is first linked and slave_cnt is
@@ -5876,14 +5876,14 @@ CC: Veaceslav Falico <vfalico@gmail.com>
 Fixes: 278b208375 (""bonding: initial RCU conversion"")
 Signed-off-by: Nikolay Aleksandrov <nikolay@redhat.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,17,14,3,,9a72c2da690d78e93cff24b9f616412508678dd5
+",1,17,14,3,Fix (Minor),9a72c2da690d78e93cff24b9f616412508678dd5
 r8169: fix setting rx vlan,"r8169: fix setting rx vlan
 
 The setting should depend on the new features not the current one.
 
 Signed-off-by: Hayes Wang <hayeswang@realtek.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,2,1,1,,36d8e82541c4be8f529dce9efbcefd504e085ccf
+",1,2,1,1,Fix (Minor),36d8e82541c4be8f529dce9efbcefd504e085ccf
 r8169: fix the default setting of rx vlan,"r8169: fix the default setting of rx vlan
 
 If the parameter ""features"" of __rtl8169_set_features() is equal to
@@ -5892,7 +5892,7 @@ be changed.
 
 Signed-off-by: Hayes Wang <hayeswang@realtek.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,7,6,1,,48c20407f49039d8da155ca00877ec5f057799e6
+",1,7,6,1,Fix (Minor),48c20407f49039d8da155ca00877ec5f057799e6
 parisc: Implement new LWS CAS supporting 64 bit operations.,"parisc: Implement new LWS CAS supporting 64 bit operations.
 
 The current LWS cas only works correctly for 32bit. The new LWS allows
@@ -5901,7 +5901,7 @@ for CAS operations of variable size.
 Signed-off-by: Guy Martin <gmsoft@tuxicoman.be>
 Cc: <stable@vger.kernel.org> # 3.13+
 Signed-off-by: Helge Deller <deller@gmx.de>
-",1,233,229,4,,89206491201cbd1571009b36292af781cef74c1b
+",1,233,229,4,Feature (Major),89206491201cbd1571009b36292af781cef74c1b
 vfs: fix bad hashing of dentries,"vfs: fix bad hashing of dentries
 
 Josef Bacik found a performance regression between 3.2 and 3.10 and
@@ -5981,7 +5981,7 @@ Use the now-cleaned-up CONFIG_ARCH_HAS_FAST_MULTIPLIER (together with
 multiply or the explicit sequence of shift/add instructions.
 
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,4,4,0,,23d0db76ffa13ffb95229946e4648568c3c29db5
+",1,4,4,0,Feature (Minor),23d0db76ffa13ffb95229946e4648568c3c29db5
 Make ARCH_HAS_FAST_MULTIPLIER a real config variable,"Make ARCH_HAS_FAST_MULTIPLIER a real config variable
 
 It used to be an ad-hoc hack defined by the x86 version of
@@ -6002,7 +6002,7 @@ want to know ""do I want to expand multiples by constants by hand or
 not"", particularly the hash generation code.
 
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",5,14,8,6,,72d931046030beb2d13dad6d205be0e228618432
+",5,14,8,6,Feature (Minor),72d931046030beb2d13dad6d205be0e228618432
 drivers: net: cpsw: dual_emac: in suspend/resume bring down/up all the netdev,"drivers: net: cpsw: dual_emac: in suspend/resume bring down/up all the netdev
 
 During suspend and resume in Dual EMAC, second port is not working as in
@@ -6012,7 +6012,7 @@ down and up all the interfaces that are up during suspend/resume.
 Signed-off-by: Mugunthan V N <mugunthanvnm@ti.com>
 Tested-by: Nishanth Menon <nm@ti.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,29,24,5,,618073e30c225ddaef086c030a5f0a3c7ef2d323
+",1,29,24,5,Fix (Minor),618073e30c225ddaef086c030a5f0a3c7ef2d323
 ASoC: rockchip-i2s: dt: swap tx and rx channed request number in example,"ASoC: rockchip-i2s: dt: swap tx and rx channed request number in example
 
 Reference to RK3288 TRM, fix an error channel id for i2s tx and rx
@@ -6025,7 +6025,7 @@ Tested on RK3288 board.
 
 Signed-off-by: Jianqun <jay.xu@rock-chips.com>
 Signed-off-by: Mark Brown <broonie@kernel.org>
-",1,2,1,1,,d67f660edbce696f3fc6bc8c25b869f5a72279bb
+",1,2,1,1,Documentation (Minor),d67f660edbce696f3fc6bc8c25b869f5a72279bb
 ASoC: rockchip-i2s: fix registers' property of rockchip i2s controller,"ASoC: rockchip-i2s: fix registers' property of rockchip i2s controller
 
 Reference rockchip I2S controller TRM, modify some registers' property
@@ -6037,7 +6037,7 @@ Test on RK3288 with max98090.
 
 Signed-off-by: Jianqun Xu <jay.xu@rock-chips.com>
 Signed-off-by: Mark Brown <broonie@kernel.org>
-",1,6,3,3,,2f1e93f81cebfa99b668f27cdb14992ff23480a4
+",1,6,3,3,Fix (Minor),2f1e93f81cebfa99b668f27cdb14992ff23480a4
 ASoC: rockchip-i2s: fix master mode set bit error,"ASoC: rockchip-i2s: fix master mode set bit error
 
 Fix error format set to I2S master or slave mode.
@@ -6045,7 +6045,7 @@ Test on RK3288 board with max98090.
 
 Signed-off-by: Jianqun Xu <jay.xu@rock-chips.com>
 Signed-off-by: Mark Brown <broonie@kernel.org>
-",1,7,4,3,,07833d88314c496f8a136c6e4b4729c69e65b878
+",1,7,4,3,Fix (Minor),07833d88314c496f8a136c6e4b4729c69e65b878
 spi: davinci: request cs_gpio's from probe,"spi: davinci: request cs_gpio's from probe
 
 Now CS GPIOs are requested from struct spi_master.setup() callback
@@ -6059,7 +6059,7 @@ Hence, fix it by moving CS GPIOs requesting code in .probe().
 Reported-by: Murali Karicheri <m-karicheri2@ti.com>
 Signed-off-by: Grygorii Strashko <grygorii.strashko@ti.com>
 Signed-off-by: Mark Brown <broonie@kernel.org>
-",1,34,25,9,,8936decdd977ee614234153a1aba85d12329fa7a
+",1,34,25,9,Fix (Minor),8936decdd977ee614234153a1aba85d12329fa7a
 drivers: net: b44: Fix typo in returning multicast stats,"drivers: net: b44: Fix typo in returning multicast stats
 
 nstat->multicast refers to received packets, not transmitted as
@@ -6068,7 +6068,7 @@ given.
 
 Signed-off-by: Mark Einon <mark.einon@gmail.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,2,1,1,,0bc9b73be43b21838973e80ddeb5250f0310ebf7
+",1,2,1,1,Fix (Minor),0bc9b73be43b21838973e80ddeb5250f0310ebf7
 ipv6: clean up anycast when an interface is destroyed,"ipv6: clean up anycast when an interface is destroyed
 
 If we try to rmmod the driver for an interface while sockets with
@@ -6086,7 +6086,7 @@ addrconf_ifdown(how == 1).
 Signed-off-by: Sabrina Dubroca <sd@queasysnail.net>
 Acked-by: Hannes Frederic Sowa <hannes@stressinduktion.org>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",3,30,27,3,,381f4dca48d23e155b936b86ccd3ff12f073cf0f
+",3,30,27,3,Feature (Minor),381f4dca48d23e155b936b86ccd3ff12f073cf0f
 net: arc_emac: prevent reuse of unreclaimed tx descriptors,"net: arc_emac: prevent reuse of unreclaimed tx descriptors
 
 This patch changes the logic in tx path to ensure that tx descriptors
@@ -6095,7 +6095,7 @@ arc_emac_tx_clean().
 
 Signed-off-by: Beniamino Galvani <b.galvani@gmail.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,43,32,11,,74dd40bca95f9968e368751ea81f3b98471109ce
+",1,43,32,11,Fix (Minor),74dd40bca95f9968e368751ea81f3b98471109ce
 net: arc_emac: enable tx interrupts,"net: arc_emac: enable tx interrupts
 
 In the current implementation the cleaning of tx ring is done by the
@@ -6113,7 +6113,7 @@ after completed transmissions.
 Signed-off-by: Beniamino Galvani <b.galvani@gmail.com>
 Reviewed-by: Florian Fainelli <f.fainelli@gmail.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,10,5,5,,7ce7679d6bbd1715799a9cf17b9b558bc2d962b7
+",1,10,5,5,Feature (Minor),7ce7679d6bbd1715799a9cf17b9b558bc2d962b7
 alarmtimer: Lock k_itimer during timer callback,"alarmtimer: Lock k_itimer during timer callback
 
 Locks the k_itimer's it_lock member when handling the alarm timer's
@@ -6132,7 +6132,7 @@ Cc: Prarit Bhargava <prarit@redhat.com>
 Cc: Sharvil Nanavati <sharvil@google.com>
 Signed-off-by: Richard Larocque <rlarocque@google.com>
 Signed-off-by: John Stultz <john.stultz@linaro.org>
-",1,10,8,2,,474e941bed9262f5fa2394f9a4a67e24499e5926
+",1,10,8,2,Feature (Minor),474e941bed9262f5fa2394f9a4a67e24499e5926
 alarmtimer: Do not signal SIGEV_NONE timers,"alarmtimer: Do not signal SIGEV_NONE timers
 
 Avoids sending a signal to alarm timers created with sigev_notify set to
@@ -6158,7 +6158,7 @@ Cc: Prarit Bhargava <prarit@redhat.com>
 Cc: Sharvil Nanavati <sharvil@google.com>
 Signed-off-by: Richard Larocque <rlarocque@google.com>
 Signed-off-by: John Stultz <john.stultz@linaro.org>
-",1,6,4,2,,265b81d23a46c39df0a735a3af4238954b41a4c2
+",1,6,4,2,Fix (Minor),265b81d23a46c39df0a735a3af4238954b41a4c2
 alarmtimer: Return relative times in timer_gettime,"alarmtimer: Return relative times in timer_gettime
 
 Returns the time remaining for an alarm timer, rather than the time at
@@ -6180,7 +6180,7 @@ Cc: Sharvil Nanavati <sharvil@google.com>
 Signed-off-by: Richard Larocque <rlarocque@google.com>
 [jstultz: minor style tweak]
 Signed-off-by: John Stultz <john.stultz@linaro.org>
-",1,18,11,7,,e86fea764991e00a03ff1e56409ec9cacdbda4c9
+",1,18,11,7,Feature (Minor),e86fea764991e00a03ff1e56409ec9cacdbda4c9
 jiffies: Fix timeval conversion to jiffies,"jiffies: Fix timeval conversion to jiffies
 
 timeval_to_jiffies tried to round a timeval up to an integral number
@@ -6259,7 +6259,7 @@ Reported-by: Aaron Jacobs <jacobsa@google.com>
 Signed-off-by: Andrew Hunter <ahh@google.com>
 [jstultz: Tweaked to apply to 3.17-rc]
 Signed-off-by: John Stultz <john.stultz@linaro.org>
-",2,68,31,37,,d78c9300c51d6ceed9f6d078d4e9366f259de28c
+",2,68,31,37,Fix (Minor),d78c9300c51d6ceed9f6d078d4e9366f259de28c
 workqueue: apply __WQ_ORDERED to create_singlethread_workqueue(),"workqueue: apply __WQ_ORDERED to create_singlethread_workqueue()
 
 create_singlethread_workqueue() is a compat interface for single
@@ -6304,7 +6304,7 @@ Cc: Gustavo Luiz Duarte <gduarte@redhat.com>
 Cc: Tomas Henzl <thenzl@redhat.com>
 Cc: stable@vger.kernel.org
 Fixes: 4c16bd327c (""workqueue: implement NUMA affinity for unbound workqueues"")
-",1,2,1,1,,e09c2c295468476a239d13324ce9042ec4de05eb
+",1,2,1,1,Fix (Minor),e09c2c295468476a239d13324ce9042ec4de05eb
 futex: Unlock hb->lock in futex_wait_requeue_pi() error path,"futex: Unlock hb->lock in futex_wait_requeue_pi() error path
 
 futex_wait_requeue_pi() calls futex_wait_setup(). If
@@ -6331,7 +6331,7 @@ Cc: Peter Zijlstra <a.p.zijlstra@chello.nl>
 Cc: stable@vger.kernel.org
 Link: http://lkml.kernel.org/r/alpine.DEB.2.10.1409112318500.4178@nanos
 Signed-off-by: Thomas Gleixner <tglx@linutronix.de>
-",1,1,1,0,,13c42c2f43b19aab3195f2d357db00d1e885eaa8
+",1,1,1,0,Fix (Minor),13c42c2f43b19aab3195f2d357db00d1e885eaa8
 GFS2: fix d_splice_alias() misuses,"GFS2: fix d_splice_alias() misuses
 
 Callers of d_splice_alias(dentry, inode) don't need iput(), neither
@@ -6347,7 +6347,7 @@ an inode it has just found in directory.
 Cc: stable@vger.kernel.org # v3.14+
 Signed-off-by: Al Viro <viro@zeniv.linux.org.uk>
 Signed-off-by: Steven Whitehouse <swhiteho@redhat.com>
-",1,5,3,2,,cfb2f9d5c921e38b0f12bb26fed10b877664444d
+",1,5,3,2,Fix (Minor),cfb2f9d5c921e38b0f12bb26fed10b877664444d
 NFS: remove BUG possibility in nfs4_open_and_get_state,"NFS: remove BUG possibility in nfs4_open_and_get_state
 
 commit 4fa2c54b5198d09607a534e2fd436581064587ed
@@ -6369,7 +6369,7 @@ Link: http://lkml.kernel.org/r/20140908144525.GB19811@infradead.org
 Signed-off-by: NeilBrown <neilb@suse.de>
 Acked-by: Jeff Layton <jlayton@primarydata.com>
 Signed-off-by: Trond Myklebust <trond.myklebust@primarydata.com>
-",1,10,7,3,,f39c01047994e66e7f3d89ddb4c6141f23349d8d
+",1,10,7,3,Fix (Minor),f39c01047994e66e7f3d89ddb4c6141f23349d8d
 ARM: 8137/1: fix get_user BE behavior for target variable with size of 8 bytes,"ARM: 8137/1: fix get_user BE behavior for target variable with size of 8 bytes
 
 e38361d 'ARM: 8091/2: add get_user() support for 8 byte types' commit
@@ -6396,7 +6396,7 @@ Signed-off-by: Victor Kamensky <victor.kamensky@linaro.org>
 Suggested-by: Daniel Thompson <daniel.thompson@linaro.org>
 Reviewed-by: Daniel Thompson <daniel.thompson@linaro.org>
 Signed-off-by: Russell King <rmk+kernel@arm.linux.org.uk>
-",2,86,75,11,,d9981380b49b839ecaffbbe131908a342db68980
+",2,86,75,11,Fix (Major),d9981380b49b839ecaffbbe131908a342db68980
 ARM: 8135/1: Fix in-correct barrier usage in SWP{B} emulation,"ARM: 8135/1: Fix in-correct barrier usage in SWP{B} emulation
 
 According to the ARM ARMv7, explicit barriers are necessary when using
@@ -6410,7 +6410,7 @@ Based on this, remove the barriers from SWP{B} emulation.
 Acked-by: Will Deacon <will.deacon@arm.com>
 Signed-off-by: Punit Agrawal <punit.agrawal@arm.com>
 Signed-off-by: Russell King <rmk+kernel@arm.linux.org.uk>
-",1,15,0,15,,e918a62a2ba81d10a3cc2c513dc70034c9524a95
+",1,15,0,15,Fix (Minor),e918a62a2ba81d10a3cc2c513dc70034c9524a95
 "PCI: Remove ""no hotplug settings from platform"" warning","PCI: Remove ""no hotplug settings from platform"" warning
 
 We print way too many messages like this:
@@ -6429,7 +6429,7 @@ For now, just remove both log messages.
 
 Link: https://bugzilla.kernel.org/show_bug.cgi?id=84391
 Signed-off-by: Bjorn Helgaas <bhelgaas@google.com>
-Acked-by: Yinghai Lu <yinghai@kernel.org>",1,6,1,5,,6a73336bde293741026614135419e9b76afb9145
+Acked-by: Yinghai Lu <yinghai@kernel.org>",1,6,1,5,Fix (Minor),6a73336bde293741026614135419e9b76afb9145
 KEYS: Fix termination condition in assoc array garbage collection,"KEYS: Fix termination condition in assoc array garbage collection
 
 This fixes CVE-2014-3631.
@@ -6508,7 +6508,7 @@ CR2: 0000000000000018
 Signed-off-by: David Howells <dhowells@redhat.com>
 Acked-by: Don Zickus <dzickus@redhat.com>
 Signed-off-by: James Morris <james.l.morris@oracle.com>
-",1,4,3,1,,95389b08d93d5c06ec63ab49bd732b0069b7c35e
+",1,4,3,1,Fix (Major),95389b08d93d5c06ec63ab49bd732b0069b7c35e
 video: ARM CLCD: Fix color model capabilities for DT platforms,"video: ARM CLCD: Fix color model capabilities for DT platforms
 
 The DT-based panel capabilities selection was picking up
@@ -6522,7 +6522,7 @@ This patch fixes it by removing the unnecessary limitation.
 
 Signed-off-by: Pawel Moll <pawel.moll@arm.com>
 Signed-off-by: Tomi Valkeinen <tomi.valkeinen@ti.com>
-",1,4,1,3,,e4cf39ea473329dfc07de1246f97d27b7fc96f79
+",1,4,1,3,Fix (Minor),e4cf39ea473329dfc07de1246f97d27b7fc96f79
 Input: atmel_mxt_ts - fix merge in DT documentation,"Input: atmel_mxt_ts - fix merge in DT documentation
 
 Something went a bit wrong in merging f5940231a - there's a bit of repeated
@@ -6537,7 +6537,7 @@ So that firmware-id matching can be used with multiplexed aux ports too.
 
 Signed-off-by: Hans de Goede <hdegoede@redhat.com>
 Signed-off-by: Dmitry Torokhov <dmitry.torokhov@gmail.com>
-",1,2,2,0,,266e43c4eb81440e81da6c51bc5d4f9be2b7839c
+",1,2,2,0,Feature (Minor),266e43c4eb81440e81da6c51bc5d4f9be2b7839c
 Input: i8042 - add nomux quirk for Avatar AVIU-145A6,"Input: i8042 - add nomux quirk for Avatar AVIU-145A6
 
 The sys_vendor / product_name are somewhat generic unfortunately, so this
@@ -6550,7 +6550,7 @@ Cc: stable@vger.kernel.org
 Reported-by: Hugo P <saurosii@gmail.com>
 Signed-off-by: Hans de Goede <hdegoede@redhat.com>
 Signed-off-by: Dmitry Torokhov <dmitry.torokhov@gmail.com>
-",1,7,7,0,,d2682118f4bb3ceb835f91c1a694407a31bb7378
+",1,7,7,0,Feature (Minor),d2682118f4bb3ceb835f91c1a694407a31bb7378
 Input: i8042 - add Fujitsu U574 to no_timeout dmi table,"Input: i8042 - add Fujitsu U574 to no_timeout dmi table
 
 https://bugzilla.kernel.org/show_bug.cgi?id=69731
@@ -6559,7 +6559,7 @@ Cc: stable@vger.kernel.org
 Reported-by: Jason Robinson <mail@jasonrobinson.me>
 Signed-off-by: Hans de Goede <hdegoede@redhat.com>
 Signed-off-by: Dmitry Torokhov <dmitry.torokhov@gmail.com>
-",1,8,8,0,,cc18a69c92d0972bc2fc5a047ee3be1e8398171b
+",1,8,8,0,Feature (Minor),cc18a69c92d0972bc2fc5a047ee3be1e8398171b
 Input: atkbd - do not try 'deactivate' keyboard on any LG laptops,"Input: atkbd - do not try 'deactivate' keyboard on any LG laptops
 
 We are getting more and more reports about LG laptops not having
@@ -6578,7 +6578,7 @@ Reported-by: Jaime Velasco Juan <jsagarribay@gmail.com>
 Reported-by: Georgios Tsalikis <georgios@tsalikis.net>
 Tested-by: Jaime Velasco Juan <jsagarribay@gmail.com>
 Signed-off-by: Dmitry Torokhov <dmitry.torokhov@gmail.com>
-",1,8,0,8,,c01206796139e2b1feb7539bc72174fef1c6dc6e
+",1,8,0,8,Fix (Major),c01206796139e2b1feb7539bc72174fef1c6dc6e
 phy: spear1340-miphy: fix driver dependencies,"phy: spear1340-miphy: fix driver dependencies
 
 ST SPEAR1340-MIPHY support should be available only on
@@ -6589,7 +6589,7 @@ Acked-by: Kyungmin Park <kyungmin.park@samsung.com>
 Cc: Pratyush Anand <pratyush.anand@st.com>
 Cc: Mohit Kumar <mohit.kumar@st.com>
 Signed-off-by: Kishon Vijay Abraham I <kishon@ti.com>
-",1,1,1,0,,7652d35f98b5049be370835182a98ba5689f8361
+",1,1,1,0,Fix (Minor),7652d35f98b5049be370835182a98ba5689f8361
 phy: spear1310-miphy: fix driver dependencies,"phy: spear1310-miphy: fix driver dependencies
 
 ST SPEAR1310-MIPHY support should be available only on
@@ -6600,7 +6600,7 @@ Acked-by: Kyungmin Park <kyungmin.park@samsung.com>
 Cc: Pratyush Anand <pratyush.anand@st.com>
 Cc: Mohit Kumar <mohit.kumar@st.com>
 Signed-off-by: Kishon Vijay Abraham I <kishon@ti.com>
-",1,1,1,0,,6100a7c1e9fb4ce6a2c3ed04081d4d5ab8362f0f
+",1,1,1,0,Fix (Minor),6100a7c1e9fb4ce6a2c3ed04081d4d5ab8362f0f
 phy: miphy365x: Fix off-by-one error,"phy: miphy365x: Fix off-by-one error
 
 We index the RX/TX speed select values in the following way:
@@ -6615,7 +6615,7 @@ Cc: Alexandre Torgue <alexandre.torgue@st.com>
 Reported-by: Gabriel Fernandez <gabriel.fernandez@linaro.org>
 Signed-off-by: Lee Jones <lee.jones@linaro.org>
 Signed-off-by: Kishon Vijay Abraham I <kishon@ti.com>
-",1,1,1,0,,a6cc1b9478e769aca95d3a1bcb071d38b3f6bc30
+",1,1,1,0,Fix (Minor),a6cc1b9478e769aca95d3a1bcb071d38b3f6bc30
 drm/ast: AST2000 cannot be detected correctly,"drm/ast: AST2000 cannot be detected correctly
 
 Type error and cause AST2000 cannot be detected correctly
@@ -6624,7 +6624,7 @@ Signed-off-by: Y.C. Chen <yc_chen@aspeedtech.com>
 Reviewed-by: Egbert Eich <eich@suse.de>
 Cc: stable@vger.kernel.org
 Signed-off-by: Dave Airlie <airlied@redhat.com>
-",1,2,1,1,,83502a5d34386f7c6973bc70e1c423f55f5a2e3a
+",1,2,1,1,Fix (Minor),83502a5d34386f7c6973bc70e1c423f55f5a2e3a
 drm/ast: open key before detect chips,"drm/ast: open key before detect chips
 
 Some config settings like 3rd TX chips will not get correctly
@@ -6634,7 +6634,7 @@ Signed-off-by: Y.C. Chen <yc_chen@aspeedtech.com>
 Reviewed-by: Egbert Eich <eich@suse.de>
 Cc: stable@vger.kernel.org
 Signed-off-by: Dave Airlie <airlied@redhat.com>
-",1,1,1,0,,8f372e250ae5f4a5faf87ca1a629d0ae59db65b6
+",1,1,1,0,Fix (Minor),8f372e250ae5f4a5faf87ca1a629d0ae59db65b6
 ARM: keystone: dts: fix bindings for pcie and usb clock nodes,"ARM: keystone: dts: fix bindings for pcie and usb clock nodes
 
 Fix incorrect clock names for usb1, pcie1 and domain register
@@ -6642,7 +6642,7 @@ offset for pcie1 clock nodes on K2E EVM
 
 Signed-off-by: Murali Karicheri <m-karicheri2@ti.com>
 Signed-off-by: Santosh Shilimkar <santosh.shilimkar@ti.com>
-",1,6,3,3,,99897500e54560397054aa238c771fa8284d0eb2
+",1,6,3,3,Fix (Minor),99897500e54560397054aa238c771fa8284d0eb2
 xhci: fix oops when xhci resumes from hibernate with hw lpm capable devices,"xhci: fix oops when xhci resumes from hibernate with hw lpm capable devices
 
 Resuming from hibernate (S4) will restart and re-initialize xHC.
@@ -6661,7 +6661,7 @@ Tested-by: Imre Deak <imre.deak@intel.com>
 Cc: stable <stable@vger.kernel.org>
 Signed-off-by: Mathias Nyman <mathias.nyman@linux.intel.com>
 Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-",1,12,10,2,,96044694b8511bc2b04df0776b4ba295cfe005c0
+",1,12,10,2,Fix (Major),96044694b8511bc2b04df0776b4ba295cfe005c0
 usb: xhci: Fix OOPS in xhci error handling code,"usb: xhci: Fix OOPS in xhci error handling code
 
 The xhci driver will OOPS on resume from S2/S3 if dma_alloc_coherent()
@@ -6677,7 +6677,7 @@ Signed-off-by: Al Cooper <alcooperx@gmail.com>
 Cc: stable <stable@vger.kernel.org>
 Signed-off-by: Mathias Nyman <mathias.nyman@linux.intel.com>
 Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-",1,1,1,0,,0eda06c7c17ae48d7db69beef57f6e2b20bc3c72
+",1,1,1,0,Fix (Minor),0eda06c7c17ae48d7db69beef57f6e2b20bc3c72
 xhci: Fix null pointer dereference if xhci initialization fails,"xhci: Fix null pointer dereference if xhci initialization fails
 
 If xhci initialization fails before the roothub bandwidth
@@ -6688,7 +6688,7 @@ Reported-by: Manuel Reimer <manuel.reimer@gmx.de>
 Cc: stable <stable@vger.kernel.org>
 Signed-off-by: Mathias Nyman <mathias.nyman@linux.intel.com>
 Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-",1,2,1,1,,c207e7c50f31113c24a9f536fcab1e8a256985d7
+",1,2,1,1,Fix (Minor),c207e7c50f31113c24a9f536fcab1e8a256985d7
 storage: Add single-LUN quirk for Jaz USB Adapter,"storage: Add single-LUN quirk for Jaz USB Adapter
 
 The Iomega Jaz USB Adapter is a SCSI-USB converter cable. The hardware
@@ -6704,14 +6704,14 @@ That's non-fatal but the US_FL_SINGLE_LUN quirk fixes it.
 Signed-off-by: Mark Knibbs <markk@clara.co.uk>
 Cc: stable <stable@vger.kernel.org>
 Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-",1,6,6,0,,c66f1c62e85927357e7b3f4c701614dcb5c498a2
+",1,6,6,0,Fix (Minor),c66f1c62e85927357e7b3f4c701614dcb5c498a2
 uas: Add missing le16_to_cpu calls to asm1051 / asm1053 usb-id check,"uas: Add missing le16_to_cpu calls to asm1051 / asm1053 usb-id check
 
 Reported-by: kbuild test robot <fengguang.wu@intel.com>
 Cc: stable@vger.kernel.org # 3.16
 Signed-off-by: Hans de Goede <hdegoede@redhat.com>
 Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-",1,4,2,2,,a79e5bc53a9519202dfad7d916761601fcbf8db1
+",1,4,2,2,Fix (Minor),a79e5bc53a9519202dfad7d916761601fcbf8db1
 "Revert ""ath9k: Calculate sleep duration""","Revert ""ath9k: Calculate sleep duration""
 
 This reverts commit 09ebb810927a110e4c354beb20308830d108a54b.
@@ -6737,7 +6737,7 @@ Cc: stable@vger.kernel.org
 Cc: Rajkumar Manoharan <rmanohar@qti.qualcomm.com>
 Signed-off-by: Sujith Manoharan <c_manoha@qca.qualcomm.com>
 Signed-off-by: John W. Linville <linville@tuxdriver.com>
-",1,5,2,3,,ae0fd6354134e63aa3e62456e2080c430287144d
+",1,5,2,3,Regression (Minor),ae0fd6354134e63aa3e62456e2080c430287144d
 xen/arm: remove mach_to_phys rbtree,"xen/arm: remove mach_to_phys rbtree
 
 Remove the rbtree used to keep track of machine to physical mappings:
@@ -6752,7 +6752,7 @@ it.
 Signed-off-by: Stefano Stabellini <stefano.stabellini@eu.citrix.com>
 Tested-by: Denis Schneider <v1ne2go@gmail.com>
 
-",2,75,1,74,,d50582e06fd5a58281151e097ff68b02ca65cf2d
+",2,75,1,74,Refactoring (Minor),d50582e06fd5a58281151e097ff68b02ca65cf2d
 xen/arm: reimplement xen_dma_unmap_page & friends,"xen/arm: reimplement xen_dma_unmap_page & friends
 
 xen_dma_unmap_page, xen_dma_sync_single_for_cpu and
@@ -6782,7 +6782,7 @@ arm64 doesn't need cache maintenance operations on unmap for now.
 Signed-off-by: Stefano Stabellini <stefano.stabellini@eu.citrix.com>
 Tested-by: Denis Schneider <v1ne2go@gmail.com>
 
-",3,229,210,19,,340720be32d458ee11d1117719a8e4b6b82981b2
+",3,229,210,19,Refactoring (Major),340720be32d458ee11d1117719a8e4b6b82981b2
 xen/arm: introduce XENFEAT_grant_map_identity,"xen/arm: introduce XENFEAT_grant_map_identity
 
 The flag tells us that the hypervisor maps a grant page to guest
@@ -6794,7 +6794,7 @@ foreign grant.
 Signed-off-by: Stefano Stabellini <stefano.stabellini@eu.citrix.com>
 Tested-by: Denis Schneider <v1ne2go@gmail.com>
 
-",2,9,9,0,,5ebc77de83c7b74543de774afa7395b3b790e65e
+",2,9,9,0,Feature (Minor),5ebc77de83c7b74543de774afa7395b3b790e65e
 bus: omap_l3_noc: Fix connID for OMAP4,"bus: omap_l3_noc: Fix connID for OMAP4
 
 Commit d4d8819e205854c (""bus: omap_l3_noc: fix masterid detection"")
@@ -6810,7 +6810,7 @@ Fixes: d4d8819e205854c (""bus: omap_l3_noc: fix masterid detection"")
 Reported-by: Kristian Otnes <kotnes@cisco.com>
 Signed-off-by: Nishanth Menon <nm@ti.com>
 Signed-off-by: Tony Lindgren <tony@atomide.com>
-",1,50,25,25,,41fc619dd5584d438d1eb673bd82a722d627ad85
+",1,50,25,25,Fix (Minor),41fc619dd5584d438d1eb673bd82a722d627ad85
 arm64: flush TLS registers during exec,"arm64: flush TLS registers during exec
 
 Nathan reports that we leak TLS information from the parent context
@@ -6832,7 +6832,7 @@ Cc: <stable@vger.kernel.org>
 Acked-by: Nathan Lynch <Nathan_Lynch@mentor.com>
 Reported-by: Nathan Lynch <Nathan_Lynch@mentor.com>
 Signed-off-by: Will Deacon <will.deacon@arm.com>
-",2,24,24,0,,eb35bdd7bca29a13c8ecd44e6fd747a84ce675db
+",2,24,24,0,Fix (Minor),eb35bdd7bca29a13c8ecd44e6fd747a84ce675db
 ASoC: cs4265: Fix register address to set the proper data type.,"ASoC: cs4265: Fix register address to set the proper data type.
 
 The SPDIF control register must be written to set the data type in hw_params
@@ -6841,7 +6841,7 @@ not the ADC control register.
 Signed-off-by: Paul Handrigan <Paul.Handrigan@cirrus.com>
 Signed-off-by: Mark Brown <broonie@kernel.org>
 Cc: stable@vger.kernel.org
-",1,6,3,3,,774418253e0ec226ad220c6237bba80fd3f4fbc0
+",1,6,3,3,Fix (Minor),774418253e0ec226ad220c6237bba80fd3f4fbc0
 virtio-rng: skip reading when we start to remove the device,"virtio-rng: skip reading when we start to remove the device
 
 Before we really unregister the hwrng device, reading will get stuck if
@@ -6852,7 +6852,7 @@ Signed-off-by: Amos Kong <akong@redhat.com>
 Reviewed-by: Amit Shah <amit.shah@redhat.com>
 Cc: stable@vger.kernel.org
 Signed-off-by: Rusty Russell <rusty@rustcorp.com.au>
-",1,5,5,0,,f49819560f53b7f3a596a8ea2e6764dc86695b62
+",1,5,5,0,Fix (Minor),f49819560f53b7f3a596a8ea2e6764dc86695b62
 virtio-rng: fix stuck of hot-unplugging busy device,"virtio-rng: fix stuck of hot-unplugging busy device
 
 When we try to hot-remove a busy virtio-rng device from QEMU monitor,
@@ -6867,7 +6867,7 @@ Signed-off-by: Amos Kong <akong@redhat.com>
 Reviewed-by: Amit Shah <amit.shah@redhat.com>
 Cc: stable@vger.kernel.org
 Signed-off-by: Rusty Russell <rusty@rustcorp.com.au>
-",1,2,2,0,,3856e548372513665670ca5db60d9a74b970fe0d
+",1,2,2,0,Fix (Minor),3856e548372513665670ca5db60d9a74b970fe0d
 ALSA: hda - Fix invalid pin powermap without jack detection,"ALSA: hda - Fix invalid pin powermap without jack detection
 
 When a driver is set up without the jack detection explicitly (either
@@ -6886,7 +6886,7 @@ at the right place, after snd_hda_gen_build_controls().
 Reported-by: Adam Richter <adam_richter2004@yahoo.com>
 Cc: <stable@vger.kernel.org>
 Signed-off-by: Takashi Iwai <tiwai@suse.de>
-",1,17,12,5,,7a9744cb455e6faa287e148394b4b422a6f3c5c4
+",1,17,12,5,Fix (Minor),7a9744cb455e6faa287e148394b4b422a6f3c5c4
 drm/msm: don't crash if no msm.vram param,"drm/msm: don't crash if no msm.vram param
 
 If VRAM carveout is used, due to no IOMMU, we should have a default
@@ -6894,12 +6894,12 @@ value for msm.vram so that we don't simply crash.
 
 Reported-by: Srinivas Kandagatla <srinivas.kandagatla@linaro.org>
 Signed-off-by: Rob Clark <robdclark@gmail.com>
-",1,2,1,1,,3a10ba8c6b68d9b7f519cd25f903be2d43b37d9d
+",1,2,1,1,Fix (Minor),3a10ba8c6b68d9b7f519cd25f903be2d43b37d9d
 drm/msm/hdmi: fix build break on non-CCF platforms,"drm/msm/hdmi: fix build break on non-CCF platforms
 
 Reported-by: Russell King <linux@arm.linux.org.uk>
 Signed-off-by: Rob Clark <robdclark@gmail.com>
-",1,15,13,2,,28a38b656283bfea04f112abc587ce28760dac25
+",1,15,13,2,Fix (Minor),28a38b656283bfea04f112abc587ce28760dac25
 drm/msm: Change nested function to static function,"drm/msm: Change nested function to static function
 
 There is currently a nested function in Russel King's tree
@@ -6915,7 +6915,7 @@ works with both clang and gcc.
 
 Signed-off-by: Mark Charlebois <charlebm@gmail.com>
 Signed-off-by: Rob Clark <robdclark@gmail.com>
-",1,46,24,22,,fc886107c55634415d24584008ebac4edd074af1
+",1,46,24,22,Refactoring (Minor),fc886107c55634415d24584008ebac4edd074af1
 GFS2: Don't use MAXQUOTAS value,"GFS2: Don't use MAXQUOTAS value
 
 MAXQUOTAS value defines maximum number of quota types VFS supports.
@@ -6926,7 +6926,7 @@ use its private definition.
 CC: cluster-devel@redhat.com
 Signed-off-by: Jan Kara <jack@suse.cz>
 Signed-off-by: Steven Whitehouse <swhiteho@redhat.com>
-",1,7,5,2,,a937cca270c544c4319572b57b196b2251b07dd2
+",1,7,5,2,Feature (Minor),a937cca270c544c4319572b57b196b2251b07dd2
 GFS2: Hash the negative dentry during inode lookup,"GFS2: Hash the negative dentry during inode lookup
 
 Fix a regression introduced by:
@@ -6969,7 +6969,7 @@ flexcan_chip_[en|dis]able(), so avoid using usleep_range()
 Signed-off-by: David Jander <david@protonic.nl>
 Cc: linux-stable <stable@vger.kernel.org>
 Signed-off-by: Marc Kleine-Budde <mkl@pengutronix.de>
-",1,10,5,5,,8badd65e48c90d66587359d5329c2813088c0f50
+",1,10,5,5,Fix (Minor),8badd65e48c90d66587359d5329c2813088c0f50
 dmaengine: jz4740: Fix non-cyclic descriptor completion,"dmaengine: jz4740: Fix non-cyclic descriptor completion
 
 We need to make sure to deqeueue the descriptor from the active list before
@@ -6978,7 +6978,7 @@ to NULL after we stopped using it.
 
 Signed-off-by: Lars-Peter Clausen <lars@metafoo.de>
 Signed-off-by: Vinod Koul <vinod.koul@intel.com>
-",1,3,2,1,,f498e064e0b97df910163533e78e2704ba0a9570
+",1,3,2,1,Fix (Minor),f498e064e0b97df910163533e78e2704ba0a9570
 usb: chipidea: msm: Initialize PHY on reset event,"usb: chipidea: msm: Initialize PHY on reset event
 
 Initialize USB PHY after every Link controller reset
@@ -6988,7 +6988,7 @@ Cc: Tim Bird <tbird20d@gmail.com>
 Signed-off-by: Peter Chen <peter.chen@freescale.com>
 Signed-off-by: Ivan T. Ivanov <iivanov@mm-sol.com>
 Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-",1,1,1,0,,233c7daf4eecd1e992dc42591182cd4a892e687c
+",1,1,1,0,Fix (Minor),233c7daf4eecd1e992dc42591182cd4a892e687c
 usb: chipidea: msm: Use USB PHY API to control PHY state,"usb: chipidea: msm: Use USB PHY API to control PHY state
 
 PHY drivers keep track of the current state of the hardware,
@@ -7000,7 +7000,7 @@ Signed-off-by: Peter Chen <peter.chen@freescale.com>
 Signed-off-by: Ivan T. Ivanov <iivanov@mm-sol.com>
 Acked-by: Felipe Balbi <balbi@ti.com>
 Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-",1,6,1,5,,ea290056d7c46f7781ff13801048ed957b96d1a5
+",1,6,1,5,Fix (Minor),ea290056d7c46f7781ff13801048ed957b96d1a5
 fs/notify: don't show f_handle if exportfs_encode_inode_fh failed,"fs/notify: don't show f_handle if exportfs_encode_inode_fh failed
 
 Currently we handle only ENOSPC.  In case of other errors the file_handle
@@ -7012,7 +7012,7 @@ Cc: Alexander Viro <viro@zeniv.linux.org.uk>
 Cc: <stable@vger.kernel.org>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,2,1,1,,7e8824816bda16bb11ff5ff1e1212d642e57b0b3
+",1,2,1,1,Fix (Minor),7e8824816bda16bb11ff5ff1e1212d642e57b0b3
 fsnotify/fdinfo: use named constants instead of hardcoded values,"fsnotify/fdinfo: use named constants instead of hardcoded values
 
 MAX_HANDLE_SZ is equal to 128, but currently the size of pad is only 64
@@ -7024,7 +7024,7 @@ Cc: Alexander Viro <viro@zeniv.linux.org.uk>
 Cc: <stable@vger.kernel.org>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,4,2,2,,1fc98d11cac6dd66342e5580cb2687e5b1e9a613
+",1,4,2,2,Feature (Minor),1fc98d11cac6dd66342e5580cb2687e5b1e9a613
 kcmp: fix standard comparison bug,"kcmp: fix standard comparison bug
 
 The C operator <= defines a perfectly fine total ordering on the set of
@@ -7132,7 +7132,7 @@ Reviewed-by: Cyrill Gorcunov <gorcunov@openvz.org>
 Cc: <stable@vger.kernel.org>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,7,4,3,,acbbe6fbb240a927ee1f5994f04d31267d422215
+",1,7,4,3,Fix (Minor),acbbe6fbb240a927ee1f5994f04d31267d422215
 mm/mmap.c: use pr_emerg when printing BUG related information,"mm/mmap.c: use pr_emerg when printing BUG related information
 
 Make sure we actually see the output of validate_mm() and browse_rb()
@@ -7142,7 +7142,7 @@ for the BUG() isn't obvious.
 Signed-off-by: Sasha Levin <sasha.levin@oracle.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,16,8,8,,8542bdfc6632b55aa1cf4fa255283c878b662499
+",1,16,8,8,Feature (Minor),8542bdfc6632b55aa1cf4fa255283c878b662499
 shm: add memfd.h to UAPI export list,"shm: add memfd.h to UAPI export list
 
 The new header file memfd.h from commit 9183df25fe7b (""shm: add
@@ -7153,7 +7153,7 @@ Reviewed-by: David Herrmann <dh.herrmann@gmail.com>
 Cc: Hugh Dickins <hughd@google.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,1,1,0,,b01d072065b6f36550f486fe77f05b092225ba1b
+",1,1,1,0,Feature (Minor),b01d072065b6f36550f486fe77f05b092225ba1b
 checkpatch: allow commit descriptions on separate line from commit id,"checkpatch: allow commit descriptions on separate line from commit id
 
 The general form for commit id and description is
@@ -7174,7 +7174,7 @@ Tested-by: Joe Lawrence <joe.lawrence@stratus.com>
 Suggested-by: Geert Uytterhoeven <geert@linux-m68k.org>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,5,4,1,,66881735071e54283df38ffbd9584c63e3661b9f
+",1,5,4,1,Feature (Minor),66881735071e54283df38ffbd9584c63e3661b9f
 sh: get_user_pages_fast() must flush cache,"sh: get_user_pages_fast() must flush cache
 
 This patch avoids fuse hangs on sh4 by flushing the cache on
@@ -7193,7 +7193,7 @@ Cc: Geert Uytterhoeven <geert+renesas@glider.be>
 Cc: Kamal Dasu <kdasu.kdev@gmail.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,2,2,0,,caac7e6d00d3ddc888bd8169e75a02f962efdcff
+",1,2,2,0,Fix (Minor),caac7e6d00d3ddc888bd8169e75a02f962efdcff
 eventpoll: fix uninitialized variable in epoll_ctl,"eventpoll: fix uninitialized variable in epoll_ctl
 
 When calling epoll_ctl with operation EPOLL_CTL_DEL, structure epds is
@@ -7227,7 +7227,7 @@ Cc: Arve Hjønnevåg <arve@android.com>
 Cc: <stable@vger.kernel.org>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,3,2,1,,c680e41b3a2e944185c74bf60531e3d316d3ecc4
+",1,3,2,1,Fix (Minor),c680e41b3a2e944185c74bf60531e3d316d3ecc4
 kernel/printk/printk.c: fix faulty logic in the case of recursive printk,"kernel/printk/printk.c: fix faulty logic in the case of recursive printk
 
 We shouldn't set text_len in the code path that detects printk recursion
@@ -7267,7 +7267,7 @@ Acked-by: Steven Rostedt <rostedt@goodmis.org>
 Cc: <stable@vger.kernel.org>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,6,3,3,,000a7d66ec30898f46869be01ab8205b056385d0
+",1,6,3,3,Fix (Minor),000a7d66ec30898f46869be01ab8205b056385d0
 mem-hotplug: let memblock skip the hotpluggable memory regions in __next_mem_range(),"mem-hotplug: let memblock skip the hotpluggable memory regions in __next_mem_range()
 
 Let memblock skip the hotpluggable memory regions in __next_mem_range(),
@@ -7296,7 +7296,7 @@ Cc: ""H. Peter Anvin"" <hpa@zytor.com>
 Cc: Wu Fengguang <fengguang.wu@intel.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",2,6,6,0,,0a313a998adbae19c1309f80a3ad79107fff7c4e
+",2,6,6,0,Feature (Minor),0a313a998adbae19c1309f80a3ad79107fff7c4e
 Documentation: filter: Add MIPS to architectures with BPF JIT,"Documentation: filter: Add MIPS to architectures with BPF JIT
 
 MIPS supports BPF JIT since v3.16-rc1
@@ -7324,7 +7324,7 @@ Fix that!
 Fixes: d2fce8a ('mlx4: Set user-space raw Ethernet QPs to properly handle VXLAN traffic')
 Signed-off-by: Or Gerlitz <ogerlitz@mellanox.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,2,1,1,,8e1a03b63c62bfa622c3989f8aead17ea845db7d
+",1,2,1,1,Fix (Minor),8e1a03b63c62bfa622c3989f8aead17ea845db7d
 net/mlx4: Set vlan stripping policy by the right command,"net/mlx4: Set vlan stripping policy by the right command
 
 Changing the vlan stripping policy of the QP isn't supported by older
@@ -7337,7 +7337,7 @@ Fixes: 7677fc9 ('net/mlx4: Strengthen VLAN tags/priorities enforcement in VST mo
 Signed-off-by: Matan Barak <matanb@mellanox.com>
 Signed-off-by: Or Gerlitz <ogerlitz@mellanox.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",5,45,38,7,,09e05c3f78e9e82bda5958eb95bbf719f7a0ed6b
+",5,45,38,7,Fix (Major),09e05c3f78e9e82bda5958eb95bbf719f7a0ed6b
 net/mlx4: Avoid dealing with MAC index in UPDATE_QP wrapper if not needed,"net/mlx4: Avoid dealing with MAC index in UPDATE_QP wrapper if not needed
 
 The current wrapper implementation of the UPDATE_QP command tries to get
@@ -7348,7 +7348,7 @@ Fixes: ce8d9e0 ('net/mlx4_core: Add UPDATE_QP SRIOV wrapper support')
 Signed-off-by: Matan Barak <matanb@mellanox.com>
 Signed-off-by: Or Gerlitz <ogerlitz@mellanox.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,18,11,7,,b7834758e6f33da401f584035f1b6b62d0672aab
+",1,18,11,7,Fix (Minor),b7834758e6f33da401f584035f1b6b62d0672aab
 net/mlx4: Use the correct VSD mask in UPDATE_QP,"net/mlx4: Use the correct VSD mask in UPDATE_QP
 
 When doing VGT->VST->VGT state changes, we used an incorrect mask
@@ -7361,7 +7361,7 @@ Fixes: f0f829b ('net/mlx4_core: Add immediate activate for VGT->VST->VGT')
 Signed-off-by: Matan Barak <matanb@mellanox.com>
 Signed-off-by: Or Gerlitz <ogerlitz@mellanox.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,2,1,1,,311be98a3cca6469adf369714d689f9bbf286190
+",1,2,1,1,Fix (Minor),311be98a3cca6469adf369714d689f9bbf286190
 net/mlx4: Correctly configure single ported VFs from the host,"net/mlx4: Correctly configure single ported VFs from the host
 
 Single port VFs are seen PCI wise on both ports of the PF (we don't have
@@ -7377,7 +7377,7 @@ Fixes: 449fc48 ('net/mlx4: Adapt code for N-Port VF')
 Signed-off-by: Matan Barak <matanb@mellanox.com>
 Signed-off-by: Or Gerlitz <ogerlitz@mellanox.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,21,21,0,,a91c772fa0275163508e1078ff6d474d423244fb
+",1,21,21,0,Fix (Minor),a91c772fa0275163508e1078ff6d474d423244fb
 drivers: net: cpsw: dual_emac: fix reducing of rx descriptor during ifdown,"drivers: net: cpsw: dual_emac: fix reducing of rx descriptor during ifdown
 
 In Dual EMAC, when both interface are up and while doing ifdown with heavy
@@ -7386,7 +7386,7 @@ requeued as still the other interface is up and running.
 
 Signed-off-by: Mugunthan V N <mugunthanvnm@ti.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,23,23,0,,a0e2c822bf0a1095dc250b5875e39ac0662a5df6
+",1,23,23,0,Fix (Minor),a0e2c822bf0a1095dc250b5875e39ac0662a5df6
 usb: hub: take hub->hdev reference when processing from eventlist,"usb: hub: take hub->hdev reference when processing from eventlist
 
 During surprise device hotplug removal tests, it was observed that
@@ -7401,7 +7401,7 @@ Suggested-by: Alan Stern <stern@rowland.harvard.edu> for placement
 Acked-by: Alan Stern <stern@rowland.harvard.edu>
 Cc: stable <stable@vger.kernel.org>
 Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-",1,4,3,1,,c605f3cdff53a743f6d875b76956b239deca1272
+",1,4,3,1,Fix (Minor),c605f3cdff53a743f6d875b76956b239deca1272
 uas: Disable uas on ASM1051 devices,"uas: Disable uas on ASM1051 devices
 
 There are a large numbers of issues with ASM1051 devices in uas mode:
@@ -7430,7 +7430,7 @@ devices with the shared usb-id.
 Cc: stable@vger.kernel.org # 3.16
 Signed-off-by: Hans de Goede <hdegoede@redhat.com>
 Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-",1,27,23,4,,a9c54caa456dccba938005f6479892b589975e6a
+",1,27,23,4,Fix (Minor),a9c54caa456dccba938005f6479892b589975e6a
 PCI: Add pci_ignore_hotplug() to ignore hotplug events for a device,"PCI: Add pci_ignore_hotplug() to ignore hotplug events for a device
 
 Powering off a hot-pluggable device, e.g., with pci_set_power_state(D3cold),
@@ -7486,7 +7486,7 @@ Acked-by: Alex Deucher <alexander.deucher@amd.com>
 Acked-by: Rajat Jain <rajatxjain@gmail.com>
 Acked-by: Rafael J. Wysocki <rafael.j.wysocki@intel.com>
 Acked-by: Dave Airlie <airlied@redhat.com>
-CC: stable@vger.kernel.org	# v3.15+",5,36,26,10,,b440bde74f043c8ec31081cb59c9a53ade954701
+CC: stable@vger.kernel.org	# v3.15+",5,36,26,10,Regression (Major),b440bde74f043c8ec31081cb59c9a53ade954701
 pnfs: fix filelayout_retry_commit when idx > 0,"pnfs: fix filelayout_retry_commit when idx > 0
 
 filelayout_retry_commit was recently split out from alloc_ds_commits,
@@ -7498,7 +7498,7 @@ bucket @idx. This is called when alloc_ds_commits fails for a bucket.
 
 Signed-off-by: Weston Andros Adamson <dros@primarydata.com>
 Signed-off-by: Trond Myklebust <trond.myklebust@primarydata.com>
-",1,5,3,2,,224ecbf5a674ec7da3a3b3ea21ca62e2853653fa
+",1,5,3,2,Fix (Minor),224ecbf5a674ec7da3a3b3ea21ca62e2853653fa
 Input: serport - add compat handling for SPIOCSTYPE ioctl,"Input: serport - add compat handling for SPIOCSTYPE ioctl
 
 When running a 32-bit inputattach utility in a 64-bit system, there will be
@@ -7509,14 +7509,14 @@ fails.
 Cc: stable@vger.kernel.org
 Signed-off-by: John Sung <penmount.touch@gmail.com>
 Signed-off-by: Dmitry Torokhov <dmitry.torokhov@gmail.com>
-",1,45,38,7,,a80d8b02751060a178bb1f7a6b7a93645a7a308b
+",1,45,38,7,Feature (Minor),a80d8b02751060a178bb1f7a6b7a93645a7a308b
 Input: atmel_mxt_ts - fix double free of input device,"Input: atmel_mxt_ts - fix double free of input device
 
 [Nick Dyer: reworked to move free of input device into separate function
 and only call in paths that require it.]
 Signed-off-by: Nick Dyer <nick.dyer@itdev.co.uk>
 Signed-off-by: Dmitry Torokhov <dmitry.torokhov@gmail.com>
-",1,18,13,5,,58e4aeee39917c75da8e5dca0f1c42be8dc29f9e
+",1,18,13,5,Fix (Minor),58e4aeee39917c75da8e5dca0f1c42be8dc29f9e
 libceph: do not hard code max auth ticket len,"libceph: do not hard code max auth ticket len
 
 We hard code cephx auth ticket buffer size to 256 bytes.  This isn't
@@ -7531,7 +7531,7 @@ Fixes: http://tracker.ceph.com/issues/8979
 Cc: stable@vger.kernel.org
 Signed-off-by: Ilya Dryomov <ilya.dryomov@inktank.com>
 Reviewed-by: Sage Weil <sage@redhat.com>
-",1,64,29,35,,c27a3e4d667fdcad3db7b104f75659478e0c68d8
+",1,64,29,35,Fix (Minor),c27a3e4d667fdcad3db7b104f75659478e0c68d8
 libceph: add process_one_ticket() helper,"libceph: add process_one_ticket() helper
 
 Add a helper for processing individual cephx auth tickets.  Needed for
@@ -7541,7 +7541,7 @@ the diff here is whitespace - view with git diff -b).
 Cc: stable@vger.kernel.org
 Signed-off-by: Ilya Dryomov <ilya.dryomov@inktank.com>
 Reviewed-by: Sage Weil <sage@redhat.com>
-",1,228,124,104,,597cda357716a3cf8d994cb11927af917c8d71fa
+",1,228,124,104,Feature (Minor),597cda357716a3cf8d994cb11927af917c8d71fa
 libceph: gracefully handle large reply messages from the mon,"libceph: gracefully handle large reply messages from the mon
 
 We preallocate a few of the message types we get back from the mon.  If we
@@ -7551,7 +7551,7 @@ a new one instead of blindly using the one we have.
 CC: stable@vger.kernel.org
 Signed-off-by: Sage Weil <sage@redhat.com>
 Reviewed-by: Ilya Dryomov <ilya.dryomov@inktank.com>
-",1,8,8,0,,73c3d4812b4c755efeca0140f606f83772a39ce4
+",1,8,8,0,Feature (Minor),73c3d4812b4c755efeca0140f606f83772a39ce4
 ARM: dts: cm-t54: fix serial console power supply.,"ARM: dts: cm-t54: fix serial console power supply.
 
 LDO8 regulator is used for act led and serial cosole power supply.
@@ -7566,7 +7566,7 @@ Fixes: 318dbb02b (""regulator: palmas: Fix SMPS enable/disable/is_enabled"")
 Signed-off-by: Dmitry Lifshitz <lifshitz@compulab.co.il>
 Tested-by: Paul Walmsley <paul@pwsan.com>
 Signed-off-by: Tony Lindgren <tony@atomide.com>
-",1,5,2,3,,e847faf44929112c99b3759a533a727ebd71945b
+",1,5,2,3,Fix (Minor),e847faf44929112c99b3759a533a727ebd71945b
 ARM: dts: dra7-evm: Fix NAND GPMC timings,"ARM: dts: dra7-evm: Fix NAND GPMC timings
 
 The nand timings were scaled down by 2 to account for
@@ -7584,7 +7584,7 @@ Fixes: ff66a3c86e00 (""ARM: dts: dra7: add support for parallel NAND flash"")
 Cc: <stable@vger.kernel.org>        [3.16]
 Signed-off-by: Roger Quadros <rogerq@ti.com>
 Signed-off-by: Tony Lindgren <tony@atomide.com>
-",1,27,12,15,,5990047cef0c6a36eefcb166bd32d99a8f95c75b
+",1,27,12,15,Fix (Minor),5990047cef0c6a36eefcb166bd32d99a8f95c75b
 dm cache: fix race causing dirty blocks to be marked as clean,"dm cache: fix race causing dirty blocks to be marked as clean
 
 When a writeback or a promotion of a block is completed, the cell of
@@ -7645,7 +7645,7 @@ Signed-off-by: Anssi Hannula <anssi.hannula@iki.fi>
 Acked-by: Joe Thornber <ejt@redhat.com>
 Signed-off-by: Mike Snitzer <snitzer@redhat.com>
 Cc: stable@vger.kernel.org
-",1,4,2,2,,40aa978eccec61347cd47b97c598df49acde8be5
+",1,4,2,2,Fix (Minor),40aa978eccec61347cd47b97c598df49acde8be5
 blk-mq: scale depth and rq map appropriate if low on memory,"blk-mq: scale depth and rq map appropriate if low on memory
 
 If we are running in a kdump environment, resources are scarce.
@@ -7659,7 +7659,7 @@ a sane fallback for those (1 queue, 64 tags, or something like that).
 
 Tested-by: Robert Elliott <elliott@hp.com>
 Signed-off-by: Jens Axboe <axboe@fb.com>
-",1,88,69,19,,a516440542afcb9647f88d12c35640baf02d07ea
+",1,88,69,19,Feature (Minor),a516440542afcb9647f88d12c35640baf02d07ea
 x86/xen: don't copy bogus duplicate entries into kernel page tables,"x86/xen: don't copy bogus duplicate entries into kernel page tables
 
 When RANDOMIZE_BASE (KASLR) is enabled; or the sum of all loaded
@@ -7703,7 +7703,7 @@ Signed-off-by: Stefan Bader <stefan.bader@canonical.com>
 Signed-off-by: David Vrabel <david.vrabel@citrix.com>
 Reviewed-by: Boris Ostrovsky <boris.ostrovsky@oracle.com>
 Cc: stable@vger.kernel.org
-",2,28,13,15,,0b5a50635fc916cf46e3de0b819a61fc3f17e7ee
+",2,28,13,15,Fix (Minor),0b5a50635fc916cf46e3de0b819a61fc3f17e7ee
 MAINTAINERS: Tomasz has moved,"MAINTAINERS: Tomasz has moved
 
 I am leaving Samsung, so my current e-mail address is not going to work
@@ -7714,7 +7714,7 @@ time.
 
 Signed-off-by: Tomasz Figa <t.figa@samsung.com>
 Signed-off-by: Linus Walleij <linus.walleij@linaro.org>
-",1,5,3,2,,fea685e9f9d0c3d273aa861891bf5ac952012d21
+",1,5,3,2,Documentation (Minor),fea685e9f9d0c3d273aa861891bf5ac952012d21
 pinctrl: baytrail: resolve unbalanced IRQ wake disable warning,"pinctrl: baytrail: resolve unbalanced IRQ wake disable warning
 
 Add the IRQCHIP_SKIP_SET_WAKE flag to baytrail gpio irq_chip
@@ -7724,7 +7724,7 @@ Suggested-by: Borun Fu <borun.fu@intel.com>
 Signed-off-by: Mathias Nyman <mathias.nyman@linux.intel.com>
 Reviewed-by: Mika Westerberg <mika.westerberg@linux.intel.com>
 Signed-off-by: Linus Walleij <linus.walleij@linaro.org>
-",1,1,1,0,,41939e699c507a3441625862d125eb348f5319e0
+",1,1,1,0,Fix (Minor),41939e699c507a3441625862d125eb348f5319e0
 ASoC: soc-pcm: fix dpcm_path_get error handling,"ASoC: soc-pcm: fix dpcm_path_get error handling
 
 dpcm_path_get may return -ENOMEM when allocating memory for list
@@ -7734,7 +7734,7 @@ this case.
 Signed-off-by: Qiao Zhou <zhouqiao@marvell.com>
 Acked-by: Vinod Koul <vinod.koul@intel.com>
 Signed-off-by: Mark Brown <broonie@kernel.org>
-",2,12,10,2,,8f70e515a8bb6a1908b40b786cb43f6491e8da04
+",2,12,10,2,Fix (Minor),8f70e515a8bb6a1908b40b786cb43f6491e8da04
 regulator: remove unnecessary of_node_get() to parent,"regulator: remove unnecessary of_node_get() to parent
 
 These of_node_get() were added to balance refcount decrements inside of
@@ -7749,7 +7749,7 @@ So, need to remove these unnecessary of_node_get() calls.
 Signed-off-by: Guodong Xu <guodong.xu@linaro.org>
 Reviewed-by: Axel Lin <axel.lin@ingics.com>
 Signed-off-by: Mark Brown <broonie@kernel.org>
-",7,15,7,8,,b8b27a44ddf1987e9bae84b99741b0a61192e017
+",7,15,7,8,Refactoring (Minor),b8b27a44ddf1987e9bae84b99741b0a61192e017
 rbd: fix error return code in rbd_dev_device_setup(),"rbd: fix error return code in rbd_dev_device_setup()
 
 Fix to return -ENOMEM from the workqueue alloc error handling
@@ -7757,7 +7757,7 @@ case instead of 0, as done elsewhere in this function.
 
 Reviewed-by: Alex Elder <elder@linaro.org>
 Signed-off-by: Wei Yongjun <yongjun_wei@trendmicro.com.cn>
-",1,4,3,1,,255939e783d8f45f8c58487dfc18957c44ea9871
+",1,4,3,1,Fix (Minor),255939e783d8f45f8c58487dfc18957c44ea9871
 rbd: avoid format-security warning inside alloc_workqueue(),"rbd: avoid format-security warning inside alloc_workqueue()
 
 drivers/block/rbd.c: In function ‘rbd_dev_device_setup’:
@@ -7765,7 +7765,7 @@ drivers/block/rbd.c:5090:19: warning: format not a string literal and no format 
 
 Reported-by: kbuild test robot <fengguang.wu@intel.com>
 Signed-off-by: Ilya Dryomov <ilya.dryomov@inktank.com>
-",1,2,1,1,,58d1362b50dc87ebf18cd137e7a879fd99b7e721
+",1,2,1,1,Fix (Minor),58d1362b50dc87ebf18cd137e7a879fd99b7e721
 RxRPC: Fix missing __user annotation,"RxRPC: Fix missing __user annotation
 
 Fix a missing __user annotation in a cast of a user space pointer (found by
@@ -7773,7 +7773,7 @@ checker).
 
 Signed-off-by: David Howells <dhowells@redhat.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,2,1,1,,ed3bfdfdced76aa7edb0b05c0d739ee3a2a6e619
+",1,2,1,1,Fix (Minor),ed3bfdfdced76aa7edb0b05c0d739ee3a2a6e619
 net:bonding: Add missing space in bonding driver parameter description,"net:bonding: Add missing space in bonding driver parameter description
 
 This patch adds missing space between ""interface"" and ""by""
@@ -7781,7 +7781,7 @@ in bonding module parameter description.
 
 Signed-off-by: Masanari Iida <standby24x7@gmail.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,2,1,1,,37b7021d9d713964482faeb9e0935f458a1a4016
+",1,2,1,1,Fix (Minor),37b7021d9d713964482faeb9e0935f458a1a4016
 net:socket: set msg_namelen to 0 if msg_name is passed as NULL in msghdr struct from userland.,"net:socket: set msg_namelen to 0 if msg_name is passed as NULL in msghdr struct from userland.
 
 Linux manpage for recvmsg and sendmsg calls does not explicitly mention setting msg_namelen to 0 when
@@ -7792,7 +7792,7 @@ To fix this, we set msg_namelen to 0 when msg_name is passed as NULL from userla
 
 Signed-off-by: Ani Sinha <ani@arista.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,3,3,0,,6a2a2b3ae0759843b22c929881cc184b00cc63ff
+",1,3,3,0,Fix (Minor),6a2a2b3ae0759843b22c929881cc184b00cc63ff
 Input: synaptics - add support for ForcePads,"Input: synaptics - add support for ForcePads
 
 ForcePads are found on HP EliteBook 1040 laptops. They lack any kind of
@@ -7807,7 +7807,7 @@ contacts appear.
 Cc: stable@vger.kernel.org
 Reviewed-by: Hans de Goede <hdegoede@redhat.com>
 Signed-off-by: Dmitry Torokhov <dmitry.torokhov@gmail.com>
-",2,79,63,16,,5715fc764f7753d464dbe094b5ef9cffa6e479a4
+",2,79,63,16,Feature (Major),5715fc764f7753d464dbe094b5ef9cffa6e479a4
 Input: matrix_keypad - use request_any_context_irq(),"Input: matrix_keypad - use request_any_context_irq()
 
 When trying to use the matrix-keypad driver with GPIO drivers that
@@ -7820,7 +7820,7 @@ keypad driver.
 
 Signed-off-by: Lothar Waßmann <LW@KARO-electronics.de>
 Signed-off-by: Dmitry Torokhov <dmitry.torokhov@gmail.com>
-",1,9,5,4,,24e4d21c4252fb6d5a7e75d1e1ee47c2ce38ae99
+",1,9,5,4,Fix (Minor),24e4d21c4252fb6d5a7e75d1e1ee47c2ce38ae99
 Input: atmel_mxt_ts - downgrade warning about empty interrupts,"Input: atmel_mxt_ts - downgrade warning about empty interrupts
 
 In the case where the CHG/interrupt line mode is not configured correctly,
@@ -7829,12 +7829,12 @@ message to debug.
 
 Signed-off-by: Nick Dyer <nick.dyer@itdev.co.uk>
 Signed-off-by: Dmitry Torokhov <dmitry.torokhov@gmail.com>
-",1,7,6,1,,651b4608811796ee6ddea5ce33e8db7ef6ea42b1
+",1,7,6,1,Feature (Minor),651b4608811796ee6ddea5ce33e8db7ef6ea42b1
 Input: wm971x - fix typo in module parameter description,"Input: wm971x - fix typo in module parameter description
 
 Signed-off-by: Masanari Iida <standby24x7@gmail.com>
 Signed-off-by: Dmitry Torokhov <dmitry.torokhov@gmail.com>
-",2,4,2,2,,31b2b16d3f356b0e463e603643d8b4b047ba2db8
+",2,4,2,2,Documentation (Minor),31b2b16d3f356b0e463e603643d8b4b047ba2db8
 clk/efm32gg: fix dt init prototype,"clk/efm32gg: fix dt init prototype
 
 Since commit 54196ccbe0ba (of: consolidate linker section OF match table
@@ -7862,7 +7862,7 @@ Reported-by: Bryan Hundven <bryanhundven@gmail.com>
 Reviewed-by: Arnd Bergmann <arnd@arndb.de>
 Signed-off-by: Uwe Kleine-König <u.kleine-koenig@pengutronix.de>
 Signed-off-by: Mike Turquette <mturquette@linaro.org>
-",1,6,3,3,,8ce8ebeb572d70e672a8d158e93ffaac80ea7576
+",1,6,3,3,Regression (Minor),8ce8ebeb572d70e672a8d158e93ffaac80ea7576
 ASoC: samsung-i2s: Check secondary DAI exists before referencing,"ASoC: samsung-i2s: Check secondary DAI exists before referencing
 
 In a couple of places the driver is missing a check to ensure there is a
@@ -7873,7 +7873,7 @@ Signed-off-by: Charles Keepax <ckeepax@opensource.wolfsonmicro.com>
 Acked-by: Sylwester Nawrocki <s.nawrocki@samsung.com>
 Signed-off-by: Mark Brown <broonie@linaro.org>
 Cc: stable@vger.kernel.org
-",1,5,3,2,,133c2681c4a0c1b589d138c2fdd0f131bdce20ed
+",1,5,3,2,Fix (Minor),133c2681c4a0c1b589d138c2fdd0f131bdce20ed
 usb: dwc2/gadget: avoid disabling ep0,"usb: dwc2/gadget: avoid disabling ep0
 
 Endpoint 0 should not be disabled, so we start loop counter from number 1.
@@ -7881,7 +7881,7 @@ Endpoint 0 should not be disabled, so we start loop counter from number 1.
 Signed-off-by: Robert Baldyga <r.baldyga@samsung.com>
 Cc: stable <stable@vger.kernel.org> # 3.16
 Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-",1,2,1,1,,604eac3c0c69e98f2fd0133305f9e777418f1d3b
+",1,2,1,1,Fix (Minor),604eac3c0c69e98f2fd0133305f9e777418f1d3b
 usb: dwc2/gadget: delay enabling irq once hardware is configured properly,"usb: dwc2/gadget: delay enabling irq once hardware is configured properly
 
 This patch fixes kernel panic/interrupt storm/etc issues if bootloader
@@ -7892,7 +7892,7 @@ Signed-off-by: Marek Szyprowski <m.szyprowski@samsung.com>
 Signed-off-by: Robert Baldyga <r.baldyga@samsung.com>
 Cc: stable <stable@vger.kernel.org> # 3.16
 Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-",1,18,11,7,,eb3c56c5ccdd252940cb0ec0541fcdc94894bd8d
+",1,18,11,7,Fix (Minor),eb3c56c5ccdd252940cb0ec0541fcdc94894bd8d
 usb: dwc2/gadget: do not call disconnect method in pullup,"usb: dwc2/gadget: do not call disconnect method in pullup
 
 This leads to potential spinlock recursion in composite framework, other
@@ -7902,7 +7902,7 @@ Signed-off-by: Marek Szyprowski <m.szyprowski@samsung.com>
 Signed-off-by: Robert Baldyga <r.baldyga@samsung.com>
 Cc: stable <stable@vger.kernel.org> # 3.16
 Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-",1,1,0,1,,b510df5a36c066da3a188f4ade3404118b63c6de
+",1,1,0,1,Fix (Minor),b510df5a36c066da3a188f4ade3404118b63c6de
 usb: dwc2/gadget: break infinite loop in endpoint disable code,"usb: dwc2/gadget: break infinite loop in endpoint disable code
 
 This patch fixes possible freeze caused by infinite loop in interrupt
@@ -7912,7 +7912,7 @@ Signed-off-by: Marek Szyprowski <m.szyprowski@samsung.com>
 Signed-off-by: Robert Baldyga <r.baldyga@samsung.com>
 Cc: stable <stable@vger.kernel.org> # 3.16
 Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-",1,1,1,0,,e0cbe595db72b037260bbda77106f6811a1ebb1d
+",1,1,1,0,Fix (Minor),e0cbe595db72b037260bbda77106f6811a1ebb1d
 usb: dwc2/gadget: fix phy initialization sequence,"usb: dwc2/gadget: fix phy initialization sequence
 
 In the Generic PHY Framework a NULL phy is considered to be a valid phy
@@ -7928,7 +7928,7 @@ Signed-off-by: Marek Szyprowski <m.szyprowski@samsung.com>
 Signed-off-by: Robert Baldyga <r.baldyga@samsung.com>
 Cc: stable <stable@vger.kernel.org> # 3.16
 Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-",1,27,12,15,,ca2c5ba80f823a38c4aae506e2f03c1afb076b0a
+",1,27,12,15,Fix (Minor),ca2c5ba80f823a38c4aae506e2f03c1afb076b0a
 usb: dwc2/gadget: fix phy disable sequence,"usb: dwc2/gadget: fix phy disable sequence
 
 When the driver is removed s3c_hsotg_phy_disable is called three times
@@ -7950,7 +7950,7 @@ Signed-off-by: Marek Szyprowski <m.szyprowski@samsung.com>
 Signed-off-by: Robert Baldyga <r.baldyga@samsung.com>
 Cc: stable <stable@vger.kernel.org> # 3.16
 Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-",1,3,0,3,,0655314be0d9c54ad5f63500219485c6a9d9e5e2
+",1,3,0,3,Fix (Minor),0655314be0d9c54ad5f63500219485c6a9d9e5e2
 Block: fix unbalanced bypass-disable in blk_register_queue,"Block: fix unbalanced bypass-disable in blk_register_queue
 
 When a queue is registered, the block layer turns off the bypass
@@ -7967,7 +7967,7 @@ Acked-by: Tejun Heo <tj@kernel.org>
 CC: James Bottomley <James.Bottomley@HansenPartnership.com>
 CC: Jens Axboe <axboe@kernel.dk>
 Signed-off-by: Jens Axboe <axboe@fb.com>
-",1,6,4,2,,df35c7c912fe668797681842b3b74c61b0664050
+",1,6,4,2,Fix (Minor),df35c7c912fe668797681842b3b74c61b0664050
 drm/radeon/dpm: set the thermal type properly for special configs,"drm/radeon/dpm: set the thermal type properly for special configs
 
 On systems with special thermal configurations make sure we make
@@ -7976,14 +7976,14 @@ configuration on these systems.
 
 Signed-off-by: Alex Deucher <alexander.deucher@amd.com>
 Cc: stable@vger.kernel.org
-",1,26,19,7,,ff4377924f7e587c61bcbc704eafecf6c7bd2e00
+",1,26,19,7,Fix (Minor),ff4377924f7e587c61bcbc704eafecf6c7bd2e00
 spi/pl022: Fix error message,"spi/pl022: Fix error message
 
 This patch fixes an error message typo (""not"" missing).
 
 Signed-off-by: Roland Stigge <stigge@antcom.de>
 Signed-off-by: Mark Brown <broonie@linaro.org>
-",1,2,1,1,,61e89e65e31516cae8124599e43be955eb10514c
+",1,2,1,1,Fix (Minor),61e89e65e31516cae8124599e43be955eb10514c
 drm/radeon: reduce memory footprint for debugging,"drm/radeon: reduce memory footprint for debugging
 
 There is no need to use hex_dump_to_buffer() since we have a kernel helper to
@@ -7991,7 +7991,7 @@ dump up to 64 bytes just via printk(). In our case the actual size is 15 bytes.
 
 Signed-off-by: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
 Signed-off-by: Alex Deucher <alexander.deucher@amd.com>
-",1,7,2,5,,df8fbc231b7e4a78dae2b02e116fe73e4ea63cb0
+",1,7,2,5,Feature (Minor),df8fbc231b7e4a78dae2b02e116fe73e4ea63cb0
 ARM: pxa: fix section mismatch warning for pxa_timer_nodt_init,"ARM: pxa: fix section mismatch warning for pxa_timer_nodt_init
 
 commit a38b1f60b5245a3 (""ARM: pxa: Add non device-tree timer link to
@@ -8002,7 +8002,7 @@ which is.
 
 Signed-off-by: Arnd Bergmann <arnd@arndb.de>
 Acked-by: Robert Jarzmik <robert.jarzmik@free.fr>
-",1,2,1,1,,3d3c6a5f3de2c76b2d6bf96be56dd6fcc2bb2a30
+",1,2,1,1,Regression (Minor),3d3c6a5f3de2c76b2d6bf96be56dd6fcc2bb2a30
 ARM: OMAP: Fix Kconfig warning for omap1,"ARM: OMAP: Fix Kconfig warning for omap1
 
 Commit 21278aeafbfa (""ARM: use menuconfig for sub-arch menus"") improved
@@ -8017,7 +8017,7 @@ Fixes: 21278aeafbfa (""ARM: use menuconfig for sub-arch menus"")
 Reported-by: Andreas Ruprecht <rupran@einserver.de>
 Signed-off-by: Tony Lindgren <tony@atomide.com>
 Signed-off-by: Arnd Bergmann <arnd@arndb.de>
-",2,6,3,3,,52aaac5ae52ad9a7016410ffeedbaf24b722f3a2
+",2,6,3,3,Regression (Minor),52aaac5ae52ad9a7016410ffeedbaf24b722f3a2
 ACPI / LPSS: complete PM entries for LPSS power domain,"ACPI / LPSS: complete PM entries for LPSS power domain
 
 PM entries of LPSS power domain were not implemented correctly
@@ -8031,7 +8031,7 @@ Signed-off-by: Mika Westerberg <mika.westerberg@linux.intel.com>
 Signed-off-by: Fu Zhonghui <zhonghui.fu@linux.intel.com>
 Cc: 3.16+ <stable@vger.kernel.org> # 3.16+
 Signed-off-by: Rafael J. Wysocki <rafael.j.wysocki@intel.com>
-",1,10,5,5,,f4168b617ac09986c4333accaff5d8ba5a9db7bf
+",1,10,5,5,Fix (Minor),f4168b617ac09986c4333accaff5d8ba5a9db7bf
 "Revert ""ACPI / battery: fix wrong value of capacity_now reported when fully charged""","Revert ""ACPI / battery: fix wrong value of capacity_now reported when fully charged""
 
 This reverts commit 232de5143790 (""ACPI / battery: fix wrong value of
@@ -8059,7 +8059,7 @@ Fixes: 232de5143790 (""ACPI / battery: fix wrong value of capacity_now reported 
 Cc: 3.16+ <stable@vger.kernel.org> # 3.16+
 Signed-off-by: Bjørn Mork <bjorn@mork.no>
 Signed-off-by: Rafael J. Wysocki <rafael.j.wysocki@intel.com>
-",1,14,0,14,,508b3c677601797f2d51df3df5caa436dd235cb9
+",1,14,0,14,Regression (Minor),508b3c677601797f2d51df3df5caa436dd235cb9
 "Revert ""ACPI / battery: Fix warning message in acpi_battery_get_state()""","Revert ""ACPI / battery: Fix warning message in acpi_battery_get_state()""
 
 This reverts commit d719870b41e0 (""ACPI / battery: Fix warning message in
@@ -8079,26 +8079,26 @@ Fixes: d719870b41e0 (""ACPI / battery: Fix warning message in acpi_battery_get_s
 Cc: 3.16+ <stable@vger.kernel.org> # 3.16+
 Signed-off-by: Bjørn Mork <bjorn@mork.no>
 Signed-off-by: Rafael J. Wysocki <rafael.j.wysocki@intel.com>
-",1,2,1,1,,583ee394ac503ff9eac0f50673cd569643bdb3b4
+",1,2,1,1,Regression (Minor),583ee394ac503ff9eac0f50673cd569643bdb3b4
 microblaze: Fix number of syscalls,"microblaze: Fix number of syscalls
 
 Number of syscalls have to be updated too.
 
 Signed-off-by: Michal Simek <michal.simek@xilinx.com>
-",1,2,1,1,,9fc4b7e241a7b6da46c5da0ee6f85d99e91dd024
+",1,2,1,1,Fix (Minor),9fc4b7e241a7b6da46c5da0ee6f85d99e91dd024
 microblaze: Rename Advance setup to Kernel features,"microblaze: Rename Advance setup to Kernel features
 
 ""Advance setup: menu is misleading that's why rename it.
 
 Signed-off-by: Michal Simek <michal.simek@xilinx.com>
-",1,2,1,1,,b408e2c205805ae74134f77b12d6bb44dd3dcc86
+",1,2,1,1,Fix (Minor),b408e2c205805ae74134f77b12d6bb44dd3dcc86
 microblaze: Add mm/Kconfig to advance menu,"microblaze: Add mm/Kconfig to advance menu
 
 mm/Kconfig is getting too big to be in root menu.
 Move it to submenu.
 
 Signed-off-by: Michal Simek <michal.simek@xilinx.com>
-",1,4,2,2,,7acdc1cf764bab66d529ff6d0c5caf25cae202de
+",1,4,2,2,Feature (Minor),7acdc1cf764bab66d529ff6d0c5caf25cae202de
 arch/microblaze/include/asm/uaccess.h: Use pr_devel() instead of pr_debug(),"arch/microblaze/include/asm/uaccess.h: Use pr_devel() instead of pr_debug()
 
 When DYNAMIC_DEBUG enabled, pr_debug() depends on KBUILD_MODNAME which
@@ -8139,7 +8139,7 @@ The related error with allmodconfig:
 
 Signed-off-by: Chen Gang <gang.chen.5i5j@gmail.com>
 Signed-off-by: Michal Simek <michal.simek@xilinx.com>
-",1,4,2,2,,de295cf0dbed54d732a23dd0f048c89538d80222
+",1,4,2,2,Feature (Minor),de295cf0dbed54d732a23dd0f048c89538d80222
 "arch/microblaze/include/asm/entry.h: Include ""linux/linkage.h"" to avoid compiling issue","arch/microblaze/include/asm/entry.h: Include ""linux/linkage.h"" to avoid compiling issue
 
 ""entry.h"" needs 'asmlinkage', and ""asm/linkage.h"" does not provide it.
@@ -8157,14 +8157,14 @@ The related error (with allmodconfig under microblaze):
 
 Signed-off-by: Chen Gang <gang.chen.5i5j@gmail.com>
 Signed-off-by: Michal Simek <michal.simek@xilinx.com>
-",1,1,1,0,,dd03524614d6d75b2e8604f9d2186ab079038142
+",1,1,1,0,Fix (Minor),dd03524614d6d75b2e8604f9d2186ab079038142
 ASoC: Update email id of the author,"ASoC: Update email id of the author
 
 I moved from ST Microelectronics and so updating email-id to personal one.
 
 Signed-off-by: Rajeev Kumar <rajeevkumar.linux@gmail.com>
 Signed-off-by: Mark Brown <broonie@linaro.org>
-",3,10,5,5,,b794dbcd31c8b19118b7d02a39453576aa8e78fb
+",3,10,5,5,Documentation (Minor),b794dbcd31c8b19118b7d02a39453576aa8e78fb
 "powerpc: Wire up sys_seccomp(), sys_getrandom() and sys_memfd_create()","powerpc: Wire up sys_seccomp(), sys_getrandom() and sys_memfd_create()
 
 This patch wires up three new syscalls for powerpc. The three
@@ -8172,7 +8172,7 @@ new syscalls are seccomp, getrandom and memfd_create.
 
 Signed-off-by: Pranith Kumar <bobby.prani@gmail.com>
 Reviewed-by: David Herrmann <dh.herrmann@gmail.com>
-",3,8,7,1,,7d59deb50aafbdc01b52aed209d202d827261cb0
+",3,8,7,1,Feature (Minor),7d59deb50aafbdc01b52aed209d202d827261cb0
 powerpc: Make CONFIG_FHANDLE=y for all 64 bit powerpc defconfigs,"powerpc: Make CONFIG_FHANDLE=y for all 64 bit powerpc defconfigs
 
 CONFIG_FHANDLE is a requirement for systemd and with the increasing
@@ -8180,7 +8180,7 @@ uptake of systemd within distros it makes sense for 64 bit defconfigs
 to include it.
 
 Signed-off-by: Cyril Bur <cyril.bur@au1.ibm.com>
-",11,11,11,0,,d11dfd179b444bcbc15545cc03761f607168d7a3
+",11,11,11,0,Feature (Minor),d11dfd179b444bcbc15545cc03761f607168d7a3
 powerpc: use machine_subsys_initcall() for opal_hmi_handler_init(),"powerpc: use machine_subsys_initcall() for opal_hmi_handler_init()
 
 As opal_message_init() uses machine_early_initcall(powernv, ), and
@@ -8188,7 +8188,7 @@ opal_hmi_handler_init() depends on that early initcall, so it also needs
 use machine_* to check the machine_id.
 
 Signed-off-by: Li Zhong <zhong@linux.vnet.ibm.com>
-",1,3,2,1,,c1c8a92f7017519f343fa87a32e544c217d9d287
+",1,3,2,1,Feature (Minor),c1c8a92f7017519f343fa87a32e544c217d9d287
 powerpc/perf: Fix ABIv2 kernel backtraces,"powerpc/perf: Fix ABIv2 kernel backtraces
 
 ABIv2 kernels are failing to backtrace through the kernel. An example:
@@ -8227,7 +8227,7 @@ in valid_next_sp(). This fixes the issue:
 Cc: stable@vger.kernel.org # 3.16+
 Reported-by: Aneesh Kumar K.V <aneesh.kumar@linux.vnet.ibm.com>
 Signed-off-by: Anton Blanchard <anton@samba.org>
-",2,9,8,1,,85101af13bb854a6572fa540df7c7201958624b9
+",2,9,8,1,Fix (Minor),85101af13bb854a6572fa540df7c7201958624b9
 efi/arm64: Fix fdt-related memory reservation,"efi/arm64: Fix fdt-related memory reservation
 
 Commit 86c8b27a01cf:
@@ -8252,7 +8252,7 @@ Signed-off-by: Mark Salter <msalter@redhat.com>
 Acked-by: Ard Biesheuvel <ard.biesheuvel@linaro.org>
 Acked-by: Mark Rutland <mark.rutland@arm.com>
 Signed-off-by: Matt Fleming <matt.fleming@intel.com>
-",2,13,10,3,,0ceac9e094b065fe3fec19669740f338d3480498
+",2,13,10,3,Fix (Minor),0ceac9e094b065fe3fec19669740f338d3480498
 "x86/mm: Apply the section attribute to the variable, not its type","x86/mm: Apply the section attribute to the variable, not its type
 
 This fixes a compilation error in clang in that a linker section
@@ -8270,7 +8270,7 @@ Cc: Linus Torvalds <torvalds@linux-foundation.org>
 Cc: Andrew Morton <akpm@linux-foundation.org>
 Link: http://lkml.kernel.org/r/1409959005-11479-1-git-send-email-behanw@converseincode.com
 Signed-off-by: Ingo Molnar <mingo@kernel.org>
-",1,2,1,1,,cc99535eb4049c730cac421d403d079593cb31ae
+",1,2,1,1,Fix (Minor),cc99535eb4049c730cac421d403d079593cb31ae
 perf: Fix a race condition in perf_remove_from_context(),"perf: Fix a race condition in perf_remove_from_context()
 
 We saw a kernel soft lockup in perf_remove_from_context(),
@@ -8296,7 +8296,7 @@ Cc: Linus Torvalds <torvalds@linux-foundation.org>
 Cc: <stable@vger.kernel.org>
 Link: http://lkml.kernel.org/r/1409696840-843-1-git-send-email-xiyou.wangcong@gmail.com
 Signed-off-by: Ingo Molnar <mingo@kernel.org>
-",1,10,10,0,,3577af70a2ce4853d58e57d832e687d739281479
+",1,10,10,0,Fix (Minor),3577af70a2ce4853d58e57d832e687d739281479
 powerpc/pseries: Fix endian issues in memory hotplug,"powerpc/pseries: Fix endian issues in memory hotplug
 
 Values acquired from Open Firmware are in 32-bit big endian format
@@ -8304,7 +8304,7 @@ and need to be handled on little endian architectures.  This patch
 ensures values are in cpu endian when hotplugging memory.
 
 Signed-off-by: Thomas Falcon <tlfalcon@linux.vnet.ibm.com>
-",1,36,19,17,,c9ac408bc7329911237c25508f578fb2fa1c4235
+",1,36,19,17,Fix (Minor),c9ac408bc7329911237c25508f578fb2fa1c4235
 "nfs: revert ""nfs4: queue free_lock_state job submission to nfsiod""","nfs: revert ""nfs4: queue free_lock_state job submission to nfsiod""
 
 This reverts commit 49a4bda22e186c4d0eb07f4a36b5b1a378f9398d.
@@ -8357,7 +8357,7 @@ Signed-off-by: Jeff Layton <jlayton@primarydata.com>
 Reviewed-by: Christoph Hellwig <hch@lst.de>
 Tested-by: Christoph Hellwig <hch@lst.de>
 Signed-off-by: Trond Myklebust <trond.myklebust@primarydata.com>
-",2,37,12,25,,0c0e0d3c091ed5b823fb89e1d46dbb9abd5830a7
+",2,37,12,25,Regression (Minor),0c0e0d3c091ed5b823fb89e1d46dbb9abd5830a7
 nfs: fix kernel warning when removing proc entry,"nfs: fix kernel warning when removing proc entry
 
 I saw the following kernel warning:
@@ -8405,7 +8405,7 @@ as suggested by Al Viro]
 Cc: stable@vger.kernel.org # 3.4.x : 65b38851a17: NFS: Fix /proc/fs/nfsfs/servers
 Cc: stable@vger.kernel.org # 3.4.x
 Signed-off-by: Trond Myklebust <trond.myklebust@primarydata.com>
-",1,12,3,9,,21e81002f9788a3af591416b6dec60d7b67f2fb2
+",1,12,3,9,Fix (Minor),21e81002f9788a3af591416b6dec60d7b67f2fb2
 tty: xuartps: Fix tx_emtpy() callback,"tty: xuartps: Fix tx_emtpy() callback
 
 The tx_empty() callback currently checks the TXEMPTY bit in the interrupt
@@ -15073,7 +15073,7 @@ Signed-off-by: Nandini Sharma <nandini.sharma@st.com>
 Signed-off-by: Giuseppe Cavallaro <peppe.cavallaro@st.com>
 Reviewed-by: Florian Fainelli <f.fainelli@gmail.com>
 Signed-off-by: David S. Miller <davem@davemloft.net>
-",1,18,9,9,,7a4cecf74c165653b2d01301b301a8659438217e
+",1,18,9,9,Fix (Minor),7a4cecf74c165653b2d01301b301a8659438217e
 cpufreq: intel_pstate: Add CPU ID for Braswell processor,"cpufreq: intel_pstate: Add CPU ID for Braswell processor
 
 This is pretty much the same as Intel Baytrail, only the CPU ID is
@@ -15083,7 +15083,7 @@ Signed-off-by: Mika Westerberg <mika.westerberg@linux.intel.com>
 Acked-by: Viresh Kumar <viresh.kumar@linaro.org>
 Acked-by: Dirk Brandewie <dirk.j.brandewie@intel.com>
 Signed-off-by: Rafael J. Wysocki <rafael.j.wysocki@intel.com>
-",1,1,1,0,,16405f98bca8eb39a23b3ce03e241ca19e7af370
+",1,1,1,0,Feature (Minor),16405f98bca8eb39a23b3ce03e241ca19e7af370
 intel_pstate: Turn per cpu printk into pr_debug,"intel_pstate: Turn per cpu printk into pr_debug
 
 On larger systems intel_pstate currently spams the boot up
@@ -15144,7 +15144,7 @@ Cc: Jingoo Han <jg1.han@samsung.com>
 Cc: Sachin Kamat <sachin.kamat@samsung.com>
 Cc: Jingoo Han <jg1.han@samsung.com>
 Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-",2,87,45,42,,7c38405ca7bde60e6d3cffb87a086fc7a805a85c
+",2,87,45,42,Regression (Minor),7c38405ca7bde60e6d3cffb87a086fc7a805a85c
 MAINTAINERS: catch special Rockchip code locations,"MAINTAINERS: catch special Rockchip code locations
 
 Add some more locations that aren't catched by the general wildcard.
@@ -15154,7 +15154,7 @@ and the i2s driver.
 
 Signed-off-by: Heiko Stuebner <heiko@sntech.de>
 Signed-off-by: Olof Johansson <olof@lixom.net>
-",1,5,5,0,,541555e95cc9ca321606b72dc0c670a764713669
+",1,5,5,0,Documentation (Minor),541555e95cc9ca321606b72dc0c670a764713669
 radeon: Test for PCI root bus before assuming bus->self,"radeon: Test for PCI root bus before assuming bus->self
 
 If we assign a Radeon device to a virtual machine, we can no longer
@@ -15166,7 +15166,7 @@ PCI root bus.
 
 Signed-off-by: Alex Williamson <alex.williamson@redhat.com>
 Signed-off-by: Alex Deucher <alexander.deucher@amd.com>
-",2,12,10,2,,0bd252de78d406485c896508c13a8f7a78ee8353
+",2,12,10,2,Fix (Minor),0bd252de78d406485c896508c13a8f7a78ee8353
 regulator: Proofread documentation,"regulator: Proofread documentation
 
 Signed-off-by: Geert Uytterhoeven <geert+renesas@glider.be>
@@ -27771,7 +27771,7 @@ This is an attempt at isolating some of the changes necessary to port
 to NVIF in a separate commit.
 
 Signed-off-by: Ben Skeggs <bskeggs@redhat.com>
-",41,847,459,388,,967e7bde8739fe3b215f7537e8f1f39c044902af
+",41,847,459,388,Feature (Minor),967e7bde8739fe3b215f7537e8f1f39c044902af
 drm/nouveau: kill nouveau_dev() + wrap register macros,"drm/nouveau: kill nouveau_dev() + wrap register macros
 
 Signed-off-by: Ben Skeggs <bskeggs@redhat.com>
@@ -27791,18 +27791,18 @@ long-unloved code we currently use, and allow fifo/display/mpeg (hi
 Ilia ;)) engines to all be exposed in the same way.
 
 Signed-off-by: Ben Skeggs <bskeggs@redhat.com>
-",14,1352,1350,2,,a04d04231b490a2dca427a0f04603ed47fdb9cee
+",14,1352,1350,2,Feature (Major),a04d04231b490a2dca427a0f04603ed47fdb9cee
 drm/nouveau/client: add method to retrieve device list,"drm/nouveau/client: add method to retrieve device list
 
 Signed-off-by: Ben Skeggs <bskeggs@redhat.com>
-",4,72,72,0,,803c1787efd379110963db360fbe06ed0b41197e
+",4,72,72,0,Feature (Minor),803c1787efd379110963db360fbe06ed0b41197e
 drm/nouveau/core: remove NV_D0 family,"drm/nouveau/core: remove NV_D0 family
 
 The one place where it mattered has been replaced with a class check,
 which is more appropriate anyway.
 
 Signed-off-by: Ben Skeggs <bskeggs@redhat.com>
-",6,71,37,34,,9c210f378f7cee5f1a5eabe5a78c5ec98251cb5b
+",6,71,37,34,Refactoring (Minor),9c210f378f7cee5f1a5eabe5a78c5ec98251cb5b
 drm/nouveau/device: add method to retrieve some basic device info,"drm/nouveau/device: add method to retrieve some basic device info
 
 Signed-off-by: Ben Skeggs <bskeggs@redhat.com>
@@ -27824,7 +27824,7 @@ portion of the driver will be ported to speak to the core using these
 interfaces as much as possible.
 
 Signed-off-by: Ben Skeggs <bskeggs@redhat.com>
-",13,835,831,4,,8ec2a6ec6e229d67b19737f9b603eef478fa955d
+",13,835,831,4,Feature (Minor),8ec2a6ec6e229d67b19737f9b603eef478fa955d
 drm/nouveau/core: add function to return list of supported children,"drm/nouveau/core: add function to return list of supported children
 
 Signed-off-by: Ben Skeggs <bskeggs@redhat.com>
@@ -27843,7 +27843,7 @@ Various races between suspend/unload with display HPD/DP IRQ handlers
 automagically solved as a result.
 
 Signed-off-by: Ben Skeggs <bskeggs@redhat.com>
-",52,1392,875,517,,79ca27706a034b683196c85f5c6901b78e5ab8f0
+",52,1392,875,517,Refactoring (Major),79ca27706a034b683196c85f5c6901b78e5ab8f0
 drm/nouveau/core: move handle-based object apis to handle.c,"drm/nouveau/core: move handle-based object apis to handle.c
 
 Signed-off-by: Ben Skeggs <bskeggs@redhat.com>
@@ -27859,11 +27859,11 @@ Signed-off-by: Ben Skeggs <bskeggs@redhat.com>
 drm/nouveau: store vblank event handler data in nv_crtc,"drm/nouveau: store vblank event handler data in nv_crtc
 
 Signed-off-by: Ben Skeggs <bskeggs@redhat.com>
-",3,58,29,29,,b12f0ae9e8dfee55c7757f9c4be3b1154c366754
+",3,58,29,29,Feature (Minor),b12f0ae9e8dfee55c7757f9c4be3b1154c366754
 drm/nv50/kms: create ctxdma objects for framebuffers as required,"drm/nv50/kms: create ctxdma objects for framebuffers as required
 
 Signed-off-by: Ben Skeggs <bskeggs@redhat.com>
-",4,289,126,163,,8a42364701d6860e51d53bbcbe3c84fe93816861
+",4,289,126,163,Feature (Minor),8a42364701d6860e51d53bbcbe3c84fe93816861
 drm/nv50/kms: move framebuffer wrangling out of common code,"drm/nv50/kms: move framebuffer wrangling out of common code
 
 Signed-off-by: Ben Skeggs <bskeggs@redhat.com>
@@ -27885,7 +27885,7 @@ ddx the required info.
 Signed-off-by: Mario Kleiner <mario.kleiner.de@gmail.com>
 Cc: <stable@vger.kernel.org> #v3.13+
 Signed-off-by: Ben Skeggs <bskeggs@redhat.com>
-",1,4,3,1,,7820e5eef0faa4a5e10834296680827f7ce78a89
+",1,4,3,1,Documentation (Minor),7820e5eef0faa4a5e10834296680827f7ce78a89
 drm/nv50-/sw: use nv50_software_context_dtor....,"drm/nv50-/sw: use nv50_software_context_dtor....
 
 You would not believe the troubles this caused me...
@@ -28797,7 +28797,7 @@ Cc: Baoquan He <bhe@redhat.com>
 Cc: Andy Lutomirski <luto@amacapital.net>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",2,8,4,4,,7d3e2bca22feb1f4a624009ff6c15e6f724cb4e7
+",2,8,4,4,Refactoring (Minor),7d3e2bca22feb1f4a624009ff6c15e6f724cb4e7
 kernel: build bin2c based on config option CONFIG_BUILD_BIN2C,"kernel: build bin2c based on config option CONFIG_BUILD_BIN2C
 
 currently bin2c builds only if CONFIG_IKCONFIG=y. But bin2c will now be
@@ -28818,7 +28818,7 @@ Cc: Baoquan He <bhe@redhat.com>
 Cc: Andy Lutomirski <luto@amacapital.net>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",3,8,7,1,,de5b56ba51f63973ceb5c184ee0855f0c8a13fc9
+",3,8,7,1,Feature (Minor),de5b56ba51f63973ceb5c184ee0855f0c8a13fc9
 bin2c: move bin2c in scripts/basic,"bin2c: move bin2c in scripts/basic
 
 This patch series does not do kernel signature verification yet.  I plan
@@ -29043,7 +29043,7 @@ Cc: Daniel Mack <zonque@gmail.com>
 Cc: Andy Lutomirski <luto@amacapital.net>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",4,180,180,0,,40e041a2c858b3caefc757e26cb85bfceae5062b
+",4,180,180,0,Feature (Minor),40e041a2c858b3caefc757e26cb85bfceae5062b
 mm: allow drivers to prevent new writable mappings,"mm: allow drivers to prevent new writable mappings
 
 This patch (of 6):
@@ -29080,7 +29080,7 @@ Signed-off-by: Joe Perches <joe@perches.com>
 Cc: Christoph Hellwig <hch@lst.de>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,1,0,1,,935e9f02e798051d2923d59f6025cd74f59aa0e1
+",1,1,0,1,Documentation (Minor),935e9f02e798051d2923d59f6025cd74f59aa0e1
 MAINTAINERS: remove unusd ARM/QUALCOMM MSM pattern,"MAINTAINERS: remove unusd ARM/QUALCOMM MSM pattern
 
 Commit 87933a68dce6 (""mfd: pm8921: Remove pm8xxx API now that
@@ -29090,7 +29090,7 @@ Signed-off-by: Joe Perches <joe@perches.com>
 Reviewed-by: Stephen Boyd <sboyd@codeaurora.org>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,1,0,1,,1db22e8b837246608a467e7f0a7d1b2ff0c92a19
+",1,1,0,1,Documentation (Minor),1db22e8b837246608a467e7f0a7d1b2ff0c92a19
 MAINTAINERS: remove unused radeon drm pattern,"MAINTAINERS: remove unused radeon drm pattern
 
 Commit 8dcedd7e87f4 (""UAPI: (Scripted) Disintegrate include/drm"") moved
@@ -29100,7 +29100,7 @@ Signed-off-by: Joe Perches <joe@perches.com>
 Cc: David Howells <dhowells@redhat.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,1,0,1,,eb231527b54b47f6ce61a8771813e7cd69510d82
+",1,1,0,1,Documentation (Minor),eb231527b54b47f6ce61a8771813e7cd69510d82
 MAINTAINERS: remove METAG imgdafs pattern,"MAINTAINERS: remove METAG imgdafs pattern
 
 This never made it into the kernel tree.  Remove it.
@@ -29109,7 +29109,7 @@ Signed-off-by: Joe Perches <joe@perches.com>
 Acked-by: James Hogan <james.hogan@imgtec.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,1,0,1,,d656143a1d2363aa8dbef2797edf0c91c9e891fc
+",1,1,0,1,Documentation (Minor),d656143a1d2363aa8dbef2797edf0c91c9e891fc
 MAINTAINERS: remove section CIRRUS LOGIC EP93XX OHCI USB HOST DRIVER,"MAINTAINERS: remove section CIRRUS LOGIC EP93XX OHCI USB HOST DRIVER
 
 Commit e55f7cd24676 (""usb: ohci: remove ep93xx bus glue platform
@@ -29120,7 +29120,7 @@ Cc: H Hartley Sweeten <hartleys@visionengravers.com>
 Cc: Lennert Buytenhek <kernel@wantstofly.org>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,6,0,6,,988636a8bed6c7b0ccdb1ccfdf7264e953ee4299
+",1,6,0,6,Documentation (Minor),988636a8bed6c7b0ccdb1ccfdf7264e953ee4299
 MAINTAINERS: update picoxcell patterns,"MAINTAINERS: update picoxcell patterns
 
 Fix the picoxcell patterns, add the dts directory too.
@@ -29129,7 +29129,7 @@ Signed-off-by: Joe Perches <joe@perches.com>
 Acked-by: Jamie Iles <jamie@jamieiles.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,4,2,2,,b87339877e0f15ecf61d34b41ab442209c1ca085
+",1,4,2,2,Documentation (Minor),b87339877e0f15ecf61d34b41ab442209c1ca085
 MAINTAINERS: fix PXA3xx NAND FLASH DRIVER pattern,"MAINTAINERS: fix PXA3xx NAND FLASH DRIVER pattern
 
 Use underscore, not dash
@@ -29137,7 +29137,7 @@ Use underscore, not dash
 Signed-off-by: Joe Perches <joe@perches.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,2,1,1,,9a67f099c802879c1dd7952114faee4adcf0a5b4
+",1,2,1,1,Documentation (Minor),9a67f099c802879c1dd7952114faee4adcf0a5b4
 MAINTAINERS: use correct filename for sdhci-bcm-kona,"MAINTAINERS: use correct filename for sdhci-bcm-kona
 
 Use dashes not underscores.
@@ -29154,7 +29154,7 @@ Incorrect pattern used, it's not a directory, it's a file.  Fix it.
 Signed-off-by: Joe Perches <joe@perches.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,2,1,1,,0a759c6ead8470ca6c8ef000615d167db9715626
+",1,2,1,1,Documentation (Minor),0a759c6ead8470ca6c8ef000615d167db9715626
 MAINTAINERS: update clk/sirf patterns,"MAINTAINERS: update clk/sirf patterns
 
 Commit 7bf21bc81f28 (""clk: sirf: re-arch to make the codes support both
@@ -29164,7 +29164,7 @@ Signed-off-by: Joe Perches <joe@perches.com>
 Cc: Barry Song <Baohua.Song@csr.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,2,1,1,,4a9c44f15a73846ae059285daec07d16c6fe81dd
+",1,2,1,1,Documentation (Minor),4a9c44f15a73846ae059285daec07d16c6fe81dd
 MAINTAINERS: use the correct efi-stub location,"MAINTAINERS: use the correct efi-stub location
 
 Commit 4171fe2f8a47 (""EFI stub documentation updates"") moved the file,
@@ -29192,7 +29192,7 @@ the files, update the pattern.
 Signed-off-by: Joe Perches <joe@perches.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,6,3,3,,73d425fd1dda72bbc198e23ccb7c259d15fe49d8
+",1,6,3,3,Documentation (Minor),73d425fd1dda72bbc198e23ccb7c259d15fe49d8
 drivers/net/ethernet/amd/pcnet32.c: neaten and remove unnecessary OOM messages,"drivers/net/ethernet/amd/pcnet32.c: neaten and remove unnecessary OOM messages
 
 Make the code flow a little better for 80 columns.
@@ -29220,7 +29220,7 @@ Cc: Manohar Vanga <manohar.vanga@gmail.com>
 Acked-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",2,12,4,8,,88b2608c49b7fe3d9131d5a1d4a03438a589997c
+",2,12,4,8,Refactoring (Minor),88b2608c49b7fe3d9131d5a1d4a03438a589997c
 synclink_gt: use pci_zalloc_consistent,"synclink_gt: use pci_zalloc_consistent
 
 Remove the now unnecessary memset too.
@@ -29230,7 +29230,7 @@ Acked-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
 Cc: Jiri Slaby <jslaby@suse.cz>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,5,2,3,,d54d7796c5f86eea0748a185b56ffb74ebc050e6
+",1,5,2,3,Refactoring (Minor),d54d7796c5f86eea0748a185b56ffb74ebc050e6
 staging: use pci_zalloc_consistent,"staging: use pci_zalloc_consistent
 
 Remove the now unnecessary memset too.
@@ -29242,7 +29242,7 @@ Cc: Christopher Harrer <charrer@alacritech.com>
 Cc: Forest Bond <forest@alittletooquiet.net>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",5,137,44,93,,8b983be54bb5c4ff133e3aa45fe50669089d0a68
+",5,137,44,93,Refactoring (Minor),8b983be54bb5c4ff133e3aa45fe50669089d0a68
 scsi: use pci_zalloc_consistent,"scsi: use pci_zalloc_consistent
 
 Remove the now unnecessary memset too.
@@ -29257,7 +29257,7 @@ Cc: ""Stephen M. Cameron"" <scameron@beardog.cce.hp.com>
 Cc: Neela Syam Kolli <megaraidlinux@lsi.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",12,91,32,59,,7c845eb5e184977d9c7135ae20d012b59f8cc729
+",12,91,32,59,Refactoring (Minor),7c845eb5e184977d9c7135ae20d012b59f8cc729
 rtlwifi: use pci_zalloc_consistent,"rtlwifi: use pci_zalloc_consistent
 
 Remove the now unnecessary memset too.
@@ -29268,7 +29268,7 @@ Cc: Chaoming Li <chaoming_li@realsil.com.cn>
 Cc: ""John W. Linville"" <linville@tuxdriver.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,17,5,12,,8ac41b9dc719b4a5c65a2192988e8199278bb71a
+",1,17,5,12,Refactoring (Minor),8ac41b9dc719b4a5c65a2192988e8199278bb71a
 rtl818x: use pci_zalloc_consistent,"rtl818x: use pci_zalloc_consistent
 
 Remove the now unnecessary memset too.
@@ -29277,7 +29277,7 @@ Signed-off-by: Joe Perches <joe@perches.com>
 Cc: ""John W. Linville"" <linville@tuxdriver.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,11,4,7,,504e3b4f5a210057419fe7a2ea3a0b5b3bc15aa1
+",1,11,4,7,Refactoring (Minor),504e3b4f5a210057419fe7a2ea3a0b5b3bc15aa1
 mwl8k: use pci_zalloc_consistent,"mwl8k: use pci_zalloc_consistent
 
 Remove the now unnecessary memset too.
@@ -29287,7 +29287,7 @@ Cc: Lennert Buytenhek <buytenh@wantstofly.org>
 Cc: ""John W. Linville"" <linville@tuxdriver.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,6,2,4,,e6443b24c74110309790a2bb3f5566c9fb5eac66
+",1,6,2,4,Refactoring (Minor),e6443b24c74110309790a2bb3f5566c9fb5eac66
 ipw2100: use pci_zalloc_consistent,"ipw2100: use pci_zalloc_consistent
 
 Remove the now unnecessary memset too.
@@ -29297,7 +29297,7 @@ Cc: Stanislav Yakovlev <stas.yakovlev@gmail.com>
 Cc: ""John W. Linville"" <linville@tuxdriver.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,16,5,11,,f0b6539cfaa6c13c9ebaa47f0136fee7a4c2d981
+",1,16,5,11,Refactoring (Minor),f0b6539cfaa6c13c9ebaa47f0136fee7a4c2d981
 irda: use pci_zalloc_consistent,"irda: use pci_zalloc_consistent
 
 Remove the now unnecessary memset too.
@@ -29307,7 +29307,7 @@ Cc: Samuel Ortiz <samuel@sortiz.org>
 Acked-by: David S. Miller <davem@davemloft.net>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,4,2,2,,38537b7f558bca5375b87f0c75ec5cfa2ed69dab
+",1,4,2,2,Refactoring (Minor),38537b7f558bca5375b87f0c75ec5cfa2ed69dab
 qlogic: use pci_zalloc_consistent,"qlogic: use pci_zalloc_consistent
 
 Remove the now unnecessary memset too.
@@ -29322,7 +29322,7 @@ Cc: Ron Mercer <ron.mercer@qlogic.com>
 Acked-by: David S. Miller <davem@davemloft.net>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",2,15,6,9,,440c734fefdabcf9caf4532e9bc51313cd0c546b
+",2,15,6,9,Refactoring (Minor),440c734fefdabcf9caf4532e9bc51313cd0c546b
 micrel: use pci_zalloc_consistent,"micrel: use pci_zalloc_consistent
 
 Remove the now unnecessary memset too.
@@ -29331,7 +29331,7 @@ Signed-off-by: Joe Perches <joe@perches.com>
 Acked-by: David S. Miller <davem@davemloft.net>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,7,3,4,,a2d0abc6aacf2ba9e76ffad60f1782aa10942bce
+",1,7,3,4,Refactoring (Minor),a2d0abc6aacf2ba9e76ffad60f1782aa10942bce
 sky2: use pci_zalloc_consistent,"sky2: use pci_zalloc_consistent
 
 Remove the now unnecessary memset too.
@@ -29342,7 +29342,7 @@ Cc: Stephen Hemminger <stephen@networkplumber.org>
 Acked-by: David S. Miller <davem@davemloft.net>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,5,2,3,,12fe08b2b5acada5ce708866786d08918e1f4819
+",1,5,2,3,Refactoring (Minor),12fe08b2b5acada5ce708866786d08918e1f4819
 enic: use pci_zalloc_consistent,"enic: use pci_zalloc_consistent
 
 Remove the now unnecessary memset too.
@@ -29355,7 +29355,7 @@ Cc: Neel Patel <neepatel@cisco.com>
 Acked-by: David S. Miller <davem@davemloft.net>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,8,3,5,,87f44b4e282a419fe82e9625ea6d3f35f614381f
+",1,8,3,5,Refactoring (Minor),87f44b4e282a419fe82e9625ea6d3f35f614381f
 atl1e: use pci_zalloc_consistent,"atl1e: use pci_zalloc_consistent
 
 Remove the now unnecessary memset too.
@@ -29364,7 +29364,7 @@ Signed-off-by: Joe Perches <joe@perches.com>
 Acked-by: David S. Miller <davem@davemloft.net>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,7,2,5,,191182688a3303f70ed358f3b0029110d74dec5a
+",1,7,2,5,Refactoring (Minor),191182688a3303f70ed358f3b0029110d74dec5a
 amd: use pci_zalloc_consistent,"amd: use pci_zalloc_consistent
 
 Remove the now unnecessary memset too.
@@ -29374,7 +29374,7 @@ Acked-by: Don Fry <pcnet32@frontier.com>
 Acked-by: David S. Miller <davem@davemloft.net>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,18,8,10,,8c6a5dca88401d119e2e6b8e81c2ea3b9b18b4ff
+",1,18,8,10,Refactoring (Minor),8c6a5dca88401d119e2e6b8e81c2ea3b9b18b4ff
 media: use pci_zalloc_consistent,"media: use pci_zalloc_consistent
 
 Remove the now unnecessary memset too.
@@ -29384,7 +29384,7 @@ Cc: Hans Verkuil <hverkuil@xs4all.nl>
 Cc: Mauro Carvalho Chehab <m.chehab@samsung.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",6,65,22,43,,6850aeabdd1fde7cd35f26d4e8779bec943e1cd9
+",6,65,22,43,Refactoring (Minor),6850aeabdd1fde7cd35f26d4e8779bec943e1cd9
 i810: use pci_zalloc_consistent,"i810: use pci_zalloc_consistent
 
 Remove the now unnecessary memset too.
@@ -29393,7 +29393,7 @@ Signed-off-by: Joe Perches <joe@perches.com>
 Cc: David Airlie <airlied@linux.ie>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,5,2,3,,59e2623b433552d7402dfacd2bc2d7a22a360a4f
+",1,5,2,3,Refactoring (Minor),59e2623b433552d7402dfacd2bc2d7a22a360a4f
 infiniband: use pci_zalloc_consistent,"infiniband: use pci_zalloc_consistent
 
 Remove the now unnecessary memset too.
@@ -29407,7 +29407,7 @@ Cc: Hal Rosenstock <hal.rosenstock@gmail.com>
 Cc: Faisal Latif <faisal.latif@intel.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",3,23,10,13,,9011a67b2fe9b89048bcba81745ef34394f6f7ab
+",3,23,10,13,Refactoring (Minor),9011a67b2fe9b89048bcba81745ef34394f6f7ab
 crypto: use pci_zalloc_consistent,"crypto: use pci_zalloc_consistent
 
 Remove the now unnecessary memset too.
@@ -29416,7 +29416,7 @@ Signed-off-by: Joe Perches <joe@perches.com>
 Herbert Xu <herbert@gondor.apana.org.au>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,5,2,3,,7e835084fe1fff705be16e1db8a9e5e8f56b9b73
+",1,5,2,3,Refactoring (Minor),7e835084fe1fff705be16e1db8a9e5e8f56b9b73
 block: use pci_zalloc_consistent,"block: use pci_zalloc_consistent
 
 Remove the now unnecessary memset too.
@@ -29425,7 +29425,7 @@ Signed-off-by: Joe Perches <joe@perches.com>
 Mike Miller <mike.miller@hp.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",3,54,22,32,,a5bbf6160c2b5ebce1533bf989c7cd0086beeabf
+",3,54,22,32,Refactoring (Minor),a5bbf6160c2b5ebce1533bf989c7cd0086beeabf
 atm: use pci_zalloc_consistent,"atm: use pci_zalloc_consistent
 
 Remove the now unnecessary memset too.
@@ -29434,7 +29434,7 @@ Signed-off-by: Joe Perches <joe@perches.com>
 Cc: Chas Williams <chas@cmf.nrl.navy.mil>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",2,46,21,25,,6f2a011afc324260d8e5e2aa480a58c34283c581
+",2,46,21,25,Refactoring (Minor),6f2a011afc324260d8e5e2aa480a58c34283c581
 pci-dma-compat: add pci_zalloc_consistent helper,"pci-dma-compat: add pci_zalloc_consistent helper
 
 Add this helper for consistency with pci_zalloc_coherent
@@ -29487,7 +29487,7 @@ Cc: Sujith Sankar <ssujith@cisco.com>
 Cc: Tom Tucker <tom@opengridcomputing.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,8,8,0,,82bf0baad9768c21850d06ddc24ea47984c4c90f
+",1,8,8,0,Feature (Minor),82bf0baad9768c21850d06ddc24ea47984c4c90f
 drivers/scsi: replace strict_strto calls,"drivers/scsi: replace strict_strto calls
 
 Replace obsolete strict_strto with more appropriate kstrto calls
@@ -29496,7 +29496,7 @@ Signed-off-by: Daniel Walter <dwalter@google.com>
 Cc: ""James E.J. Bottomley"" <JBottomley@parallels.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",2,8,4,4,,f7c65af5136f7999121f05a8398dd34a43bad139
+",2,8,4,4,Refactoring (Minor),f7c65af5136f7999121f05a8398dd34a43bad139
 arch/x86: replace strict_strto calls,"arch/x86: replace strict_strto calls
 
 Replace obsolete strict_strto calls with appropriate kstrto calls
@@ -29508,7 +29508,7 @@ Cc: ""H. Peter Anvin"" <hpa@zytor.com>
 Cc: Thomas Gleixner <tglx@linutronix.de>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",5,18,9,9,,164109e3cdba52b9f2ece063bc3aa2a90f77c273
+",5,18,9,9,Refactoring (Minor),164109e3cdba52b9f2ece063bc3aa2a90f77c273
 arch/powerpc: replace obsolete strict_strto* calls,"arch/powerpc: replace obsolete strict_strto* calls
 
 Replace strict_strto calls with more appropriate kstrto calls
@@ -29517,7 +29517,7 @@ Signed-off-by: Daniel Walter <dwalter@google.com>
 Cc: Benjamin Herrenschmidt <benh@kernel.crashing.org>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",4,14,7,7,,1618bd53e6f43918f90ca04a4fcaf664b0a78749
+",4,14,7,7,Refactoring (Minor),1618bd53e6f43918f90ca04a4fcaf664b0a78749
 arch/arm/mach-w90x900/cpu.c: replace obsolete strict_strto,"arch/arm/mach-w90x900/cpu.c: replace obsolete strict_strto
 
 Replace obsolete strict_strto with kstrto calls
@@ -29526,7 +29526,7 @@ Signed-off-by: Daniel Walter <dwalter@google.com>
 Cc: Wan ZongShun <mcuos.com@gmail.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,3,2,1,,37028623d78c7289af0a044202a16c1dd0482b6e
+",1,3,2,1,Refactoring (Minor),37028623d78c7289af0a044202a16c1dd0482b6e
 arch/arm/mach-s3c24xx/mach-jive.c: replace strict_strto* with kstrto*,"arch/arm/mach-s3c24xx/mach-jive.c: replace strict_strto* with kstrto*
 
 Replace obsolete strict_strto call with kstrto
@@ -29535,7 +29535,7 @@ Signed-off-by: Daniel Walter <dwalter@google.com>
 Cc: Ben Dooks <ben-linux@fluff.org>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,2,1,1,,5c2432cbe87d693879c11b0e39a32d2528233c64
+",1,2,1,1,Refactoring (Minor),5c2432cbe87d693879c11b0e39a32d2528233c64
 arch/arm/mach-pxa: replace strict_strto call with kstrto,"arch/arm/mach-pxa: replace strict_strto call with kstrto
 
 Replace obsolete call to strict_strto with kstrto
@@ -29544,7 +29544,7 @@ Signed-off-by: Daniel Walter <dwalter@google.com>
 Cc: Eric Miao <eric.y.miao@gmail.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",2,4,2,2,,4fce45b44bdbf293bc1aed5526e4da90f32eb8eb
+",2,4,2,2,Refactoring (Minor),4fce45b44bdbf293bc1aed5526e4da90f32eb8eb
 arch/arm/mach-omap2: replace strict_strto* with kstrto*,"arch/arm/mach-omap2: replace strict_strto* with kstrto*
 
 Replace obsolete strict_strto call with kstrto calls.
@@ -29554,7 +29554,7 @@ Signed-off-by: Daniel Walter <dwalter@google.com>
 Cc: Tony Lindgren <tony@atomide.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",2,24,7,17,,056610ac140ea4775d8855989c4316017ed3bd0a
+",2,24,7,17,Refactoring (Minor),056610ac140ea4775d8855989c4316017ed3bd0a
 MAINTAINERS: update IBM ServeRAID RAID info,"MAINTAINERS: update IBM ServeRAID RAID info
 
 - Invalid maintainer e-mail address:
@@ -29573,7 +29573,7 @@ Cc: Paul Bolle <pebolle@tiscali.nl>
 Reviewed-by: Jingoo Han <jg1.han@samsung.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",2,12,8,4,,f9213e78c42ce9f712400b699511acfff51351a5
+",2,12,8,4,Documentation (Minor),f9213e78c42ce9f712400b699511acfff51351a5
 MAINTAINERS: remove two ancient EATA sections,"MAINTAINERS: remove two ancient EATA sections
 
 These haven't had a single ack by the listed maintainer in all git history
@@ -29584,7 +29584,7 @@ An EATA entry for Michael Neuffer is already in CREDITS.
 Signed-off-by: Joe Perches <joe@perches.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,14,0,14,,d347087b6eb5793ec96be998c5a283935972673d
+",1,14,0,14,Refactoring (Minor),d347087b6eb5793ec96be998c5a283935972673d
 update Roland McGrath's mail,"update Roland McGrath's mail
 
 roland@redhat.com bounces, change it to roland@hack.frob.com.
@@ -29593,7 +29593,7 @@ Signed-off-by: Richard Weinberger <richard@nod.at>
 Acked-by: Roland McGrath <roland@hack.frob.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,2,1,1,,e846ee5f013d8236326f890ea4573004b286df88
+",1,2,1,1,Documentation (Minor),e846ee5f013d8236326f890ea4573004b286df88
 init/main.c: code clean-up,"init/main.c: code clean-up
 
 Fixing some checkpatch warnings(remove global initialization, move
@@ -29602,13 +29602,13 @@ __initdata, coalesce formats ...)
 Signed-off-by: Fabian Frederick <fabf@skynet.be>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,23,12,11,,dd4d9fecbeba893e9ce2488e4d619e5397a2712a
+",1,23,12,11,Refactoring (Minor),dd4d9fecbeba893e9ce2488e4d619e5397a2712a
 kernel/acct.c: fix coding style warnings and errors,"kernel/acct.c: fix coding style warnings and errors
 
 Signed-off-by: Ionut Alexa <ionut.m.alexa@gmail.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,30,17,13,,934fc295b30ea8ce5d5e0ab9024a10fab9b6f200
+",1,30,17,13,Refactoring (Minor),934fc295b30ea8ce5d5e0ab9024a10fab9b6f200
 "arm64,ia64,ppc,s390,sh,tile,um,x86,mm: remove default gate area","arm64,ia64,ppc,s390,sh,tile,um,x86,mm: remove default gate area
 
 The core mm code will provide a default gate area based on
@@ -29647,7 +29647,7 @@ Cc: ""H. Peter Anvin"" <hpa@zytor.com>
 Cc: Nathan Lynch <Nathan_Lynch@mentor.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",21,235,53,182,,a6c19dfe39941a5d3f4d072121c0a4841e7e26fd
+",21,235,53,182,Refactoring (Major),a6c19dfe39941a5d3f4d072121c0a4841e7e26fd
 fs/dlm/debug_fs.c: remove unnecessary null test before debugfs_remove,"fs/dlm/debug_fs.c: remove unnecessary null test before debugfs_remove
 
 This fixes checkpatch warning:
@@ -29658,7 +29658,7 @@ Signed-off-by: Fabian Frederick <fabf@skynet.be>
 Cc: Christine Caulfield <ccaulfie@redhat.com>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,15,5,10,,e0d9bf4cc0888befd00b1a7db383681be68aada9
+",1,15,5,10,Fix (Minor),e0d9bf4cc0888befd00b1a7db383681be68aada9
 scripts/checkstack.pl: automatically handle 32-bit and 64-bit mode for ARCH=x86,"scripts/checkstack.pl: automatically handle 32-bit and 64-bit mode for ARCH=x86
 
 This patch adds support for ARCH=x86 into checkstack.
@@ -29681,7 +29681,7 @@ Cc: Richard Weinberger <richard@nod.at>
 Cc: Geert Uytterhoeven <geert@linux-m68k.org>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,12,5,7,,fda9f9903be6c3b590472c175c514b0834bb3c83
+",1,12,5,7,Feature (Minor),fda9f9903be6c3b590472c175c514b0834bb3c83
 scripts/tags.sh: include compat_sys_* symbols in the generated tags,"scripts/tags.sh: include compat_sys_* symbols in the generated tags
 
 Since the kernel now has a COMPAT_SYSCALL infrastructure via commit
@@ -29694,7 +29694,7 @@ Cc: Alexander Viro <viro@zeniv.linux.org.uk>
 Cc: Michal Marek <mmarek@suse.cz>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,2,2,0,,c965526a82a62a97363ea7f3caae0e4a8a809bb9
+",1,2,2,0,Fix (Minor),c965526a82a62a97363ea7f3caae0e4a8a809bb9
 scripts/coccinelle/free/ifnullfree.cocci: add copyright information,"scripts/coccinelle/free/ifnullfree.cocci: add copyright information
 
 All coccinelle scripts have a copyright in the header.
@@ -29704,7 +29704,7 @@ Suggested-by: Julia Lawall <Julia.Lawall@lip6.fr>
 Acked-by: Julia Lawall <Julia.Lawall@lip6.fr>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,5,3,2,,45715f33d447ba878a3ca81673514785bb4dfe5a
+",1,5,3,2,Documentation (Minor),45715f33d447ba878a3ca81673514785bb4dfe5a
 scripts/coccinelle/free: add NULL test before freeing functions,"scripts/coccinelle/free: add NULL test before freeing functions
 
 Warns or generates patch for NULL check before the following functions:
@@ -29721,7 +29721,7 @@ Cc: Joe Perches <joe@perches.com>
 Cc: Markus Elfring <elfring@users.sourceforge.net>
 Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
 Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-",1,52,52,0,,791dfeb49519f18a6efea4619f5678457f1532ff
+",1,52,52,0,Feature (Minor),791dfeb49519f18a6efea4619f5678457f1532ff
 lib/scatterlist: clean up useless architecture versions of scatterlist.h,"lib/scatterlist: clean up useless architecture versions of scatterlist.h
 
 There's no need to have an architecture version of scatterlist.h if the
@@ -32753,7 +32753,7 @@ anymore.""
 Conflicts:
 	drivers/gpu/drm/drm_drv.c
 	drivers/gpu/drm/drm_stub.c
-",9,47,20,27,,7963e9db1b1f842fdc53309baa8714d38e9f5681
+",9,47,20,27,Regression (Minor),7963e9db1b1f842fdc53309baa8714d38e9f5681
 kbuild: kselftest - new make target to build and run kernel selftests,"kbuild: kselftest - new make target to build and run kernel selftests
 
 Add a new make target ""kselftest"" to enable kernel testing. This
@@ -32765,7 +32765,7 @@ running kselftest on it.
 Signed-off-by: Shuah Khan <shuah.kh@samsung.com>
 Acked-by: Sam Ravnborg <sam@ravnborg.org>
 Signed-off-by: Michal Marek <mmarek@suse.cz>
-",1,12,12,0,,5a5da78b3a48120d942c8a18ecc645f6acdf7da6
+",1,12,12,0,Fix (Minor),5a5da78b3a48120d942c8a18ecc645f6acdf7da6
 kbuild: Fix handling of backslashes in *.cmd files,"kbuild: Fix handling of backslashes in *.cmd files
 
 Commit c353acba (""kbuild: make: fix if_changed when command contains
@@ -32789,7 +32789,7 @@ so drop the l characters.
 
 Signed-off-by: Hans Wennborg <hans@hanshq.net>
 Signed-off-by: Rafael J. Wysocki <rafael.j.wysocki@intel.com>
-",1,4,2,2,,a5f30eba78969624ed8e86db81a8dd91736f79f3
+",1,4,2,2,Fix (Minor),a5f30eba78969624ed8e86db81a8dd91736f79f3
 ACPI / hotplug: Check scan handlers in acpi_scan_hot_remove(),"ACPI / hotplug: Check scan handlers in acpi_scan_hot_remove()
 
 When ACPI_HOTPLUG_MEMORY is not configured, memory_device_handler.attach
@@ -43576,7 +43576,7 @@ This should not cause any problems but if it does this patch can just
 be reverted.
 
 Signed-off-by: ""Eric W. Biederman"" <ebiederm@xmission.com>
-",1,2,1,1,,e81324407269b7708a0678a5c40710d2a75e9bf0
+",1,2,1,1,Feature (Minor),e81324407269b7708a0678a5c40710d2a75e9bf0
 proc: Implement /proc/thread-self to point at the directory of the current thread,"proc: Implement /proc/thread-self to point at the directory of the current thread
 
 /proc/thread-self is derived from /proc/self.  /proc/thread-self
@@ -43591,7 +43591,7 @@ when only the initial pthread has exited, causing problems for other
 threads.
 
 Signed-off-by: ""Eric W. Biederman"" <ebiederm@xmission.com>
-",7,118,112,6,,0097875bd41528922fb3bb5f348c53f17e00e2fd
+",7,118,112,6,Feature (Major),0097875bd41528922fb3bb5f348c53f17e00e2fd
 proc: Have net show up under /proc/<tgid>/task/<tid>,"proc: Have net show up under /proc/<tgid>/task/<tid>
 
 Network namespaces are per task so it make sense for them to show up
